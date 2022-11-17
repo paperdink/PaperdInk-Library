@@ -1,4 +1,4 @@
-# Crypto Ticker
+# Cryptocurrency Tracker
 This example displays 6 crypto ticker with their price and percentage change.
 It also shows the date and time it was updated.
 
