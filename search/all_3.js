@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['date_5ftime_2ecpp_0',['date_time.cpp',['../date__time_8cpp.html',1,'']]],
+  ['date_5ftime_2eh_1',['date_time.h',['../date__time_8h.html',1,'']]],
+  ['date_5ftime_5flrg_5ffont_2',['DATE_TIME_LRG_FONT',['../date__time_8h.html#a34d24ff35ab0016096f61c9a0eae1f90',1,'date_time.h']]],
+  ['date_5ftime_5fmed_5ffont_3',['DATE_TIME_MED_FONT',['../date__time_8h.html#a16d43a85c8d2ccbb96cc92800ac8864c',1,'date_time.h']]],
+  ['day_5foffset_4',['day_offset',['../structtime__struct.html#af515c76c09df5b61f3c8f33d148e9844',1,'time_struct']]],
+  ['debug_5',['DEBUG',['../crypto_8h.html#ad72dbcf6d0153db1b8d8a58001feed83',1,'DEBUG():&#160;crypto.h'],['../bitmap__parser_8h.html#ad72dbcf6d0153db1b8d8a58001feed83',1,'DEBUG():&#160;bitmap_parser.h']]],
+  ['deep_5fsleep_5fbutton_5fwakeup_6',['deep_sleep_button_wakeup',['../classPaperdink__Base__Class.html#a64ec79b2835acc58bde8e6eb3bf0b8ea',1,'Paperdink_Base_Class']]],
+  ['deep_5fsleep_5ftimer_5fbutton_5fwakeup_7',['deep_sleep_timer_button_wakeup',['../classPaperdink__Base__Class.html#af76880120cd7b53a10faaea8b86d3990',1,'Paperdink_Base_Class']]],
+  ['deep_5fsleep_5ftimer_5fwakeup_8',['deep_sleep_timer_wakeup',['../classPaperdink__Base__Class.html#a4d9dff1943ccb73a0ca03f5917a50e28',1,'Paperdink_Base_Class']]],
+  ['diplay_5fday_5fdate_5flrg_5fstyle1_9',['diplay_day_date_lrg_style1',['../date__time_8h.html#a1ee7f2b1ace790127daea2351f2b1bc8',1,'diplay_day_date_lrg_style1(GxEPD2_GFX &amp;display, uint16_t x, uint16_t y, const char *time_zone, uint8_t week_start_offset=0):&#160;date_time.cpp'],['../date__time_8cpp.html#a1d691a281e44fa6881f27b5319459464',1,'diplay_day_date_lrg_style1(GxEPD2_GFX &amp;display, uint16_t x, uint16_t y, const char *time_zone, uint8_t week_start_offset):&#160;date_time.cpp']]],
+  ['disable_5fdisplay_10',['disable_display',['../classPaperdink__Merlot.html#a3dfb11972cb0ad8979430f78cd6029a2',1,'Paperdink_Merlot::disable_display()'],['../classPaperdink__Classic.html#a1d63025cb7b18d01b35f3dc6f94a6a74',1,'Paperdink_Classic::disable_display()'],['../classPaperdink__Base__Class.html#a58b207f14a99d6727815c4dbf3bca4d4',1,'Paperdink_Base_Class::disable_display()']]],
+  ['disable_5feverything_11',['disable_everything',['../classPaperdink__Base__Class.html#a39569d93a0dff82defa0f4403a64f270',1,'Paperdink_Base_Class']]],
+  ['display_12',['display',['../classPaperdink__Merlot.html#a893e5e1246f9da2fe7169f4c09fbd4b7',1,'Paperdink_Merlot::display()'],['../classPaperdink__Classic.html#a7938079f8bbb931242c47fb0c2f0f719',1,'Paperdink_Classic::display()']]],
+  ['display_5fcrypto_5fmed_5fbox_13',['display_crypto_med_box',['../crypto_8h.html#a37bbf46222c2fabf2dc1d57afd4cfded',1,'display_crypto_med_box(GxEPD2_GFX &amp;display, int16_t x, int16_t y, const char *ticker):&#160;crypto.cpp'],['../crypto_8cpp.html#a37bbf46222c2fabf2dc1d57afd4cfded',1,'display_crypto_med_box(GxEPD2_GFX &amp;display, int16_t x, int16_t y, const char *ticker):&#160;crypto.cpp']]],
+  ['display_5flast_5fupdated_5ftime_5fmed_5fstyle1_14',['display_last_updated_time_med_style1',['../date__time_8cpp.html#a24c961519c72878a8e92b5b0bbe68d9e',1,'display_last_updated_time_med_style1(GxEPD2_GFX &amp;display, uint16_t x, uint16_t y, const char *time_zone, uint8_t week_start_offset):&#160;date_time.cpp'],['../date__time_8h.html#ab403866225ccfe770a50da0f2a5eee3e',1,'display_last_updated_time_med_style1(GxEPD2_GFX &amp;display, uint16_t x, uint16_t y, const char *time_zone, uint8_t week_start_offset=0):&#160;date_time.cpp']]],
+  ['display_5fweather_5ftext_15',['display_weather_text',['../weather_8h.html#a3acf6a8caae3bfc5670962e6edf95e9c',1,'weather.h']]],
+  ['display_5fweather_5ftext_5fabs_16',['display_weather_text_abs',['../weather_8cpp.html#ad7466575bd44f79e6d2af730d65f6f07',1,'weather.cpp']]],
+  ['display_5fweather_5ftext_5fcenter_17',['display_weather_text_center',['../weather_8cpp.html#ac92e51b1e585cc929a7b622e5db5e94b',1,'display_weather_text_center(GxEPD2_GFX &amp;display, uint16_t x, uint16_t y, uint16_t width, const char *city, const char *country, const char *owm_api_id):&#160;weather.cpp'],['../weather_8h.html#ac92e51b1e585cc929a7b622e5db5e94b',1,'display_weather_text_center(GxEPD2_GFX &amp;display, uint16_t x, uint16_t y, uint16_t width, const char *city, const char *country, const char *owm_api_id):&#160;weather.cpp']]],
+  ['down_5farrow_5fmed_18',['down_arrow_med',['../down__arrow__med_8h.html#a307ffa1c2e884309329e4b577de8d29a',1,'down_arrow_med.h']]],
+  ['down_5farrow_5fmed_2eh_19',['down_arrow_med.h',['../down__arrow__med_8h.html',1,'']]],
+  ['down_5farrow_5fred_20',['down_arrow_red',['../down__arrow__med_8h.html#a8844e6622e9424b96befe8ef5d49d929',1,'down_arrow_med.h']]],
+  ['down_5farrow_5fsml_21',['down_arrow_sml',['../down__arrow__sml_8h.html#aee416bcfdc67d12a1590d42d093ad19f',1,'down_arrow_sml.h']]],
+  ['down_5farrow_5fsml_2eh_22',['down_arrow_sml.h',['../down__arrow__sml_8h.html',1,'']]],
+  ['down_5farrow_5fsml_5fred_23',['down_arrow_sml_red',['../down__arrow__sml_8h.html#aa812f2dc9a4081ab7c53e05687a8c913',1,'down_arrow_sml.h']]],
+  ['drawbitmapfrom_5fsd_5ftobuffer_24',['drawBitmapFrom_SD_ToBuffer',['../bitmap__parser_8cpp.html#a0fe6ea34b6dcde1e60c303497fd34f7f',1,'drawBitmapFrom_SD_ToBuffer(GxEPD2_GFX &amp;display, fs::FS &amp;fs, const char *filename, int16_t x, int16_t y, bool with_color):&#160;bitmap_parser.cpp'],['../bitmap__parser_8h.html#a0fe6ea34b6dcde1e60c303497fd34f7f',1,'drawBitmapFrom_SD_ToBuffer(GxEPD2_GFX &amp;display, fs::FS &amp;fs, const char *filename, int16_t x, int16_t y, bool with_color):&#160;bitmap_parser.cpp']]]
+];
