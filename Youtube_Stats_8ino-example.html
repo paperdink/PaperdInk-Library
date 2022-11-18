@@ -163,8 +163,8 @@ $(document).ready(function(){initNavTree('Youtube_Stats_8ino-example.html',''); 
 <div class="line">    Paperdink_UI.display_text(Paperdink.epd, 150, 125, YOUTUBE_CHANNEL_NAME, 100, 50, &amp;Code_New_Roman_Bold10pt7b);</div>
 <div class="line"> </div>
 <div class="line">    /* Display number of subscribers and views */</div>
-<div class="line">    Paperdink_Youtube.display_subscribers_sml(Paperdink.epd, 150, 160, 100, 50);</div>
-<div class="line">    Paperdink_Youtube.display_views_sml(Paperdink.epd, 150, 200, 100, 50);</div>
+<div class="line">    Paperdink_Youtube.display_subscribers_sml(Paperdink.epd, 100, 160, 200, 50);</div>
+<div class="line">    Paperdink_Youtube.display_views_sml(Paperdink.epd, 100, 200, 200, 50);</div>
 <div class="line"> </div>
 <div class="line">    /* Send data to display for the update */</div>
 <div class="line">    Paperdink.epd.display();</div>
@@ -178,8 +178,8 @@ $(document).ready(function(){initNavTree('Youtube_Stats_8ino-example.html',''); 
 <div class="line">    uint64_t sleep_time = (86400/(UPDATES_PER_DAY))-(((Paperdink_Date.mil_hour*3600)+(Paperdink_Date.min*60)+(Paperdink_Date.sec))%(86400/UPDATES_PER_DAY));</div>
 <div class="line"> </div>
 <div class="line">    /* Update after sleep_time microsecond or when button 1 is pressed. */</div>
-<div class="line">    // Paperdink.deep_sleep_timer_wakeup(sleep_time*S_TO_uS_FACTOR); // Consumes lower current</div>
-<div class="line">    Paperdink.deep_sleep_timer_button_wakeup(sleep_time*S_TO_uS_FACTOR, BUTTON_1_PIN); // Consumes higher current</div>
+<div class="line">    Paperdink.deep_sleep_timer_wakeup(sleep_time*S_TO_uS_FACTOR); // Consumes lower current</div>
+<div class="line">    // Paperdink.deep_sleep_timer_button_wakeup(sleep_time*S_TO_uS_FACTOR, BUTTON_1_PIN); // Consumes higher current</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line">void loop()</div>
