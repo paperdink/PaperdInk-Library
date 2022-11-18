@@ -32,22 +32,28 @@ void setup()
 {
 	DEBUG.begin(115200);
 
-    /** Initialize paperd.ink device */
+    /* Initialize paperd.ink device */
 	Paperdink.begin();
     
-    /** Enable power to the display */
+    /* Enable power to the display */
 	Paperdink.enable_display();
-
-    /** Connect to wifi network */
-	Paperdink.connect_wifi(SSID, PASSWORD);
-
-    /** Clear the background */
+    /* Clear the background */
 	Paperdink.epd.fillScreen(GxEPD_WHITE);
+
+    /* Connect to wifi network */
+	if(Paperdink.connect_wifi(SSID, PASSWORD) < 0){
+        DEBUG.println("Unable to connect to WiFi");
+        Paperdink.epd.drawBitmap(370, 4, wifi_off_sml, wifi_off_sml_width, wifi_off_sml_height, GxEPD_BLACK);
+    }
+
+    /* Fetch date data */
+    if(Paperdink_Date.fetch_data(TIME_ZONE) < 0){
+        DEBUG.println("Unable to fetch Date Time data");
+    }
    
-    /** Fetch data from Youtube */
+    /* Fetch data from Youtube */
 	if(Paperdink_Youtube.fetch_data(YOUTUBE_CHANNEL_ID, YOUTUBE_API_ID) < 0){
-		Serial.println("Unable to initialize youtube");
-        return;
+		DEBUG.println("Unable to initialize youtube");
 	}
 
     /* Show youtube logo */
@@ -63,18 +69,18 @@ void setup()
     Paperdink_Youtube.display_subscribers_sml(Paperdink.epd, 150, 160, 100, 50);
     Paperdink_Youtube.display_views_sml(Paperdink.epd, 150, 200, 100, 50);
 
-    /* Update the actual display */
+    /* Send data to display for the update */
 	Paperdink.epd.display();
 
 	DEBUG.println("Turning off everything");
 
-    /** Sleep till update time.
+    /* Sleep till update time.
      * Align updates to 12am so that date change aligns
      * with actual day change.
      */
-	uint64_t sleep_time = (86400/(UPDATES_PER_DAY))-(((pdink_now.mil_hour*3600)+(pdink_now.min*60)+(pdink_now.sec))%(86400/UPDATES_PER_DAY));
+	uint64_t sleep_time = (86400/(UPDATES_PER_DAY))-(((Paperdink_Date.mil_hour*3600)+(Paperdink_Date.min*60)+(Paperdink_Date.sec))%(86400/UPDATES_PER_DAY));
 
-    //** Update after sleep_time microsecond or when button 1 is pressed. */
+    /* Update after sleep_time microsecond or when button 1 is pressed. */
     // Paperdink.deep_sleep_timer_wakeup(sleep_time*S_TO_uS_FACTOR); // Consumes lower current
 	Paperdink.deep_sleep_timer_button_wakeup(sleep_time*S_TO_uS_FACTOR, BUTTON_1_PIN); // Consumes higher current
 }
