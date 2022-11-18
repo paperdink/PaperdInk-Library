@@ -2,7 +2,7 @@
 #include <WiFiClientSecure.h>
 #include "base.h"
 
-int8_t Paperdink_Base_Class::begin()
+int8_t PaperdinkDeviceBaseClass::begin()
 {
 	pinMode(EPD_EN, OUTPUT);
 	pinMode(EPD_RST, OUTPUT);
@@ -13,7 +13,7 @@ int8_t Paperdink_Base_Class::begin()
 	return 0;
 }
 
-int8_t Paperdink_Base_Class::enable_display()
+int8_t PaperdinkDeviceBaseClass::enable_display()
 {
     // Power up EPD
 	digitalWrite(EPD_EN, LOW);
@@ -25,7 +25,7 @@ int8_t Paperdink_Base_Class::enable_display()
 	return 0;
 }
 
-int8_t Paperdink_Base_Class::disable_display()
+int8_t PaperdinkDeviceBaseClass::disable_display()
 {
 	digitalWrite(EPD_EN, HIGH);
 	digitalWrite(EPD_RST, LOW);
@@ -35,7 +35,7 @@ int8_t Paperdink_Base_Class::disable_display()
 	return 0;
 }
 
-int8_t Paperdink_Base_Class::disable_everything()
+int8_t PaperdinkDeviceBaseClass::disable_everything()
 {
 	disable_display();
     // TODO: Add disable functions for SD and Batt
@@ -45,7 +45,7 @@ int8_t Paperdink_Base_Class::disable_everything()
 	return 0;
 }
 
-int8_t Paperdink_Base_Class::deep_sleep_timer_wakeup(uint64_t sleep_time_us)
+int8_t PaperdinkDeviceBaseClass::deep_sleep_timer_wakeup(uint64_t sleep_time_us)
 {
     // Turn off everything
 	disable_everything();
@@ -58,7 +58,7 @@ int8_t Paperdink_Base_Class::deep_sleep_timer_wakeup(uint64_t sleep_time_us)
 	return 0;
 }
 
-int8_t Paperdink_Base_Class::deep_sleep_button_wakeup(uint8_t gpio_num)
+int8_t PaperdinkDeviceBaseClass::deep_sleep_button_wakeup(uint8_t gpio_num)
 {
     // Turn off everything
 	disable_everything();
@@ -71,7 +71,7 @@ int8_t Paperdink_Base_Class::deep_sleep_button_wakeup(uint8_t gpio_num)
 	return 0;
 }
 
-int8_t Paperdink_Base_Class::deep_sleep_timer_button_wakeup(uint64_t sleep_time_us, uint8_t gpio_num)
+int8_t PaperdinkDeviceBaseClass::deep_sleep_timer_button_wakeup(uint64_t sleep_time_us, uint8_t gpio_num)
 {
     // Turn off everything
 	disable_everything();
@@ -85,7 +85,7 @@ int8_t Paperdink_Base_Class::deep_sleep_timer_button_wakeup(uint64_t sleep_time_
 	return 0;
 }
 
-int8_t Paperdink_Base_Class::connect_wifi(const char *ssid, const char *password, uint8_t attempts)
+int8_t PaperdinkDeviceBaseClass::connect_wifi(const char *ssid, const char *password, uint8_t attempts)
 {
 
 	WiFi.begin(ssid, password);
@@ -102,7 +102,7 @@ int8_t Paperdink_Base_Class::connect_wifi(const char *ssid, const char *password
 	return 0;
 }
 
-int8_t Paperdink_Base_Class::connect_wifi(const char *ssid, const char *password)
+int8_t PaperdinkDeviceBaseClass::connect_wifi(const char *ssid, const char *password)
 {
 	return connect_wifi(ssid, password, 40);
 }

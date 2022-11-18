@@ -4,12 +4,12 @@
 
 #include "base.h"
 
-class Paperdink_Classic : public Paperdink_Base_Class
+class Paperdink_Classic : public PaperdinkDeviceBaseClass
 {
-public:
-GxEPD2_BW<GxEPD2_420, GxEPD2_420::HEIGHT> display = GxEPD2_420(EPD_CS, EPD_DC, EPD_RST, EPD_BUSY);
-int8_t enable_display() override;
-int8_t disable_display() override;
+    public:
+        GxEPD2_BW<GxEPD2_420, GxEPD2_420::HEIGHT> epd = GxEPD2_420(EPD_CS, EPD_DC, EPD_RST, EPD_BUSY);
+        int8_t enable_display() override;
+        int8_t disable_display() override;
 };
 
 #endif /* _PDINK_CLASSIC_H_ */

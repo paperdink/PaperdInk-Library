@@ -2,8 +2,8 @@
 
 int8_t Paperdink_Classic::enable_display()
 {
-	Paperdink_Base_Class::enable_display();
-	display.init();
+	PaperdinkDeviceBaseClass::enable_display();
+	epd.init();
 
 	return 0;
 }

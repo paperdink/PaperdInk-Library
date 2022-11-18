@@ -28,4 +28,6 @@ int8_t fetch_date_time(const char *time_zone, uint8_t week_start_offset);
 void diplay_day_date_lrg_style1(GxEPD2_GFX& display, uint16_t x, uint16_t y, const char *time_zone, uint8_t week_start_offset = 0);
 void display_last_updated_time_med_style1(GxEPD2_GFX& display, uint16_t x, uint16_t y, const char *time_zone, uint8_t week_start_offset = 0);
 
+extern RTC_DATA_ATTR struct time_struct pdink_now;
+
 #endif /* TIME_H */

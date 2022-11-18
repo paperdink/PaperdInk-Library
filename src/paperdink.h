@@ -1,7 +1,10 @@
 
 /** Examples
- * @example crypto_tracker.ino
- * Shows 6 crypto tickers with last updated time and date. 
+ * @example Crypto_Tracker.ino
+ * Shows 6 crypto tickers with last updated time and date.
+ *
+ * @example Youtube_Stats.ino
+ * Shows subscription and total views count.
  */
 
 #ifndef _PAPERDINK_H_
@@ -15,6 +18,7 @@
 #include "ui/crypto/crypto.h"
 #include "ui/date_time/date_time.h"
 #include "ui/weather/weather.h"
+#include "ui/youtube/youtube.h"
 
 // Paperdink Devices
 #include "devices/classic.h"
@@ -25,7 +29,6 @@
 #define M_TO_uS_FACTOR (6e7)
 #define H_TO_uS_FACTOR (3.6e9)
 
-extern PDINK_DEVICE pdink;
-extern RTC_DATA_ATTR struct time_struct pdink_now;
+extern PAPERDINK_DEVICE Paperdink;
 
 #endif /* _PAPERDINK_H_ */
