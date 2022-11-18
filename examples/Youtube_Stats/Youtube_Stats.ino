@@ -66,8 +66,8 @@ void setup()
     Paperdink_UI.display_text(Paperdink.epd, 150, 125, YOUTUBE_CHANNEL_NAME, 100, 50, &Code_New_Roman_Bold10pt7b);
 
     /* Display number of subscribers and views */
-    Paperdink_Youtube.display_subscribers_sml(Paperdink.epd, 150, 160, 100, 50);
-    Paperdink_Youtube.display_views_sml(Paperdink.epd, 150, 200, 100, 50);
+    Paperdink_Youtube.display_subscribers_sml(Paperdink.epd, 100, 160, 200, 50);
+    Paperdink_Youtube.display_views_sml(Paperdink.epd, 100, 200, 200, 50);
 
     /* Send data to display for the update */
 	Paperdink.epd.display();
