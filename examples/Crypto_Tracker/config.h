@@ -1,15 +1,12 @@
-# Cryptocurrency Tracker
-This example displays 6 crypto ticker with their price and percentage change.
-It also shows the date and time it was updated.
 
-## Usage
-Update the `config.h` file with configuration details
-```
+#ifndef CONFIG_H
+#define CONFIG_H
+
 // CONFIGURATION
 // Uncomment only one of the below #define statements
 // based on the paperd.ink device you have
-#define PDINK_DEVICE Paperdink_Classic
-//#define PDINK_DEVICE Paperdink_Merlot
+#define PAPERDINK_DEVICE Paperdink_Classic
+//#define PAPERDINK_DEVICE Paperdink_Merlot
 
 #define SSID     "*****" // Wifi Network SSID (name of wifi network)
 #define PASSWORD "*****" // Wifi Network password
@@ -25,4 +22,13 @@ Update the `config.h` file with configuration details
 // ... and so on
 // Higher number means lower battery life
 #define UPDATES_PER_DAY 4
-```
+
+/* TODO: Add how-to */
+#define CRYPTO_TICKER_1 "Bitcoin"
+#define CRYPTO_TICKER_2 "Ethereum"
+#define CRYPTO_TICKER_3 "Dogecoin"
+#define CRYPTO_TICKER_4 "Monero"
+#define CRYPTO_TICKER_5 "Solana"
+#define CRYPTO_TICKER_6 "Helium"
+
+#endif /* CONFIG_H */
