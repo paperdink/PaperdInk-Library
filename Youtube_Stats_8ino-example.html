@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Paperd.Ink Library: crypto_tracker.ino</title>
+<title>Paperd.Ink Library: Youtube_Stats.ino</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -65,7 +65,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('crypto_tracker_8ino-example.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('Youtube_Stats_8ino-example.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -91,11 +91,10 @@ $(document).ready(function(){initNavTree('crypto_tracker_8ino-example.html','');
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">crypto_tracker.ino</div></div>
+  <div class="headertitle"><div class="title">Youtube_Stats.ino</div></div>
 </div><!--header-->
 <div class="contents">
-<p >Examples</p>
-<p >Shows 6 crypto tickers with last updated time and date.</p>
+<p >Shows subscription and total views count.</p>
 <div class="fragment"><div class="line">/* The MIT License (MIT)</div>
 <div class="line"> * Copyright (c) 2022 Paperd.Ink</div>
 <div class="line"> </div>
@@ -118,54 +117,74 @@ $(document).ready(function(){initNavTree('crypto_tracker_8ino-example.html','');
 <div class="line"> * SOFTWARE.</div>
 <div class="line"> */</div>
 <div class="line"> </div>
-<div class="line">// config.h should be before paperdink.h</div>
+<div class="line">/* config.h should be before paperdink.h */</div>
 <div class="line">#include &quot;config.h&quot;</div>
 <div class="line">#include &lt;paperdink.h&gt;</div>
+<div class="line">#include &quot;youtube_logo.h&quot;</div>
 <div class="line"> </div>
-<div class="line">// Create paperdink object</div>
-<div class="line">PDINK_DEVICE pdink;</div>
+<div class="line">/* Create Paperdink object */</div>
+<div class="line">PAPERDINK_DEVICE Paperdink;</div>
 <div class="line"> </div>
 <div class="line">void setup()</div>
 <div class="line">{</div>
 <div class="line">    DEBUG.begin(115200);</div>
-<div class="line">    DEBUG.println();</div>
-<div class="line">    DEBUG.println(&quot;paperd.ink&quot;);</div>
 <div class="line"> </div>
-<div class="line">    pdink.begin();</div>
-<div class="line">    pdink.enable_display();</div>
+<div class="line">    /* Initialize paperd.ink device */</div>
+<div class="line">    Paperdink.begin();</div>
+<div class="line">    </div>
+<div class="line">    /* Enable power to the display */</div>
+<div class="line">    Paperdink.enable_display();</div>
+<div class="line">    /* Clear the background */</div>
+<div class="line">    Paperdink.epd.fillScreen(GxEPD_WHITE);</div>
 <div class="line"> </div>
-<div class="line">    pdink.connect_wifi(SSID, PASSWORD);</div>
+<div class="line">    /* Connect to wifi network */</div>
+<div class="line">    if(Paperdink.connect_wifi(SSID, PASSWORD) &lt; 0){</div>
+<div class="line">        DEBUG.println(&quot;Unable to connect to WiFi&quot;);</div>
+<div class="line">        Paperdink.epd.drawBitmap(370, 4, wifi_off_sml, wifi_off_sml_width, wifi_off_sml_height, GxEPD_BLACK);</div>
+<div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    pdink.display.fillScreen(GxEPD_WHITE);</div>
+<div class="line">    /* Fetch date data */</div>
+<div class="line">    if(Paperdink_Date.fetch_data(TIME_ZONE) &lt; 0){</div>
+<div class="line">        DEBUG.println(&quot;Unable to fetch Date Time data&quot;);</div>
+<div class="line">    }</div>
+<div class="line">   </div>
+<div class="line">    /* Fetch data from Youtube */</div>
+<div class="line">    if(Paperdink_Youtube.fetch_data(YOUTUBE_CHANNEL_ID, YOUTUBE_API_ID) &lt; 0){</div>
+<div class="line">        DEBUG.println(&quot;Unable to initialize youtube&quot;);</div>
+<div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    display_crypto_med_box(pdink.display, 0, 15, &quot;Bitcoin&quot;);</div>
-<div class="line">    display_crypto_med_box(pdink.display, 0, 85, &quot;Ethereum&quot;);</div>
-<div class="line">    display_crypto_med_box(pdink.display, 0, 155, &quot;Dogecoin&quot;);</div>
-<div class="line">    display_crypto_med_box(pdink.display, 0, 225, &quot;Monero&quot;);</div>
-<div class="line">    display_crypto_med_box(pdink.display, 200, 155, &quot;USD-coin&quot;);</div>
-<div class="line">    display_crypto_med_box(pdink.display, 200, 225, &quot;Solana&quot;);</div>
+<div class="line">    /* Show youtube logo */</div>
+<div class="line">    Paperdink.epd.drawBitmap(100, 60, youtube_logo, youtube_logo_width, youtube_logo_height, GxEPD_BLACK);</div>
+<div class="line">    if(Paperdink.epd.epd2.hasColor){</div>
+<div class="line">        Paperdink.epd.drawBitmap(100, 60, youtube_logo_red, youtube_logo_width, youtube_logo_height, GxEPD_RED);</div>
+<div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    diplay_day_date_lrg_style1(pdink.display, 200, 20, TIME_ZONE);</div>
+<div class="line">    /* Print name of the channel */</div>
+<div class="line">    Paperdink_UI.display_text(Paperdink.epd, 150, 125, YOUTUBE_CHANNEL_NAME, 100, 50, &amp;Code_New_Roman_Bold10pt7b);</div>
 <div class="line"> </div>
-<div class="line">    display_last_updated_time_med_style1(pdink.display, 215, 125, TIME_ZONE);</div>
+<div class="line">    /* Display number of subscribers and views */</div>
+<div class="line">    Paperdink_Youtube.display_subscribers_sml(Paperdink.epd, 150, 160, 100, 50);</div>
+<div class="line">    Paperdink_Youtube.display_views_sml(Paperdink.epd, 150, 200, 100, 50);</div>
 <div class="line"> </div>
-<div class="line">    pdink.display.display();</div>
+<div class="line">    /* Send data to display for the update */</div>
+<div class="line">    Paperdink.epd.display();</div>
 <div class="line"> </div>
 <div class="line">    DEBUG.println(&quot;Turning off everything&quot;);</div>
 <div class="line"> </div>
-<div class="line">    // Sleep till update time.</div>
-<div class="line">    // Align updates to 12am so that date change aligns</div>
-<div class="line">    // with actual day change.</div>
-<div class="line">    uint64_t sleep_time = (86400/(UPDATES_PER_DAY))-(((pdink_now.mil_hour*3600)+(pdink_now.min*60)+(pdink_now.sec))%(86400/UPDATES_PER_DAY));</div>
+<div class="line">    /* Sleep till update time.</div>
+<div class="line">     * Align updates to 12am so that date change aligns</div>
+<div class="line">     * with actual day change.</div>
+<div class="line">     */</div>
+<div class="line">    uint64_t sleep_time = (86400/(UPDATES_PER_DAY))-(((Paperdink_Date.mil_hour*3600)+(Paperdink_Date.min*60)+(Paperdink_Date.sec))%(86400/UPDATES_PER_DAY));</div>
 <div class="line"> </div>
-<div class="line">    // Update after sleep_time microsecond or when button 1 is pressed.</div>
-<div class="line">    //pdink.deep_sleep_timer_wakeup(sleep_time*S_TO_uS_FACTOR); // Consumes lower current</div>
-<div class="line">    pdink.deep_sleep_timer_button_wakeup(sleep_time*S_TO_uS_FACTOR, BUTTON_1_PIN); // Consumes higher current</div>
+<div class="line">    /* Update after sleep_time microsecond or when button 1 is pressed. */</div>
+<div class="line">    // Paperdink.deep_sleep_timer_wakeup(sleep_time*S_TO_uS_FACTOR); // Consumes lower current</div>
+<div class="line">    Paperdink.deep_sleep_timer_button_wakeup(sleep_time*S_TO_uS_FACTOR, BUTTON_1_PIN); // Consumes higher current</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line">void loop()</div>
 <div class="line">{</div>
-<div class="line">    // put your main code here, to run repeatedly:</div>
+<div class="line"> </div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->

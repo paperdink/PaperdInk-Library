@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['up_5farrow_5fmed_2eh_0',['up_arrow_med.h',['../up__arrow__med_8h.html',1,'']]],
-  ['up_5farrow_5fsml_2eh_1',['up_arrow_sml.h',['../up__arrow__sml_8h.html',1,'']]]
+  ['roboto_5fregular_5f12pt7b_2eh_0',['Roboto_Regular_12pt7b.h',['../Roboto__Regular__12pt7b_8h.html',1,'']]]
 ];

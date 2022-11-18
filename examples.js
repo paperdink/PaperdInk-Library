@@ -1,4 +1,5 @@
 var examples =
 [
-    [ "crypto_tracker.ino", "crypto_tracker_8ino-example.html", null ]
+    [ "Crypto_Tracker.ino", "Crypto_Tracker_8ino-example.html", null ],
+    [ "Youtube_Stats.ino", "Youtube_Stats_8ino-example.html", null ]
 ];

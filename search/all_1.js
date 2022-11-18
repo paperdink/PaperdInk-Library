@@ -4,7 +4,7 @@ var searchData=
   ['base_2eh_1',['base.h',['../base_8h.html',1,'']]],
   ['batt_5fen_2',['BATT_EN',['../pin__assignment_8h.html#ad9659da3944ab60dddc44fcd16293ee5',1,'pin_assignment.h']]],
   ['battery_5fvoltage_3',['BATTERY_VOLTAGE',['../pin__assignment_8h.html#a4cb5c278dcc397c3d573b8250a18f875',1,'pin_assignment.h']]],
-  ['begin_4',['begin',['../classPaperdink__Base__Class.html#a55211515852a5175cb2df28c9b804185',1,'Paperdink_Base_Class']]],
+  ['begin_4',['begin',['../classPaperdinkDeviceBaseClass.html#ab5f1f3390591cc99c617b097b4ea86ff',1,'PaperdinkDeviceBaseClass']]],
   ['bitmap_5fparser_2ecpp_5',['bitmap_parser.cpp',['../bitmap__parser_8cpp.html',1,'']]],
   ['bitmap_5fparser_2eh_6',['bitmap_parser.h',['../bitmap__parser_8h.html',1,'']]],
   ['button_5f1_5fpin_7',['BUTTON_1_PIN',['../pin__assignment_8h.html#a0411f64ff1b702c2b2e6e721f032f750',1,'pin_assignment.h']]],

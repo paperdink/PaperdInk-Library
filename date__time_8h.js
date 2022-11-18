@@ -1,9 +1,7 @@
 var date__time_8h =
 [
-    [ "time_struct", "structtime__struct.html", "structtime__struct" ],
-    [ "DATE_TIME_LRG_FONT", "date__time_8h.html#a34d24ff35ab0016096f61c9a0eae1f90", null ],
-    [ "DATE_TIME_MED_FONT", "date__time_8h.html#a16d43a85c8d2ccbb96cc92800ac8864c", null ],
-    [ "diplay_day_date_lrg_style1", "date__time_8h.html#a1ee7f2b1ace790127daea2351f2b1bc8", null ],
-    [ "display_last_updated_time_med_style1", "date__time_8h.html#ab403866225ccfe770a50da0f2a5eee3e", null ],
-    [ "fetch_date_time", "date__time_8h.html#ac2b6cfb2e632df70341de0587e495dde", null ]
+    [ "PaperdinkUIDateClass", "classPaperdinkUIDateClass.html", "classPaperdinkUIDateClass" ],
+    [ "CONFIG_TIME_RETRY_COUNT", "date__time_8h.html#a3a3e2e5c42a500e7c7350e06c6305ffc", null ],
+    [ "NTP_SERVER", "date__time_8h.html#a751e3f85cd240e89d390d18996089cd0", null ],
+    [ "Paperdink_Date", "date__time_8h.html#acd23575bb51562501f8ec9b538d72b94", null ]
 ];

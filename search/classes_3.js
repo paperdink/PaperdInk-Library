@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['time_5fstruct_0',['time_struct',['../structtime__struct.html',1,'']]]
+  ['weatherjsonlistener_0',['WeatherJsonListener',['../classWeatherJsonListener.html',1,'']]]
 ];
