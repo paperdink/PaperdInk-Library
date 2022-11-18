@@ -1,6 +1,6 @@
 
-#ifndef _CRYPTO_H_
-#define _CRYPTO_H_
+#ifndef _PAPERDINK_CRYPTO_H_
+#define _PAPERDINK_CRYPTO_H_
 
 #include "../../common.h"
 
@@ -17,9 +17,17 @@
 #define CRYPTO_MAX_PRICE_LENGTH_STR (CRYPTO_MAX_PRICE_LENGTH+5)   // USD 123.456789\0
 #define CRYPTO_MAX_CHANGE_LENGTH_STR (CRYPTO_MAX_CHANGE_LENGTH+3) // -3.27%\0
 
-#define CRYPTO_MED_FONT &Code_New_Roman9pt7b
-#define CRYPTO_MED_FONT_BOLD &Code_New_Roman_Bold10pt7b
+class PaperdinkUICryptoClass : public PaperdinkUIBaseClass
+{
+    public:
+        char price[CRYPTO_MAX_PRICE_LENGTH_STR] = "USD XXX";
+        char change[CRYPTO_MAX_CHANGE_LENGTH_STR] = "XXXX%";
 
-void display_crypto_med_box(GxEPD2_GFX& display, int16_t x, int16_t y, const char *ticker);
+        int8_t fetch_data(const char *ticker);
+        
+        void display_med_box(GxEPD2_GFX& display, int16_t x, int16_t y, const char *ticker);
+};
 
-#endif /* _CRYPTO_H_ */
+extern PaperdinkUICryptoClass Paperdink_Crypto;
+
+#endif /* _PAPERDINK_CRYPTO_H_ */

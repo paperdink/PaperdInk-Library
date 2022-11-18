@@ -5,9 +5,6 @@
 enum CRYPTO_STATE {NOT_FOUND, FOUND_PRICE, FOUND_CHANGE};
 static CRYPTO_STATE key_state;
 
-extern char price[CRYPTO_MAX_PRICE_LENGTH_STR];
-extern char change[CRYPTO_MAX_CHANGE_LENGTH_STR];
-
 void CryptoJsonListener::whitespace(char c)
 {
 }
@@ -29,14 +26,14 @@ void CryptoJsonListener::key(String key)
 void CryptoJsonListener::value(String value)
 {
 	if(key_state == FOUND_PRICE){
-		strncpy(&price[4], value.c_str(), CRYPTO_MAX_PRICE_LENGTH);
+		strncpy(&Paperdink_Crypto.price[4], value.c_str(), CRYPTO_MAX_PRICE_LENGTH);
         //price[CRYPTO_MAX_CHANGE_LENGTH_STR] = '\0';
-		Serial.printf("Price: %s\r\n", price);
+		Serial.printf("Price: %s\r\n", Paperdink_Crypto.price);
 		key_state = NOT_FOUND;
 	} else if(key_state == FOUND_CHANGE){
-		strncpy(change, value.c_str(), CRYPTO_MAX_CHANGE_LENGTH);
+		strncpy(Paperdink_Crypto.change, value.c_str(), CRYPTO_MAX_CHANGE_LENGTH);
         //change[CRYPTO_MAX_CHANGE_LENGTH_STR] = '\0';
-		Serial.printf("Change: %s\r\n", change);
+		Serial.printf("Change: %s\r\n", Paperdink_Crypto.change);
 		key_state = NOT_FOUND;
 	}
 }

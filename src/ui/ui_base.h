@@ -7,6 +7,7 @@
 class PaperdinkUIBaseClass
 {
     public:
+        const GFXfont* font_lrg = &Mont_HeavyDEMO25pt7b; 
         const GFXfont* font_med = &Code_New_Roman9pt7b; 
         const GFXfont* font_med_bold = &Code_New_Roman_Bold10pt7b; 
 

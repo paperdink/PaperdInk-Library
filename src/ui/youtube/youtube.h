@@ -6,6 +6,9 @@
 
 #define DEBUG Serial
 
+#define MAX_YOUTUBE_SUBSCRIBER_COUNT 20
+#define MAX_YOUTUBE_VIEWS_COUNT 20
+
 class PaperdinkUIYoutubeClass : public PaperdinkUIBaseClass
 {
     public:
@@ -17,9 +20,6 @@ class PaperdinkUIYoutubeClass : public PaperdinkUIBaseClass
         void display_subscribers_sml(GxEPD2_GFX& display, int16_t x, int16_t y, int16_t w = 0, int16_t h = 0);
         void display_views_sml(GxEPD2_GFX& display, int16_t x, int16_t y, int16_t w = 0, int16_t h = 0);
 };
-
-#define MAX_YOUTUBE_SUBSCRIBER_COUNT 20
-#define MAX_YOUTUBE_VIEWS_COUNT 20
 
 extern PaperdinkUIYoutubeClass Paperdink_Youtube;
 
