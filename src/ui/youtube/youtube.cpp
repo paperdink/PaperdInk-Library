@@ -43,13 +43,13 @@ int8_t PaperdinkUIYoutubeClass::fetch_data(const char *channel_id, const char *a
 	return ret;
 }
 
-void PaperdinkUIYoutubeClass::display_subscribers_sml(GxEPD2_GFX& display, int16_t x, int16_t y, int16_t w, int16_t h)
+void PaperdinkUIYoutubeClass::display_subscribers_med(GxEPD2_GFX& display, int16_t x, int16_t y, int16_t w, int16_t h)
 {
 	int16_t xt, yt;
 	uint16_t wt, ht, prev_height = y, prev_width = x;
     char subscribers_str[MAX_YOUTUBE_SUBSCRIBER_COUNT];
 
-    display.setFont(font_med_bold);
+    display.setFont(font_med);
 	display.setTextColor(GxEPD_BLACK);
 	display.setTextSize(1);
 
@@ -61,24 +61,24 @@ void PaperdinkUIYoutubeClass::display_subscribers_sml(GxEPD2_GFX& display, int16
         // 5px and 4px margin
         display.setCursor(prev_width+5, prev_height+ht+4);
     } else {
-        display.setCursor(prev_width+5+((w-wt)/2), prev_height+4+((h-ht)/2));
-        prev_width += 5+((w+wt)/2);
+        display.setCursor(prev_width+5+((w-wt)/2)+(user_med_width/2), prev_height+4+((h-ht)/2));
+        prev_width += 5+((w+wt)/2)+(user_med_width/2);
         prev_height += 4+(ht);
     }
     display.print(subscribers_str);
     
     // 3 px margin
-    display.drawBitmap(prev_width-wt-user_sml_width-3, prev_height-(user_sml_height/2), user_sml, user_sml_width, user_sml_height, GxEPD_BLACK);
+    display.drawBitmap(prev_width-wt-user_med_width-5, prev_height-user_med_height+3, user_med, user_med_width, user_med_height, GxEPD_BLACK);
 }
 
-void PaperdinkUIYoutubeClass::display_views_sml(GxEPD2_GFX& display, int16_t x, int16_t y, int16_t w, int16_t h)
+void PaperdinkUIYoutubeClass::display_views_med(GxEPD2_GFX& display, int16_t x, int16_t y, int16_t w, int16_t h)
 {
 	int16_t xt, yt;
 	uint16_t wt, ht, prev_height = y, prev_width = x;
 	const int16_t block_width = 100;
     char views_str[MAX_YOUTUBE_VIEWS_COUNT];
 
-    display.setFont(font_med_bold);
+    display.setFont(font_med);
 	display.setTextColor(GxEPD_BLACK);
 	display.setTextSize(1);
 
@@ -90,14 +90,14 @@ void PaperdinkUIYoutubeClass::display_views_sml(GxEPD2_GFX& display, int16_t x, 
         // 5px and 4px margin
         display.setCursor(prev_width+5, prev_height+ht+4);
     } else {
-        display.setCursor(prev_width+5+((w-wt)/2), prev_height+4+((h-ht)/2));
-        prev_width += 5+((w+wt)/2);
+        display.setCursor(prev_width+5+((w-wt)/2)+(eye_med_width/2), prev_height+4+((h-ht)/2));
+        prev_width += 5+((w+wt)/2)+(eye_med_width/2);
         prev_height += 4+(ht);
     }
 	display.print(views_str);
 
     // 3 px margin
-    display.drawBitmap(prev_width-wt-eye_sml_width-3, prev_height-(eye_sml_height/2), eye_sml, eye_sml_width, eye_sml_height, GxEPD_BLACK);
+    display.drawBitmap(prev_width-wt-eye_med_width-5, prev_height-eye_med_height+3, eye_med, eye_med_width, eye_med_height, GxEPD_BLACK);
 }
 
 PaperdinkUIYoutubeClass Paperdink_Youtube;

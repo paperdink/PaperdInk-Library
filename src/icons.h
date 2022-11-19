@@ -9,7 +9,9 @@
 #include "icons/up_arrow_med.h"
 #include "icons/down_arrow_med.h"
 #include "icons/eye_sml.h"
+#include "icons/eye_med.h"
 #include "icons/user_sml.h"
+#include "icons/user_med.h"
 #include "icons/wifi_off_sml.h"
 
 #endif /* _PAPERDINK_ICONS_H_ */

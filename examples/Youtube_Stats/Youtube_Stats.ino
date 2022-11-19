@@ -24,6 +24,7 @@
 #include "config.h"
 #include <paperdink.h>
 #include "youtube_logo.h"
+#include "youtube_icon.h"
 
 /* Create Paperdink object */
 PAPERDINK_DEVICE Paperdink;
@@ -56,6 +57,7 @@ void setup()
 		DEBUG.println("Unable to initialize youtube");
 	}
 
+#ifdef DESIGN_1
     /* Show youtube logo */
     Paperdink.epd.drawBitmap(100, 60, youtube_logo, youtube_logo_width, youtube_logo_height, GxEPD_BLACK);
     if(Paperdink.epd.epd2.hasColor){
@@ -63,12 +65,24 @@ void setup()
     }
 
     /* Print name of the channel */
-    Paperdink_UI.display_text(Paperdink.epd, 150, 125, YOUTUBE_CHANNEL_NAME, 100, 50, &Code_New_Roman_Bold10pt7b);
+    Paperdink_UI.display_text(Paperdink.epd, 0, 140, YOUTUBE_CHANNEL_NAME, 400, 50, Paperdink_UI.font_med_bold);
+
+#elif DESIGN_2
+    /* Show youtube icon */
+    Paperdink.epd.drawBitmap(50, 60, youtube_icon, youtube_icon_width, youtube_icon_height, GxEPD_BLACK);
+    if(Paperdink.epd.epd2.hasColor){
+        Paperdink.epd.drawBitmap(50, 60, youtube_icon_red, youtube_icon_width, youtube_icon_height, GxEPD_RED);
+    }
+
+    /* Print name of the channel */
+    Paperdink_UI.display_text(Paperdink.epd, 170, 65, YOUTUBE_CHANNEL_NAME, 0, 0, Paperdink_UI.font_med_bold);
+    Paperdink_UI.display_text(Paperdink.epd, 170, 100, DESIGN_2_STRING, 0, 0, Paperdink_UI.font_sml_bold);
 
     /* Display number of subscribers and views */
-    Paperdink_Youtube.display_subscribers_sml(Paperdink.epd, 100, 160, 200, 50);
-    Paperdink_Youtube.display_views_sml(Paperdink.epd, 100, 200, 200, 50);
-
+    Paperdink_Youtube.display_subscribers_med(Paperdink.epd, 0, 170, 400, 50);
+    Paperdink_Youtube.display_views_med(Paperdink.epd, 0, 220, 400, 50);
+#endif
+    
     /* Send data to display for the update */
 	Paperdink.epd.display();
 

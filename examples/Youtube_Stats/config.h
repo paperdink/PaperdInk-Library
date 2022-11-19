@@ -23,9 +23,17 @@
 // Higher number means lower battery life
 #define UPDATES_PER_DAY 1
 
-// Youtube configuration TODO: Add how-to
+/* Youtube configuration TODO: Add how-to
+ * Get ID from username. Replace <API_KEY> and <USERNAME> 
+ * https://www.googleapis.com/youtube/v3/channels?key=<API_KEY>&forUsername=<USERNAME>&part=id
+ * 
+ * Uncomment either DESIGN_1 or DESIGN_2
+ */
+//#define DESIGN_1 (true)
+#define DESIGN_2 (true)
+#define DESIGN_2_STRING "CUSTOM-STRING"
 #define YOUTUBE_CHANNEL_NAME "YOUR-CHANNEL-NAME"
-#define YOUTUBE_CHANNEL_ID   "YOUR-CHANNEL-ID"
-#define YOUTUBE_API_ID       "YOUR-API-ID"
+#define YOUTUBE_CHANNEL_ID "YOUR-CHANNEL-ID"
+#define YOUTUBE_API_ID     "YOUR-API-KEY"
 
 #endif /* CONFIG_H */

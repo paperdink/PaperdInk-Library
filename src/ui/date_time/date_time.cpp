@@ -80,7 +80,7 @@ void PaperdinkUIDateClass::display_last_updated_time_med_style1(GxEPD2_GFX& disp
 	uint16_t wt, ht, prev_height = 0, prev_width = 0;
 	char time_str[5];
 
-	display.setFont(font_med);
+	display.setFont(font_sml);
 	display.setTextColor(GxEPD_BLACK);
 	display.setTextSize(1);
 

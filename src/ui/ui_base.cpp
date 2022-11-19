@@ -19,14 +19,14 @@ void PaperdinkUIBaseClass::display_grid(GxEPD2_GFX& display)
 }
 
 
-void PaperdinkUIBaseClass::display_text(GxEPD2_GFX& display, int16_t x, int16_t y, const char *string, int16_t w, int16_t h, const GFXfont* font, uint8_t color)
+void PaperdinkUIBaseClass::display_text(GxEPD2_GFX& display, int16_t x, int16_t y, const char *string, int16_t w, int16_t h, const GFXfont* font, uint8_t color, uint8_t size)
 {
 	int16_t xt, yt;
 	uint16_t wt, ht, prev_height = y, prev_width = x;
     
     display.setFont(font);
 	display.setTextColor(color);
-	display.setTextSize(1);
+	display.setTextSize(size);
 
     display.getTextBounds(string, 0, 0, &xt, &yt, &wt, &ht);
 	if(w == 0 || h == 0){
