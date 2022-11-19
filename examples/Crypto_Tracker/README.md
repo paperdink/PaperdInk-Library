@@ -3,8 +3,15 @@ This example displays 6 crypto ticker with their price and percentage change.
 It also shows the date and time it was updated.
 
 ## Usage
-Update the `config.h` file with configuration details
 
+### Fetch crypto ticker
+Visit [coingecko](www.coingecko.com) and search for the ticker you like.
+Open the ticker page and note the **API id** field. This string is the ticker string
+to be copied in the configuration file.
+
+### Update `config.h`
+
+Update the `config.h` file with configuration details
 
 ```
 // CONFIGURATION
