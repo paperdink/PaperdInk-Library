@@ -53,7 +53,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Code__New__Roman10pt7b_8h.html",
-"up__arrow__med_8h.html"
+"pin__assignment_8h.html#ac50e2b1f9ae3de4d3ba00d5861e18b1f"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
