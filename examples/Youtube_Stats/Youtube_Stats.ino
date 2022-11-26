@@ -59,13 +59,13 @@ void setup()
 
 #ifdef DESIGN_1
     /* Show youtube logo */
-    Paperdink.epd.drawBitmap(100, 60, youtube_logo, youtube_logo_width, youtube_logo_height, GxEPD_BLACK);
+    Paperdink.epd.drawBitmap(100, 55, youtube_logo, youtube_logo_width, youtube_logo_height, GxEPD_BLACK);
     if(Paperdink.epd.epd2.hasColor){
-        Paperdink.epd.drawBitmap(100, 60, youtube_logo_red, youtube_logo_width, youtube_logo_height, GxEPD_RED);
+        Paperdink.epd.drawBitmap(100, 55, youtube_logo_red, youtube_logo_width, youtube_logo_height, GxEPD_RED);
     }
 
     /* Print name of the channel */
-    Paperdink_UI.display_text(Paperdink.epd, 0, 140, YOUTUBE_CHANNEL_NAME, 400, 50, Paperdink_UI.font_med_bold);
+    Paperdink_UI.display_text(Paperdink.epd, 0, 130, YOUTUBE_CHANNEL_NAME, 400, 50, Paperdink_UI.font_med_bold);
 
 #elif DESIGN_2
     /* Show youtube icon */
@@ -78,11 +78,12 @@ void setup()
     Paperdink_UI.display_text(Paperdink.epd, 170, 65, YOUTUBE_CHANNEL_NAME, 0, 0, Paperdink_UI.font_med_bold);
     Paperdink_UI.display_text(Paperdink.epd, 170, 100, DESIGN_2_STRING, 0, 0, Paperdink_UI.font_sml_bold);
 
+#endif
+
     /* Display number of subscribers and views */
     Paperdink_Youtube.display_subscribers_med(Paperdink.epd, 0, 170, 400, 50);
     Paperdink_Youtube.display_views_med(Paperdink.epd, 0, 220, 400, 50);
-#endif
-    
+
     /* Send data to display for the update */
 	Paperdink.epd.display();
 
