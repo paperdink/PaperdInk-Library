@@ -5,8 +5,8 @@
 // CONFIGURATION
 // Uncomment only one of the below #define statements
 // based on the paperd.ink device you have
-#define PAPERDINK_DEVICE Paperdink_Classic
-//#define PAPERDINK_DEVICE Paperdink_Merlot
+//#define PAPERDINK_DEVICE Paperdink_Classic
+#define PAPERDINK_DEVICE Paperdink_Merlot
 
 #define SSID     "*****" // Wifi Network SSID (name of wifi network)
 #define PASSWORD "*****" // Wifi Network password
@@ -31,9 +31,9 @@
  */
 //#define DESIGN_1 (true)
 #define DESIGN_2 (true)
-#define DESIGN_2_STRING "CUSTOM-STRING"
-#define YOUTUBE_CHANNEL_NAME "YOUR-CHANNEL-NAME"
-#define YOUTUBE_CHANNEL_ID "YOUR-CHANNEL-ID"
-#define YOUTUBE_API_ID     "YOUR-API-KEY"
+#define DESIGN_2_STRING       "@XYZChannel"
+#define YOUTUBE_CHANNEL_NAME  "XYZ Channel"
+#define YOUTUBE_CHANNEL_ID    "*****"
+#define YOUTUBE_API_ID        "*****"
 
 #endif /* CONFIG_H */

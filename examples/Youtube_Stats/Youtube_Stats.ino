@@ -20,9 +20,9 @@
  * SOFTWARE.
  */
 
-/* config.h should be before paperdink.h */
+/* config.h should be before Paperdink.h */
 #include "config.h"
-#include <paperdink.h>
+#include <Paperdink.h>
 #include "youtube_logo.h"
 #include "youtube_icon.h"
 

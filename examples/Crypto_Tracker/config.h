@@ -5,8 +5,8 @@
 // CONFIGURATION
 // Uncomment only one of the below #define statements
 // based on the paperd.ink device you have
-#define PAPERDINK_DEVICE Paperdink_Classic
-//#define PAPERDINK_DEVICE Paperdink_Merlot
+//#define PAPERDINK_DEVICE Paperdink_Classic
+#define PAPERDINK_DEVICE Paperdink_Merlot
 
 #define SSID     "*****" // Wifi Network SSID (name of wifi network)
 #define PASSWORD "*****" // Wifi Network password
