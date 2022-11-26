@@ -1,5 +1,5 @@
 # Cryptocurrency Tracker
-This example displays 6 crypto ticker with their price and percentage change.
+This example displays 6 crypto tickers with their price and percentage change.
 It also shows the date and time it was updated.
 
 <img src="Crypto_Tracker.png" width="500" alt="Crypto tracker image">
