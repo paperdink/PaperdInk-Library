@@ -2,7 +2,7 @@
 This example displays 6 crypto ticker with their price and percentage change.
 It also shows the date and time it was updated.
 
-![Crypto Tracker](Crypto_Tracker.png?raw=true "Crypto Tracker" | width=500)
+<img src="Crypto_Tracker.png" width="500" alt="Crypto tracker image">
 
 ## Usage
 
