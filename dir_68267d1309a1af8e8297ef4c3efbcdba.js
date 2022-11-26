@@ -10,6 +10,6 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "fonts.h", "fonts_8h.html", null ],
     [ "icons.h", "icons_8h.html", null ],
     [ "paperdink.cpp", "paperdink_8cpp.html", null ],
-    [ "paperdink.h", "paperdink_8h.html", "paperdink_8h" ],
+    [ "Paperdink.h", "Paperdink_8h.html", "Paperdink_8h" ],
     [ "pin_assignment.h", "pin__assignment_8h.html", "pin__assignment_8h" ]
 ];
