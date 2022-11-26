@@ -1,6 +1,8 @@
 # Youtube Stats
 This example shows your youtube subscribers and total views count.
 
+<img src="Youtube_Stats.png" width="500" alt="Youtube stats image">
+
 ## Usage
 Update the `config.h` file with configuration details
 ```
