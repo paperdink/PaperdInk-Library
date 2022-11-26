@@ -5,11 +5,11 @@
 // CONFIGURATION
 // Uncomment only one of the below #define statements
 // based on the paperd.ink device you have
-#define PAPERDINK_DEVICE Paperdink_Classic
-//#define PAPERDINK_DEVICE Paperdink_Merlot
+//#define PAPERDINK_DEVICE Paperdink_Classic
+#define PAPERDINK_DEVICE Paperdink_Merlot
 
-#define SSID     "*****" // Wifi Network SSID (name of wifi network)
-#define PASSWORD "*****" // Wifi Network password
+#define SSID     "B305" // Wifi Network SSID (name of wifi network)
+#define PASSWORD "indianengineer98105" // Wifi Network password
 
 // Time zone from list https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv
 #define TIME_ZONE "PST8PDT,M3.2.0,M11.1.0"
