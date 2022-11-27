@@ -223,6 +223,7 @@ var NAVTREEINDEX0 =
 "index.html":[],
 "index.html":[0],
 "index.html#autotoc_md1":[0,0],
+"index.html#autotoc_md2":[0,1],
 "merlot_8cpp.html":[2,0,0,1,4],
 "merlot_8cpp_source.html":[2,0,0,1,4],
 "merlot_8h.html":[2,0,0,1,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "pin__assignment_8h.html#a9b41bdc625fc987d318710249adbca19":[2,0,0,11,3],
 "pin__assignment_8h.html#aa02bac860a3c7ee1a00b10fdf1990407":[2,0,0,11,19],
 "pin__assignment_8h.html#aa62a91121a8416e1fc44ca9fcff6d36a":[2,0,0,11,18],
-"pin__assignment_8h.html#aa8c957366ef9084af92c44996b5857e0":[2,0,0,11,16],
-"pin__assignment_8h.html#ab043cbf17e064086d28042d8f7707dbb":[2,0,0,11,14]
+"pin__assignment_8h.html#aa8c957366ef9084af92c44996b5857e0":[2,0,0,11,16]
 };

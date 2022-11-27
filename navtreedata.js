@@ -26,7 +26,8 @@ var NAVTREE =
 [
   [ "Paperd.Ink Library", "index.html", [
     [ "Paperd.Ink Library for Arduino", "index.html", [
-      [ "Library Dependencies (from arduino library manager)", "index.html#autotoc_md1", null ]
+      [ "Hardware features", "index.html#autotoc_md1", null ],
+      [ "Library Dependencies (from arduino library manager)", "index.html#autotoc_md2", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -56,7 +57,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Code__New__Roman10pt7b_8h.html",
-"pin__assignment_8h.html#ab4caa618bccec4ed861326ea194d7895"
+"pin__assignment_8h.html#ab043cbf17e064086d28042d8f7707dbb"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
