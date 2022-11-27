@@ -4,7 +4,7 @@
   <br />
   <a href="https://docs.paperd.ink/PaperdInk-Library/"><strong>Doxygen docs »</strong></a>
   <br />
-  <img src="extras/Main_Image.png" width=500px alt="Main Image">
+  <img src="https://github.com/paperdink/PaperdInk-Library/raw/main/extras/Main_Image.png" width=500px alt="Main Image">
 </p>
 
 
