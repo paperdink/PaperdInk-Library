@@ -4,9 +4,11 @@
   <br />
   <a href="https://docs.paperd.ink/PaperdInk-Library/"><strong>Doxygen docs »</strong></a>
   <br />
+  <img src="extras/Main_Image.png" width=500px alt="Main Image">
 </p>
 
-## Install Library Dependencies (from arduino library manager)
+
+## Library Dependencies (from arduino library manager)
   - Adafruit GFX library by Adafruit
   - GxEPD2 by Jean-Marc Zingg version
   - JSON Streaming Parser by Daniel Eichhorn
