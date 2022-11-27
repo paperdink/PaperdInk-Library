@@ -52,7 +52,7 @@ void PaperdinkUICryptoClass::display_med_box(GxEPD2_GFX& display, int16_t x, int
 	const char dummy_price[] = "USD 7.77777777"; // decides width of the box
     //const char change[] = "1.32%";
 
-	display.setFont(font_sml_bold);
+	display.setFont(font_bold);
 	display.setTextColor(GxEPD_BLACK);
 	display.setTextSize(1);
 
@@ -61,7 +61,7 @@ void PaperdinkUICryptoClass::display_med_box(GxEPD2_GFX& display, int16_t x, int
 	display.setCursor(x+14, y+ht+3);
 	display.print(ticker);
 
-	display.setFont(font_sml);
+	display.setFont(font);
     /* Display background */
 	display.getTextBounds(dummy_price, 0, 0, &xt, &yt, &wt, &ht);
 	display.fillRoundRect(x+5, y+30, wt+20, ht+10, ht+10, display.epd2.hasColor ? GxEPD_RED : GxEPD_BLACK);

@@ -49,7 +49,7 @@ void PaperdinkUIYoutubeClass::display_subscribers_med(GxEPD2_GFX& display, int16
 	uint16_t wt, ht, prev_height = y, prev_width = x;
     char subscribers_str[MAX_YOUTUBE_SUBSCRIBER_COUNT];
 
-    display.setFont(font_med);
+    display.setFont(font);
 	display.setTextColor(GxEPD_BLACK);
 	display.setTextSize(1);
 
@@ -78,7 +78,7 @@ void PaperdinkUIYoutubeClass::display_views_med(GxEPD2_GFX& display, int16_t x, 
 	const int16_t block_width = 100;
     char views_str[MAX_YOUTUBE_VIEWS_COUNT];
 
-    display.setFont(font_med);
+    display.setFont(font);
 	display.setTextColor(GxEPD_BLACK);
 	display.setTextSize(1);
 

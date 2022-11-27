@@ -50,27 +50,26 @@ int8_t PaperdinkUIDateClass::fetch_data(const char *time_zone, uint8_t week_star
 	return 0;
 }
 
-void PaperdinkUIDateClass::diplay_day_date_lrg_style1(GxEPD2_GFX& display, uint16_t x, uint16_t y)
+void PaperdinkUIDateClass::diplay_day_date_style1_center(GxEPD2_GFX& display, uint16_t x, uint16_t y, uint16_t w)
 {
 	int16_t xt, yt;
 	uint16_t wt, ht, prev_height = 0, prev_width = 0;
 	char date_str[7];
-	const uint16_t WIDTH = 200;
 
-	display.setFont(font_lrg);
+	display.setFont(font);
 	display.setTextColor(display.epd2.hasColor ? GxEPD_RED : GxEPD_BLACK);
 	display.setTextSize(1);
 
     // Display day
 	display.getTextBounds(wday, 0, 0, &xt, &yt, &wt, &ht);
-	display.setCursor(x+((WIDTH-wt)/2), y+ht);
+	display.setCursor(x+((w-wt)/2), y+ht);
 	display.println(wday);
 	prev_height += y+ht;
 
     // Display date
 	sprintf(date_str, "%d %s", mday, month);
 	display.getTextBounds(date_str, 0, 0, &xt, &yt, &wt, &ht);
-	display.setCursor(x+((WIDTH-wt)/2), prev_height+ht+20);
+	display.setCursor(x+((w-wt)/2), prev_height+ht+20);
 	display.println(date_str);
 }
 
@@ -80,7 +79,7 @@ void PaperdinkUIDateClass::display_last_updated_time_med_style1(GxEPD2_GFX& disp
 	uint16_t wt, ht, prev_height = 0, prev_width = 0;
 	char time_str[5];
 
-	display.setFont(font_sml);
+	display.setFont(font);
 	display.setTextColor(GxEPD_BLACK);
 	display.setTextSize(1);
 

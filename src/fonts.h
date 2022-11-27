@@ -9,4 +9,11 @@
 #include "fonts/Code_New_Roman_Bold10pt7b.h"
 #include "fonts/Mont_HeavyDEMO25pt7b.h"
 
+#define PAPERDINK_FONT_LRG Mont_HeavyDEMO25pt7b
+#define PAPERDINK_FONT_LRG_BOLD Mont_HeavyDEMO25pt7b
+#define PAPERDINK_FONT_MED Code_New_Roman15pt7b
+#define PAPERDINK_FONT_MED_BOLD Code_New_Roman_Bold15pt7b
+#define PAPERDINK_FONT_SML Code_New_Roman9pt7b
+#define PAPERDINK_FONT_SML_BOLD Code_New_Roman9pt7b
+
 #endif /* _PAPERDINK_FONTS_H_ */
