@@ -1,10 +1,27 @@
 # Wave
 This example display day and date along with weather and todo list.
-Todo list is fetched from [Taiga](taiga.io) currently and weather from [Openweathermap](openweathermap.org)
+Todo list is fetched from [Taiga](https://www.taiga.io) currently and weather from [Openweathermap](https://www.openweathermap.org)
 
 <img src="Wave.png" width="500" alt="Wave image">
 
 ## Usage
+
+### Getting Openweathermap API key
+From their [website](https://openweathermap.org/appid),
+
+The API key is all you need to call any of our weather APIs.
+Once you [sign up](https://openweathermap.org/home/sign_up) using your email,
+the API key (APPID) will be sent to you in a confirmation email.
+Your API keys can always be found on your [account page](https://home.openweathermap.org/api_keys),
+where you can also generate additional API keys if needed. 
+Check our [documentation page](https://openweathermap.org/api)
+to find all technical information for each product. 
+Documentation is an essential guide with actual examples and 
+comprehensive description of API calls, responses and parameters.
+
+### Todo list from Taiga
+First create an account on [Taiga](https://www.taiga.io) and create a new project.
+Add your login details and project name to the config file.
 
 ### Update `config.h`
 
