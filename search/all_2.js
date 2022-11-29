@@ -9,7 +9,7 @@ var searchData=
   ['code_5fnew_5froman9pt7b_2eh_6',['Code_New_Roman9pt7b.h',['../Code__New__Roman9pt7b_8h.html',1,'']]],
   ['code_5fnew_5froman_5fbold10pt7b_2eh_7',['Code_New_Roman_Bold10pt7b.h',['../Code__New__Roman__Bold10pt7b_8h.html',1,'']]],
   ['code_5fnew_5froman_5fbold15pt7b_2eh_8',['Code_New_Roman_Bold15pt7b.h',['../Code__New__Roman__Bold15pt7b_8h.html',1,'']]],
-  ['color_5fpalette_5fbuffer_9',['color_palette_buffer',['../bitmap__parser_8cpp.html#a4d64a7ae7e7b84461895fd34b9ac29bd',1,'bitmap_parser.cpp']]],
+  ['color_9',['color',['../classPaperdink__Merlot.html#a56c12d812b6922e3236eed0f3f854fbb',1,'Paperdink_Merlot::color()'],['../classPaperdink__Classic.html#af3d20868695071cc14e3e160062c0ae8',1,'Paperdink_Classic::color()'],['../classPaperdinkDeviceBaseClass.html#a8302fffe17e00ec9f32642fc023038ea',1,'PaperdinkDeviceBaseClass::color()']]],
   ['common_2ecpp_10',['common.cpp',['../common_8cpp.html',1,'']]],
   ['common_2eh_11',['common.h',['../common_8h.html',1,'']]],
   ['completed_12',['COMPLETED',['../weather__parser_8cpp.html#a02db9a290a38910921877cb5849e32bca3549811efddf16048f4b8f6a3b960b41',1,'weather_parser.cpp']]],

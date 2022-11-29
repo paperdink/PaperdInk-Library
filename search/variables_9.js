@@ -1,11 +1,8 @@
 var searchData=
 [
-  ['up_5farrow_5fmed_0',['up_arrow_med',['../up__arrow__med_8h.html#aab9bb00f932bd71cb2e001e0548deccd',1,'up_arrow_med.h']]],
-  ['up_5farrow_5fred_1',['up_arrow_red',['../up__arrow__med_8h.html#a7174eb7ae4f2725e8a17312ec6a21a1f',1,'up_arrow_med.h']]],
-  ['up_5farrow_5fsml_2',['up_arrow_sml',['../up__arrow__sml_8h.html#a0ab6640bf5efe15dadc6bc6b38a20b1e',1,'up_arrow_sml.h']]],
-  ['up_5farrow_5fsml_5fred_3',['up_arrow_sml_red',['../up__arrow__sml_8h.html#ab74320ef31eb33f752bc599df0563b6e',1,'up_arrow_sml.h']]],
-  ['user_5fmed_4',['user_med',['../user__med_8h.html#a4dd3c404b32e8ddc671082651dbb47a9',1,'user_med.h']]],
-  ['user_5fmed_5fred_5',['user_med_red',['../user__med_8h.html#ad9bff79473866b26d8244c356a00ec4f',1,'user_med.h']]],
-  ['user_5fsml_6',['user_sml',['../user__sml_8h.html#a62c1cf5c7ad2a59976a23a67b83fce67',1,'user_sml.h']]],
-  ['user_5fsml_5fred_7',['user_sml_red',['../user__sml_8h.html#ac8375b7ddbe5d11c377e56a0807bc87a',1,'user_sml.h']]]
+  ['task_5fcount_0',['task_count',['../classPaperdinkUITodoListClass.html#ad01bf3afa0109d2609020a539afbaf9b',1,'PaperdinkUITodoListClass']]],
+  ['tasks_1',['tasks',['../classPaperdinkUITodoListClass.html#ac2343e208525596653c605fbe6c303f0',1,'PaperdinkUITodoListClass']]],
+  ['tasks_5furl_2',['tasks_url',['../todo__list_8cpp.html#a9032ba596899ca510508777e6c0c1d40',1,'todo_list.cpp']]],
+  ['todo_5flistener_3',['todo_listener',['../todo__list_8cpp.html#a7f2958ae236b7edf72f5863aa597a714',1,'todo_list.cpp']]],
+  ['token_4',['token',['../classPaperdinkUITodoListTaigaClass.html#ac0f47620480e3c71d7363de77099d421',1,'PaperdinkUITodoListTaigaClass']]]
 ];
