@@ -1,4 +1,4 @@
-const uint8_t Mont_HeavyDEMO25pt7bBitmaps[] PROGMEM = {
+const uint8_t Mont_Heavy25pt7bBitmaps[] PROGMEM = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x1F, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
@@ -760,7 +760,7 @@ const uint8_t Mont_HeavyDEMO25pt7bBitmaps[] PROGMEM = {
 	0xFC, 0xFC, 0x1F, 0x1F, 0xFC, 0xF8, 0xFF, 0x7F, 0x00, 0xDB, 0xDB, 0xDB,
 	0xFF, 0xFF, 0xFF, 0x18, 0x7E, 0xFF, 0xE7, 0xC3, 0xFF, 0xFF, 0xFF };
 
-const GFXglyph Mont_HeavyDEMO25pt7bGlyphs[] PROGMEM = {
+const GFXglyph Mont_Heavy25pt7bGlyphs[] PROGMEM = {
 	{     0,   0,   0,  11,    0,    1 },        // 0x20 ' '
 	{     0,   9,  35,  15,    3,  -34 },        // 0x21 '!'
 	{    40,  18,  13,  24,    3,  -33 },        // 0x22 '"'
@@ -857,9 +857,9 @@ const GFXglyph Mont_HeavyDEMO25pt7bGlyphs[] PROGMEM = {
 	{  8990,  16,  47,  19,    2,  -38 },        // 0x7D '}'
 	{  9084,   8,  35,  28,   10,  -34 } };        // 0x7E '~'
 
-const GFXfont Mont_HeavyDEMO25pt7b PROGMEM = {
-	(uint8_t  *)Mont_HeavyDEMO25pt7bBitmaps,
-	(GFXglyph *)Mont_HeavyDEMO25pt7bGlyphs,
+const GFXfont Mont_Heavy25pt7b PROGMEM = {
+	(uint8_t  *)Mont_Heavy25pt7bBitmaps,
+	(GFXglyph *)Mont_Heavy25pt7bGlyphs,
 	0x20, 0x7E, 63 };
 
 // Approx. 9791 bytes
