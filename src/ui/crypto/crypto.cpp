@@ -36,7 +36,6 @@ int8_t PaperdinkUICryptoClass::fetch_data(const char *ticker)
 	}
 
 	https.end();
-
 	DEBUG.printf("[HTTP] COMPLETED \r\n");
 	return ret;
 }
