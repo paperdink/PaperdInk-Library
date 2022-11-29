@@ -4,10 +4,6 @@
 
 enum WEATHER_STATE {NOT_FOUND, FOUND_TIME, FOUND_WEATHER, FOUND_MAIN, COMPLETED};
 static WEATHER_STATE key_state;
-// #define FORECAST_HOURS 3
-// uint8_t weather_count
-
-extern char weather_string[10];
 
 void WeatherJsonListener::whitespace(char c)
 {
@@ -46,8 +42,8 @@ void WeatherJsonListener::key(String key)
 void WeatherJsonListener::value(String value)
 {
 	if(key_state == FOUND_MAIN){
-		Serial.printf("Got weather: %s\r\n", value);
-		strncpy(weather_string, (char*)value.c_str(), 10);
+		DEBUG.printf("Got weather: %s\r\n", value);
+		strncpy(Paperdink_Weather.weather_string, (char*)value.c_str(), 10);
         //key_state = NOT_FOUND;
 		key_state = COMPLETED;
 	}
