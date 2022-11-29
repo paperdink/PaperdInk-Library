@@ -113,8 +113,8 @@ Inheritance diagram for PaperdinkUIClass:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a124f4e85820343a9ecad169628603e4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPaperdinkUIClass.html#a124f4e85820343a9ecad169628603e4b">display_grid</a> (GxEPD2_GFX &amp;display)</td></tr>
 <tr class="separator:a124f4e85820343a9ecad169628603e4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78e621045157f61b8308c9db74449ee1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPaperdinkUIClass.html#a78e621045157f61b8308c9db74449ee1">display_text</a> (GxEPD2_GFX &amp;display, int16_t x, int16_t y, const char *string, int16_t w=0, int16_t h=0, const GFXfont *<a class="el" href="classPaperdinkUIBaseClass.html#a2403c7536e7ad035b91e3f171c0de35e">font</a>=&amp;<a class="el" href="fonts_8h.html#aee878b90ade4178e1d8629544ddfae46">PAPERDINK_FONT_SML</a>, uint8_t color=GxEPD_BLACK, uint8_t size=1)</td></tr>
-<tr class="separator:a78e621045157f61b8308c9db74449ee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30c42f3babc9edc5e8800ec392064fe4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPaperdinkUIClass.html#a30c42f3babc9edc5e8800ec392064fe4">display_text_center</a> (GxEPD2_GFX &amp;display, int16_t x, int16_t y, const char *string, int16_t w=0, int16_t h=0, const GFXfont *<a class="el" href="classPaperdinkUIBaseClass.html#a2403c7536e7ad035b91e3f171c0de35e">font</a>=&amp;<a class="el" href="fonts_8h.html#aee878b90ade4178e1d8629544ddfae46">PAPERDINK_FONT_SML</a>, uint8_t color=GxEPD_BLACK, uint8_t size=1)</td></tr>
+<tr class="separator:a30c42f3babc9edc5e8800ec392064fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1cf7fd95a6ac81269fea5b2bfdb6a98f"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPaperdinkUIClass.html#a1cf7fd95a6ac81269fea5b2bfdb6a98f">read16</a> (File &amp;f)</td></tr>
 <tr class="separator:a1cf7fd95a6ac81269fea5b2bfdb6a98f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa404292b2e5fa2e9855cd7dde7f3147"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPaperdinkUIClass.html#afa404292b2e5fa2e9855cd7dde7f3147">read32</a> (File &amp;f)</td></tr>
@@ -132,7 +132,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ui__base_8h_source.html#l00018">18</a> of file <a class="el" href="ui__base_8h_source.html">ui_base.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ui__base_8h_source.html#l00015">15</a> of file <a class="el" href="ui__base_8h_source.html">ui_base.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad4f20660f4bcddeb5f2dfbb324a6ed8d" name="ad4f20660f4bcddeb5f2dfbb324a6ed8d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad4f20660f4bcddeb5f2dfbb324a6ed8d">&#9670;&#160;</a></span>display_bitmap_fs()</h2>
@@ -375,14 +375,14 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a78e621045157f61b8308c9db74449ee1" name="a78e621045157f61b8308c9db74449ee1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78e621045157f61b8308c9db74449ee1">&#9670;&#160;</a></span>display_text()</h2>
+<a id="a30c42f3babc9edc5e8800ec392064fe4" name="a30c42f3babc9edc5e8800ec392064fe4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30c42f3babc9edc5e8800ec392064fe4">&#9670;&#160;</a></span>display_text_center()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void PaperdinkUIClass::display_text </td>
+          <td class="memname">void PaperdinkUIClass::display_text_center </td>
           <td>(</td>
           <td class="paramtype">GxEPD2_GFX &amp;&#160;</td>
           <td class="paramname"><em>display</em>, </td>
@@ -462,7 +462,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   38</span> </div>
 <div class="line"><span class="lineno">   39</span>    display.print(<span class="keywordtype">string</span>);</div>
 <div class="line"><span class="lineno">   40</span>}</div>
-<div class="ttc" id="aclassPaperdinkUIBaseClass_html_a2403c7536e7ad035b91e3f171c0de35e"><div class="ttname"><a href="classPaperdinkUIBaseClass.html#a2403c7536e7ad035b91e3f171c0de35e">PaperdinkUIBaseClass::font</a></div><div class="ttdeci">const GFXfont * font</div><div class="ttdef"><b>Definition:</b> <a href="ui__base_8h_source.html#l00014">ui_base.h:14</a></div></div>
+<div class="ttc" id="aclassPaperdinkUIBaseClass_html_a2403c7536e7ad035b91e3f171c0de35e"><div class="ttname"><a href="classPaperdinkUIBaseClass.html#a2403c7536e7ad035b91e3f171c0de35e">PaperdinkUIBaseClass::font</a></div><div class="ttdeci">const GFXfont * font</div><div class="ttdef"><b>Definition:</b> <a href="ui__base_8h_source.html#l00011">ui_base.h:11</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

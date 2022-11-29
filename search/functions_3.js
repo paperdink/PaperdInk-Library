@@ -8,11 +8,11 @@ var searchData=
   ['disable_5feverything_5',['disable_everything',['../classPaperdinkDeviceBaseClass.html#a01dc2809d5fb50978cd3427817a16d9d',1,'PaperdinkDeviceBaseClass']]],
   ['display_5fbitmap_5ffs_6',['display_bitmap_fs',['../classPaperdinkUIClass.html#ad4f20660f4bcddeb5f2dfbb324a6ed8d',1,'PaperdinkUIClass']]],
   ['display_5fgrid_7',['display_grid',['../classPaperdinkUIClass.html#a124f4e85820343a9ecad169628603e4b',1,'PaperdinkUIClass']]],
-  ['display_5flast_5fupdated_5ftime_5fmed_5fstyle1_8',['display_last_updated_time_med_style1',['../classPaperdinkUIDateClass.html#a944b9623d61cc8ab29d9d5a1f355cb55',1,'PaperdinkUIDateClass']]],
+  ['display_5flast_5fupdated_5ftime_5fstyle1_5fcenter_8',['display_last_updated_time_style1_center',['../classPaperdinkUIDateClass.html#a607ad8b7bb9d7f2606499823904beef8',1,'PaperdinkUIDateClass']]],
   ['display_5flrg_5fbox_9',['display_lrg_box',['../classPaperdinkUITodoListClass.html#ad9e6784d29daa463b80f467fc767dcc6',1,'PaperdinkUITodoListClass']]],
   ['display_5fmed_5fbox_10',['display_med_box',['../classPaperdinkUICryptoClass.html#a98d9902b392a131b9333c96e65c94863',1,'PaperdinkUICryptoClass']]],
   ['display_5fsubscribers_5fmed_11',['display_subscribers_med',['../classPaperdinkUIYoutubeClass.html#ae863dc516ed30076d150b5ca93aa6719',1,'PaperdinkUIYoutubeClass']]],
-  ['display_5ftext_12',['display_text',['../classPaperdinkUIClass.html#a78e621045157f61b8308c9db74449ee1',1,'PaperdinkUIClass']]],
+  ['display_5ftext_5fcenter_12',['display_text_center',['../classPaperdinkUIClass.html#a30c42f3babc9edc5e8800ec392064fe4',1,'PaperdinkUIClass']]],
   ['display_5fviews_5fmed_13',['display_views_med',['../classPaperdinkUIYoutubeClass.html#a9d5d6f292ac8570535602144742dcfec',1,'PaperdinkUIYoutubeClass']]],
   ['display_5fweather_5ftext_5fcenter_14',['display_weather_text_center',['../classPaperdinkUIWeatherClass.html#a832a81f4f090fa025d3e11d61744ea57',1,'PaperdinkUIWeatherClass']]]
 ];
