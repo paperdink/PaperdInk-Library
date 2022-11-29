@@ -33,7 +33,7 @@
 #define DESIGN_2 (true)
 #define DESIGN_2_STRING       "@XYZChannel"
 #define YOUTUBE_CHANNEL_NAME  "XYZ Channel"
-#define YOUTUBE_CHANNEL_ID    "*****"
-#define YOUTUBE_API_ID        "*****"
+#define YOUTUBE_CHANNEL_ID    "*********"
+#define YOUTUBE_API_ID        "*********"
 
 #endif /* CONFIG_H */
