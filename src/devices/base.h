@@ -11,6 +11,9 @@
 class PaperdinkDeviceBaseClass
 {
     public:
+        uint8_t has_color = false;
+        uint8_t color = GxEPD_BLACK;
+
         int8_t begin();
         virtual int8_t enable_display();
         virtual int8_t disable_display();
