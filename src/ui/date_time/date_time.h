@@ -25,7 +25,7 @@ class PaperdinkUIDateClass : public PaperdinkUIBaseClass
 
         int8_t fetch_data(const char *time_zone, uint8_t week_start_offset = 0);
         void diplay_day_date_style1_center(GxEPD2_GFX& display, uint16_t x, uint16_t y, uint16_t w);
-        void display_last_updated_time_med_style1(GxEPD2_GFX& display, uint16_t x, uint16_t y);
+        void display_last_updated_time_style1_center(GxEPD2_GFX& display, uint16_t x, uint16_t y, uint16_t w);
 
 };
 

@@ -47,6 +47,9 @@ void setup()
 
     /* Fetch and display cryptocurrency data */
     /* TODO: Put in some kind of loop */
+    Paperdink_Crypto.font = &PAPERDINK_FONT_SML;
+    Paperdink_Crypto.font_bold = &PAPERDINK_FONT_SML_BOLD;
+    
     if(Paperdink_Crypto.fetch_data(CRYPTO_TICKER_1) < 0){
         DEBUG.println("Unable to fetch data for " CRYPTO_TICKER_1);
     }
@@ -82,9 +85,12 @@ void setup()
         DEBUG.println("Unable to fetch Date Time data");
     }
     /* Display date */
-	Paperdink_Date.diplay_day_date_lrg_style1(Paperdink.epd, 200, 20);
+    Paperdink_Date.font = &PAPERDINK_FONT_LRG;
+	Paperdink_Date.diplay_day_date_style1_center(Paperdink.epd, 200, 20, 200);
+
     /* Display last updated time */
-	Paperdink_Date.display_last_updated_time_med_style1(Paperdink.epd, 215, 125);
+	Paperdink_Date.font = &PAPERDINK_FONT_SML;
+    Paperdink_Date.display_last_updated_time_style1_center(Paperdink.epd, 200, 125, 200);
 
     /* Send data to display for the update */ 
 	Paperdink.epd.display();

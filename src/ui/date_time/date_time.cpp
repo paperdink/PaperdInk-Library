@@ -15,7 +15,8 @@ int8_t PaperdinkUIDateClass::fetch_data(const char *time_zone, uint8_t week_star
 
 	    if(!getLocalTime(&timeinfo)){
 		    Serial.println("Failed to obtain time. Retrying...");
-	        if (i == CONFIG_TIME_RETRY_COUNT){
+	        delay(1000);
+            if (i == CONFIG_TIME_RETRY_COUNT){
                 return -1;
             }
         } else {
@@ -73,21 +74,20 @@ void PaperdinkUIDateClass::diplay_day_date_style1_center(GxEPD2_GFX& display, ui
 	display.println(date_str);
 }
 
-void PaperdinkUIDateClass::display_last_updated_time_med_style1(GxEPD2_GFX& display, uint16_t x, uint16_t y)
+void PaperdinkUIDateClass::display_last_updated_time_style1_center(GxEPD2_GFX& display, uint16_t x, uint16_t y, uint16_t w)
 {
 	int16_t xt, yt;
 	uint16_t wt, ht, prev_height = 0, prev_width = 0;
-	char time_str[5];
+	char time_str[] = "Updated at: XX:XX";
 
 	display.setFont(font);
 	display.setTextColor(GxEPD_BLACK);
 	display.setTextSize(1);
 
-	display.getTextBounds(wday, 0, 0, &xt, &yt, &wt, &ht);
-	display.setCursor(x, y+ht);
-
-	sprintf(time_str, "%02d:%02d", mil_hour, min);
-	display.printf("Updated at: %s", time_str);
+    sprintf(&time_str[12], "%02d:%02d", mil_hour, min);
+	display.getTextBounds(time_str, 0, 0, &xt, &yt, &wt, &ht);
+	display.setCursor(x+((w-wt)/2), y+ht);
+	display.print(time_str);
 }
 
 PaperdinkUIDateClass Paperdink_Date;
