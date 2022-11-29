@@ -13,6 +13,8 @@
 
 #include "ui/ui_base.h"
 
+#define DEBUG Serial
+
 /* Convert the Json data into an Arduino Stream */
 class ArudinoStreamParser : public Stream, public JsonStreamingParser  {
     /* https://github.com/mrfaptastic/json-streaming-parser2 */

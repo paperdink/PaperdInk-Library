@@ -11,7 +11,6 @@
 #define _PAPERDINK_H_
 
 #include <Arduino.h>
-#include "bitmap/bitmap_parser.h"
 #include "pin_assignment.h"
 
 // UI components
@@ -19,6 +18,7 @@
 #include "ui/date_time/date_time.h"
 #include "ui/weather/weather.h"
 #include "ui/youtube/youtube.h"
+#include "ui/todo_list/todo_list.h"
 
 // Paperdink Devices
 #include "devices/classic.h"
