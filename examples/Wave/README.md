@@ -23,6 +23,10 @@ comprehensive description of API calls, responses and parameters.
 First create an account on [Taiga](https://www.taiga.io) and create a new project.
 Add your login details and project name to the config file.
 
+### Uploading bitmaps
+Use [ESP32 Sketch data upload](https://randomnerdtutorials.com/install-esp32-filesystem-uploader-arduino-ide/)
+to upload images from data folder.
+
 ### Update `config.h`
 
 Update the `config.h` file with configuration details
