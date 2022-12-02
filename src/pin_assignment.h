@@ -11,29 +11,29 @@
 // SPI pins
 
 // SD card pins
-#define SS 21
+#define SS    21
 #define SD_CS SS
 #define SD_EN 5
 
 // E-paper pins
-#define EPD_CS 22
-#define EPD_DC 15
+#define EPD_CS   22
+#define EPD_DC   15
 #define EPD_BUSY 34
-#define EPD_EN 12
-#define EPD_RST 13
+#define EPD_EN   12
+#define EPD_RST  13
 
 // PCF8574 pins
-#define PCF_INT 35
-#define SD_CD P4 // input
+#define PCF_INT   35
+#define SD_CD     P4 // input
 #define EXT_GPIO1 P5
 #define EXT_GPIO2 P6
 #define EXT_GPIO3 P7
 #define PCF_I2C_ADDR 0x38
 
 // LiPo
-#define CHARGING_PIN 36
-#define BATT_EN 25
-#define BATTERY_VOLTAGE 34
+#define CHARGE_PIN 36
+#define BATT_EN    25
+#define BATT_VOLT  39
 
 // Buzzer
 #define BUZR 26
