@@ -2,6 +2,7 @@
 #ifndef _PAPERDINK_COMMON_H_
 #define _PAPERDINK_COMMON_H_
 
+#include <ArduinoJson.h>
 #include <JsonStreamingParser.h>
 #include <JsonListener.h>
 #include <Print.h>
