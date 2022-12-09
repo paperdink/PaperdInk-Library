@@ -114,12 +114,13 @@ void PaperdinkUIWeatherClass::display_weather_style1(GxEPD2_GFX& display, uint16
 
     prev_width = x; // Reset width for next line
 
+    // TODO: OWM API provides rain/snow in mm only. Convert to in
     // Show rain
     display.drawBitmap(prev_width, prev_height+10, umbrella_sml, umbrella_sml_width, umbrella_sml_height, GxEPD_BLACK); 
     prev_width += umbrella_sml_width;
 
     display.setCursor(prev_width+10, prev_height+10+ht+2);
-    display.printf("%d", (int16_t)Paperdink_Weather.rain);
+    display.printf("%.2f mm", Paperdink_Weather.rain);
     prev_height += umbrella_sml_height+10;
 
     prev_width = x; // Reset width for next line
@@ -129,7 +130,7 @@ void PaperdinkUIWeatherClass::display_weather_style1(GxEPD2_GFX& display, uint16
     prev_width += snowflake_sml_width;
 
     display.setCursor(prev_width+10, prev_height+10+ht+2);
-    display.printf("%d", (int16_t)Paperdink_Weather.snow);
+    display.printf("%.2f mm", Paperdink_Weather.snow);
 
 }
 
