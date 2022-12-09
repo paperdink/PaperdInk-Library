@@ -108,9 +108,40 @@ int8_t fetch_quote()
         DEBUG.printf("[HTTP] GET SUCCESS\r\n");
         //String payload = https.getString();
         //Serial.println(payload);
-        ArudinoStreamParser parser;
-        parser.setListener(&quote_listener);
-        https.writeToStream(&parser);
+
+        /* There are two ways to parse the data.
+         * Option 1: ArduinoJSON (https://github.com/bblanchon/ArduinoJson)
+         * If the data is small, ArduinoJSON can be used
+         * which reserves memory and deserializes the incoming JSON data.
+         * 
+         * Option 2: JSON Streaming Parser (https://github.com/squix78/json-streaming-parser)
+         * If the data is large, JSON Streaming Parser can be used
+         * which does not reserve memory at once. It reserves small chunks of memory
+         * and the user can store only what is required.
+         */
+        
+        /* Option 1: ArduinoJSON */
+        DynamicJsonDocument json(50 * 1024);
+        DeserializationError error = deserializeJson(json, https.getStream());
+        // Test if parsing succeeds.
+        if (error) {
+            Serial.print(F("deserializeJson() failed: "));
+            Serial.println(error.c_str());
+            ret = -1;
+        } else {
+            // convert it to a JsonObject
+            JsonObject root = json.as<JsonObject>();
+            strncpy(quote_string, root["content"], MAX_QUOTE_LENGTH);
+            Serial.printf("Quote: %s\r\n", quote_string);
+            
+            strncpy(author_string, root["author"], MAX_AUTHOR_LENGTH);
+            Serial.printf("Author: %s\r\n", author_string);
+        }
+
+        /* Option 2: JSONStreamingParser */
+        //ArudinoStreamParser parser;
+        //parser.setListener(&quote_listener);
+        //https.writeToStream(&parser);
     } else {
         DEBUG.printf("[HTTP] AUTH... failed, error: %d::%s\r\n", httpCode, https.errorToString(httpCode).c_str());
         ret = -1;
@@ -163,7 +194,6 @@ void display_quote(GxEPD2_GFX& display)
 
     str_len = strlen(quote_string);
 
-    display.fillScreen(GxEPD_WHITE);
     display.setFont(QUOTE_FONT);
     display.setTextColor(GxEPD_BLACK);
     display.setTextSize(1);
