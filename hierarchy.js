@@ -3,6 +3,7 @@ var hierarchy =
     [ "JsonListener", null, [
       [ "CryptoJsonListener", "classCryptoJsonListener.html", null ],
       [ "TodoTaigaJsonListener", "classTodoTaigaJsonListener.html", null ],
+      [ "TodoTodoistJsonListener", "classTodoTodoistJsonListener.html", null ],
       [ "WeatherJsonListener", "classWeatherJsonListener.html", null ],
       [ "YoutubeJsonListener", "classYoutubeJsonListener.html", null ]
     ] ],
@@ -18,7 +19,8 @@ var hierarchy =
       [ "PaperdinkUICryptoClass", "classPaperdinkUICryptoClass.html", null ],
       [ "PaperdinkUIDateClass", "classPaperdinkUIDateClass.html", null ],
       [ "PaperdinkUITodoListClass", "classPaperdinkUITodoListClass.html", [
-        [ "PaperdinkUITodoListTaigaClass", "classPaperdinkUITodoListTaigaClass.html", null ]
+        [ "PaperdinkUITodoListTaigaClass", "classPaperdinkUITodoListTaigaClass.html", null ],
+        [ "PaperdinkUITodoListTodoistClass", "classPaperdinkUITodoListTodoistClass.html", null ]
       ] ],
       [ "PaperdinkUIWeatherClass", "classPaperdinkUIWeatherClass.html", null ],
       [ "PaperdinkUIYoutubeClass", "classPaperdinkUIYoutubeClass.html", null ]

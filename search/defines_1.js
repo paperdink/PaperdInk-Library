@@ -1,9 +1,14 @@
 var searchData=
 [
-  ['charging_5fpin_0',['CHARGING_PIN',['../pin__assignment_8h.html#aebba53c6ed65f341aa4efaac847da261',1,'pin_assignment.h']]],
-  ['config_5ftime_5fretry_5fcount_1',['CONFIG_TIME_RETRY_COUNT',['../date__time_8h.html#a3a3e2e5c42a500e7c7350e06c6305ffc',1,'date_time.h']]],
-  ['crypto_5fmax_5fchange_5flength_2',['CRYPTO_MAX_CHANGE_LENGTH',['../crypto_8h.html#aae6e8c50177cd60553bc23b95b466804',1,'crypto.h']]],
-  ['crypto_5fmax_5fchange_5flength_5fstr_3',['CRYPTO_MAX_CHANGE_LENGTH_STR',['../crypto_8h.html#ae5930dc8027721f254194fa119ae30f4',1,'crypto.h']]],
-  ['crypto_5fmax_5fprice_5flength_4',['CRYPTO_MAX_PRICE_LENGTH',['../crypto_8h.html#a5960f9c4e6fcce2ba459a33d78988fd2',1,'crypto.h']]],
-  ['crypto_5fmax_5fprice_5flength_5fstr_5',['CRYPTO_MAX_PRICE_LENGTH_STR',['../crypto_8h.html#a1a90bf216a79954840ed6eb714e05099',1,'crypto.h']]]
+  ['batt_5fen_0',['BATT_EN',['../pin__assignment_8h.html#ad9659da3944ab60dddc44fcd16293ee5',1,'pin_assignment.h']]],
+  ['batt_5fvolt_1',['BATT_VOLT',['../pin__assignment_8h.html#a474fd5ac3b123247b0482397fa599cdf',1,'pin_assignment.h']]],
+  ['button_5f1_5fpin_2',['BUTTON_1_PIN',['../pin__assignment_8h.html#a0411f64ff1b702c2b2e6e721f032f750',1,'pin_assignment.h']]],
+  ['button_5f1_5frtc_5fgpio_3',['BUTTON_1_RTC_GPIO',['../pin__assignment_8h.html#a9b41bdc625fc987d318710249adbca19',1,'pin_assignment.h']]],
+  ['button_5f2_5fpin_4',['BUTTON_2_PIN',['../pin__assignment_8h.html#ac965fc518b25b1ec0de10e3ac841b170',1,'pin_assignment.h']]],
+  ['button_5f2_5frtc_5fgpio_5',['BUTTON_2_RTC_GPIO',['../pin__assignment_8h.html#ac5d692d4b5d2ff3e023841ceaeda0f91',1,'pin_assignment.h']]],
+  ['button_5f3_5fpin_6',['BUTTON_3_PIN',['../pin__assignment_8h.html#a0371ce39a54669bd1ef373bac05fdd4b',1,'pin_assignment.h']]],
+  ['button_5f3_5frtc_5fgpio_7',['BUTTON_3_RTC_GPIO',['../pin__assignment_8h.html#af529de7a35ec2b8418e9022ba84983b6',1,'pin_assignment.h']]],
+  ['button_5f4_5fpin_8',['BUTTON_4_PIN',['../pin__assignment_8h.html#a6f97237f1f6f3380a8010ba147a088ad',1,'pin_assignment.h']]],
+  ['button_5f4_5frtc_5fgpio_9',['BUTTON_4_RTC_GPIO',['../pin__assignment_8h.html#a74f6b2c4f5885a8321ab1ccd7bcfcf06',1,'pin_assignment.h']]],
+  ['buzr_10',['BUZR',['../pin__assignment_8h.html#a929d197e1e139d225ace86e78e91c3a4',1,'pin_assignment.h']]]
 ];

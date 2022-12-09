@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['auth_5furl_0',['auth_url',['../todo__list_8cpp.html#afda9255a63bbccdd385baf2f9efb063e',1,'todo_list.cpp']]]
+  ['alert_5fxlrg_0',['alert_xlrg',['../alert__xlrg_8h.html#ae14a60c85315d98cb774dc9b078967c7',1,'alert_xlrg.h']]],
+  ['alert_5fxlrg_5fred_1',['alert_xlrg_red',['../alert__xlrg_8h.html#a10811eae27b76b352d7b00a65f4b1271',1,'alert_xlrg.h']]]
 ];

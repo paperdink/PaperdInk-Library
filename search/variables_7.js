@@ -1,14 +1,8 @@
 var searchData=
 [
-  ['paperdink_0',['Paperdink',['../Paperdink_8h.html#a8061124a4b47f5e2d6cb5c5a1d2b1161',1,'Paperdink.h']]],
-  ['paperdink_5fcrypto_1',['Paperdink_Crypto',['../crypto_8cpp.html#a2b3a7ce2550c18b5e4b077c663dc1104',1,'Paperdink_Crypto():&#160;crypto.cpp'],['../crypto_8h.html#a2b3a7ce2550c18b5e4b077c663dc1104',1,'Paperdink_Crypto():&#160;crypto.cpp']]],
-  ['paperdink_5fdate_2',['Paperdink_Date',['../date__time_8cpp.html#acd23575bb51562501f8ec9b538d72b94',1,'Paperdink_Date():&#160;date_time.cpp'],['../date__time_8h.html#acd23575bb51562501f8ec9b538d72b94',1,'Paperdink_Date():&#160;date_time.cpp']]],
-  ['paperdink_5ftodolisttaiga_3',['Paperdink_TodoListTaiga',['../todo__list_8cpp.html#af2c675ea842cab17ca492ea7ecef82ec',1,'Paperdink_TodoListTaiga():&#160;todo_list.cpp'],['../todo__list_8h.html#af2c675ea842cab17ca492ea7ecef82ec',1,'Paperdink_TodoListTaiga():&#160;todo_list.cpp']]],
-  ['paperdink_5fui_4',['Paperdink_UI',['../ui__base_8cpp.html#a7c4bcf89ae5405c139274cdb02c2a137',1,'Paperdink_UI():&#160;ui_base.cpp'],['../ui__base_8h.html#a7c4bcf89ae5405c139274cdb02c2a137',1,'Paperdink_UI():&#160;ui_base.cpp']]],
-  ['paperdink_5fweather_5',['Paperdink_Weather',['../weather_8cpp.html#a848f3d8765c550cd2cd68f5f1faea03d',1,'Paperdink_Weather():&#160;weather.cpp'],['../weather_8h.html#a848f3d8765c550cd2cd68f5f1faea03d',1,'Paperdink_Weather():&#160;weather.cpp']]],
-  ['paperdink_5fyoutube_6',['Paperdink_Youtube',['../youtube_8cpp.html#ac7de26f4839fb7d76b4833ad7702f070',1,'Paperdink_Youtube():&#160;youtube.cpp'],['../youtube_8h.html#ac7de26f4839fb7d76b4833ad7702f070',1,'Paperdink_Youtube():&#160;youtube.cpp']]],
-  ['post_5fdata_7',['post_data',['../todo__list_8cpp.html#a5fa57ff3ae3271b6e822a738110f7aba',1,'todo_list.cpp']]],
-  ['price_8',['price',['../classPaperdinkUICryptoClass.html#adcab445e63c448cb8220bb980ecb1b97',1,'PaperdinkUICryptoClass']]],
-  ['progmem_9',['PROGMEM',['../Roboto__Regular__12pt7b_8h.html#a4300b7e9218de78a4a92a0f5dfb7c0a9',1,'PROGMEM():&#160;Roboto_Regular_12pt7b.h'],['../Mont__Heavy25pt7b_8h.html#a68bd3a8975985d36739ea870fd46f3f3',1,'PROGMEM():&#160;Mont_Heavy25pt7b.h'],['../Mont__ExtraLight8pt7b_8h.html#a700de69060d3d49e7142dcfc906fef5a',1,'PROGMEM():&#160;Mont_ExtraLight8pt7b.h'],['../Gobold__Thin9pt7b_8h.html#ae859b189136601be0adcd4fa1666b8bc',1,'PROGMEM():&#160;Gobold_Thin9pt7b.h'],['../Code__New__Roman__Bold15pt7b_8h.html#a48071b5c4738e54f597199d63afa5206',1,'PROGMEM():&#160;Code_New_Roman_Bold15pt7b.h'],['../Code__New__Roman__Bold10pt7b_8h.html#a488fabe0a53257741b2a18ccad7047d2',1,'PROGMEM():&#160;Code_New_Roman_Bold10pt7b.h'],['../Code__New__Roman9pt7b_8h.html#a9729d3577f3ba1c72686513e2738b615',1,'PROGMEM():&#160;Code_New_Roman9pt7b.h'],['../Code__New__Roman15pt7b_8h.html#a44d27d9593e347dd08e13daa4ce36d3e',1,'PROGMEM():&#160;Code_New_Roman15pt7b.h'],['../Code__New__Roman10pt7b_8h.html#a4300b7e9218de78a4a92a0f5dfb7c0a9',1,'PROGMEM():&#160;Code_New_Roman10pt7b.h']]],
-  ['project_5fid_10',['project_id',['../classPaperdinkUITodoListTaigaClass.html#aa1fda4dcfb8f698207914d820dc6feef',1,'PaperdinkUITodoListTaigaClass']]]
+  ['mday_0',['mday',['../classPaperdinkUIDateClass.html#aef46d12e1da62363c5d7efdc05f5dd8f',1,'PaperdinkUIDateClass']]],
+  ['mil_5fhour_1',['mil_hour',['../classPaperdinkUIDateClass.html#a2fa8045028b68977f4d57e31664b87ff',1,'PaperdinkUIDateClass']]],
+  ['min_2',['min',['../classPaperdinkUIDateClass.html#a2882938d5029e3e6c0700dc6929b8eda',1,'PaperdinkUIDateClass']]],
+  ['month_3',['month',['../classPaperdinkUIDateClass.html#a2a7949e088d373df243a59d806ee243e',1,'PaperdinkUIDateClass']]],
+  ['month_5fnum_4',['month_num',['../classPaperdinkUIDateClass.html#ace907a40ca6cd4b43e3a9742f3b7ba0e',1,'PaperdinkUIDateClass']]]
 ];

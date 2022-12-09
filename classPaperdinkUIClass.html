@@ -129,10 +129,14 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a2403c7536e7ad035b91e3f171c0de35e inherit pub_attribs_classPaperdinkUIBaseClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48ed5b437a554c49e2acbbf3625e5ebe inherit pub_attribs_classPaperdinkUIBaseClass"><td class="memItemLeft" align="right" valign="top">const GFXfont *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPaperdinkUIBaseClass.html#a48ed5b437a554c49e2acbbf3625e5ebe">font_bold</a> = &amp;<a class="el" href="fonts_8h.html#a078c50dc03738a770bd8de90af007980">PAPERDINK_FONT_SML_BOLD</a></td></tr>
 <tr class="separator:a48ed5b437a554c49e2acbbf3625e5ebe inherit pub_attribs_classPaperdinkUIBaseClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb4e45b10a8ba627629cf9e34626aa7d inherit pub_attribs_classPaperdinkUIBaseClass"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPaperdinkUIBaseClass.html#adb4e45b10a8ba627629cf9e34626aa7d">primary_color</a> = GxEPD_BLACK</td></tr>
+<tr class="separator:adb4e45b10a8ba627629cf9e34626aa7d inherit pub_attribs_classPaperdinkUIBaseClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a688b5caea6d212ad74f3522b1caeb45c inherit pub_attribs_classPaperdinkUIBaseClass"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPaperdinkUIBaseClass.html#a688b5caea6d212ad74f3522b1caeb45c">secondary_color</a> = GxEPD_WHITE</td></tr>
+<tr class="separator:a688b5caea6d212ad74f3522b1caeb45c inherit pub_attribs_classPaperdinkUIBaseClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="ui__base_8h_source.html#l00015">15</a> of file <a class="el" href="ui__base_8h_source.html">ui_base.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ui__base_8h_source.html#l00017">17</a> of file <a class="el" href="ui__base_8h_source.html">ui_base.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad4f20660f4bcddeb5f2dfbb324a6ed8d" name="ad4f20660f4bcddeb5f2dfbb324a6ed8d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad4f20660f4bcddeb5f2dfbb324a6ed8d">&#9670;&#160;</a></span>display_bitmap_fs()</h2>
@@ -193,14 +197,14 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   78</span> </div>
 <div class="line"><span class="lineno">   79</span>    <span class="keywordflow">if</span>((x &gt;= display.width()) || (y &gt;= display.height())){<span class="keywordflow">return</span>;}</div>
 <div class="line"><span class="lineno">   80</span> </div>
-<div class="line"><span class="lineno">   81</span>    <a class="code hl_define" href="common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.println();</div>
-<div class="line"><span class="lineno">   82</span>    <a class="code hl_define" href="common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.print(<span class="stringliteral">&quot;Loading image &#39;&quot;</span>);</div>
-<div class="line"><span class="lineno">   83</span>    <a class="code hl_define" href="common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.print(filename);</div>
-<div class="line"><span class="lineno">   84</span>    <a class="code hl_define" href="common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.println(<span class="charliteral">&#39;\&#39;&#39;</span>);</div>
+<div class="line"><span class="lineno">   81</span>    <a class="code hl_define" href="paperdink__common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.println();</div>
+<div class="line"><span class="lineno">   82</span>    <a class="code hl_define" href="paperdink__common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.print(<span class="stringliteral">&quot;Loading image &#39;&quot;</span>);</div>
+<div class="line"><span class="lineno">   83</span>    <a class="code hl_define" href="paperdink__common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.print(filename);</div>
+<div class="line"><span class="lineno">   84</span>    <a class="code hl_define" href="paperdink__common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.println(<span class="charliteral">&#39;\&#39;&#39;</span>);</div>
 <div class="line"><span class="lineno">   85</span> </div>
 <div class="line"><span class="lineno">   86</span>    file = fs.open(String(<span class="stringliteral">&quot;/&quot;</span>) + filename, FILE_READ);</div>
 <div class="line"><span class="lineno">   87</span>    <span class="keywordflow">if</span>(!file){</div>
-<div class="line"><span class="lineno">   88</span>        <a class="code hl_define" href="common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.print(<span class="stringliteral">&quot;File not found&quot;</span>);</div>
+<div class="line"><span class="lineno">   88</span>        <a class="code hl_define" href="paperdink__common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.print(<span class="stringliteral">&quot;File not found&quot;</span>);</div>
 <div class="line"><span class="lineno">   89</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">   90</span>    }</div>
 <div class="line"><span class="lineno">   91</span> </div>
@@ -216,14 +220,14 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  101</span>        uint16_t depth = <a class="code hl_function" href="classPaperdinkUIClass.html#a1cf7fd95a6ac81269fea5b2bfdb6a98f">read16</a>(file);                                  <span class="comment">// bits per pixel</span></div>
 <div class="line"><span class="lineno">  102</span>        uint32_t format = <a class="code hl_function" href="classPaperdinkUIClass.html#afa404292b2e5fa2e9855cd7dde7f3147">read32</a>(file);</div>
 <div class="line"><span class="lineno">  103</span>        <span class="keywordflow">if</span>((planes == 1) &amp;&amp; ((format == 0) || (format == 3))){          <span class="comment">// uncompressed is handled, 565 also</span></div>
-<div class="line"><span class="lineno">  104</span>            <a class="code hl_define" href="common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.print(<span class="stringliteral">&quot;File size: &quot;</span>); <a class="code hl_define" href="common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.println(fileSize);</div>
-<div class="line"><span class="lineno">  105</span>            <a class="code hl_define" href="common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.print(<span class="stringliteral">&quot;Image Offset: &quot;</span>); <a class="code hl_define" href="common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.println(imageOffset);</div>
-<div class="line"><span class="lineno">  106</span>            <a class="code hl_define" href="common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.print(<span class="stringliteral">&quot;Header size: &quot;</span>); <a class="code hl_define" href="common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.println(headerSize);</div>
-<div class="line"><span class="lineno">  107</span>            <a class="code hl_define" href="common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.print(<span class="stringliteral">&quot;Bit Depth: &quot;</span>); <a class="code hl_define" href="common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.println(depth);</div>
-<div class="line"><span class="lineno">  108</span>            <a class="code hl_define" href="common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.print(<span class="stringliteral">&quot;Image size: &quot;</span>);</div>
-<div class="line"><span class="lineno">  109</span>            <a class="code hl_define" href="common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.print(width);</div>
-<div class="line"><span class="lineno">  110</span>            <a class="code hl_define" href="common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.print(<span class="charliteral">&#39;x&#39;</span>);</div>
-<div class="line"><span class="lineno">  111</span>            <a class="code hl_define" href="common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.println(height);</div>
+<div class="line"><span class="lineno">  104</span>            <a class="code hl_define" href="paperdink__common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.print(<span class="stringliteral">&quot;File size: &quot;</span>); <a class="code hl_define" href="paperdink__common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.println(fileSize);</div>
+<div class="line"><span class="lineno">  105</span>            <a class="code hl_define" href="paperdink__common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.print(<span class="stringliteral">&quot;Image Offset: &quot;</span>); <a class="code hl_define" href="paperdink__common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.println(imageOffset);</div>
+<div class="line"><span class="lineno">  106</span>            <a class="code hl_define" href="paperdink__common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.print(<span class="stringliteral">&quot;Header size: &quot;</span>); <a class="code hl_define" href="paperdink__common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.println(headerSize);</div>
+<div class="line"><span class="lineno">  107</span>            <a class="code hl_define" href="paperdink__common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.print(<span class="stringliteral">&quot;Bit Depth: &quot;</span>); <a class="code hl_define" href="paperdink__common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.println(depth);</div>
+<div class="line"><span class="lineno">  108</span>            <a class="code hl_define" href="paperdink__common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.print(<span class="stringliteral">&quot;Image size: &quot;</span>);</div>
+<div class="line"><span class="lineno">  109</span>            <a class="code hl_define" href="paperdink__common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.print(width);</div>
+<div class="line"><span class="lineno">  110</span>            <a class="code hl_define" href="paperdink__common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.print(<span class="charliteral">&#39;x&#39;</span>);</div>
+<div class="line"><span class="lineno">  111</span>            <a class="code hl_define" href="paperdink__common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.println(height);</div>
 <div class="line"><span class="lineno">  112</span>            <span class="comment">// BMP rows are padded (if needed) to 4-byte boundary</span></div>
 <div class="line"><span class="lineno">  113</span>            uint32_t rowSize = (width * depth / 8 + 3) &amp; ~3;</div>
 <div class="line"><span class="lineno">  114</span>            <span class="keywordflow">if</span>(depth &lt; 8){rowSize = ((width * depth + 8 - depth) / 8 + 3) &amp; ~3;}</div>
@@ -326,17 +330,17 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  211</span>                    display.drawPixel(x + col, yrow, color);</div>
 <div class="line"><span class="lineno">  212</span>                } <span class="comment">// end pixel</span></div>
 <div class="line"><span class="lineno">  213</span>            } <span class="comment">// end line</span></div>
-<div class="line"><span class="lineno">  214</span>            <a class="code hl_define" href="common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.print(<span class="stringliteral">&quot;loaded in &quot;</span>); <a class="code hl_define" href="common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.print(millis() - startTime); <a class="code hl_define" href="common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.println(<span class="stringliteral">&quot; ms&quot;</span>);</div>
+<div class="line"><span class="lineno">  214</span>            <a class="code hl_define" href="paperdink__common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.print(<span class="stringliteral">&quot;loaded in &quot;</span>); <a class="code hl_define" href="paperdink__common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.print(millis() - startTime); <a class="code hl_define" href="paperdink__common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.println(<span class="stringliteral">&quot; ms&quot;</span>);</div>
 <div class="line"><span class="lineno">  215</span>        }</div>
 <div class="line"><span class="lineno">  216</span>    }</div>
 <div class="line"><span class="lineno">  217</span>    file.close();</div>
 <div class="line"><span class="lineno">  218</span>    <span class="keywordflow">if</span>(!valid){</div>
-<div class="line"><span class="lineno">  219</span>        <a class="code hl_define" href="common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.println(<span class="stringliteral">&quot;bitmap format not handled.&quot;</span>);</div>
+<div class="line"><span class="lineno">  219</span>        <a class="code hl_define" href="paperdink__common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.println(<span class="stringliteral">&quot;bitmap format not handled.&quot;</span>);</div>
 <div class="line"><span class="lineno">  220</span>    }</div>
 <div class="line"><span class="lineno">  221</span>}</div>
 <div class="ttc" id="aclassPaperdinkUIClass_html_a1cf7fd95a6ac81269fea5b2bfdb6a98f"><div class="ttname"><a href="classPaperdinkUIClass.html#a1cf7fd95a6ac81269fea5b2bfdb6a98f">PaperdinkUIClass::read16</a></div><div class="ttdeci">uint16_t read16(File &amp;f)</div><div class="ttdef"><b>Definition:</b> <a href="ui__base_8cpp_source.html#l00050">ui_base.cpp:50</a></div></div>
 <div class="ttc" id="aclassPaperdinkUIClass_html_afa404292b2e5fa2e9855cd7dde7f3147"><div class="ttname"><a href="classPaperdinkUIClass.html#afa404292b2e5fa2e9855cd7dde7f3147">PaperdinkUIClass::read32</a></div><div class="ttdeci">uint32_t read32(File &amp;f)</div><div class="ttdef"><b>Definition:</b> <a href="ui__base_8cpp_source.html#l00060">ui_base.cpp:60</a></div></div>
-<div class="ttc" id="acommon_8h_html_ad72dbcf6d0153db1b8d8a58001feed83"><div class="ttname"><a href="common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a></div><div class="ttdeci">#define DEBUG</div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00016">common.h:16</a></div></div>
+<div class="ttc" id="apaperdink__common_8h_html_ad72dbcf6d0153db1b8d8a58001feed83"><div class="ttname"><a href="paperdink__common_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a></div><div class="ttdeci">#define DEBUG</div><div class="ttdef"><b>Definition:</b> <a href="paperdink__common_8h_source.html#l00017">paperdink_common.h:17</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

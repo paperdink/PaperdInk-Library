@@ -3,7 +3,7 @@ var searchData=
   ['base_2ecpp_0',['base.cpp',['../base_8cpp.html',1,'']]],
   ['base_2eh_1',['base.h',['../base_8h.html',1,'']]],
   ['batt_5fen_2',['BATT_EN',['../pin__assignment_8h.html#ad9659da3944ab60dddc44fcd16293ee5',1,'pin_assignment.h']]],
-  ['battery_5fvoltage_3',['BATTERY_VOLTAGE',['../pin__assignment_8h.html#a4cb5c278dcc397c3d573b8250a18f875',1,'pin_assignment.h']]],
+  ['batt_5fvolt_3',['BATT_VOLT',['../pin__assignment_8h.html#a474fd5ac3b123247b0482397fa599cdf',1,'pin_assignment.h']]],
   ['begin_4',['begin',['../classPaperdinkDeviceBaseClass.html#ab5f1f3390591cc99c617b097b4ea86ff',1,'PaperdinkDeviceBaseClass']]],
   ['button_5f1_5fpin_5',['BUTTON_1_PIN',['../pin__assignment_8h.html#a0411f64ff1b702c2b2e6e721f032f750',1,'pin_assignment.h']]],
   ['button_5f1_5frtc_5fgpio_6',['BUTTON_1_RTC_GPIO',['../pin__assignment_8h.html#a9b41bdc625fc987d318710249adbca19',1,'pin_assignment.h']]],

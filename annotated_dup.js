@@ -11,9 +11,11 @@ var annotated_dup =
     [ "PaperdinkUIDateClass", "classPaperdinkUIDateClass.html", "classPaperdinkUIDateClass" ],
     [ "PaperdinkUITodoListClass", "classPaperdinkUITodoListClass.html", "classPaperdinkUITodoListClass" ],
     [ "PaperdinkUITodoListTaigaClass", "classPaperdinkUITodoListTaigaClass.html", "classPaperdinkUITodoListTaigaClass" ],
+    [ "PaperdinkUITodoListTodoistClass", "classPaperdinkUITodoListTodoistClass.html", "classPaperdinkUITodoListTodoistClass" ],
     [ "PaperdinkUIWeatherClass", "classPaperdinkUIWeatherClass.html", "classPaperdinkUIWeatherClass" ],
     [ "PaperdinkUIYoutubeClass", "classPaperdinkUIYoutubeClass.html", "classPaperdinkUIYoutubeClass" ],
     [ "TodoTaigaJsonListener", "classTodoTaigaJsonListener.html", "classTodoTaigaJsonListener" ],
+    [ "TodoTodoistJsonListener", "classTodoTodoistJsonListener.html", "classTodoTodoistJsonListener" ],
     [ "WeatherJsonListener", "classWeatherJsonListener.html", "classWeatherJsonListener" ],
     [ "YoutubeJsonListener", "classYoutubeJsonListener.html", "classYoutubeJsonListener" ]
 ];

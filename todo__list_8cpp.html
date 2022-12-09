@@ -100,41 +100,32 @@ $(document).ready(function(){initNavTree('todo__list_8cpp.html',''); initResizab
 <code>#include &lt;HTTPClient.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="todo__list_8h_source.html">todo_list.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="taiga__parser_8h_source.html">taiga_parser.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="todoist__parser_8h_source.html">todoist_parser.h</a>&quot;</code><br />
 </div>
 <p><a href="todo__list_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:afda9255a63bbccdd385baf2f9efb063e"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="todo__list_8cpp.html#afda9255a63bbccdd385baf2f9efb063e">auth_url</a> = &quot;https://api.taiga.io/api/v1/auth&quot;</td></tr>
-<tr class="separator:afda9255a63bbccdd385baf2f9efb063e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49fc9633cebeae957e70264ff100daa4"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="todo__list_8cpp.html#a49fc9633cebeae957e70264ff100daa4">slug_url</a> = &quot;https://api.taiga.io/api/v1/projects/by_slug?slug={0}-{1}&quot;</td></tr>
-<tr class="separator:a49fc9633cebeae957e70264ff100daa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9032ba596899ca510508777e6c0c1d40"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="todo__list_8cpp.html#a9032ba596899ca510508777e6c0c1d40">tasks_url</a> = &quot;https://api.taiga.io/api/v1/userstories?include_tasks=1&amp;status__is_archived=false&amp;project=&quot;</td></tr>
-<tr class="separator:a9032ba596899ca510508777e6c0c1d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fa57ff3ae3271b6e822a738110f7aba"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="todo__list_8cpp.html#a5fa57ff3ae3271b6e822a738110f7aba">post_data</a> = &quot;{ \&quot;type\&quot;: \&quot;normal\&quot;, \&quot;username\&quot;: \&quot;{0}\&quot;, \&quot;password\&quot;: \&quot;{1}\&quot; }&quot;</td></tr>
-<tr class="separator:a5fa57ff3ae3271b6e822a738110f7aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f2958ae236b7edf72f5863aa597a714"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTodoTaigaJsonListener.html">TodoTaigaJsonListener</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="todo__list_8cpp.html#a7f2958ae236b7edf72f5863aa597a714">todo_listener</a></td></tr>
-<tr class="separator:a7f2958ae236b7edf72f5863aa597a714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2e96e50738f23e186ccf43c01baddc5"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="todo__list_8cpp.html#ab2e96e50738f23e186ccf43c01baddc5">taiga_auth_url</a> = &quot;https://api.taiga.io/api/v1/auth&quot;</td></tr>
+<tr class="separator:ab2e96e50738f23e186ccf43c01baddc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af89519e731bbcfd207bf2087fec6f2f7"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="todo__list_8cpp.html#af89519e731bbcfd207bf2087fec6f2f7">taiga_slug_url</a> = &quot;https://api.taiga.io/api/v1/projects/by_slug?slug={0}-{1}&quot;</td></tr>
+<tr class="separator:af89519e731bbcfd207bf2087fec6f2f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38184879252d18ede01fe1394f669353"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="todo__list_8cpp.html#a38184879252d18ede01fe1394f669353">taiga_tasks_url</a> = &quot;https://api.taiga.io/api/v1/userstories?include_tasks=1&amp;status__is_archived=false&amp;project=&quot;</td></tr>
+<tr class="separator:a38184879252d18ede01fe1394f669353"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a320ae5e41e94502495aa7bea712cb20e"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="todo__list_8cpp.html#a320ae5e41e94502495aa7bea712cb20e">taiga_post_data</a> = &quot;{ \&quot;type\&quot;: \&quot;normal\&quot;, \&quot;username\&quot;: \&quot;{0}\&quot;, \&quot;password\&quot;: \&quot;{1}\&quot; }&quot;</td></tr>
+<tr class="separator:a320ae5e41e94502495aa7bea712cb20e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae44d09779c57b6fdde53bc16e3e7190a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTodoTaigaJsonListener.html">TodoTaigaJsonListener</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="todo__list_8cpp.html#ae44d09779c57b6fdde53bc16e3e7190a">taiga_todo_listener</a></td></tr>
+<tr class="separator:ae44d09779c57b6fdde53bc16e3e7190a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a688aef4e001459b05cd9b5f6b3bac685"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="todo__list_8cpp.html#a688aef4e001459b05cd9b5f6b3bac685">todoist_url</a> = &quot;https://api.todoist.com/rest/v2/tasks&quot;</td></tr>
+<tr class="separator:a688aef4e001459b05cd9b5f6b3bac685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a685ceae95b0971134f84467e056a9fdb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTodoTodoistJsonListener.html">TodoTodoistJsonListener</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="todo__list_8cpp.html#a685ceae95b0971134f84467e056a9fdb">todoist_todo_listener</a></td></tr>
+<tr class="separator:a685ceae95b0971134f84467e056a9fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2c675ea842cab17ca492ea7ecef82ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPaperdinkUITodoListTaigaClass.html">PaperdinkUITodoListTaigaClass</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="todo__list_8cpp.html#af2c675ea842cab17ca492ea7ecef82ec">Paperdink_TodoListTaiga</a></td></tr>
 <tr class="separator:af2c675ea842cab17ca492ea7ecef82ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b8285b9e47f79bde721457fc4c21db0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPaperdinkUITodoListTodoistClass.html">PaperdinkUITodoListTodoistClass</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="todo__list_8cpp.html#a6b8285b9e47f79bde721457fc4c21db0">Paperdink_TodoListTodoist</a></td></tr>
+<tr class="separator:a6b8285b9e47f79bde721457fc4c21db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="afda9255a63bbccdd385baf2f9efb063e" name="afda9255a63bbccdd385baf2f9efb063e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afda9255a63bbccdd385baf2f9efb063e">&#9670;&#160;</a></span>auth_url</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String auth_url = &quot;https://api.taiga.io/api/v1/auth&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="todo__list_8cpp_source.html#l00008">8</a> of file <a class="el" href="todo__list_8cpp_source.html">todo_list.cpp</a>.</p>
-
-</div>
-</div>
 <a id="af2c675ea842cab17ca492ea7ecef82ec" name="af2c675ea842cab17ca492ea7ecef82ec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af2c675ea842cab17ca492ea7ecef82ec">&#9670;&#160;</a></span>Paperdink_TodoListTaiga</h2>
 
@@ -147,50 +138,34 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="todo__list_8cpp_source.html#l00122">122</a> of file <a class="el" href="todo__list_8cpp_source.html">todo_list.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="todo__list_8cpp_source.html#l00172">172</a> of file <a class="el" href="todo__list_8cpp_source.html">todo_list.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a5fa57ff3ae3271b6e822a738110f7aba" name="a5fa57ff3ae3271b6e822a738110f7aba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fa57ff3ae3271b6e822a738110f7aba">&#9670;&#160;</a></span>post_data</h2>
+<a id="a6b8285b9e47f79bde721457fc4c21db0" name="a6b8285b9e47f79bde721457fc4c21db0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b8285b9e47f79bde721457fc4c21db0">&#9670;&#160;</a></span>Paperdink_TodoListTodoist</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String post_data = &quot;{ \&quot;type\&quot;: \&quot;normal\&quot;, \&quot;username\&quot;: \&quot;{0}\&quot;, \&quot;password\&quot;: \&quot;{1}\&quot; }&quot;</td>
+          <td class="memname"><a class="el" href="classPaperdinkUITodoListTodoistClass.html">PaperdinkUITodoListTodoistClass</a> Paperdink_TodoListTodoist</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="todo__list_8cpp_source.html#l00011">11</a> of file <a class="el" href="todo__list_8cpp_source.html">todo_list.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="todo__list_8cpp_source.html#l00173">173</a> of file <a class="el" href="todo__list_8cpp_source.html">todo_list.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a49fc9633cebeae957e70264ff100daa4" name="a49fc9633cebeae957e70264ff100daa4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49fc9633cebeae957e70264ff100daa4">&#9670;&#160;</a></span>slug_url</h2>
+<a id="ab2e96e50738f23e186ccf43c01baddc5" name="ab2e96e50738f23e186ccf43c01baddc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2e96e50738f23e186ccf43c01baddc5">&#9670;&#160;</a></span>taiga_auth_url</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String slug_url = &quot;https://api.taiga.io/api/v1/projects/by_slug?slug={0}-{1}&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="todo__list_8cpp_source.html#l00009">9</a> of file <a class="el" href="todo__list_8cpp_source.html">todo_list.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a9032ba596899ca510508777e6c0c1d40" name="a9032ba596899ca510508777e6c0c1d40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9032ba596899ca510508777e6c0c1d40">&#9670;&#160;</a></span>tasks_url</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String tasks_url = &quot;https://api.taiga.io/api/v1/userstories?include_tasks=1&amp;status__is_archived=false&amp;project=&quot;</td>
+          <td class="memname">String taiga_auth_url = &quot;https://api.taiga.io/api/v1/auth&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -199,19 +174,99 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a7f2958ae236b7edf72f5863aa597a714" name="a7f2958ae236b7edf72f5863aa597a714"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f2958ae236b7edf72f5863aa597a714">&#9670;&#160;</a></span>todo_listener</h2>
+<a id="a320ae5e41e94502495aa7bea712cb20e" name="a320ae5e41e94502495aa7bea712cb20e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a320ae5e41e94502495aa7bea712cb20e">&#9670;&#160;</a></span>taiga_post_data</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classTodoTaigaJsonListener.html">TodoTaigaJsonListener</a> todo_listener</td>
+          <td class="memname">String taiga_post_data = &quot;{ \&quot;type\&quot;: \&quot;normal\&quot;, \&quot;username\&quot;: \&quot;{0}\&quot;, \&quot;password\&quot;: \&quot;{1}\&quot; }&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="todo__list_8cpp_source.html#l00013">13</a> of file <a class="el" href="todo__list_8cpp_source.html">todo_list.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af89519e731bbcfd207bf2087fec6f2f7" name="af89519e731bbcfd207bf2087fec6f2f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af89519e731bbcfd207bf2087fec6f2f7">&#9670;&#160;</a></span>taiga_slug_url</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String taiga_slug_url = &quot;https://api.taiga.io/api/v1/projects/by_slug?slug={0}-{1}&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="todo__list_8cpp_source.html#l00011">11</a> of file <a class="el" href="todo__list_8cpp_source.html">todo_list.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a38184879252d18ede01fe1394f669353" name="a38184879252d18ede01fe1394f669353"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38184879252d18ede01fe1394f669353">&#9670;&#160;</a></span>taiga_tasks_url</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String taiga_tasks_url = &quot;https://api.taiga.io/api/v1/userstories?include_tasks=1&amp;status__is_archived=false&amp;project=&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="todo__list_8cpp_source.html#l00012">12</a> of file <a class="el" href="todo__list_8cpp_source.html">todo_list.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae44d09779c57b6fdde53bc16e3e7190a" name="ae44d09779c57b6fdde53bc16e3e7190a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae44d09779c57b6fdde53bc16e3e7190a">&#9670;&#160;</a></span>taiga_todo_listener</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTodoTaigaJsonListener.html">TodoTaigaJsonListener</a> taiga_todo_listener</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="todo__list_8cpp_source.html#l00014">14</a> of file <a class="el" href="todo__list_8cpp_source.html">todo_list.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a685ceae95b0971134f84467e056a9fdb" name="a685ceae95b0971134f84467e056a9fdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a685ceae95b0971134f84467e056a9fdb">&#9670;&#160;</a></span>todoist_todo_listener</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTodoTodoistJsonListener.html">TodoTodoistJsonListener</a> todoist_todo_listener</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="todo__list_8cpp_source.html#l00018">18</a> of file <a class="el" href="todo__list_8cpp_source.html">todo_list.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a688aef4e001459b05cd9b5f6b3bac685" name="a688aef4e001459b05cd9b5f6b3bac685"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a688aef4e001459b05cd9b5f6b3bac685">&#9670;&#160;</a></span>todoist_url</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String todoist_url = &quot;https://api.todoist.com/rest/v2/tasks&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="todo__list_8cpp_source.html#l00017">17</a> of file <a class="el" href="todo__list_8cpp_source.html">todo_list.cpp</a>.</p>
 
 </div>
 </div>

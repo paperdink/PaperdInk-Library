@@ -9,6 +9,6 @@ var classPaperdinkDeviceBaseClass =
     [ "disable_display", "classPaperdinkDeviceBaseClass.html#a7fe51094a2665123ecb1dcf8e7522df5", null ],
     [ "disable_everything", "classPaperdinkDeviceBaseClass.html#a01dc2809d5fb50978cd3427817a16d9d", null ],
     [ "enable_display", "classPaperdinkDeviceBaseClass.html#a393b02e53f276397bc4dc2f65c65550f", null ],
-    [ "color", "classPaperdinkDeviceBaseClass.html#a8302fffe17e00ec9f32642fc023038ea", null ],
+    [ "color", "classPaperdinkDeviceBaseClass.html#a1ce93eaa63134f67a5dcabe4b2eba617", null ],
     [ "has_color", "classPaperdinkDeviceBaseClass.html#acf8e87fcfcf39d19dc22f06f5ddeff22", null ]
 ];

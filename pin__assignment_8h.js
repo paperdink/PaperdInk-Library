@@ -1,7 +1,7 @@
 var pin__assignment_8h =
 [
     [ "BATT_EN", "pin__assignment_8h.html#ad9659da3944ab60dddc44fcd16293ee5", null ],
-    [ "BATTERY_VOLTAGE", "pin__assignment_8h.html#a4cb5c278dcc397c3d573b8250a18f875", null ],
+    [ "BATT_VOLT", "pin__assignment_8h.html#a474fd5ac3b123247b0482397fa599cdf", null ],
     [ "BUTTON_1_PIN", "pin__assignment_8h.html#a0411f64ff1b702c2b2e6e721f032f750", null ],
     [ "BUTTON_1_RTC_GPIO", "pin__assignment_8h.html#a9b41bdc625fc987d318710249adbca19", null ],
     [ "BUTTON_2_PIN", "pin__assignment_8h.html#ac965fc518b25b1ec0de10e3ac841b170", null ],
@@ -11,7 +11,7 @@ var pin__assignment_8h =
     [ "BUTTON_4_PIN", "pin__assignment_8h.html#a6f97237f1f6f3380a8010ba147a088ad", null ],
     [ "BUTTON_4_RTC_GPIO", "pin__assignment_8h.html#a74f6b2c4f5885a8321ab1ccd7bcfcf06", null ],
     [ "BUZR", "pin__assignment_8h.html#a929d197e1e139d225ace86e78e91c3a4", null ],
-    [ "CHARGING_PIN", "pin__assignment_8h.html#aebba53c6ed65f341aa4efaac847da261", null ],
+    [ "CHARGE_PIN", "pin__assignment_8h.html#a7d4c35896b4cef11138dc33d6a258811", null ],
     [ "EPD_BUSY", "pin__assignment_8h.html#a98a47d15f16ce30ec6e48c08ec45b685", null ],
     [ "EPD_CS", "pin__assignment_8h.html#a25e8ef72b86b3dca2dbdb39b248f948d", null ],
     [ "EPD_DC", "pin__assignment_8h.html#ab043cbf17e064086d28042d8f7707dbb", null ],

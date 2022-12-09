@@ -9,6 +9,7 @@ var searchData=
   ['paperdinkuidateclass_6',['PaperdinkUIDateClass',['../classPaperdinkUIDateClass.html',1,'']]],
   ['paperdinkuitodolistclass_7',['PaperdinkUITodoListClass',['../classPaperdinkUITodoListClass.html',1,'']]],
   ['paperdinkuitodolisttaigaclass_8',['PaperdinkUITodoListTaigaClass',['../classPaperdinkUITodoListTaigaClass.html',1,'']]],
-  ['paperdinkuiweatherclass_9',['PaperdinkUIWeatherClass',['../classPaperdinkUIWeatherClass.html',1,'']]],
-  ['paperdinkuiyoutubeclass_10',['PaperdinkUIYoutubeClass',['../classPaperdinkUIYoutubeClass.html',1,'']]]
+  ['paperdinkuitodolisttodoistclass_9',['PaperdinkUITodoListTodoistClass',['../classPaperdinkUITodoListTodoistClass.html',1,'']]],
+  ['paperdinkuiweatherclass_10',['PaperdinkUIWeatherClass',['../classPaperdinkUIWeatherClass.html',1,'']]],
+  ['paperdinkuiyoutubeclass_11',['PaperdinkUIYoutubeClass',['../classPaperdinkUIYoutubeClass.html',1,'']]]
 ];
