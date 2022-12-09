@@ -8,7 +8,7 @@ class Paperdink_Classic : public PaperdinkDeviceBaseClass
 {
     public:
         uint8_t has_color = false;
-        uint8_t color = GxEPD_BLACK;
+        int color = GxEPD_BLACK;
 
         GxEPD2_BW<GxEPD2_420, GxEPD2_420::HEIGHT> epd = GxEPD2_420(EPD_CS, EPD_DC, EPD_RST, EPD_BUSY);
         int8_t enable_display() override;
