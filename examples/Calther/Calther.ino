@@ -76,6 +76,7 @@ void setup()
 #ifdef TODOIST
     Paperdink_TodoListTodoist.font_bold = &PAPERDINK_FONT_SML_BOLD;
     Paperdink_TodoListTodoist.font = &PAPERDINK_FONT_SML;
+    Paperdink_TodoListTodoist.primary_color = GxEPD_WHITE;
 
     if(Paperdink_TodoListTodoist.fetch_data(TODOIST_TOKEN) < 0 ){
         DEBUG.println("Unable to fetch to-do list from Todoist");
@@ -85,6 +86,7 @@ void setup()
 #elif TAIGA
     Paperdink_TodoListTaiga.font_bold = &PAPERDINK_FONT_SML_BOLD;
     Paperdink_TodoListTaiga.font = &PAPERDINK_FONT_SML;
+    Paperdink_TodoListTaiga.primary_color = GxEPD_WHITE;
 
     if(Paperdink_TodoListTaiga.fetch_data(TAIGA_PROJECT_NAME, TAIGA_PROJECT_USERNAME, TAIGA_PROJECT_PASSWORD) < 0 ){
         DEBUG.println("Unable to fetch to-do list from Taiga");
