@@ -5,9 +5,6 @@
 #include "weather.h"
 #include "weather_parser.h"
 
-// RGREMOVE:
-#include <StreamUtils.h>
-
 WeatherJsonListener weather_listener;
 static String owm_url = "https://api.openweathermap.org/data/2.5/forecast?q={0},{1}&appid={2}&mode=json&cnt=1";
 
