@@ -22,7 +22,16 @@
  */
 #define FORECAST_HOURS 3
 
-/* Taiga server information */
+/* To-Do list config
+ * Select Todo list provider between Taiga or Todoist
+ * by uncommenting their respective lines.
+ */
+/* Todoist configuration */
+//#define TODOIST (true)
+//#define TODOIST_TOKEN "Bearer *****" // Todoist Token
+
+/* Taiga configuration */
+#define TAIGA (true)
 #define TAIGA_PROJECT_USERNAME  "*****" // Taiga username
 #define TAIGA_PROJECT_PASSWORD  "*****" // Taiga login password
 #define TAIGA_PROJECT_NAME      "*****" // Taiga project name

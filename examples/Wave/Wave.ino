@@ -66,19 +66,32 @@ void setup()
     sprintf(img_string, "%d.bmp", (image_counter++%NUM_IMAGES)+1);
     Paperdink_UI.display_bitmap_fs(Paperdink.epd, SPIFFS, img_string, 0, 0, Paperdink.has_color);
 
-    /* Fetch todo list from taiga */
-    if(Paperdink_TodoListTaiga.fetch_data(TAIGA_PROJECT_NAME, TAIGA_PROJECT_USERNAME, TAIGA_PROJECT_PASSWORD) < 0){
-        DEBUG.println("Unable to fetch todo list");    
-    }
-
     /* Create white box to display tasks */
     Paperdink.epd.fillRect(20, 25, 140, 250, GxEPD_WHITE);
     Paperdink.epd.drawRect(20, 25, 140, 250, GxEPD_BLACK);
 
-    /* Display tasks list */
+    /* Fetch and display Todo list */
+#ifdef TODOIST
+    Paperdink_TodoListTodoist.font_bold = &Gobold_Thin9pt7b;
+    Paperdink_TodoListTodoist.font = &Mont_ExtraLight8pt7b;
+    Paperdink_TodoListTodoist.primary_color = GxEPD_BLACK;
+
+    if(Paperdink_TodoListTodoist.fetch_data(TODOIST_TOKEN) < 0 ){
+        DEBUG.println("Unable to fetch to-do list from Todoist");
+    }
+    Paperdink_TodoListTodoist.display_list_style1(Paperdink.epd, 20, 30, 12, 1, 135);
+
+#elif TAIGA
     Paperdink_TodoListTaiga.font_bold = &Gobold_Thin9pt7b;
     Paperdink_TodoListTaiga.font = &Mont_ExtraLight8pt7b;
-    Paperdink_TodoListTaiga.display_lrg_box(Paperdink.epd, 20, 30);
+    Paperdink_TodoListTaiga.primary_color = GxEPD_BLACK;
+
+    if(Paperdink_TodoListTaiga.fetch_data(TAIGA_PROJECT_NAME, TAIGA_PROJECT_USERNAME, TAIGA_PROJECT_PASSWORD) < 0 ){
+        DEBUG.println("Unable to fetch to-do list from Taiga");
+    }
+    Paperdink_TodoListTaiga.display_list_style1(Paperdink.epd, 20, 30, 12, 1, 135);
+
+#endif
 
     /* Fetch date data */
     if(Paperdink_Date.fetch_data(TIME_ZONE) < 0){
@@ -90,7 +103,7 @@ void setup()
 
     /* Display date */
     Paperdink_Date.font = &PAPERDINK_FONT_LRG;
-    Paperdink_Date.diplay_day_date_style1_center(Paperdink.epd, 180, 65, 200);
+    Paperdink_Date.display_day_date_style1_center(Paperdink.epd, 180, 65, 200);
 
     /* Fetch weather data*/
     if(Paperdink_Weather.fetch_data(CITY, COUNTRY, OWM_ID) < 0){

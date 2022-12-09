@@ -1,6 +1,6 @@
 # Wave
 This example display day and date along with weather and todo list.
-Todo list is fetched from [Taiga](https://www.taiga.io) currently and weather from [Openweathermap](https://www.openweathermap.org)
+Todo list can be synced from [Taiga](https://www.taiga.io) or [Todoist](https://todoist.com) and weather from [Openweathermap](https://www.openweathermap.org)
 
 <img src="Wave.png" width="500" alt="Wave image">
 
@@ -22,6 +22,11 @@ comprehensive description of API calls, responses and parameters.
 ### Todo list from Taiga
 First create an account on [Taiga](https://www.taiga.io) and create a new project.
 Add your login details and project name to the config file.
+
+### Todo list from Todoist
+First create an account on [Todoist](https://www.todoist.com).
+Go to `Settings > Integrations` and generate an API token.
+Copy this token to the config file.
 
 ### Uploading bitmaps
 Use [ESP32 Sketch data upload](https://randomnerdtutorials.com/install-esp32-filesystem-uploader-arduino-ide/)
@@ -52,7 +57,16 @@ Update the `config.h` file with configuration details
  */
 #define FORECAST_HOURS 3
 
-/* Taiga server information */
+/* To-Do list config
+ * Select Todo list provider between Taiga or Todoist
+ * by uncommenting their respective lines.
+ */
+/* Todoist configuration */
+//#define TODOIST (true)
+//#define TODOIST_TOKEN "Bearer *****" // Todoist Token
+
+/* Taiga configuration */
+#define TAIGA (true)
 #define TAIGA_PROJECT_USERNAME  "*****" // Taiga username
 #define TAIGA_PROJECT_PASSWORD  "*****" // Taiga login password
 #define TAIGA_PROJECT_NAME      "*****" // Taiga project name
