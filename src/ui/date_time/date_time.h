@@ -2,7 +2,7 @@
 #ifndef _PAPERDINK_TIME_H
 #define _PAPERDINK_TIME_H
 
-#include "../../common.h"
+#include "../../paperdink_common.h"
 
 #define NTP_SERVER "pool.ntp.org"
 #define CONFIG_TIME_RETRY_COUNT (5)

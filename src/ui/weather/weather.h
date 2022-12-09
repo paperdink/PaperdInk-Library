@@ -1,7 +1,7 @@
 #ifndef _PAPERDINK_WEATHER_H_
 #define _PAPERDINK_WEATHER_H_
 
-#include "../../common.h"
+#include "../../paperdink_common.h"
 
 #define DEBUG Serial
 

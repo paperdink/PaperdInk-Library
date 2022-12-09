@@ -1,5 +1,5 @@
 
-#include "common.h"
+#include "paperdink_common.h"
 
 size_t ArudinoStreamParser::write(const uint8_t *data, size_t size)
 {

@@ -2,7 +2,7 @@
 #ifndef _PAPERDINK_CRYPTO_H_
 #define _PAPERDINK_CRYPTO_H_
 
-#include "../../common.h"
+#include "../../paperdink_common.h"
 
 #define DEBUG Serial
 

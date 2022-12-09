@@ -3,7 +3,7 @@
 #define _UI_BASE__H_
 
 #include <FS.h>
-#include "../common.h"
+#include "../paperdink_common.h"
 
 class PaperdinkUIBaseClass
 {
