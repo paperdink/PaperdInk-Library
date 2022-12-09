@@ -128,33 +128,6 @@ int8_t PaperdinkUITodoListTodoistClass::fetch_data(const char *token)
     return ret;
 }
 
-//void PaperdinkUITodoListClass::display_lrg_box(GxEPD2_GFX& display, int16_t x, int16_t y, uint16_t max_tasks, uint16_t max_str_len)
-//{
-//    int16_t xt, yt;
-//    uint16_t wt, ht, prev_height = 0, prev_width = 0;
-//
-//    display.setFont(font_bold);
-//    display.setTextColor(GxEPD_BLACK);
-//    display.setTextSize(1);
-//
-//    display.getTextBounds(F("To-Do List"), 0, 0, &xt, &yt, &wt, &ht);
-//    display.setCursor(x+5, y+prev_height+ht);
-//    prev_height += ht;
-//    display.println(F("To-Do List"));
-//
-//    display.setFont(font);
-//    display.setTextColor(GxEPD_BLACK);
-//    display.setTextSize(1);
-//    display.getTextBounds(F("item"), 0, 0, &xt, &yt, &wt, &ht);
-//
-//    // Display tasks
-//    for(int i = 0; i < task_count; i++){
-//        display.setCursor(x+5, y+prev_height+(ht+7)*i+20);
-//        DEBUG.printf("Task: %s\r\n", tasks[i]);
-//        display.print((char*)tasks[i]);
-//    }
-//}
-
 void PaperdinkUITodoListClass::display_list_style1(GxEPD2_GFX& display, int16_t x, int16_t y, int16_t rows, int16_t columns, uint16_t max_line_width)
 {
     int16_t xt, yt;
@@ -162,7 +135,7 @@ void PaperdinkUITodoListClass::display_list_style1(GxEPD2_GFX& display, int16_t 
     uint16_t i = 0, j = 0, start_height = 0;
 
     display.setFont(font_bold);
-    display.setTextColor(GxEPD_WHITE);
+    display.setTextColor(primary_color);
     display.setTextSize(1);
 
     display.getTextBounds(F("To-Do List"), 0, 0, &xt, &yt, &wt, &ht);
@@ -172,9 +145,7 @@ void PaperdinkUITodoListClass::display_list_style1(GxEPD2_GFX& display, int16_t 
     display.println(F("To-Do List"));
 
     display.setFont(font);
-    display.setTextColor(GxEPD_WHITE);
-    display.setTextSize(1);
-
+    display.setTextColor(primary_color);
     display.getTextBounds("W", 0, 0, &xt, &yt, &wt, &char_ht);
 
     // Display tasks
