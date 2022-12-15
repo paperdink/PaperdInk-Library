@@ -2,7 +2,7 @@
 #ifndef CUSTOM_PARSER_H
 #define CUSTOM_PARSER_H
 
-#include <paperdink_common.h>
+#include <Paperdink.h>
 
 class quoteListener : public JsonListener {
 
