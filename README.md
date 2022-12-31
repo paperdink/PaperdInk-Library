@@ -22,4 +22,5 @@
   - Adafruit GFX library by Adafruit
   - GxEPD2 by Jean-Marc Zingg version
   - JSON Streaming Parser by Daniel Eichhorn
+  - ArduinoJSON by Benoit Blanchon
 
