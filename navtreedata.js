@@ -25,10 +25,7 @@
 var NAVTREE =
 [
   [ "Paperd.Ink Library", "index.html", [
-    [ "Paperd.Ink Library for Arduino", "index.html", [
-      [ "Hardware features", "index.html#autotoc_md1", null ],
-      [ "Library Dependencies (from arduino library manager)", "index.html#autotoc_md2", null ]
-    ] ],
+    [ "Paperd.Ink Library for Arduino", "index.html", "index" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
