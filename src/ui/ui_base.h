@@ -12,6 +12,7 @@ class PaperdinkUIBaseClass
         const GFXfont* font_bold = &PAPERDINK_FONT_SML_BOLD; 
         int primary_color = GxEPD_BLACK;
         int secondary_color = GxEPD_WHITE;
+        int tertiary_color = GxEPD_BLACK;
 };
 
 class PaperdinkUIClass : public PaperdinkUIBaseClass

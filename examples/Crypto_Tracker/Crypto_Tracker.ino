@@ -49,7 +49,10 @@ void setup()
     /* TODO: Put in some kind of loop */
     Paperdink_Crypto.font = &PAPERDINK_FONT_SML;
     Paperdink_Crypto.font_bold = &PAPERDINK_FONT_SML_BOLD;
-    
+    Paperdink_Crypto.primary_color = GxEPD_BLACK;
+    Paperdink_Crypto.secondary_color = Paperdink.has_color ? GxEPD_RED : GxEPD_BLACK;
+    Paperdink_Crypto.tertiary_color = GxEPD_WHITE;
+
     if(Paperdink_Crypto.fetch_data(CRYPTO_TICKER_1) < 0){
         DEBUG.println("Unable to fetch data for " CRYPTO_TICKER_1);
     }
@@ -86,7 +89,7 @@ void setup()
     }
     /* Display date */
     Paperdink_Date.font = &PAPERDINK_FONT_LRG;
-	Paperdink_Date.diplay_day_date_style1_center(Paperdink.epd, 200, 20, 200);
+	Paperdink_Date.display_day_date_style1_center(Paperdink.epd, 200, 20, 200);
 
     /* Display last updated time */
 	Paperdink_Date.font = &PAPERDINK_FONT_SML;

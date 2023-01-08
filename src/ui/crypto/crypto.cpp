@@ -52,7 +52,7 @@ void PaperdinkUICryptoClass::display_med_box(GxEPD2_GFX& display, int16_t x, int
     //const char change[] = "1.32%";
 
 	display.setFont(font_bold);
-	display.setTextColor(GxEPD_BLACK);
+	display.setTextColor(primary_color);
 	display.setTextSize(1);
 
     /* Display ticker string */
@@ -63,12 +63,12 @@ void PaperdinkUICryptoClass::display_med_box(GxEPD2_GFX& display, int16_t x, int
 	display.setFont(font);
     /* Display background */
 	display.getTextBounds(dummy_price, 0, 0, &xt, &yt, &wt, &ht);
-	display.fillRoundRect(x+5, y+30, wt+20, ht+10, ht+10, display.epd2.hasColor ? GxEPD_RED : GxEPD_BLACK);
+	display.fillRoundRect(x+5, y+30, wt+20, ht+10, ht+10, secondary_color);
 	prev_width += x+5+wt+20;
 	prev_height += y+30;
 
     /* Display current price */
-	display.setTextColor(GxEPD_WHITE);
+	display.setTextColor(tertiary_color);
 	display.getTextBounds(price, 0, 0, &xt, &yt, &wt, &ht);
 	display.setCursor(5+((x+prev_width-wt)/2), prev_height+ht+4);
 	display.print(price);
@@ -77,18 +77,14 @@ void PaperdinkUICryptoClass::display_med_box(GxEPD2_GFX& display, int16_t x, int
 
     /* Display arrow */
 	const uint8_t *arrow = up_arrow_sml;
-	uint16_t color = GxEPD_BLACK;
 	if(change[0] == '-'){
 		arrow = down_arrow_sml;
-		if(display.epd2.hasColor){
-			color = GxEPD_RED;
-		}
 	}
-	display.drawBitmap(prev_width, prev_height, arrow, 24, 24, color);
+	display.drawBitmap(prev_width, prev_height, arrow, 24, 24, tertiary_color);
 	prev_width += 24; // Size of bitmap
 
     // Display percentage change
-	display.setTextColor(GxEPD_BLACK);
+	display.setTextColor(primary_color);
 	display.getTextBounds(change, 0, 0, &xt, &yt, &wt, &ht);
 	display.setCursor(prev_width-wt, y+ht+3);
 	display.print(change);
