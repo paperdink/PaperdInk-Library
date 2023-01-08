@@ -89,10 +89,12 @@ void setup()
     }
     /* Display date */
     Paperdink_Date.font = &PAPERDINK_FONT_LRG;
+    Paperdink_Date.primary_color = Paperdink.color;
 	Paperdink_Date.display_day_date_style1_center(Paperdink.epd, 200, 20, 200);
 
     /* Display last updated time */
 	Paperdink_Date.font = &PAPERDINK_FONT_SML;
+    Paperdink_Date.primary_color = GxEPD_BLACK;
     Paperdink_Date.display_last_updated_time_style1_center(Paperdink.epd, 200, 125, 200);
 
     /* Send data to display for the update */ 
