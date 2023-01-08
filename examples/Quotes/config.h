@@ -35,6 +35,10 @@
 #define QUOTE_FONT &Roboto_Regular12pt7b
 #define AUTHOR_FONT &Gobold_Thin9pt7b
 
+#define BACKGROUND_COLOR GxEPD_WHITE
+#define QUOTE_COLOR GxEPD_BLACK
+#define AUTHOR_COLOR GxEPD_BLACK // Can be made GxEPD_RED for Merlot
+
 #define MAX_QUOTE_LENGTH 256   // Maximum characters in a quote
 #define MAX_AUTHOR_LENGTH 128  // Maximum characters in a author
 

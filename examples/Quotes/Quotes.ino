@@ -42,7 +42,7 @@ void setup()
     /* Enable power to the display */
     Paperdink.enable_display();
     /* Clear the background */
-    Paperdink.epd.fillScreen(GxEPD_WHITE);
+    Paperdink.epd.fillScreen(BACKGROUND_COLOR);
 
     /* Connect to wifi network */
     if(Paperdink.connect_wifi(SSID, PASSWORD) < 0){
@@ -143,7 +143,7 @@ int8_t fetch_quote()
         //parser.setListener(&quote_listener);
         //https.writeToStream(&parser);
     } else {
-        DEBUG.printf("[HTTP] AUTH... failed, error: %d::%s\r\n", httpCode, https.errorToString(httpCode).c_str());
+        DEBUG.printf("[HTTP] Failed, error: %d::%s\r\n", httpCode, https.errorToString(httpCode).c_str());
         ret = -1;
     }
 
@@ -195,7 +195,7 @@ void display_quote(GxEPD2_GFX& display)
     str_len = strlen(quote_string);
 
     display.setFont(QUOTE_FONT);
-    display.setTextColor(GxEPD_BLACK);
+    display.setTextColor(QUOTE_COLOR);
     display.setTextSize(1);
 
     // To get height of the font
@@ -216,7 +216,7 @@ void display_quote(GxEPD2_GFX& display)
     }
 
     display.setFont(AUTHOR_FONT);
-    display.setTextColor(display.epd2.hasColor ? GxEPD_RED : GxEPD_BLACK);
+    display.setTextColor(AUTHOR_COLOR);
     display.getTextBounds(author_string, 0, 0, &x, &y, &w, &h);
     display.setCursor((display.width()-w)/2, display.getCursorY()+10);
     display.print("-");
