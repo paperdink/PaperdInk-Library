@@ -54,7 +54,11 @@ void setup()
     if(Paperdink_Date.fetch_data(TIME_ZONE) < 0){
         DEBUG.println("Unable to fetch Date Time data");
     }
-    
+
+    /* Set colors for the calender */
+    Paperdink_Date.primary_color = GxEPD_BLACK;
+    Paperdink_Date.secondary_color = GxEPD_WHITE;
+
     /* Display calender */
     Paperdink_Date.display_calender(Paperdink.epd, 125, 40); 
 
@@ -69,6 +73,7 @@ void setup()
 
     /* Display weather information */
     Paperdink_Weather.font = &Gobold_Thin9pt7b;
+    Paperdink_Weather.primary_color = GxEPD_BLACK;
     Paperdink_Weather.display_weather_style1(Paperdink.epd, 5, 22);
     Paperdink_Weather.display_weather_style2_center(Paperdink.epd, 0, 130, 110);
 

@@ -86,7 +86,7 @@ void PaperdinkUIWeatherClass::display_weather_text_center(GxEPD2_GFX& display, u
     uint16_t wt, ht;
 
     display.setFont(font);
-    display.setTextColor(GxEPD_BLACK);
+    display.setTextColor(primary_color);
     display.getTextBounds(Paperdink_Weather.weather_string, 0, 0, &xt, &yt, &wt, &ht);
     display.setCursor(x+((w-wt)/2), y+ht);
     display.print(weather_string);
@@ -98,10 +98,10 @@ void PaperdinkUIWeatherClass::display_weather_style1(GxEPD2_GFX& display, uint16
     uint16_t wt, ht, prev_width = x, prev_height = y;
 
     display.setFont(font);
-    display.setTextColor(GxEPD_BLACK);
+    display.setTextColor(primary_color);
 
     // Show min and max temperature
-    display.drawBitmap(prev_width, prev_height, thermometer_sml, thermometer_sml_width, thermometer_sml_height, GxEPD_BLACK); 
+    display.drawBitmap(prev_width, prev_height, thermometer_sml, thermometer_sml_width, thermometer_sml_height, primary_color); 
     prev_width += thermometer_sml_width;
 
     display.getTextBounds("77", 0, 0, &xt, &yt, &wt, &ht);
@@ -113,7 +113,7 @@ void PaperdinkUIWeatherClass::display_weather_style1(GxEPD2_GFX& display, uint16
 
     // TODO: OWM API provides rain/snow in mm only. Convert to in
     // Show rain
-    display.drawBitmap(prev_width, prev_height+10, umbrella_sml, umbrella_sml_width, umbrella_sml_height, GxEPD_BLACK); 
+    display.drawBitmap(prev_width, prev_height+10, umbrella_sml, umbrella_sml_width, umbrella_sml_height, primary_color); 
     prev_width += umbrella_sml_width;
 
     display.setCursor(prev_width+10, prev_height+10+ht+2);
@@ -123,7 +123,7 @@ void PaperdinkUIWeatherClass::display_weather_style1(GxEPD2_GFX& display, uint16
     prev_width = x; // Reset width for next line
 
     // Show snow
-    display.drawBitmap(prev_width, prev_height+10, snowflake_sml, snowflake_sml_width, snowflake_sml_height, GxEPD_BLACK); 
+    display.drawBitmap(prev_width, prev_height+10, snowflake_sml, snowflake_sml_width, snowflake_sml_height, primary_color); 
     prev_width += snowflake_sml_width;
 
     display.setCursor(prev_width+10, prev_height+10+ht+2);
@@ -152,7 +152,7 @@ void PaperdinkUIWeatherClass::display_weather_style2_center(GxEPD2_GFX& display,
         DEBUG.printf("Invalid weather: %s\r\n", Paperdink_Weather.weather_string);
     }
 
-    display.drawBitmap(x + (w - alert_xlrg_width)/2, y, bitmap, alert_xlrg_width, alert_xlrg_height, GxEPD_BLACK);
+    display.drawBitmap(x + (w - alert_xlrg_width)/2, y, bitmap, alert_xlrg_width, alert_xlrg_height, primary_color);
 }
 
 PaperdinkUIWeatherClass Paperdink_Weather;

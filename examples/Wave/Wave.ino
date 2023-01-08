@@ -112,6 +112,7 @@ void setup()
 
     /* Display weather text */
     Paperdink_Weather.font = &Gobold_Thin9pt7b;
+    Paperdink_Weather.primary_color = GxEPD_BLACK;
     Paperdink_Weather.display_weather_text_center(Paperdink.epd, 180, 200, 200);
 
     /* Send data to display for the update */ 
