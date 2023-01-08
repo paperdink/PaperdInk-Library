@@ -147,7 +147,10 @@ $(document).ready(function(){initNavTree('Crypto_Tracker_8ino-example.html','');
 <div class="line">    /* TODO: Put in some kind of loop */</div>
 <div class="line">    Paperdink_Crypto.font = &amp;PAPERDINK_FONT_SML;</div>
 <div class="line">    Paperdink_Crypto.font_bold = &amp;PAPERDINK_FONT_SML_BOLD;</div>
-<div class="line">    </div>
+<div class="line">    Paperdink_Crypto.primary_color = GxEPD_BLACK;</div>
+<div class="line">    Paperdink_Crypto.secondary_color = Paperdink.has_color ? GxEPD_RED : GxEPD_BLACK;</div>
+<div class="line">    Paperdink_Crypto.tertiary_color = GxEPD_WHITE;</div>
+<div class="line"> </div>
 <div class="line">    if(Paperdink_Crypto.fetch_data(CRYPTO_TICKER_1) &lt; 0){</div>
 <div class="line">        DEBUG.println(&quot;Unable to fetch data for &quot; CRYPTO_TICKER_1);</div>
 <div class="line">    }</div>
@@ -184,7 +187,7 @@ $(document).ready(function(){initNavTree('Crypto_Tracker_8ino-example.html','');
 <div class="line">    }</div>
 <div class="line">    /* Display date */</div>
 <div class="line">    Paperdink_Date.font = &amp;PAPERDINK_FONT_LRG;</div>
-<div class="line">    Paperdink_Date.diplay_day_date_style1_center(Paperdink.epd, 200, 20, 200);</div>
+<div class="line">    Paperdink_Date.display_day_date_style1_center(Paperdink.epd, 200, 20, 200);</div>
 <div class="line"> </div>
 <div class="line">    /* Display last updated time */</div>
 <div class="line">    Paperdink_Date.font = &amp;PAPERDINK_FONT_SML;</div>

@@ -78,6 +78,7 @@ var NAVTREEINDEX0 =
 "classPaperdinkDeviceBaseClass.html#ae4a7ea470b52aa212a17992b9989eb83":[1,0,4,4],
 "classPaperdinkUIBaseClass.html":[1,0,5],
 "classPaperdinkUIBaseClass.html#a2403c7536e7ad035b91e3f171c0de35e":[1,0,5,0],
+"classPaperdinkUIBaseClass.html#a32cb0378ac64f815144d54a04a16ec28":[1,0,5,4],
 "classPaperdinkUIBaseClass.html#a48ed5b437a554c49e2acbbf3625e5ebe":[1,0,5,1],
 "classPaperdinkUIBaseClass.html#a688b5caea6d212ad74f3522b1caeb45c":[1,0,5,3],
 "classPaperdinkUIBaseClass.html#adb4e45b10a8ba627629cf9e34626aa7d":[1,0,5,2],
@@ -107,8 +108,8 @@ var NAVTREEINDEX0 =
 "classPaperdinkUIDateClass.html#a94ec0d0d265baaa92f5f640d0c5e681b":[1,0,8,1],
 "classPaperdinkUIDateClass.html#ac15376fa1c305f2d3bc4b542c97266f9":[1,0,8,6],
 "classPaperdinkUIDateClass.html#ace907a40ca6cd4b43e3a9742f3b7ba0e":[1,0,8,11],
-"classPaperdinkUIDateClass.html#ae7bdc11a9693df4d2b4c83e4af5f2033":[1,0,8,4],
 "classPaperdinkUIDateClass.html#aef46d12e1da62363c5d7efdc05f5dd8f":[1,0,8,7],
+"classPaperdinkUIDateClass.html#af9c1c51996f58f7ab822497beb745f37":[1,0,8,4],
 "classPaperdinkUITodoListClass.html":[1,0,9],
 "classPaperdinkUITodoListClass.html#aa1eb56525504af9c2c6290e975ac8d59":[1,0,9,3],
 "classPaperdinkUITodoListClass.html#abf70b99272faa70dadb1c55daf4c788f":[1,0,9,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "down__arrow__sml_8h.html":[2,0,0,2,3],
 "down__arrow__sml_8h.html#aa812f2dc9a4081ab7c53e05687a8c913":[2,0,0,2,3,1],
 "down__arrow__sml_8h.html#aee416bcfdc67d12a1590d42d093ad19f":[2,0,0,2,3,0],
-"down__arrow__sml_8h_source.html":[2,0,0,2,3],
-"drizzle__xlrg_8h.html":[2,0,0,2,4]
+"down__arrow__sml_8h_source.html":[2,0,0,2,3]
 };

@@ -134,6 +134,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:adb4e45b10a8ba627629cf9e34626aa7d inherit pub_attribs_classPaperdinkUIBaseClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a688b5caea6d212ad74f3522b1caeb45c inherit pub_attribs_classPaperdinkUIBaseClass"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPaperdinkUIBaseClass.html#a688b5caea6d212ad74f3522b1caeb45c">secondary_color</a> = GxEPD_WHITE</td></tr>
 <tr class="separator:a688b5caea6d212ad74f3522b1caeb45c inherit pub_attribs_classPaperdinkUIBaseClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32cb0378ac64f815144d54a04a16ec28 inherit pub_attribs_classPaperdinkUIBaseClass"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPaperdinkUIBaseClass.html#a32cb0378ac64f815144d54a04a16ec28">tertiary_color</a> = GxEPD_BLACK</td></tr>
+<tr class="separator:a32cb0378ac64f815144d54a04a16ec28 inherit pub_attribs_classPaperdinkUIBaseClass"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -190,7 +192,7 @@ Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   50</span>    <span class="keywordtype">char</span> subscribers_str[<a class="code hl_define" href="youtube_8h.html#acfa49f19e93afd4644f42f1e53214971">MAX_YOUTUBE_SUBSCRIBER_COUNT</a>];</div>
 <div class="line"><span class="lineno">   51</span> </div>
 <div class="line"><span class="lineno">   52</span>    display.setFont(<a class="code hl_variable" href="classPaperdinkUIBaseClass.html#a2403c7536e7ad035b91e3f171c0de35e">font</a>);</div>
-<div class="line"><span class="lineno">   53</span>    display.setTextColor(GxEPD_BLACK);</div>
+<div class="line"><span class="lineno">   53</span>    display.setTextColor(<a class="code hl_variable" href="classPaperdinkUIBaseClass.html#adb4e45b10a8ba627629cf9e34626aa7d">primary_color</a>);</div>
 <div class="line"><span class="lineno">   54</span>    display.setTextSize(1);</div>
 <div class="line"><span class="lineno">   55</span> </div>
 <div class="line"><span class="lineno">   56</span>    <span class="comment">// Display subscribers count</span></div>
@@ -208,9 +210,10 @@ Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   68</span>    display.print(subscribers_str);</div>
 <div class="line"><span class="lineno">   69</span>    </div>
 <div class="line"><span class="lineno">   70</span>    <span class="comment">// 3 px margin</span></div>
-<div class="line"><span class="lineno">   71</span>    display.drawBitmap(prev_width-wt-<a class="code hl_define" href="user__med_8h.html#a7e2f165671ae9c87b5aa7e7cb96f0b58">user_med_width</a>-5, prev_height-<a class="code hl_define" href="user__med_8h.html#a31ec2bbf80f22680af63a6286cea05e0">user_med_height</a>+3, <a class="code hl_variable" href="user__med_8h.html#a4dd3c404b32e8ddc671082651dbb47a9">user_med</a>, <a class="code hl_define" href="user__med_8h.html#a7e2f165671ae9c87b5aa7e7cb96f0b58">user_med_width</a>, <a class="code hl_define" href="user__med_8h.html#a31ec2bbf80f22680af63a6286cea05e0">user_med_height</a>, GxEPD_BLACK);</div>
+<div class="line"><span class="lineno">   71</span>    display.drawBitmap(prev_width-wt-<a class="code hl_define" href="user__med_8h.html#a7e2f165671ae9c87b5aa7e7cb96f0b58">user_med_width</a>-5, prev_height-<a class="code hl_define" href="user__med_8h.html#a31ec2bbf80f22680af63a6286cea05e0">user_med_height</a>+3, <a class="code hl_variable" href="user__med_8h.html#a4dd3c404b32e8ddc671082651dbb47a9">user_med</a>, <a class="code hl_define" href="user__med_8h.html#a7e2f165671ae9c87b5aa7e7cb96f0b58">user_med_width</a>, <a class="code hl_define" href="user__med_8h.html#a31ec2bbf80f22680af63a6286cea05e0">user_med_height</a>, <a class="code hl_variable" href="classPaperdinkUIBaseClass.html#adb4e45b10a8ba627629cf9e34626aa7d">primary_color</a>);</div>
 <div class="line"><span class="lineno">   72</span>}</div>
 <div class="ttc" id="aclassPaperdinkUIBaseClass_html_a2403c7536e7ad035b91e3f171c0de35e"><div class="ttname"><a href="classPaperdinkUIBaseClass.html#a2403c7536e7ad035b91e3f171c0de35e">PaperdinkUIBaseClass::font</a></div><div class="ttdeci">const GFXfont * font</div><div class="ttdef"><b>Definition:</b> <a href="ui__base_8h_source.html#l00011">ui_base.h:11</a></div></div>
+<div class="ttc" id="aclassPaperdinkUIBaseClass_html_adb4e45b10a8ba627629cf9e34626aa7d"><div class="ttname"><a href="classPaperdinkUIBaseClass.html#adb4e45b10a8ba627629cf9e34626aa7d">PaperdinkUIBaseClass::primary_color</a></div><div class="ttdeci">int primary_color</div><div class="ttdef"><b>Definition:</b> <a href="ui__base_8h_source.html#l00013">ui_base.h:13</a></div></div>
 <div class="ttc" id="aclassPaperdinkUIYoutubeClass_html_a85d3f3bae6297d42b831b1770c13cced"><div class="ttname"><a href="classPaperdinkUIYoutubeClass.html#a85d3f3bae6297d42b831b1770c13cced">PaperdinkUIYoutubeClass::subscribers</a></div><div class="ttdeci">uint64_t subscribers</div><div class="ttdef"><b>Definition:</b> <a href="youtube_8h_source.html#l00015">youtube.h:15</a></div></div>
 <div class="ttc" id="auser__med_8h_html_a31ec2bbf80f22680af63a6286cea05e0"><div class="ttname"><a href="user__med_8h.html#a31ec2bbf80f22680af63a6286cea05e0">user_med_height</a></div><div class="ttdeci">#define user_med_height</div><div class="ttdef"><b>Definition:</b> <a href="user__med_8h_source.html#l00002">user_med.h:2</a></div></div>
 <div class="ttc" id="auser__med_8h_html_a4dd3c404b32e8ddc671082651dbb47a9"><div class="ttname"><a href="user__med_8h.html#a4dd3c404b32e8ddc671082651dbb47a9">user_med</a></div><div class="ttdeci">const unsigned char user_med[128]</div><div class="ttdef"><b>Definition:</b> <a href="user__med_8h_source.html#l00004">user_med.h:4</a></div></div>
@@ -271,7 +274,7 @@ Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   79</span>    <span class="keywordtype">char</span> views_str[<a class="code hl_define" href="youtube_8h.html#ab57d36222e138089ec75b4f1b0597a2a">MAX_YOUTUBE_VIEWS_COUNT</a>];</div>
 <div class="line"><span class="lineno">   80</span> </div>
 <div class="line"><span class="lineno">   81</span>    display.setFont(<a class="code hl_variable" href="classPaperdinkUIBaseClass.html#a2403c7536e7ad035b91e3f171c0de35e">font</a>);</div>
-<div class="line"><span class="lineno">   82</span>    display.setTextColor(GxEPD_BLACK);</div>
+<div class="line"><span class="lineno">   82</span>    display.setTextColor(<a class="code hl_variable" href="classPaperdinkUIBaseClass.html#adb4e45b10a8ba627629cf9e34626aa7d">primary_color</a>);</div>
 <div class="line"><span class="lineno">   83</span>    display.setTextSize(1);</div>
 <div class="line"><span class="lineno">   84</span> </div>
 <div class="line"><span class="lineno">   85</span>    <span class="comment">// Display ticker</span></div>
@@ -289,7 +292,7 @@ Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   97</span>    display.print(views_str);</div>
 <div class="line"><span class="lineno">   98</span> </div>
 <div class="line"><span class="lineno">   99</span>    <span class="comment">// 3 px margin</span></div>
-<div class="line"><span class="lineno">  100</span>    display.drawBitmap(prev_width-wt-<a class="code hl_define" href="eye__med_8h.html#a37ae372c695dc221cea14bad7c752fac">eye_med_width</a>-5, prev_height-<a class="code hl_define" href="eye__med_8h.html#a2436bf84f93f59bfdbfff85306edfa38">eye_med_height</a>+3, <a class="code hl_variable" href="eye__med_8h.html#aa54d60dd6a8ef5c19ab0b9d59d3f32a7">eye_med</a>, <a class="code hl_define" href="eye__med_8h.html#a37ae372c695dc221cea14bad7c752fac">eye_med_width</a>, <a class="code hl_define" href="eye__med_8h.html#a2436bf84f93f59bfdbfff85306edfa38">eye_med_height</a>, GxEPD_BLACK);</div>
+<div class="line"><span class="lineno">  100</span>    display.drawBitmap(prev_width-wt-<a class="code hl_define" href="eye__med_8h.html#a37ae372c695dc221cea14bad7c752fac">eye_med_width</a>-5, prev_height-<a class="code hl_define" href="eye__med_8h.html#a2436bf84f93f59bfdbfff85306edfa38">eye_med_height</a>+3, <a class="code hl_variable" href="eye__med_8h.html#aa54d60dd6a8ef5c19ab0b9d59d3f32a7">eye_med</a>, <a class="code hl_define" href="eye__med_8h.html#a37ae372c695dc221cea14bad7c752fac">eye_med_width</a>, <a class="code hl_define" href="eye__med_8h.html#a2436bf84f93f59bfdbfff85306edfa38">eye_med_height</a>, <a class="code hl_variable" href="classPaperdinkUIBaseClass.html#adb4e45b10a8ba627629cf9e34626aa7d">primary_color</a>);</div>
 <div class="line"><span class="lineno">  101</span>}</div>
 <div class="ttc" id="aclassPaperdinkUIYoutubeClass_html_a5939cea58ee5c5e0cfab06e9a7de2e8e"><div class="ttname"><a href="classPaperdinkUIYoutubeClass.html#a5939cea58ee5c5e0cfab06e9a7de2e8e">PaperdinkUIYoutubeClass::views</a></div><div class="ttdeci">uint64_t views</div><div class="ttdef"><b>Definition:</b> <a href="youtube_8h_source.html#l00016">youtube.h:16</a></div></div>
 <div class="ttc" id="aeye__med_8h_html_a2436bf84f93f59bfdbfff85306edfa38"><div class="ttname"><a href="eye__med_8h.html#a2436bf84f93f59bfdbfff85306edfa38">eye_med_height</a></div><div class="ttdeci">#define eye_med_height</div><div class="ttdef"><b>Definition:</b> <a href="eye__med_8h_source.html#l00002">eye_med.h:2</a></div></div>

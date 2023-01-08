@@ -4,7 +4,7 @@ var classPaperdinkUIDateClass =
     [ "display_day_date_style1_center", "classPaperdinkUIDateClass.html#a94ec0d0d265baaa92f5f640d0c5e681b", null ],
     [ "display_day_date_style2_center", "classPaperdinkUIDateClass.html#a7b92fd0f65b4e454460b9712afcac031", null ],
     [ "display_last_updated_time_style1_center", "classPaperdinkUIDateClass.html#a607ad8b7bb9d7f2606499823904beef8", null ],
-    [ "fetch_data", "classPaperdinkUIDateClass.html#ae7bdc11a9693df4d2b4c83e4af5f2033", null ],
+    [ "fetch_data", "classPaperdinkUIDateClass.html#af9c1c51996f58f7ab822497beb745f37", null ],
     [ "day_offset", "classPaperdinkUIDateClass.html#a7f6e0c5fe7bcb62dbace073b3eae5733", null ],
     [ "hour", "classPaperdinkUIDateClass.html#ac15376fa1c305f2d3bc4b542c97266f9", null ],
     [ "mday", "classPaperdinkUIDateClass.html#aef46d12e1da62363c5d7efdc05f5dd8f", null ],
