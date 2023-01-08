@@ -58,7 +58,7 @@ void PaperdinkUIDateClass::display_day_date_style1_center(GxEPD2_GFX& display, u
 	char date_str[7];
 
 	display.setFont(font);
-	display.setTextColor(display.epd2.hasColor ? GxEPD_RED : GxEPD_BLACK);
+	display.setTextColor(primary_color);
 	display.setTextSize(1);
 
     // Display day
@@ -81,7 +81,7 @@ void PaperdinkUIDateClass::display_day_date_style2_center(GxEPD2_GFX& display, u
     char mday_str[3];
 
 	display.setFont(font);
-	display.setTextColor(GxEPD_WHITE);
+	display.setTextColor(secondary_color);
 	display.setTextSize(1);
     
     // Display day
@@ -104,7 +104,7 @@ void PaperdinkUIDateClass::display_last_updated_time_style1_center(GxEPD2_GFX& d
 	char time_str[] = "Updated at: XX:XX";
 
 	display.setFont(font);
-	display.setTextColor(GxEPD_BLACK);
+	display.setTextColor(primary_color);
 	display.setTextSize(1);
 
     sprintf(&time_str[12], "%02d:%02d", mil_hour, min);
@@ -123,7 +123,7 @@ void PaperdinkUIDateClass::display_calender(GxEPD2_GFX& display, uint16_t x, uin
      */
 	display.setFont(&Gobold_Thin9pt7b);
 	display.setTextSize(1);
-    display.setTextColor(GxEPD_BLACK);
+    display.setTextColor(primary_color);
 
 #define CAL_STRING "Mon   Tue   Wed   Thu   Fri   Sat   Sun"
 
@@ -152,10 +152,10 @@ void PaperdinkUIDateClass::display_calender(GxEPD2_GFX& display, uint16_t x, uin
 					int16_t x2, y2;
 					uint16_t w2, h2;
 					display.getTextBounds(str, x + (i * (wt / 7)) - num_offset, y + ((j + 1) * ht) + ((j + 1) * 7), &x2, &y2, &w2, &h2);
-					display.fillRect(x2 - 4, y2 - 4, w2 + 8, h2 + 8, GxEPD_BLACK);
-					display.setTextColor(GxEPD_WHITE);
+					display.fillRect(x2 - 4, y2 - 4, w2 + 8, h2 + 8, primary_color);
+					display.setTextColor(secondary_color);
 				} else{
-					display.setTextColor(GxEPD_BLACK);
+					display.setTextColor(primary_color);
 				}
                 // once the offset is reached, start incrementing
 				display.println(day);

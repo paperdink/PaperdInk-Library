@@ -23,7 +23,7 @@ class PaperdinkUIDateClass : public PaperdinkUIBaseClass
         // Offset to change start week. 0=>Sun, 1=>Sat, 2=>Fri ... 6=>Mon
         uint8_t week_start_offset;
 
-        int8_t fetch_data(const char *time_zone, uint8_t week_start_offset = 0);
+        int8_t fetch_data(const char *time_zone, uint8_t week_start_offset = 6);
         void display_day_date_style1_center(GxEPD2_GFX& display, uint16_t x, uint16_t y, uint16_t w);
         void display_day_date_style2_center(GxEPD2_GFX& display, uint16_t x, uint16_t y, uint16_t w);
         void display_last_updated_time_style1_center(GxEPD2_GFX& display, uint16_t x, uint16_t y, uint16_t w);
