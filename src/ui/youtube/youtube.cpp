@@ -50,7 +50,7 @@ void PaperdinkUIYoutubeClass::display_subscribers_med(GxEPD2_GFX& display, int16
     char subscribers_str[MAX_YOUTUBE_SUBSCRIBER_COUNT];
 
     display.setFont(font);
-	display.setTextColor(GxEPD_BLACK);
+	display.setTextColor(primary_color);
 	display.setTextSize(1);
 
     // Display subscribers count
@@ -68,7 +68,7 @@ void PaperdinkUIYoutubeClass::display_subscribers_med(GxEPD2_GFX& display, int16
     display.print(subscribers_str);
     
     // 3 px margin
-    display.drawBitmap(prev_width-wt-user_med_width-5, prev_height-user_med_height+3, user_med, user_med_width, user_med_height, GxEPD_BLACK);
+    display.drawBitmap(prev_width-wt-user_med_width-5, prev_height-user_med_height+3, user_med, user_med_width, user_med_height, primary_color);
 }
 
 void PaperdinkUIYoutubeClass::display_views_med(GxEPD2_GFX& display, int16_t x, int16_t y, int16_t w, int16_t h)
@@ -79,7 +79,7 @@ void PaperdinkUIYoutubeClass::display_views_med(GxEPD2_GFX& display, int16_t x, 
     char views_str[MAX_YOUTUBE_VIEWS_COUNT];
 
     display.setFont(font);
-	display.setTextColor(GxEPD_BLACK);
+	display.setTextColor(primary_color);
 	display.setTextSize(1);
 
     // Display ticker
@@ -97,7 +97,7 @@ void PaperdinkUIYoutubeClass::display_views_med(GxEPD2_GFX& display, int16_t x, 
 	display.print(views_str);
 
     // 3 px margin
-    display.drawBitmap(prev_width-wt-eye_med_width-5, prev_height-eye_med_height+3, eye_med, eye_med_width, eye_med_height, GxEPD_BLACK);
+    display.drawBitmap(prev_width-wt-eye_med_width-5, prev_height-eye_med_height+3, eye_med, eye_med_width, eye_med_height, primary_color);
 }
 
 PaperdinkUIYoutubeClass Paperdink_Youtube;

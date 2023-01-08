@@ -82,6 +82,8 @@ void setup()
 
     /* Display number of subscribers and views */
     Paperdink_Youtube.font = &PAPERDINK_FONT_MED;
+    Paperdink_Youtube.primary_color = GxEPD_BLACK;
+
     Paperdink_Youtube.display_subscribers_med(Paperdink.epd, 0, 170, 400, 50);
     Paperdink_Youtube.display_views_med(Paperdink.epd, 0, 220, 400, 50);
 
