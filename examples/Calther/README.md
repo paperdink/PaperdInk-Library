@@ -1,5 +1,5 @@
 # Calther
-This example displays a calender along with weather and todo list.
+This example displays a calendar along with weather and todo list.
 Todo list can be synced from [Taiga](https://www.taiga.io) or [Todoist](https://todoist.com) and weather from [Openweathermap](https://www.openweathermap.org)
 
 <img src="Calther.png" width="500" alt="Calther image">
