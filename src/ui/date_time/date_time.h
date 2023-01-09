@@ -27,7 +27,7 @@ class PaperdinkUIDateClass : public PaperdinkUIBaseClass
         void display_day_date_style1_center(GxEPD2_GFX& display, uint16_t x, uint16_t y, uint16_t w);
         void display_day_date_style2_center(GxEPD2_GFX& display, uint16_t x, uint16_t y, uint16_t w);
         void display_last_updated_time_style1_center(GxEPD2_GFX& display, uint16_t x, uint16_t y, uint16_t w);
-        void display_calender(GxEPD2_GFX& display, uint16_t x, uint16_t y);
+        void display_calendar(GxEPD2_GFX& display, uint16_t x, uint16_t y);
 };
 
 extern PaperdinkUIDateClass Paperdink_Date;
