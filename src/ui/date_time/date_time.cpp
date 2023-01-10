@@ -113,7 +113,7 @@ void PaperdinkUIDateClass::display_last_updated_time_style1_center(GxEPD2_GFX& d
 	display.print(time_str);
 }
 
-void PaperdinkUIDateClass::display_calender(GxEPD2_GFX& display, uint16_t x, uint16_t y)
+void PaperdinkUIDateClass::display_calendar(GxEPD2_GFX& display, uint16_t x, uint16_t y)
 {
 	int16_t xt, yt;
 	uint16_t wt, ht;
