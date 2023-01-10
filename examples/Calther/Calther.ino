@@ -55,12 +55,12 @@ void setup()
         DEBUG.println("Unable to fetch Date Time data");
     }
 
-    /* Set colors for the calender */
+    /* Set colors for the calendar */
     Paperdink_Date.primary_color = GxEPD_BLACK;
     Paperdink_Date.secondary_color = GxEPD_WHITE;
 
-    /* Display calender */
-    Paperdink_Date.display_calender(Paperdink.epd, 125, 40); 
+    /* Display calendar */
+    Paperdink_Date.display_calendar(Paperdink.epd, 125, 40); 
 
     Paperdink_Date.font = &PAPERDINK_FONT_LRG;
     /* Display day and month */
