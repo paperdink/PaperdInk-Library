@@ -12,7 +12,7 @@ var searchData=
   ['disable_5fdisplay_9',['disable_display',['../classPaperdinkDeviceBaseClass.html#a7fe51094a2665123ecb1dcf8e7522df5',1,'PaperdinkDeviceBaseClass::disable_display()'],['../classPaperdink__Classic.html#a1d63025cb7b18d01b35f3dc6f94a6a74',1,'Paperdink_Classic::disable_display()'],['../classPaperdink__Merlot.html#a3dfb11972cb0ad8979430f78cd6029a2',1,'Paperdink_Merlot::disable_display()']]],
   ['disable_5feverything_10',['disable_everything',['../classPaperdinkDeviceBaseClass.html#a01dc2809d5fb50978cd3427817a16d9d',1,'PaperdinkDeviceBaseClass']]],
   ['display_5fbitmap_5ffs_11',['display_bitmap_fs',['../classPaperdinkUIClass.html#ad4f20660f4bcddeb5f2dfbb324a6ed8d',1,'PaperdinkUIClass']]],
-  ['display_5fcalender_12',['display_calender',['../classPaperdinkUIDateClass.html#a1b0d3fbccaf2554eb5f569f0b6a7af42',1,'PaperdinkUIDateClass']]],
+  ['display_5fcalendar_12',['display_calendar',['../classPaperdinkUIDateClass.html#a9d78f1559eae6bcac9c483a1e512568f',1,'PaperdinkUIDateClass']]],
   ['display_5fday_5fdate_5fstyle1_5fcenter_13',['display_day_date_style1_center',['../classPaperdinkUIDateClass.html#a94ec0d0d265baaa92f5f640d0c5e681b',1,'PaperdinkUIDateClass']]],
   ['display_5fday_5fdate_5fstyle2_5fcenter_14',['display_day_date_style2_center',['../classPaperdinkUIDateClass.html#a7b92fd0f65b4e454460b9712afcac031',1,'PaperdinkUIDateClass']]],
   ['display_5fgrid_15',['display_grid',['../classPaperdinkUIClass.html#a124f4e85820343a9ecad169628603e4b',1,'PaperdinkUIClass']]],

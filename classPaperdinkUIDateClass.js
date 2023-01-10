@@ -1,6 +1,6 @@
 var classPaperdinkUIDateClass =
 [
-    [ "display_calender", "classPaperdinkUIDateClass.html#a1b0d3fbccaf2554eb5f569f0b6a7af42", null ],
+    [ "display_calendar", "classPaperdinkUIDateClass.html#a9d78f1559eae6bcac9c483a1e512568f", null ],
     [ "display_day_date_style1_center", "classPaperdinkUIDateClass.html#a94ec0d0d265baaa92f5f640d0c5e681b", null ],
     [ "display_day_date_style2_center", "classPaperdinkUIDateClass.html#a7b92fd0f65b4e454460b9712afcac031", null ],
     [ "display_last_updated_time_style1_center", "classPaperdinkUIDateClass.html#a607ad8b7bb9d7f2606499823904beef8", null ],
