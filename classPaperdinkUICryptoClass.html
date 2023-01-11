@@ -214,18 +214,22 @@ Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  106</span> </div>
 <div class="line"><span class="lineno">  107</span>    <span class="comment">/* Display arrow */</span></div>
 <div class="line"><span class="lineno">  108</span>    <span class="keyword">const</span> uint8_t *arrow = <a class="code hl_variable" href="up__arrow__sml_8h.html#a0ab6640bf5efe15dadc6bc6b38a20b1e">up_arrow_sml</a>;</div>
-<div class="line"><span class="lineno">  109</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classPaperdinkUICryptoClass.html#a8a6c32d957a3c4673d628d33a28bc5f5">change</a>[0] == <span class="charliteral">&#39;-&#39;</span>){</div>
-<div class="line"><span class="lineno">  110</span>        arrow = <a class="code hl_variable" href="down__arrow__sml_8h.html#aee416bcfdc67d12a1590d42d093ad19f">down_arrow_sml</a>;</div>
-<div class="line"><span class="lineno">  111</span>    }</div>
-<div class="line"><span class="lineno">  112</span>    display.drawBitmap(prev_width, prev_height, arrow, 24, 24, <a class="code hl_variable" href="classPaperdinkUIBaseClass.html#a32cb0378ac64f815144d54a04a16ec28">tertiary_color</a>);</div>
-<div class="line"><span class="lineno">  113</span>    prev_width += 24; <span class="comment">// Size of bitmap</span></div>
-<div class="line"><span class="lineno">  114</span> </div>
-<div class="line"><span class="lineno">  115</span>    <span class="comment">// Display percentage change</span></div>
-<div class="line"><span class="lineno">  116</span>    display.setTextColor(<a class="code hl_variable" href="classPaperdinkUIBaseClass.html#adb4e45b10a8ba627629cf9e34626aa7d">primary_color</a>);</div>
-<div class="line"><span class="lineno">  117</span>    display.getTextBounds(<a class="code hl_variable" href="classPaperdinkUICryptoClass.html#a8a6c32d957a3c4673d628d33a28bc5f5">change</a>, 0, 0, &amp;xt, &amp;yt, &amp;wt, &amp;ht);</div>
-<div class="line"><span class="lineno">  118</span>    display.setCursor(prev_width-wt, y+ht+3);</div>
-<div class="line"><span class="lineno">  119</span>    display.print(<a class="code hl_variable" href="classPaperdinkUICryptoClass.html#a8a6c32d957a3c4673d628d33a28bc5f5">change</a>);</div>
-<div class="line"><span class="lineno">  120</span>}</div>
+<div class="line"><span class="lineno">  109</span>    uint16_t color = <a class="code hl_variable" href="classPaperdinkUIBaseClass.html#adb4e45b10a8ba627629cf9e34626aa7d">primary_color</a>;</div>
+<div class="line"><span class="lineno">  110</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classPaperdinkUICryptoClass.html#a8a6c32d957a3c4673d628d33a28bc5f5">change</a>[0] == <span class="charliteral">&#39;-&#39;</span>){</div>
+<div class="line"><span class="lineno">  111</span>        arrow = <a class="code hl_variable" href="down__arrow__sml_8h.html#aee416bcfdc67d12a1590d42d093ad19f">down_arrow_sml</a>;</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">if</span>(display.epd2.hasColor){</div>
+<div class="line"><span class="lineno">  113</span>            color = <a class="code hl_variable" href="classPaperdinkUIBaseClass.html#a688b5caea6d212ad74f3522b1caeb45c">secondary_color</a>;</div>
+<div class="line"><span class="lineno">  114</span>        }</div>
+<div class="line"><span class="lineno">  115</span>    }</div>
+<div class="line"><span class="lineno">  116</span>    display.drawBitmap(prev_width, prev_height, arrow, 24, 24, color);</div>
+<div class="line"><span class="lineno">  117</span>    prev_width += 24; <span class="comment">// Size of bitmap</span></div>
+<div class="line"><span class="lineno">  118</span> </div>
+<div class="line"><span class="lineno">  119</span>    <span class="comment">// Display percentage change</span></div>
+<div class="line"><span class="lineno">  120</span>    display.setTextColor(<a class="code hl_variable" href="classPaperdinkUIBaseClass.html#adb4e45b10a8ba627629cf9e34626aa7d">primary_color</a>);</div>
+<div class="line"><span class="lineno">  121</span>    display.getTextBounds(<a class="code hl_variable" href="classPaperdinkUICryptoClass.html#a8a6c32d957a3c4673d628d33a28bc5f5">change</a>, 0, 0, &amp;xt, &amp;yt, &amp;wt, &amp;ht);</div>
+<div class="line"><span class="lineno">  122</span>    display.setCursor(prev_width-wt, y+ht+3);</div>
+<div class="line"><span class="lineno">  123</span>    display.print(<a class="code hl_variable" href="classPaperdinkUICryptoClass.html#a8a6c32d957a3c4673d628d33a28bc5f5">change</a>);</div>
+<div class="line"><span class="lineno">  124</span>}</div>
 <div class="ttc" id="aclassPaperdinkUIBaseClass_html_a2403c7536e7ad035b91e3f171c0de35e"><div class="ttname"><a href="classPaperdinkUIBaseClass.html#a2403c7536e7ad035b91e3f171c0de35e">PaperdinkUIBaseClass::font</a></div><div class="ttdeci">const GFXfont * font</div><div class="ttdef"><b>Definition:</b> <a href="ui__base_8h_source.html#l00011">ui_base.h:11</a></div></div>
 <div class="ttc" id="aclassPaperdinkUIBaseClass_html_a32cb0378ac64f815144d54a04a16ec28"><div class="ttname"><a href="classPaperdinkUIBaseClass.html#a32cb0378ac64f815144d54a04a16ec28">PaperdinkUIBaseClass::tertiary_color</a></div><div class="ttdeci">int tertiary_color</div><div class="ttdef"><b>Definition:</b> <a href="ui__base_8h_source.html#l00015">ui_base.h:15</a></div></div>
 <div class="ttc" id="aclassPaperdinkUIBaseClass_html_a48ed5b437a554c49e2acbbf3625e5ebe"><div class="ttname"><a href="classPaperdinkUIBaseClass.html#a48ed5b437a554c49e2acbbf3625e5ebe">PaperdinkUIBaseClass::font_bold</a></div><div class="ttdeci">const GFXfont * font_bold</div><div class="ttdef"><b>Definition:</b> <a href="ui__base_8h_source.html#l00012">ui_base.h:12</a></div></div>
