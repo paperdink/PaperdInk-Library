@@ -106,10 +106,14 @@ void PaperdinkUICryptoClass::display_med_box(GxEPD2_GFX& display, int16_t x, int
 
     /* Display arrow */
 	const uint8_t *arrow = up_arrow_sml;
+	uint16_t color = primary_color;
 	if(change[0] == '-'){
 		arrow = down_arrow_sml;
+		if(display.epd2.hasColor){
+			color = secondary_color;
+		}
 	}
-	display.drawBitmap(prev_width, prev_height, arrow, 24, 24, tertiary_color);
+	display.drawBitmap(prev_width, prev_height, arrow, 24, 24, color);
 	prev_width += 24; // Size of bitmap
 
     // Display percentage change
