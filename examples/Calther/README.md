@@ -30,8 +30,8 @@ Copy this token to the config file.
 
 ### Refresh
 The refresh can be controlled by the the following two lines. (Only un-comment one of the lines.)
-Line 1: For lower current consumption, it is possible to wake-up only after a specific period of time defined by the variable `sleep_time`.
-Line 2: For better control, it is possible to configure a button to trigger a wake-up but this leads to slightly higer current usage.
+- Line 1: For lower current consumption, it is possible to wake-up only after a specific period of time defined by the variable `sleep_time`.
+- Line 2: For better control, it is possible to configure a button to trigger a wake-up but this leads to slightly higer current usage.
 
 ```
   /* Update after sleep_time microsecond or when button 1 is pressed. */
