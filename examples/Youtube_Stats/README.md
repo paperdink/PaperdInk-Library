@@ -3,6 +3,17 @@ This example shows your youtube subscribers and total views count.
 
 <img src="Youtube_Stats.png" width="500" alt="Youtube stats image">
 
+### Device wake-up
+The refresh can be controlled by the the following two lines. (Only un-comment one of the lines.)
+- Line 1: For lower current consumption, it is possible to wake-up only after a specific period of time defined by the variable `sleep_time`.
+- Line 2: For better control, it is possible to configure a button to trigger a wake-up in addition to a specific time period, but this leads to slightly higer current usage.
+
+```
+  /* Update after sleep_time microsecond or when button 1 is pressed. */
+  // Paperdink.deep_sleep_timer_wakeup(sleep_time*S_TO_uS_FACTOR); // Consumes lower current
+  Paperdink.deep_sleep_timer_button_wakeup(sleep_time*S_TO_uS_FACTOR, BUTTON_1_PIN); // Consumes higher current
+```
+
 ## Usage
 Update the `config.h` file with configuration details
 ```
