@@ -28,6 +28,17 @@ First create an account on [Todoist](https://www.todoist.com).
 Go to `Settings > Integrations` and generate an API token.
 Copy this token to the config file.
 
+### Refresh
+The refresh can be controlled by the the following two lines. (Only un-comment one of the lines.)
+Line 1: For lower current consumption, it is possible to wake-up only after a specific period of time defined by the variable `sleep_time`.
+Line 2: For better control, it is possible to configure a button to trigger a wake-up but this leads to slightly higer current usage.
+
+```
+  /* Update after sleep_time microsecond or when button 1 is pressed. */
+  // Paperdink.deep_sleep_timer_wakeup(sleep_time*S_TO_uS_FACTOR); // Consumes lower current
+	Paperdink.deep_sleep_timer_button_wakeup(sleep_time*S_TO_uS_FACTOR, BUTTON_1_PIN); // Consumes higher current
+```
+
 ### Update `config.h`
 
 Update the `config.h` file with configuration details
