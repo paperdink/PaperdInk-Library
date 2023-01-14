@@ -106,115 +106,125 @@ $(document).ready(function(){initNavTree('base_8cpp_source.html',''); initResiza
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    pinMode(<a class="code hl_define" href="pin__assignment_8h.html#ad9659da3944ab60dddc44fcd16293ee5">BATT_EN</a>, OUTPUT);</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    pinMode(<a class="code hl_define" href="pin__assignment_8h.html#a4e96da313fa726b5b120e6d2461248cd">PCF_INT</a>, INPUT); <span class="comment">// Required to lower power consumption</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>}</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classPaperdinkDeviceBaseClass.html#a393b02e53f276397bc4dc2f65c65550f">   16</a></span>int8_t <a class="code hl_function" href="classPaperdinkDeviceBaseClass.html#a393b02e53f276397bc4dc2f65c65550f">PaperdinkDeviceBaseClass::enable_display</a>()</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment">// Power up EPD</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    digitalWrite(<a class="code hl_define" href="pin__assignment_8h.html#a227e94fca745014a0386f84cd4321513">EPD_EN</a>, LOW);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    digitalWrite(<a class="code hl_define" href="pin__assignment_8h.html#aa8c957366ef9084af92c44996b5857e0">EPD_RST</a>, LOW);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    delay(50);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    digitalWrite(<a class="code hl_define" href="pin__assignment_8h.html#aa8c957366ef9084af92c44996b5857e0">EPD_RST</a>, HIGH);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    delay(50);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classPaperdinkDeviceBaseClass.html#a7fe51094a2665123ecb1dcf8e7522df5">   28</a></span>int8_t <a class="code hl_function" href="classPaperdinkDeviceBaseClass.html#a7fe51094a2665123ecb1dcf8e7522df5">PaperdinkDeviceBaseClass::disable_display</a>()</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    digitalWrite(<a class="code hl_define" href="pin__assignment_8h.html#a227e94fca745014a0386f84cd4321513">EPD_EN</a>, HIGH);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    digitalWrite(<a class="code hl_define" href="pin__assignment_8h.html#aa8c957366ef9084af92c44996b5857e0">EPD_RST</a>, LOW);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    delay(50);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    digitalWrite(<a class="code hl_define" href="pin__assignment_8h.html#aa8c957366ef9084af92c44996b5857e0">EPD_RST</a>, HIGH);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classPaperdinkDeviceBaseClass.html#a01dc2809d5fb50978cd3427817a16d9d">   38</a></span>int8_t <a class="code hl_function" href="classPaperdinkDeviceBaseClass.html#a01dc2809d5fb50978cd3427817a16d9d">PaperdinkDeviceBaseClass::disable_everything</a>()</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>{</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_function" href="classPaperdinkDeviceBaseClass.html#a7fe51094a2665123ecb1dcf8e7522df5">disable_display</a>();</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">// TODO: Add disable functions for SD and Batt</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    digitalWrite(<a class="code hl_define" href="pin__assignment_8h.html#a15569d756317107701fa79787ab864c4">SD_EN</a>, HIGH);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    digitalWrite(<a class="code hl_define" href="pin__assignment_8h.html#ad9659da3944ab60dddc44fcd16293ee5">BATT_EN</a>, HIGH);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classPaperdinkDeviceBaseClass.html#a298b1cfc36ce660183d25743c56482ff">   48</a></span>int8_t <a class="code hl_function" href="classPaperdinkDeviceBaseClass.html#a298b1cfc36ce660183d25743c56482ff">PaperdinkDeviceBaseClass::deep_sleep_timer_wakeup</a>(uint64_t sleep_time_us)</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>{</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">// Turn off everything</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_function" href="classPaperdinkDeviceBaseClass.html#a01dc2809d5fb50978cd3427817a16d9d">disable_everything</a>();</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    esp_sleep_enable_timer_wakeup(sleep_time_us);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    Serial.printf(<span class="stringliteral">&quot;Timer wakeup after %lld microseconds...&quot;</span>, sleep_time_us);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">// Go to sleep</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    esp_deep_sleep_start();</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classPaperdinkDeviceBaseClass.html#a8d5d8d8a40f370c2245d710bfbc1c509">   61</a></span>int8_t <a class="code hl_function" href="classPaperdinkDeviceBaseClass.html#a8d5d8d8a40f370c2245d710bfbc1c509">PaperdinkDeviceBaseClass::deep_sleep_button_wakeup</a>(uint8_t gpio_num)</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>{</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">// Turn off everything</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <a class="code hl_function" href="classPaperdinkDeviceBaseClass.html#a01dc2809d5fb50978cd3427817a16d9d">disable_everything</a>();</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    esp_sleep_enable_ext0_wakeup((gpio_num_t)gpio_num, 0); <span class="comment">//1 = High, 0 = Low</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    Serial.printf(<span class="stringliteral">&quot;Button wakeup on pin %d&quot;</span>, gpio_num);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="comment">// Go to sleep</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    esp_deep_sleep_start();</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>}</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classPaperdinkDeviceBaseClass.html#ae4a7ea470b52aa212a17992b9989eb83">   74</a></span>int8_t <a class="code hl_function" href="classPaperdinkDeviceBaseClass.html#ae4a7ea470b52aa212a17992b9989eb83">PaperdinkDeviceBaseClass::deep_sleep_timer_button_wakeup</a>(uint64_t sleep_time_us, uint8_t gpio_num)</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>{</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="comment">// Turn off everything</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_function" href="classPaperdinkDeviceBaseClass.html#a01dc2809d5fb50978cd3427817a16d9d">disable_everything</a>();</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    esp_sleep_enable_timer_wakeup(sleep_time_us);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    esp_sleep_enable_ext0_wakeup((gpio_num_t)gpio_num, 0); <span class="comment">//1 = High, 0 = Low</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    Serial.printf(<span class="stringliteral">&quot;Timer wakeup after %lld us or button on pin %d&quot;</span>, sleep_time_us, gpio_num);</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">// Go to sleep</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    esp_deep_sleep_start();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  pinMode(<a class="code hl_define" href="pin__assignment_8h.html#a0411f64ff1b702c2b2e6e721f032f750">BUTTON_1_PIN</a>, INPUT_PULLUP);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  pinMode(<a class="code hl_define" href="pin__assignment_8h.html#ac965fc518b25b1ec0de10e3ac841b170">BUTTON_2_PIN</a>, INPUT_PULLUP);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  pinMode(<a class="code hl_define" href="pin__assignment_8h.html#a0371ce39a54669bd1ef373bac05fdd4b">BUTTON_3_PIN</a>, INPUT_PULLUP);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  pinMode(<a class="code hl_define" href="pin__assignment_8h.html#a6f97237f1f6f3380a8010ba147a088ad">BUTTON_4_PIN</a>, INPUT_PULLUP);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classPaperdinkDeviceBaseClass.html#a393b02e53f276397bc4dc2f65c65550f">   22</a></span>int8_t <a class="code hl_function" href="classPaperdinkDeviceBaseClass.html#a393b02e53f276397bc4dc2f65c65550f">PaperdinkDeviceBaseClass::enable_display</a>()</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">// Power up EPD</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    digitalWrite(<a class="code hl_define" href="pin__assignment_8h.html#a227e94fca745014a0386f84cd4321513">EPD_EN</a>, LOW);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    digitalWrite(<a class="code hl_define" href="pin__assignment_8h.html#aa8c957366ef9084af92c44996b5857e0">EPD_RST</a>, LOW);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    delay(50);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    digitalWrite(<a class="code hl_define" href="pin__assignment_8h.html#aa8c957366ef9084af92c44996b5857e0">EPD_RST</a>, HIGH);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    delay(50);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classPaperdinkDeviceBaseClass.html#a7fe51094a2665123ecb1dcf8e7522df5">   34</a></span>int8_t <a class="code hl_function" href="classPaperdinkDeviceBaseClass.html#a7fe51094a2665123ecb1dcf8e7522df5">PaperdinkDeviceBaseClass::disable_display</a>()</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>{</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    digitalWrite(<a class="code hl_define" href="pin__assignment_8h.html#a227e94fca745014a0386f84cd4321513">EPD_EN</a>, HIGH);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    digitalWrite(<a class="code hl_define" href="pin__assignment_8h.html#aa8c957366ef9084af92c44996b5857e0">EPD_RST</a>, LOW);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    delay(50);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    digitalWrite(<a class="code hl_define" href="pin__assignment_8h.html#aa8c957366ef9084af92c44996b5857e0">EPD_RST</a>, HIGH);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classPaperdinkDeviceBaseClass.html#a01dc2809d5fb50978cd3427817a16d9d">   44</a></span>int8_t <a class="code hl_function" href="classPaperdinkDeviceBaseClass.html#a01dc2809d5fb50978cd3427817a16d9d">PaperdinkDeviceBaseClass::disable_everything</a>()</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>{</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_function" href="classPaperdinkDeviceBaseClass.html#a7fe51094a2665123ecb1dcf8e7522df5">disable_display</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">// TODO: Add disable functions for SD and Batt</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    digitalWrite(<a class="code hl_define" href="pin__assignment_8h.html#a15569d756317107701fa79787ab864c4">SD_EN</a>, HIGH);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    digitalWrite(<a class="code hl_define" href="pin__assignment_8h.html#ad9659da3944ab60dddc44fcd16293ee5">BATT_EN</a>, HIGH);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classPaperdinkDeviceBaseClass.html#a298b1cfc36ce660183d25743c56482ff">   54</a></span>int8_t <a class="code hl_function" href="classPaperdinkDeviceBaseClass.html#a298b1cfc36ce660183d25743c56482ff">PaperdinkDeviceBaseClass::deep_sleep_timer_wakeup</a>(uint64_t sleep_time_us)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>{</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">// Turn off everything</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_function" href="classPaperdinkDeviceBaseClass.html#a01dc2809d5fb50978cd3427817a16d9d">disable_everything</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    esp_sleep_enable_timer_wakeup(sleep_time_us);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    Serial.printf(<span class="stringliteral">&quot;Timer wakeup after %lld microseconds...&quot;</span>, sleep_time_us);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="comment">// Go to sleep</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    esp_deep_sleep_start();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classPaperdinkDeviceBaseClass.html#a8d5d8d8a40f370c2245d710bfbc1c509">   67</a></span>int8_t <a class="code hl_function" href="classPaperdinkDeviceBaseClass.html#a8d5d8d8a40f370c2245d710bfbc1c509">PaperdinkDeviceBaseClass::deep_sleep_button_wakeup</a>(uint8_t gpio_num)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>{</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="comment">// Turn off everything</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <a class="code hl_function" href="classPaperdinkDeviceBaseClass.html#a01dc2809d5fb50978cd3427817a16d9d">disable_everything</a>();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    esp_sleep_enable_ext0_wakeup((gpio_num_t)gpio_num, 0); <span class="comment">//1 = High, 0 = Low</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    Serial.printf(<span class="stringliteral">&quot;Button wakeup on pin %d&quot;</span>, gpio_num);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">// Go to sleep</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    esp_deep_sleep_start();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="classPaperdinkDeviceBaseClass.html#ae4a7ea470b52aa212a17992b9989eb83">   80</a></span>int8_t <a class="code hl_function" href="classPaperdinkDeviceBaseClass.html#ae4a7ea470b52aa212a17992b9989eb83">PaperdinkDeviceBaseClass::deep_sleep_timer_button_wakeup</a>(uint64_t sleep_time_us, uint8_t gpio_num)</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>{</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">// Turn off everything</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_function" href="classPaperdinkDeviceBaseClass.html#a01dc2809d5fb50978cd3427817a16d9d">disable_everything</a>();</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classPaperdinkDeviceBaseClass.html#a8a143cfff2861d46747dc2c9db78b4a3">   88</a></span>int8_t <a class="code hl_function" href="classPaperdinkDeviceBaseClass.html#a8a143cfff2861d46747dc2c9db78b4a3">PaperdinkDeviceBaseClass::connect_wifi</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *ssid, <span class="keyword">const</span> <span class="keywordtype">char</span> *password, uint8_t attempts)</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>{</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    esp_sleep_enable_timer_wakeup(sleep_time_us);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    esp_sleep_enable_ext0_wakeup((gpio_num_t)gpio_num, 0); <span class="comment">//1 = High, 0 = Low</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    Serial.printf(<span class="stringliteral">&quot;Timer wakeup after %lld us or button on pin %d&quot;</span>, sleep_time_us, gpio_num);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="comment">// Go to sleep</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    esp_deep_sleep_start();</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    WiFi.begin(ssid, password);</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">while</span>(WiFi.status() != WL_CONNECTED ){</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        delay(500);</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        Serial.print(<span class="stringliteral">&quot;.&quot;</span>);</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordflow">if</span>(!attempts--){</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        }</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    Serial.println(<span class="stringliteral">&quot;Connected&quot;</span>);</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>}</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="classPaperdinkDeviceBaseClass.html#ad12df602577ae3f04c6cf1f6dd29df2e">  105</a></span>int8_t <a class="code hl_function" href="classPaperdinkDeviceBaseClass.html#a8a143cfff2861d46747dc2c9db78b4a3">PaperdinkDeviceBaseClass::connect_wifi</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *ssid, <span class="keyword">const</span> <span class="keywordtype">char</span> *password)</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>{</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classPaperdinkDeviceBaseClass.html#a8a143cfff2861d46747dc2c9db78b4a3">connect_wifi</a>(ssid, password, 40);</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>}</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>}</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classPaperdinkDeviceBaseClass.html#a8a143cfff2861d46747dc2c9db78b4a3">   94</a></span>int8_t <a class="code hl_function" href="classPaperdinkDeviceBaseClass.html#a8a143cfff2861d46747dc2c9db78b4a3">PaperdinkDeviceBaseClass::connect_wifi</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *ssid, <span class="keyword">const</span> <span class="keywordtype">char</span> *password, uint8_t attempts)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>{</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    WiFi.begin(ssid, password);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">while</span>(WiFi.status() != WL_CONNECTED ){</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        delay(500);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        Serial.print(<span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordflow">if</span>(!attempts--){</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    Serial.println(<span class="stringliteral">&quot;Connected&quot;</span>);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>}</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="classPaperdinkDeviceBaseClass.html#ad12df602577ae3f04c6cf1f6dd29df2e">  111</a></span>int8_t <a class="code hl_function" href="classPaperdinkDeviceBaseClass.html#a8a143cfff2861d46747dc2c9db78b4a3">PaperdinkDeviceBaseClass::connect_wifi</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *ssid, <span class="keyword">const</span> <span class="keywordtype">char</span> *password)</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>{</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classPaperdinkDeviceBaseClass.html#a8a143cfff2861d46747dc2c9db78b4a3">connect_wifi</a>(ssid, password, 40);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>}</div>
 <div class="ttc" id="abase_8h_html"><div class="ttname"><a href="base_8h.html">base.h</a></div></div>
-<div class="ttc" id="aclassPaperdinkDeviceBaseClass_html_a01dc2809d5fb50978cd3427817a16d9d"><div class="ttname"><a href="classPaperdinkDeviceBaseClass.html#a01dc2809d5fb50978cd3427817a16d9d">PaperdinkDeviceBaseClass::disable_everything</a></div><div class="ttdeci">int8_t disable_everything()</div><div class="ttdef"><b>Definition:</b> <a href="base_8cpp_source.html#l00038">base.cpp:38</a></div></div>
-<div class="ttc" id="aclassPaperdinkDeviceBaseClass_html_a298b1cfc36ce660183d25743c56482ff"><div class="ttname"><a href="classPaperdinkDeviceBaseClass.html#a298b1cfc36ce660183d25743c56482ff">PaperdinkDeviceBaseClass::deep_sleep_timer_wakeup</a></div><div class="ttdeci">int8_t deep_sleep_timer_wakeup(uint64_t sleep_time_us)</div><div class="ttdef"><b>Definition:</b> <a href="base_8cpp_source.html#l00048">base.cpp:48</a></div></div>
-<div class="ttc" id="aclassPaperdinkDeviceBaseClass_html_a393b02e53f276397bc4dc2f65c65550f"><div class="ttname"><a href="classPaperdinkDeviceBaseClass.html#a393b02e53f276397bc4dc2f65c65550f">PaperdinkDeviceBaseClass::enable_display</a></div><div class="ttdeci">virtual int8_t enable_display()</div><div class="ttdef"><b>Definition:</b> <a href="base_8cpp_source.html#l00016">base.cpp:16</a></div></div>
-<div class="ttc" id="aclassPaperdinkDeviceBaseClass_html_a7fe51094a2665123ecb1dcf8e7522df5"><div class="ttname"><a href="classPaperdinkDeviceBaseClass.html#a7fe51094a2665123ecb1dcf8e7522df5">PaperdinkDeviceBaseClass::disable_display</a></div><div class="ttdeci">virtual int8_t disable_display()</div><div class="ttdef"><b>Definition:</b> <a href="base_8cpp_source.html#l00028">base.cpp:28</a></div></div>
-<div class="ttc" id="aclassPaperdinkDeviceBaseClass_html_a8a143cfff2861d46747dc2c9db78b4a3"><div class="ttname"><a href="classPaperdinkDeviceBaseClass.html#a8a143cfff2861d46747dc2c9db78b4a3">PaperdinkDeviceBaseClass::connect_wifi</a></div><div class="ttdeci">int8_t connect_wifi(const char *ssid, const char *password, uint8_t attempts)</div><div class="ttdef"><b>Definition:</b> <a href="base_8cpp_source.html#l00088">base.cpp:88</a></div></div>
-<div class="ttc" id="aclassPaperdinkDeviceBaseClass_html_a8d5d8d8a40f370c2245d710bfbc1c509"><div class="ttname"><a href="classPaperdinkDeviceBaseClass.html#a8d5d8d8a40f370c2245d710bfbc1c509">PaperdinkDeviceBaseClass::deep_sleep_button_wakeup</a></div><div class="ttdeci">int8_t deep_sleep_button_wakeup(uint8_t gpio_num)</div><div class="ttdef"><b>Definition:</b> <a href="base_8cpp_source.html#l00061">base.cpp:61</a></div></div>
+<div class="ttc" id="aclassPaperdinkDeviceBaseClass_html_a01dc2809d5fb50978cd3427817a16d9d"><div class="ttname"><a href="classPaperdinkDeviceBaseClass.html#a01dc2809d5fb50978cd3427817a16d9d">PaperdinkDeviceBaseClass::disable_everything</a></div><div class="ttdeci">int8_t disable_everything()</div><div class="ttdef"><b>Definition:</b> <a href="base_8cpp_source.html#l00044">base.cpp:44</a></div></div>
+<div class="ttc" id="aclassPaperdinkDeviceBaseClass_html_a298b1cfc36ce660183d25743c56482ff"><div class="ttname"><a href="classPaperdinkDeviceBaseClass.html#a298b1cfc36ce660183d25743c56482ff">PaperdinkDeviceBaseClass::deep_sleep_timer_wakeup</a></div><div class="ttdeci">int8_t deep_sleep_timer_wakeup(uint64_t sleep_time_us)</div><div class="ttdef"><b>Definition:</b> <a href="base_8cpp_source.html#l00054">base.cpp:54</a></div></div>
+<div class="ttc" id="aclassPaperdinkDeviceBaseClass_html_a393b02e53f276397bc4dc2f65c65550f"><div class="ttname"><a href="classPaperdinkDeviceBaseClass.html#a393b02e53f276397bc4dc2f65c65550f">PaperdinkDeviceBaseClass::enable_display</a></div><div class="ttdeci">virtual int8_t enable_display()</div><div class="ttdef"><b>Definition:</b> <a href="base_8cpp_source.html#l00022">base.cpp:22</a></div></div>
+<div class="ttc" id="aclassPaperdinkDeviceBaseClass_html_a7fe51094a2665123ecb1dcf8e7522df5"><div class="ttname"><a href="classPaperdinkDeviceBaseClass.html#a7fe51094a2665123ecb1dcf8e7522df5">PaperdinkDeviceBaseClass::disable_display</a></div><div class="ttdeci">virtual int8_t disable_display()</div><div class="ttdef"><b>Definition:</b> <a href="base_8cpp_source.html#l00034">base.cpp:34</a></div></div>
+<div class="ttc" id="aclassPaperdinkDeviceBaseClass_html_a8a143cfff2861d46747dc2c9db78b4a3"><div class="ttname"><a href="classPaperdinkDeviceBaseClass.html#a8a143cfff2861d46747dc2c9db78b4a3">PaperdinkDeviceBaseClass::connect_wifi</a></div><div class="ttdeci">int8_t connect_wifi(const char *ssid, const char *password, uint8_t attempts)</div><div class="ttdef"><b>Definition:</b> <a href="base_8cpp_source.html#l00094">base.cpp:94</a></div></div>
+<div class="ttc" id="aclassPaperdinkDeviceBaseClass_html_a8d5d8d8a40f370c2245d710bfbc1c509"><div class="ttname"><a href="classPaperdinkDeviceBaseClass.html#a8d5d8d8a40f370c2245d710bfbc1c509">PaperdinkDeviceBaseClass::deep_sleep_button_wakeup</a></div><div class="ttdeci">int8_t deep_sleep_button_wakeup(uint8_t gpio_num)</div><div class="ttdef"><b>Definition:</b> <a href="base_8cpp_source.html#l00067">base.cpp:67</a></div></div>
 <div class="ttc" id="aclassPaperdinkDeviceBaseClass_html_ab5f1f3390591cc99c617b097b4ea86ff"><div class="ttname"><a href="classPaperdinkDeviceBaseClass.html#ab5f1f3390591cc99c617b097b4ea86ff">PaperdinkDeviceBaseClass::begin</a></div><div class="ttdeci">int8_t begin()</div><div class="ttdef"><b>Definition:</b> <a href="base_8cpp_source.html#l00005">base.cpp:5</a></div></div>
-<div class="ttc" id="aclassPaperdinkDeviceBaseClass_html_ae4a7ea470b52aa212a17992b9989eb83"><div class="ttname"><a href="classPaperdinkDeviceBaseClass.html#ae4a7ea470b52aa212a17992b9989eb83">PaperdinkDeviceBaseClass::deep_sleep_timer_button_wakeup</a></div><div class="ttdeci">int8_t deep_sleep_timer_button_wakeup(uint64_t sleep_time_us, uint8_t gpio_num)</div><div class="ttdef"><b>Definition:</b> <a href="base_8cpp_source.html#l00074">base.cpp:74</a></div></div>
+<div class="ttc" id="aclassPaperdinkDeviceBaseClass_html_ae4a7ea470b52aa212a17992b9989eb83"><div class="ttname"><a href="classPaperdinkDeviceBaseClass.html#ae4a7ea470b52aa212a17992b9989eb83">PaperdinkDeviceBaseClass::deep_sleep_timer_button_wakeup</a></div><div class="ttdeci">int8_t deep_sleep_timer_button_wakeup(uint64_t sleep_time_us, uint8_t gpio_num)</div><div class="ttdef"><b>Definition:</b> <a href="base_8cpp_source.html#l00080">base.cpp:80</a></div></div>
+<div class="ttc" id="apin__assignment_8h_html_a0371ce39a54669bd1ef373bac05fdd4b"><div class="ttname"><a href="pin__assignment_8h.html#a0371ce39a54669bd1ef373bac05fdd4b">BUTTON_3_PIN</a></div><div class="ttdeci">#define BUTTON_3_PIN</div><div class="ttdef"><b>Definition:</b> <a href="pin__assignment_8h_source.html#l00049">pin_assignment.h:49</a></div></div>
+<div class="ttc" id="apin__assignment_8h_html_a0411f64ff1b702c2b2e6e721f032f750"><div class="ttname"><a href="pin__assignment_8h.html#a0411f64ff1b702c2b2e6e721f032f750">BUTTON_1_PIN</a></div><div class="ttdeci">#define BUTTON_1_PIN</div><div class="ttdef"><b>Definition:</b> <a href="pin__assignment_8h_source.html#l00043">pin_assignment.h:43</a></div></div>
 <div class="ttc" id="apin__assignment_8h_html_a15569d756317107701fa79787ab864c4"><div class="ttname"><a href="pin__assignment_8h.html#a15569d756317107701fa79787ab864c4">SD_EN</a></div><div class="ttdeci">#define SD_EN</div><div class="ttdef"><b>Definition:</b> <a href="pin__assignment_8h_source.html#l00016">pin_assignment.h:16</a></div></div>
 <div class="ttc" id="apin__assignment_8h_html_a227e94fca745014a0386f84cd4321513"><div class="ttname"><a href="pin__assignment_8h.html#a227e94fca745014a0386f84cd4321513">EPD_EN</a></div><div class="ttdeci">#define EPD_EN</div><div class="ttdef"><b>Definition:</b> <a href="pin__assignment_8h_source.html#l00022">pin_assignment.h:22</a></div></div>
 <div class="ttc" id="apin__assignment_8h_html_a4e96da313fa726b5b120e6d2461248cd"><div class="ttname"><a href="pin__assignment_8h.html#a4e96da313fa726b5b120e6d2461248cd">PCF_INT</a></div><div class="ttdeci">#define PCF_INT</div><div class="ttdef"><b>Definition:</b> <a href="pin__assignment_8h_source.html#l00026">pin_assignment.h:26</a></div></div>
+<div class="ttc" id="apin__assignment_8h_html_a6f97237f1f6f3380a8010ba147a088ad"><div class="ttname"><a href="pin__assignment_8h.html#a6f97237f1f6f3380a8010ba147a088ad">BUTTON_4_PIN</a></div><div class="ttdeci">#define BUTTON_4_PIN</div><div class="ttdef"><b>Definition:</b> <a href="pin__assignment_8h_source.html#l00052">pin_assignment.h:52</a></div></div>
 <div class="ttc" id="apin__assignment_8h_html_aa8c957366ef9084af92c44996b5857e0"><div class="ttname"><a href="pin__assignment_8h.html#aa8c957366ef9084af92c44996b5857e0">EPD_RST</a></div><div class="ttdeci">#define EPD_RST</div><div class="ttdef"><b>Definition:</b> <a href="pin__assignment_8h_source.html#l00023">pin_assignment.h:23</a></div></div>
+<div class="ttc" id="apin__assignment_8h_html_ac965fc518b25b1ec0de10e3ac841b170"><div class="ttname"><a href="pin__assignment_8h.html#ac965fc518b25b1ec0de10e3ac841b170">BUTTON_2_PIN</a></div><div class="ttdeci">#define BUTTON_2_PIN</div><div class="ttdef"><b>Definition:</b> <a href="pin__assignment_8h_source.html#l00046">pin_assignment.h:46</a></div></div>
 <div class="ttc" id="apin__assignment_8h_html_ad9659da3944ab60dddc44fcd16293ee5"><div class="ttname"><a href="pin__assignment_8h.html#ad9659da3944ab60dddc44fcd16293ee5">BATT_EN</a></div><div class="ttdeci">#define BATT_EN</div><div class="ttdef"><b>Definition:</b> <a href="pin__assignment_8h_source.html#l00035">pin_assignment.h:35</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
