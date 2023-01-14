@@ -10,6 +10,12 @@ int8_t PaperdinkDeviceBaseClass::begin()
 	pinMode(BATT_EN, OUTPUT);
 	pinMode(PCF_INT, INPUT); // Required to lower power consumption
 
+  pinMode(BUTTON_1_PIN, INPUT_PULLUP);
+  pinMode(BUTTON_2_PIN, INPUT_PULLUP);
+  pinMode(BUTTON_3_PIN, INPUT_PULLUP);
+  pinMode(BUTTON_4_PIN, INPUT_PULLUP);
+
+
 	return 0;
 }
 
