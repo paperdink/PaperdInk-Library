@@ -33,9 +33,10 @@ void setup()
   /* Clear the background */
   Paperdink.epd.fillScreen(GxEPD_WHITE);
 
+  Paperdink.epd.setTextColor(GxEPD_BLACK);
+
   /* Print text to  display */
   GxEPD2_GFX& display = Paperdink.epd;
-  display.setTextColor(GxEPD_BLACK);
   display.setCursor(50, display.height()/2);
   display.print("Hello World");
   
