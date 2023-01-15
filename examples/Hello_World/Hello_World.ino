@@ -19,13 +19,12 @@
  * SOFTWARE.
  */
 
-#define PAPERDINK_DEVICE Paperdink_Classic // or Paperdink_Merlot
+#define PAPERDINK_DEVICE Paperdink_Classic  // or Paperdink_Merlot
 #include <Paperdink.h>
 
 PAPERDINK_DEVICE Paperdink;
 
-void setup()
-{
+void setup() {
   /* Initialize device */
   Paperdink.begin();
   /* Enable power to display */
@@ -37,10 +36,10 @@ void setup()
 
   /* Print text to  display */
   GxEPD2_GFX& display = Paperdink.epd;
-  display.setCursor(50, display.height()/2);
+  display.setCursor(50, display.height() / 2);
   display.print("Hello World");
-  
-  /* Send data to display for the update */ 
+
+  /* Send data to display for the update */
   Paperdink.epd.display();
 }
 
