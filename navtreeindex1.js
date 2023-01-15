@@ -232,6 +232,12 @@ var NAVTREEINDEX1 =
 "wifi__off__sml_8h.html#ab9cb2fbb41c071dad7c45f7a3d51c101":[2,0,0,2,21,0],
 "wifi__off__sml_8h.html#affc405642fec2c2913c3290d7107d743":[2,0,0,2,21,3],
 "wifi__off__sml_8h_source.html":[2,0,0,2,21],
+"wifi__on__sml_8h.html":[2,0,0,2,22],
+"wifi__on__sml_8h.html#a0bde947659be809edf79b9801ac868be":[2,0,0,2,22,1],
+"wifi__on__sml_8h.html#a2054d6fb320790185388f48210cc5c4b":[2,0,0,2,22,3],
+"wifi__on__sml_8h.html#ad0c3bfac62c5f11f7609f62a5881e24e":[2,0,0,2,22,0],
+"wifi__on__sml_8h.html#adc7101bb1404637000dd0c854045f7e6":[2,0,0,2,22,2],
+"wifi__on__sml_8h_source.html":[2,0,0,2,22],
 "youtube_8cpp.html":[2,0,0,3,4,0],
 "youtube_8cpp.html#ac7de26f4839fb7d76b4833ad7702f070":[2,0,0,3,4,0,0],
 "youtube_8cpp.html#af591e5a6dcc0fce28f7352c39c631ca1":[2,0,0,3,4,0,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX1 =
 "youtube_8h.html#ad72dbcf6d0153db1b8d8a58001feed83":[2,0,0,3,4,1,1],
 "youtube_8h_source.html":[2,0,0,3,4,1],
 "youtube__parser_8cpp.html":[2,0,0,3,4,2],
-"youtube__parser_8cpp.html#a5b86f926e54478dd23b92e994115f67c":[2,0,0,3,4,2,0],
-"youtube__parser_8cpp.html#a5b86f926e54478dd23b92e994115f67ca7624d287c865b2100ab238832ae894f3":[2,0,0,3,4,2,0,2],
-"youtube__parser_8cpp.html#a5b86f926e54478dd23b92e994115f67cac219121554a2c67223013b6e62163568":[2,0,0,3,4,2,0,1],
-"youtube__parser_8cpp.html#a5b86f926e54478dd23b92e994115f67cacdaa2919bac56fe1090eb3dbb9526472":[2,0,0,3,4,2,0,0],
-"youtube__parser_8cpp_source.html":[2,0,0,3,4,2],
-"youtube__parser_8h.html":[2,0,0,3,4,3],
-"youtube__parser_8h_source.html":[2,0,0,3,4,3]
+"youtube__parser_8cpp.html#a5b86f926e54478dd23b92e994115f67c":[2,0,0,3,4,2,0]
 };

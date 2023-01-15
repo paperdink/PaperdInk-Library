@@ -11,11 +11,16 @@ var searchData=
   ['weather_5fstring_8',['weather_string',['../classPaperdinkUIWeatherClass.html#aacc8488754dff84b6b0085bfd7e649e3',1,'PaperdinkUIWeatherClass']]],
   ['weatherjsonlistener_9',['WeatherJsonListener',['../classWeatherJsonListener.html',1,'']]],
   ['week_5fstart_5foffset_10',['week_start_offset',['../classPaperdinkUIDateClass.html#a4a09add01c8e3496915d6b02e90a575d',1,'PaperdinkUIDateClass']]],
-  ['whitespace_11',['whitespace',['../classTodoTaigaJsonListener.html#a474400b813834d431833ecffae6347e5',1,'TodoTaigaJsonListener::whitespace()'],['../classTodoTodoistJsonListener.html#a0037d0993721e77c0bd2c520e4bfacfd',1,'TodoTodoistJsonListener::whitespace()'],['../classWeatherJsonListener.html#ab0746831c90b29576907460730fedb75',1,'WeatherJsonListener::whitespace()'],['../classYoutubeJsonListener.html#a7a8e9a5f2e9f41f6155c23e4ba17b6f8',1,'YoutubeJsonListener::whitespace()'],['../classCryptoJsonListener.html#afa9d79804f3094e1753dee0290ea13eb',1,'CryptoJsonListener::whitespace()']]],
+  ['whitespace_11',['whitespace',['../classCryptoJsonListener.html#afa9d79804f3094e1753dee0290ea13eb',1,'CryptoJsonListener::whitespace()'],['../classTodoTaigaJsonListener.html#a474400b813834d431833ecffae6347e5',1,'TodoTaigaJsonListener::whitespace()'],['../classTodoTodoistJsonListener.html#a0037d0993721e77c0bd2c520e4bfacfd',1,'TodoTodoistJsonListener::whitespace()'],['../classWeatherJsonListener.html#ab0746831c90b29576907460730fedb75',1,'WeatherJsonListener::whitespace()'],['../classYoutubeJsonListener.html#a7a8e9a5f2e9f41f6155c23e4ba17b6f8',1,'YoutubeJsonListener::whitespace()']]],
   ['wifi_5foff_5fsml_12',['wifi_off_sml',['../wifi__off__sml_8h.html#ab43644d907b34075b1e8511d6dd91b86',1,'wifi_off_sml.h']]],
   ['wifi_5foff_5fsml_2eh_13',['wifi_off_sml.h',['../wifi__off__sml_8h.html',1,'']]],
   ['wifi_5foff_5fsml_5fheight_14',['wifi_off_sml_height',['../wifi__off__sml_8h.html#ab9cb2fbb41c071dad7c45f7a3d51c101',1,'wifi_off_sml.h']]],
   ['wifi_5foff_5fsml_5fred_15',['wifi_off_sml_red',['../wifi__off__sml_8h.html#affc405642fec2c2913c3290d7107d743',1,'wifi_off_sml.h']]],
   ['wifi_5foff_5fsml_5fwidth_16',['wifi_off_sml_width',['../wifi__off__sml_8h.html#a6811cd4903213d7126540b5209bde50a',1,'wifi_off_sml.h']]],
-  ['write_17',['write',['../classArudinoStreamParser.html#a4e172fbe2e755e1ec951f41e9c0252e4',1,'ArudinoStreamParser::write(uint8_t data) override'],['../classArudinoStreamParser.html#ac625d45efa816ac4255a329af6293663',1,'ArudinoStreamParser::write(const uint8_t *buffer, size_t size) override']]]
+  ['wifi_5fon_5fsml_17',['wifi_on_sml',['../wifi__on__sml_8h.html#adc7101bb1404637000dd0c854045f7e6',1,'wifi_on_sml.h']]],
+  ['wifi_5fon_5fsml_2eh_18',['wifi_on_sml.h',['../wifi__on__sml_8h.html',1,'']]],
+  ['wifi_5fon_5fsml_5fheight_19',['wifi_on_sml_height',['../wifi__on__sml_8h.html#ad0c3bfac62c5f11f7609f62a5881e24e',1,'wifi_on_sml.h']]],
+  ['wifi_5fon_5fsml_5fred_20',['wifi_on_sml_red',['../wifi__on__sml_8h.html#a2054d6fb320790185388f48210cc5c4b',1,'wifi_on_sml.h']]],
+  ['wifi_5fon_5fsml_5fwidth_21',['wifi_on_sml_width',['../wifi__on__sml_8h.html#a0bde947659be809edf79b9801ac868be',1,'wifi_on_sml.h']]],
+  ['write_22',['write',['../classArudinoStreamParser.html#a4e172fbe2e755e1ec951f41e9c0252e4',1,'ArudinoStreamParser::write(uint8_t data) override'],['../classArudinoStreamParser.html#ac625d45efa816ac4255a329af6293663',1,'ArudinoStreamParser::write(const uint8_t *buffer, size_t size) override']]]
 ];
