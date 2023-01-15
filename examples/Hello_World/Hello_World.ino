@@ -30,10 +30,12 @@ void setup()
   Paperdink.begin();
   /* Enable power to display */
   Paperdink.enable_display();
+  /* Clear the background */
+  Paperdink.epd.fillScreen(GxEPD_WHITE);
 
   /* Print text to  display */
   GxEPD2_GFX& display = Paperdink.epd;
-  display.setTextColor(GxEPD_WHITE);
+  display.setTextColor(GxEPD_BLACK);
   display.setCursor(50, display.height()/2);
   display.print("Hello World");
   
