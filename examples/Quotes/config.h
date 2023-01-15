@@ -34,7 +34,7 @@
 
 /* Configuration below this is if you want to change the font.
  * Each font size is different, hence tuning the margins and line height
- * is required. Additionally, smaller fonts can accomadate longer quotes.
+ * is required. Additionally, smaller fonts can accommodate longer quotes.
  */
 #define QUOTE_FONT &Roboto_Regular12pt7b
 #define AUTHOR_FONT &Gobold_Thin9pt7b
