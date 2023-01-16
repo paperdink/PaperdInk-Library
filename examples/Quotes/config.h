@@ -25,12 +25,16 @@
  */
 #define UPDATES_PER_DAY 4
 
-/* Comma separated quote tags. See https://api.quotable.io/tags */
-#define QUOTE_TAGS "" // Empty means all quotes
+/* Quote tags (categories). For options, see https://api.quotable.io/tags */
+#define QUOTE_TAGS "" // Empty means include all quote categories
+// | separator -> OR multiple categories
+//#define QUOTE_TAGS "technology|film|future|famous-quotes|science"
+// comma separator -> AND multiple categories (may result in 0 hits)
+//#define QUOTE_TAGS "business,change"
 
 /* Configuration below this is if you want to change the font.
  * Each font size is different, hence tuning the margins and line height
- * is required. Additionally, smaller fonts can accomadate longer quotes.
+ * is required. Additionally, smaller fonts can accommodate longer quotes.
  */
 #define QUOTE_FONT &Roboto_Regular12pt7b
 #define AUTHOR_FONT &Gobold_Thin9pt7b
