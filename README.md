@@ -11,7 +11,7 @@
 
 1. **ESP32-WROOM-32** module
 2. **FCC/CE Certified** WiFi & Bluetooth for connectivity
-3. **less than 20uA** current consumption in sleep mode
+3. **Less than 20uA** current consumption in sleep mode
 4. **CP2104 USB-UART** converter onboard for programming
 5. **MicroSD Card** slot for storing images, files, etc
 6. **Piezo Buzzer** for notifications and alerts
