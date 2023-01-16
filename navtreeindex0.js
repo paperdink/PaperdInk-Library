@@ -1,5 +1,6 @@
 var NAVTREEINDEX0 =
 {
+"Calther_8ino-example.html":[3,0],
 "Code__New__Roman10pt7b_8h.html":[2,0,0,1,0],
 "Code__New__Roman10pt7b_8h.html#a4300b7e9218de78a4a92a0f5dfb7c0a9":[2,0,0,1,0,0],
 "Code__New__Roman10pt7b_8h_source.html":[2,0,0,1,0],
@@ -15,10 +16,11 @@ var NAVTREEINDEX0 =
 "Code__New__Roman__Bold15pt7b_8h.html":[2,0,0,1,4],
 "Code__New__Roman__Bold15pt7b_8h.html#a48071b5c4738e54f597199d63afa5206":[2,0,0,1,4,0],
 "Code__New__Roman__Bold15pt7b_8h_source.html":[2,0,0,1,4],
-"Crypto_Tracker_8ino-example.html":[3,0],
+"Crypto_Tracker_8ino-example.html":[3,1],
 "Gobold__Thin9pt7b_8h.html":[2,0,0,1,5],
 "Gobold__Thin9pt7b_8h.html#ae859b189136601be0adcd4fa1666b8bc":[2,0,0,1,5,0],
 "Gobold__Thin9pt7b_8h_source.html":[2,0,0,1,5],
+"Hello_World_8ino-example.html":[3,2],
 "Mont__ExtraLight8pt7b_8h.html":[2,0,0,1,6],
 "Mont__ExtraLight8pt7b_8h.html#a700de69060d3d49e7142dcfc906fef5a":[2,0,0,1,6,0],
 "Mont__ExtraLight8pt7b_8h_source.html":[2,0,0,1,6],
@@ -31,10 +33,12 @@ var NAVTREEINDEX0 =
 "Paperdink_8h.html#aac2496f31862b68e77c4589e3308d80c":[2,0,0,8,0],
 "Paperdink_8h.html#ae556f9b535d008648ea895ad22202201":[2,0,0,8,2],
 "Paperdink_8h_source.html":[2,0,0,8],
+"Quotes_8ino-example.html":[3,3],
 "Roboto__Regular__12pt7b_8h.html":[2,0,0,1,8],
 "Roboto__Regular__12pt7b_8h.html#a4300b7e9218de78a4a92a0f5dfb7c0a9":[2,0,0,1,8,0],
 "Roboto__Regular__12pt7b_8h_source.html":[2,0,0,1,8],
-"Youtube_Stats_8ino-example.html":[3,1],
+"Wave_8ino-example.html":[3,4],
+"Youtube_Stats_8ino-example.html":[3,5],
 "alert__xlrg_8h.html":[2,0,0,2,0],
 "alert__xlrg_8h.html#a10811eae27b76b352d7b00a65f4b1271":[2,0,0,2,0,3],
 "alert__xlrg_8h.html#a1513d4ec8923e5b7bb5e4e659e413cc1":[2,0,0,2,0,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX0 =
 "down__arrow__med_8h.html":[2,0,0,2,2],
 "down__arrow__med_8h.html#a307ffa1c2e884309329e4b577de8d29a":[2,0,0,2,2,0],
 "down__arrow__med_8h.html#a8844e6622e9424b96befe8ef5d49d929":[2,0,0,2,2,1],
-"down__arrow__med_8h_source.html":[2,0,0,2,2],
-"down__arrow__sml_8h.html":[2,0,0,2,3],
-"down__arrow__sml_8h.html#aa812f2dc9a4081ab7c53e05687a8c913":[2,0,0,2,3,1],
-"down__arrow__sml_8h.html#aee416bcfdc67d12a1590d42d093ad19f":[2,0,0,2,3,0],
-"down__arrow__sml_8h_source.html":[2,0,0,2,3]
+"down__arrow__med_8h_source.html":[2,0,0,2,2]
 };

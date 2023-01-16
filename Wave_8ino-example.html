@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Paperd.Ink Library: Crypto_Tracker.ino</title>
+<title>Paperd.Ink Library: Wave.ino</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -65,7 +65,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('Crypto_Tracker_8ino-example.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('Wave_8ino-example.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -91,10 +91,10 @@ $(document).ready(function(){initNavTree('Crypto_Tracker_8ino-example.html','');
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Crypto_Tracker.ino</div></div>
+  <div class="headertitle"><div class="title">Wave.ino</div></div>
 </div><!--header-->
 <div class="contents">
-<p>Shows 6 crypto tickers with last updated time and date.</p>
+<p>Displays day and date along with weather and todo list.</p>
 <div class="fragment"><div class="line">/* The MIT License (MIT)</div>
 <div class="line"> * Copyright (c) 2022 Paperd.Ink</div>
 <div class="line"> </div>
@@ -120,17 +120,34 @@ $(document).ready(function(){initNavTree('Crypto_Tracker_8ino-example.html','');
 <div class="line">/* config.h should be before Paperdink.h */</div>
 <div class="line">#include &quot;config.h&quot;</div>
 <div class="line">#include &lt;Paperdink.h&gt;</div>
+<div class="line">#include &lt;SPIFFS.h&gt;</div>
+<div class="line"> </div>
+<div class="line">/* Store image_counter in RTC memory</div>
+<div class="line"> * for persistence across deep sleep.</div>
+<div class="line"> */</div>
+<div class="line">RTC_DATA_ATTR uint8_t image_counter;</div>
 <div class="line"> </div>
 <div class="line">/* Create paperdink object */</div>
 <div class="line">PAPERDINK_DEVICE Paperdink;</div>
 <div class="line"> </div>
 <div class="line">void setup()</div>
 <div class="line">{</div>
+<div class="line">    char img_string[7];</div>
+<div class="line"> </div>
 <div class="line">    DEBUG.begin(115200);</div>
 <div class="line"> </div>
 <div class="line">    /* Initialize paperd.ink device */</div>
 <div class="line">    Paperdink.begin();</div>
-<div class="line">    </div>
+<div class="line"> </div>
+<div class="line">    /* Intialize on chip SPI file system */</div>
+<div class="line">    DEBUG.print(&quot;Initializing SPIFFS...&quot;);</div>
+<div class="line">    if(!SPIFFS.begin(true)){</div>
+<div class="line">        DEBUG.println(&quot;Failed!&quot;);</div>
+<div class="line">    }else{</div>
+<div class="line">        DEBUG.println(&quot;Success!&quot;);</div>
+<div class="line">    }</div>
+<div class="line">    delay(100);</div>
+<div class="line"> </div>
 <div class="line">    /* Enable power to the display */</div>
 <div class="line">    Paperdink.enable_display();</div>
 <div class="line">    /* Clear the background */</div>
@@ -142,57 +159,58 @@ $(document).ready(function(){initNavTree('Crypto_Tracker_8ino-example.html','');
 <div class="line">        Paperdink.epd.drawBitmap(370, 4, wifi_off_sml, wifi_off_sml_width, wifi_off_sml_height, GxEPD_BLACK);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    /* Fetch and display cryptocurrency data */</div>
-<div class="line">    /* TODO: Put in some kind of loop */</div>
-<div class="line">    Paperdink_Crypto.font = &amp;PAPERDINK_FONT_SML;</div>
-<div class="line">    Paperdink_Crypto.font_bold = &amp;PAPERDINK_FONT_SML_BOLD;</div>
-<div class="line">    Paperdink_Crypto.primary_color = GxEPD_BLACK;</div>
-<div class="line">    Paperdink_Crypto.secondary_color = Paperdink.has_color ? GxEPD_RED : GxEPD_BLACK;</div>
-<div class="line">    Paperdink_Crypto.tertiary_color = GxEPD_WHITE;</div>
+<div class="line">    /* Show background image */</div>
+<div class="line">    sprintf(img_string, &quot;%d.bmp&quot;, (image_counter++%NUM_IMAGES)+1);</div>
+<div class="line">    Paperdink_UI.display_bitmap_fs(Paperdink.epd, SPIFFS, img_string, 0, 0, Paperdink.has_color);</div>
 <div class="line"> </div>
-<div class="line">    if(Paperdink_Crypto.fetch_data(CRYPTO_TICKER_1) &lt; 0){</div>
-<div class="line">        DEBUG.println(&quot;Unable to fetch data for &quot; CRYPTO_TICKER_1);</div>
-<div class="line">    }</div>
-<div class="line">    Paperdink_Crypto.display_med_box(Paperdink.epd, 0, 15, CRYPTO_TICKER_1);</div>
-<div class="line">    </div>
-<div class="line">    if(Paperdink_Crypto.fetch_data(CRYPTO_TICKER_2) &lt; 0){</div>
-<div class="line">        DEBUG.println(&quot;Unable to fetch data for &quot; CRYPTO_TICKER_2);</div>
-<div class="line">    }</div>
-<div class="line">    Paperdink_Crypto.display_med_box(Paperdink.epd, 0, 85, CRYPTO_TICKER_2);</div>
-<div class="line">    </div>
-<div class="line">    if(Paperdink_Crypto.fetch_data(CRYPTO_TICKER_3) &lt; 0){</div>
-<div class="line">        DEBUG.println(&quot;Unable to fetch data for &quot; CRYPTO_TICKER_3);</div>
-<div class="line">    }</div>
-<div class="line">    Paperdink_Crypto.display_med_box(Paperdink.epd, 0, 155, CRYPTO_TICKER_3);</div>
+<div class="line">    /* Create white box to display tasks */</div>
+<div class="line">    Paperdink.epd.fillRect(20, 25, 140, 250, GxEPD_WHITE);</div>
+<div class="line">    Paperdink.epd.drawRect(20, 25, 140, 250, GxEPD_BLACK);</div>
 <div class="line"> </div>
-<div class="line">    if(Paperdink_Crypto.fetch_data(CRYPTO_TICKER_4) &lt; 0){</div>
-<div class="line">        DEBUG.println(&quot;Unable to fetch data for &quot; CRYPTO_TICKER_4);</div>
+<div class="line">    /* Fetch and display Todo list */</div>
+<div class="line">#ifdef TODOIST</div>
+<div class="line">    Paperdink_TodoListTodoist.font_bold = &amp;Gobold_Thin9pt7b;</div>
+<div class="line">    Paperdink_TodoListTodoist.font = &amp;Mont_ExtraLight8pt7b;</div>
+<div class="line">    Paperdink_TodoListTodoist.primary_color = GxEPD_BLACK;</div>
+<div class="line"> </div>
+<div class="line">    if(Paperdink_TodoListTodoist.fetch_data(TODOIST_TOKEN) &lt; 0 ){</div>
+<div class="line">        DEBUG.println(&quot;Unable to fetch to-do list from Todoist&quot;);</div>
 <div class="line">    }</div>
-<div class="line">    Paperdink_Crypto.display_med_box(Paperdink.epd, 0, 225, CRYPTO_TICKER_4);</div>
-<div class="line">    </div>
-<div class="line">    if(Paperdink_Crypto.fetch_data(CRYPTO_TICKER_5) &lt; 0){</div>
-<div class="line">        DEBUG.println(&quot;Unable to fetch data for &quot; CRYPTO_TICKER_5);</div>
+<div class="line">    Paperdink_TodoListTodoist.display_list_style1(Paperdink.epd, 20, 30, 12, 1, 135);</div>
+<div class="line"> </div>
+<div class="line">#elif TAIGA</div>
+<div class="line">    Paperdink_TodoListTaiga.font_bold = &amp;Gobold_Thin9pt7b;</div>
+<div class="line">    Paperdink_TodoListTaiga.font = &amp;Mont_ExtraLight8pt7b;</div>
+<div class="line">    Paperdink_TodoListTaiga.primary_color = GxEPD_BLACK;</div>
+<div class="line"> </div>
+<div class="line">    if(Paperdink_TodoListTaiga.fetch_data(TAIGA_PROJECT_NAME, TAIGA_PROJECT_USERNAME, TAIGA_PROJECT_PASSWORD) &lt; 0 ){</div>
+<div class="line">        DEBUG.println(&quot;Unable to fetch to-do list from Taiga&quot;);</div>
 <div class="line">    }</div>
-<div class="line">    Paperdink_Crypto.display_med_box(Paperdink.epd, 200, 155, CRYPTO_TICKER_5);</div>
-<div class="line">    </div>
-<div class="line">    if(Paperdink_Crypto.fetch_data(CRYPTO_TICKER_6) &lt; 0){</div>
-<div class="line">        DEBUG.println(&quot;Unable to fetch data for &quot; CRYPTO_TICKER_6);</div>
-<div class="line">    }</div>
-<div class="line">    Paperdink_Crypto.display_med_box(Paperdink.epd, 200, 225, CRYPTO_TICKER_6);</div>
+<div class="line">    Paperdink_TodoListTaiga.display_list_style1(Paperdink.epd, 20, 30, 12, 1, 135);</div>
+<div class="line"> </div>
+<div class="line">#endif</div>
 <div class="line"> </div>
 <div class="line">    /* Fetch date data */</div>
 <div class="line">    if(Paperdink_Date.fetch_data(TIME_ZONE) &lt; 0){</div>
 <div class="line">        DEBUG.println(&quot;Unable to fetch Date Time data&quot;);</div>
 <div class="line">    }</div>
+<div class="line">    /* Create white box to display time and weather */</div>
+<div class="line">    Paperdink.epd.fillRect(180, 50, 200, 200, GxEPD_WHITE);</div>
+<div class="line">    Paperdink.epd.drawRect(180, 50, 200, 200, GxEPD_BLACK);</div>
+<div class="line"> </div>
 <div class="line">    /* Display date */</div>
 <div class="line">    Paperdink_Date.font = &amp;PAPERDINK_FONT_LRG;</div>
-<div class="line">    Paperdink_Date.primary_color = Paperdink.color;</div>
-<div class="line">    Paperdink_Date.display_day_date_style1_center(Paperdink.epd, 200, 20, 200);</div>
+<div class="line">    Paperdink_Date.display_day_date_style1_center(Paperdink.epd, 180, 65, 200);</div>
 <div class="line"> </div>
-<div class="line">    /* Display last updated time */</div>
-<div class="line">    Paperdink_Date.font = &amp;PAPERDINK_FONT_SML;</div>
-<div class="line">    Paperdink_Date.primary_color = GxEPD_BLACK;</div>
-<div class="line">    Paperdink_Date.display_last_updated_time_style1_center(Paperdink.epd, 200, 125, 200);</div>
+<div class="line">    /* Fetch weather data*/</div>
+<div class="line">    if(Paperdink_Weather.fetch_data(CITY, COUNTRY, OWM_ID) &lt; 0){</div>
+<div class="line">        DEBUG.println(&quot;Unable to fetch weather data&quot;);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    /* Display weather text */</div>
+<div class="line">    Paperdink_Weather.font = &amp;Gobold_Thin9pt7b;</div>
+<div class="line">    Paperdink_Weather.primary_color = GxEPD_BLACK;</div>
+<div class="line">    Paperdink_Weather.display_weather_text_center(Paperdink.epd, 180, 200, 200);</div>
 <div class="line"> </div>
 <div class="line">    /* Send data to display for the update */ </div>
 <div class="line">    Paperdink.epd.display();</div>
