@@ -1,7 +1,19 @@
 
 /** Examples
+ * @example Calther.ino
+ * Displays a calendar along with weather and todo list.
+ *
  * @example Crypto_Tracker.ino
  * Shows 6 crypto tickers with last updated time and date.
+ *
+ * @example Hello_World.ino
+ * Displays "Hello World" in the middle of the screen.
+ *
+ * @example Quotes.ino
+ * Displays quotes from quotable API.
+ *
+ * @example Wave.ino
+ * Displays day and date along with weather and todo list.
  *
  * @example Youtube_Stats.ino
  * Shows subscription and total views count.
