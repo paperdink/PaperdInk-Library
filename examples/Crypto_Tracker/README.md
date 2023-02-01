@@ -37,7 +37,7 @@ Update the `config.h` file with configuration details
 #define PASSWORD "*****" // Wifi Network password
 
 // Time zone from list https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv
-#define TIME_ZONE "PST8PDT,M3.2.0,M11.1.0"
+#define TIME_ZONE "America/Los_Angeles"
 
 // Number of times to update starting 12am
 // 1 = Updates every 24 hours
