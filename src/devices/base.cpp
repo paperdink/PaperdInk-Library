@@ -41,11 +41,31 @@ int8_t PaperdinkDeviceBaseClass::disable_display()
 	return 0;
 }
 
+int8_t PaperdinkDeviceBaseClass::enable_sd()
+{
+  // Power up SD
+	digitalWrite(SD_EN, LOW);
+  if(!SD.begin(SD_CS)){
+	  Serial.println("SD failed!");
+    return -1;
+  }
+
+	return 0;
+}
+
+int8_t PaperdinkDeviceBaseClass::disable_sd()
+{
+  // Power down SD
+	digitalWrite(SD_EN, HIGH);
+
+	return 0;
+}
+
 int8_t PaperdinkDeviceBaseClass::disable_everything()
 {
 	disable_display();
-    // TODO: Add disable functions for SD and Batt
-	digitalWrite(SD_EN, HIGH);
+  disable_sd();
+    // TODO: Add disable functions for Batt
 	digitalWrite(BATT_EN, HIGH);
 
 	return 0;
@@ -53,12 +73,13 @@ int8_t PaperdinkDeviceBaseClass::disable_everything()
 
 int8_t PaperdinkDeviceBaseClass::deep_sleep_timer_wakeup(uint64_t sleep_time_us)
 {
-    // Turn off everything
+  // Turn off everything
 	disable_everything();
 
 	esp_sleep_enable_timer_wakeup(sleep_time_us);
 	Serial.printf("Timer wakeup after %lld microseconds...", sleep_time_us);
-    // Go to sleep
+  
+  // Go to sleep
 	esp_deep_sleep_start();
 
 	return 0;

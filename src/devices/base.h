@@ -7,6 +7,7 @@
 #include <GxEPD2_3C.h>
 
 #include "pin_assignment.h"
+#include "../paperdink_common.h"
 
 class PaperdinkDeviceBaseClass
 {
@@ -17,6 +18,8 @@ class PaperdinkDeviceBaseClass
         int8_t begin();
         virtual int8_t enable_display();
         virtual int8_t disable_display();
+        int8_t enable_sd();
+        int8_t disable_sd();
         int8_t disable_everything();
 
         int8_t deep_sleep_timer_wakeup(uint64_t sleep_time_us);

@@ -8,6 +8,9 @@
 #include <Print.h>
 #include <Stream.h>
 #include <GxEPD2_GFX.h>
+#include <FS.h>
+#include <SD.h>
+#include <SPI.h>
 
 #include "fonts.h"
 #include "icons.h"
