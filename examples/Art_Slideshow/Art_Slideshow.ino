@@ -23,10 +23,6 @@
 #include <Paperdink.h>
 
 PAPERDINK_DEVICE Paperdink;
-/* Store image_counter in RTC memory
- * for persistence across deep sleep.
- */
-RTC_DATA_ATTR uint8_t image_counter;
 
 void setup() {
   char img_string[15];
@@ -55,8 +51,7 @@ void setup() {
   
     Serial.println("SD OK!");
     /* Display image from SD card */
-    #define NUM_IMAGES 5
-    sprintf(img_string, "Art_%d.bmp", (image_counter++%NUM_IMAGES)+1);
+    sprintf(img_string, "Art_%d.bmp", (esp_random()%NUM_IMAGES)+1);
     Paperdink_UI.display_bitmap_fs(Paperdink.epd, SD, img_string, 0, 0, Paperdink.has_color);
   }
 
