@@ -1,6 +1,8 @@
 # Art Slideshow
 This example displays random images from a SD card.
 
+<img src="Art_Slideshow.png" width="500" alt="Art Slideshow image">
+
 ## Usage
 
 ### Creating images
