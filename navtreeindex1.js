@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"down__arrow__med_8h.html#a8844e6622e9424b96befe8ef5d49d929":[2,0,0,2,2,1],
+"down__arrow__med_8h_source.html":[2,0,0,2,2],
 "down__arrow__sml_8h.html":[2,0,0,2,3],
 "down__arrow__sml_8h.html#aa812f2dc9a4081ab7c53e05687a8c913":[2,0,0,2,3,1],
 "down__arrow__sml_8h.html#aee416bcfdc67d12a1590d42d093ad19f":[2,0,0,2,3,0],
@@ -43,8 +45,8 @@ var NAVTREEINDEX1 =
 "hierarchy.html":[1,2],
 "icons_8h.html":[2,0,0,6],
 "icons_8h_source.html":[2,0,0,6],
-"index.html":[0],
 "index.html":[],
+"index.html":[0],
 "index.html#autotoc_md1":[0,0],
 "index.html#autotoc_md2":[0,1],
 "lightning__xlrg_8h.html":[2,0,0,2,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX1 =
 "youtube_8cpp.html#af591e5a6dcc0fce28f7352c39c631ca1":[2,0,0,3,4,0,1],
 "youtube_8cpp_source.html":[2,0,0,3,4,0],
 "youtube_8h.html":[2,0,0,3,4,1],
-"youtube_8h.html#ab57d36222e138089ec75b4f1b0597a2a":[2,0,0,3,4,1,3],
-"youtube_8h.html#ac7de26f4839fb7d76b4833ad7702f070":[2,0,0,3,4,1,4],
-"youtube_8h.html#acfa49f19e93afd4644f42f1e53214971":[2,0,0,3,4,1,2]
+"youtube_8h.html#ab57d36222e138089ec75b4f1b0597a2a":[2,0,0,3,4,1,3]
 };

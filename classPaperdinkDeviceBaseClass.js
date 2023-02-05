@@ -8,7 +8,9 @@ var classPaperdinkDeviceBaseClass =
     [ "deep_sleep_timer_wakeup", "classPaperdinkDeviceBaseClass.html#a298b1cfc36ce660183d25743c56482ff", null ],
     [ "disable_display", "classPaperdinkDeviceBaseClass.html#a7fe51094a2665123ecb1dcf8e7522df5", null ],
     [ "disable_everything", "classPaperdinkDeviceBaseClass.html#a01dc2809d5fb50978cd3427817a16d9d", null ],
+    [ "disable_sd", "classPaperdinkDeviceBaseClass.html#a0055181a49a209b88b9df8fb51d0f998", null ],
     [ "enable_display", "classPaperdinkDeviceBaseClass.html#a393b02e53f276397bc4dc2f65c65550f", null ],
+    [ "enable_sd", "classPaperdinkDeviceBaseClass.html#a1c894a2b68192a37b856cc862ddb5629", null ],
     [ "color", "classPaperdinkDeviceBaseClass.html#a1ce93eaa63134f67a5dcabe4b2eba617", null ],
     [ "has_color", "classPaperdinkDeviceBaseClass.html#acf8e87fcfcf39d19dc22f06f5ddeff22", null ]
 ];
