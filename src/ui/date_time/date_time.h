@@ -12,6 +12,7 @@ class PaperdinkUIDateClass : public PaperdinkUIBaseClass
     public:
         char wday[4];
         char month[4];
+        uint8_t month_days;
         uint8_t month_num;
         uint8_t mday;
         uint8_t mil_hour;

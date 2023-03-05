@@ -6,46 +6,54 @@ int8_t PaperdinkUIDateClass::fetch_data(const char *time_zone, uint8_t week_star
 {
 	struct tm timeinfo;
 	time_t epoch;
+  const int MONTHS[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
-    for(uint8_t i = 0; i<CONFIG_TIME_RETRY_COUNT; i++){
-        configTime(0, 0, NTP_SERVER);
+  for(uint8_t i = 0; i<CONFIG_TIME_RETRY_COUNT; i++){
+      configTime(0, 0, NTP_SERVER);
 
-	    Serial.printf("TZ: %s\r\n", time_zone);
-	    setenv("TZ", time_zone, 1);
+	  Serial.printf("TZ: %s\r\n", time_zone);
+	  setenv("TZ", time_zone, 1);
 
-	    if(!getLocalTime(&timeinfo)){
-		    Serial.println("Failed to obtain time. Retrying...");
-	        delay(1000);
-            if (i == CONFIG_TIME_RETRY_COUNT){
-                return -1;
-            }
-        } else {
-            break;
-        }
-    }
+	  if(!getLocalTime(&timeinfo)){
+	    Serial.println("Failed to obtain time. Retrying...");
+	      delay(1000);
+          if (i == CONFIG_TIME_RETRY_COUNT){
+              return -1;
+          }
+      } else {
+          break;
+      }
+  }
 
 	epoch = mktime(&timeinfo);
 
 	sscanf(ctime(&epoch), "%s %s %hhd %hhd:%hhd:%hhd %d", wday, month, &mday, &mil_hour, &min, &sec, &year);
 
 	month_num = timeinfo.tm_mon + 1;
-    // Gives offset of first day of the month with respect to Monday
-    // https://www.tondering.dk/claus/cal/chrweek.php#calcdow
-    // 0=Sunday, 1=Monday ... 6=Saturday
+  // Gives offset of first day of the month with respect to Monday
+  // https://www.tondering.dk/claus/cal/chrweek.php#calcdow
+  // 0=Sunday, 1=Monday ... 6=Saturday
 	uint16_t a = (14 - month_num) / 12;
 	uint16_t y = year - a;
 	uint16_t m = month_num + (12 * a) - 2;
 
 	day_offset = (1 + y + (y / 4) - (y / 100) + (y / 400) + ((31 * m) / 12)) % 7;
-    // Change the offset based on user preference
+  // Change the offset based on user preference
 	day_offset = (day_offset + week_start_offset) % 7;
 
-    // Convert to 12 hour
+  // Convert to 12 hour
 	if(mil_hour > 12){
 		hour = mil_hour - 12;
 	}else{
 		hour = mil_hour;
 	}
+
+  // Get number of days in a month
+  month_days = MONTHS[month_num];
+  // Handle leap years
+  if(month_num == 1 && (((year % 4 == 0) && (year % 100 != 0)) || (year%400 == 0))){
+    month_days = 29;
+  }
 
 	Serial.printf("Time is %d %d:%d:%d on %s on the %d/%d/%d . It is the month of %s. day_offset: %d\r\n", mil_hour, hour, min, sec, wday, mday, month_num, year, month, day_offset);
 	return 0;
@@ -134,7 +142,7 @@ void PaperdinkUIDateClass::display_calendar(GxEPD2_GFX& display, uint16_t x, uin
 	uint8_t day = 1;
 
 	for(uint8_t j = 0; j <= 5; j++){
-		for(uint8_t i = 1; i <= 7 && day <= 31; i++){
+		for(uint8_t i = 1; i <= 7 && day <= month_days; i++){
             // you can hack around with this value to align your text properly based on what font, font size etc you are using
 			num_offset = 21;            // 21 is what works for me for the first 2 columns
 			if(i >= 3 && i <= 7){
