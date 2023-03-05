@@ -11,6 +11,7 @@ var classPaperdinkUIDateClass =
     [ "mil_hour", "classPaperdinkUIDateClass.html#a2fa8045028b68977f4d57e31664b87ff", null ],
     [ "min", "classPaperdinkUIDateClass.html#a2882938d5029e3e6c0700dc6929b8eda", null ],
     [ "month", "classPaperdinkUIDateClass.html#a2a7949e088d373df243a59d806ee243e", null ],
+    [ "month_days", "classPaperdinkUIDateClass.html#a434476b551ee6362f214986cd3023b19", null ],
     [ "month_num", "classPaperdinkUIDateClass.html#ace907a40ca6cd4b43e3a9742f3b7ba0e", null ],
     [ "sec", "classPaperdinkUIDateClass.html#a1b5319ed7d58772d5673034b1ad0c99e", null ],
     [ "wday", "classPaperdinkUIDateClass.html#a426a6145f4ff903c6cb4e24e1c8ade57", null ],

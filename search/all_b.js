@@ -11,5 +11,6 @@ var searchData=
   ['mont_5fextralight8pt7b_2eh_8',['Mont_ExtraLight8pt7b.h',['../Mont__ExtraLight8pt7b_8h.html',1,'']]],
   ['mont_5fheavy25pt7b_2eh_9',['Mont_Heavy25pt7b.h',['../Mont__Heavy25pt7b_8h.html',1,'']]],
   ['month_10',['month',['../classPaperdinkUIDateClass.html#a2a7949e088d373df243a59d806ee243e',1,'PaperdinkUIDateClass']]],
-  ['month_5fnum_11',['month_num',['../classPaperdinkUIDateClass.html#ace907a40ca6cd4b43e3a9742f3b7ba0e',1,'PaperdinkUIDateClass']]]
+  ['month_5fdays_11',['month_days',['../classPaperdinkUIDateClass.html#a434476b551ee6362f214986cd3023b19',1,'PaperdinkUIDateClass']]],
+  ['month_5fnum_12',['month_num',['../classPaperdinkUIDateClass.html#ace907a40ca6cd4b43e3a9742f3b7ba0e',1,'PaperdinkUIDateClass']]]
 ];
