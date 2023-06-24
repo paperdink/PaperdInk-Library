@@ -16,7 +16,7 @@ var searchData=
   ['code_5fnew_5froman9pt7b_2eh_13',['Code_New_Roman9pt7b.h',['../Code__New__Roman9pt7b_8h.html',1,'']]],
   ['code_5fnew_5froman_5fbold10pt7b_2eh_14',['Code_New_Roman_Bold10pt7b.h',['../Code__New__Roman__Bold10pt7b_8h.html',1,'']]],
   ['code_5fnew_5froman_5fbold15pt7b_2eh_15',['Code_New_Roman_Bold15pt7b.h',['../Code__New__Roman__Bold15pt7b_8h.html',1,'']]],
-  ['color_16',['color',['../classPaperdinkDeviceBaseClass.html#a1ce93eaa63134f67a5dcabe4b2eba617',1,'PaperdinkDeviceBaseClass::color()'],['../classPaperdink__Classic.html#a994605be1db57fb09b71aa7a6c7cc5d6',1,'Paperdink_Classic::color()'],['../classPaperdink__Merlot.html#a86a27cae14a0c6559fd7e92c588b0297',1,'Paperdink_Merlot::color()']]],
+  ['color_16',['color',['../classPaperdinkDeviceBaseClass.html#a1ce93eaa63134f67a5dcabe4b2eba617',1,'PaperdinkDeviceBaseClass::color'],['../classPaperdink__Classic.html#a994605be1db57fb09b71aa7a6c7cc5d6',1,'Paperdink_Classic::color'],['../classPaperdink__Merlot.html#a86a27cae14a0c6559fd7e92c588b0297',1,'Paperdink_Merlot::color']]],
   ['common_2ecpp_17',['common.cpp',['../common_8cpp.html',1,'']]],
   ['completed_18',['COMPLETED',['../weather__parser_8cpp.html#a02db9a290a38910921877cb5849e32bca3549811efddf16048f4b8f6a3b960b41',1,'weather_parser.cpp']]],
   ['config_5ftime_5fretry_5fcount_19',['CONFIG_TIME_RETRY_COUNT',['../date__time_8h.html#a3a3e2e5c42a500e7c7350e06c6305ffc',1,'date_time.h']]],
