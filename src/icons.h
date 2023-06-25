@@ -1,10 +1,9 @@
-
 #ifndef _PAPERDINK_ICONS_H_
 #define _PAPERDINK_ICONS_H_
 
 /* Icon sizes
  * sml  are 24x24 px
- * med  are 32x32 px 
+ * med  are 32x32 px
  * lrg  are 40x40 px
  * xlrg are 48x48 px
  */

@@ -1,4 +1,3 @@
-
 #ifndef CONFIG_H
 #define CONFIG_H
 
@@ -8,8 +7,8 @@
 //#define PAPERDINK_DEVICE Paperdink_Classic
 #define PAPERDINK_DEVICE Paperdink_Merlot
 
-#define SSID     "*****" // Wifi Network SSID (name of wifi network)
-#define PASSWORD "*****" // Wifi Network password
+#define SSID     "*****"        // Wifi Network SSID (name of wifi network)
+#define PASSWORD "*****"        // Wifi Network password
 
 // Time zone from list https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv
 #define TIME_ZONE "PST8PDT,M3.2.0,M11.1.0"
@@ -24,9 +23,9 @@
 #define UPDATES_PER_DAY 1
 
 /* Youtube configuration TODO: Add how-to
- * Get ID from username. Replace <API_KEY> and <USERNAME> 
+ * Get ID from username. Replace <API_KEY> and <USERNAME>
  * https://www.googleapis.com/youtube/v3/channels?key=<API_KEY>&forUsername=<USERNAME>&part=id
- * 
+ *
  * Uncomment either DESIGN_1 or DESIGN_2
  */
 //#define DESIGN_1 (true)

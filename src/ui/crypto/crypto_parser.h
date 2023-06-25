@@ -1,11 +1,9 @@
-
 #ifndef _CRYPTO_PARSER_H_
 #define _CRYPTO_PARSER_H_
 
 #include <JsonListener.h>
 
 class CryptoJsonListener : public JsonListener {
-
 public:
 virtual void whitespace(char c);
 

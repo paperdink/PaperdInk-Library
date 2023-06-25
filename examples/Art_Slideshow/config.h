@@ -1,4 +1,3 @@
-
 #ifndef CONFIG_H
 #define CONFIG_H
 
@@ -9,7 +8,7 @@
 //#define PAPERDINK_DEVICE Paperdink_Classic
 #define PAPERDINK_DEVICE Paperdink_Merlot
 
-#define UPDATE_INTERVAL 5 // Update interval in mins. Suggest to use atleast 5 mins.
-#define NUM_IMAGES 5 // Number of images uploaded. Used for selecting a random number.
+#define UPDATE_INTERVAL 5       // Update interval in mins. Suggest to use atleast 5 mins.
+#define NUM_IMAGES 5            // Number of images uploaded. Used for selecting a random number.
 
 #endif /* CONFIG_H */

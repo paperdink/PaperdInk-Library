@@ -7,20 +7,19 @@
 
 class PaperdinkUIWeatherClass : public PaperdinkUIBaseClass
 {
-    public:
-        char city[20];
-        char country[20];
-        char weather_string[10];
-        float day_max_temp;
-        float day_min_temp;
-        float rain;
-        float snow;
+public:
+char city[20];
+char country[20];
+char weather_string[10];
+float day_max_temp;
+float day_min_temp;
+float rain;
+float snow;
 
-        int8_t fetch_data(const char* city, const char* country, const char* owm_api_id, const char* units = "M");
-        void display_weather_text_center(GxEPD2_GFX& display, uint16_t x, uint16_t y, uint16_t w);
-        void display_weather_style1(GxEPD2_GFX& display, uint16_t x, uint16_t y);
-        void display_weather_style2_center(GxEPD2_GFX& display, uint16_t x, uint16_t y, uint16_t w);
-
+int8_t fetch_data(const char *city, const char *country, const char *owm_api_id, const char *units = "M");
+void display_weather_text_center(GxEPD2_GFX& display, uint16_t x, uint16_t y, uint16_t w);
+void display_weather_style1(GxEPD2_GFX& display, uint16_t x, uint16_t y);
+void display_weather_style2_center(GxEPD2_GFX& display, uint16_t x, uint16_t y, uint16_t w);
 };
 
 extern PaperdinkUIWeatherClass Paperdink_Weather;

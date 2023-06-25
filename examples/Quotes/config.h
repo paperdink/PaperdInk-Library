@@ -1,4 +1,3 @@
-
 #ifndef CONFIG_H
 #define CONFIG_H
 
@@ -9,8 +8,8 @@
 #define PAPERDINK_DEVICE Paperdink_Classic
 //#define PAPERDINK_DEVICE Paperdink_Merlot
 
-#define SSID     "*****" // Wifi Network SSID (name of wifi network)
-#define PASSWORD "*****" // Wifi Network password
+#define SSID     "*****"        // Wifi Network SSID (name of wifi network)
+#define PASSWORD "*****"        // Wifi Network password
 
 /* Time zone from list https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv */
 #define TIME_ZONE "PST8PDT,M3.2.0,M11.1.0"
@@ -41,16 +40,16 @@
 
 #define BACKGROUND_COLOR GxEPD_WHITE
 #define QUOTE_COLOR GxEPD_BLACK
-#define AUTHOR_COLOR GxEPD_BLACK // Can be made GxEPD_RED for Merlot
+#define AUTHOR_COLOR GxEPD_BLACK        // Can be made GxEPD_RED for Merlot
 
-#define MAX_QUOTE_LENGTH 256   // Maximum characters in a quote
-#define MAX_AUTHOR_LENGTH 128  // Maximum characters in a author
+#define MAX_QUOTE_LENGTH 256            // Maximum characters in a quote
+#define MAX_AUTHOR_LENGTH 128           // Maximum characters in a author
 
-#define FIRST_LINE_MARGIN 55   // Margin to leave on the left for the first line (in pixels)
-#define QUOTE_MARGIN_LEFT 18   // Margin to leave on the left of the quote 2nd line onwards (in pixels)
-#define QUOTE_MARGIN_RIGHT 18  // Margin to leave on the right of the quote (in pixels)
+#define FIRST_LINE_MARGIN 55            // Margin to leave on the left for the first line (in pixels)
+#define QUOTE_MARGIN_LEFT 18            // Margin to leave on the left of the quote 2nd line onwards (in pixels)
+#define QUOTE_MARGIN_RIGHT 18           // Margin to leave on the right of the quote (in pixels)
 
-#define EXPECTED_LINE_CHARS 40 // Maximum expected characters in a line
-#define LINE_HEIGHT_FACTOR 30  // Dividing string length with this to get number of lines
+#define EXPECTED_LINE_CHARS 40          // Maximum expected characters in a line
+#define LINE_HEIGHT_FACTOR 30           // Dividing string length with this to get number of lines
 
 #endif /* CONFIG_H */

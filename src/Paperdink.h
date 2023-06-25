@@ -1,4 +1,3 @@
-
 /** Examples
  * @example Calther.ino
  * Displays a calendar along with weather and todo list.

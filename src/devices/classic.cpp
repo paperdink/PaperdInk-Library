@@ -14,4 +14,3 @@ int8_t Paperdink_Classic::disable_display()
 
 	return 0;
 }
-

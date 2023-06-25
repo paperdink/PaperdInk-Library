@@ -24,23 +24,26 @@
 
 PAPERDINK_DEVICE Paperdink;
 
-void setup() {
-  /* Initialize device */
-  Paperdink.begin();
-  /* Enable power to display */
-  Paperdink.enable_display();
-  /* Clear the background */
-  Paperdink.epd.fillScreen(GxEPD_WHITE);
+void setup()
+{
+	/* Initialize device */
+	Paperdink.begin();
+	/* Enable power to display */
+	Paperdink.enable_display();
+	/* Clear the background */
+	Paperdink.epd.fillScreen(GxEPD_WHITE);
 
-  Paperdink.epd.setTextColor(GxEPD_BLACK);
+	Paperdink.epd.setTextColor(GxEPD_BLACK);
 
-  /* Print text to  display */
-  GxEPD2_GFX& display = Paperdink.epd;
-  display.setCursor(50, display.height() / 2);
-  display.print("Hello World");
+	/* Print text to  display */
+	GxEPD2_GFX& display = Paperdink.epd;
+	display.setCursor(50, display.height() / 2);
+	display.print("Hello World");
 
-  /* Send data to display for the update */
-  Paperdink.epd.display();
+	/* Send data to display for the update */
+	Paperdink.epd.display();
 }
 
-void loop() {}
+void loop()
+{
+}

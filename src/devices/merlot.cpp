@@ -14,4 +14,3 @@ int8_t Paperdink_Merlot::disable_display()
 
 	return 0;
 }
-

@@ -24,45 +24,47 @@
 
 PAPERDINK_DEVICE Paperdink;
 
-void setup() {
-  char img_string[15];
+void setup()
+{
+	char img_string[15];
 
-  /* Enable debug */
-  DEBUG.begin(115200);
+	/* Enable debug */
+	DEBUG.begin(115200);
 
-  /* Initialize device */
-  Paperdink.begin();
-  /* Enable power to display */
-  Paperdink.enable_display();
-  /* Clear the background */
-  Paperdink.epd.fillScreen(GxEPD_WHITE);
+	/* Initialize device */
+	Paperdink.begin();
+	/* Enable power to display */
+	Paperdink.enable_display();
+	/* Clear the background */
+	Paperdink.epd.fillScreen(GxEPD_WHITE);
 
-  if(Paperdink.enable_sd() < 0){
-	  Paperdink.epd.setTextColor(GxEPD_BLACK);
-	  Paperdink.epd.setRotation(0);
-    Paperdink.epd.setFont(&PAPERDINK_FONT_SML);
-    Paperdink.epd.setCursor(0, 120);
-    Paperdink.epd.println("   SD card failed to be initialized.");
-    Paperdink.epd.println("     1) Is a card inserted?");
-    Paperdink.epd.println("     2) Is it FAT32 formatted?");
-    Paperdink.epd.println("     3) Is it less than or equal to 32GB in size?");
-    Serial.println("SD card failed to be initialized.");
-  } else {
-  
-    Serial.println("SD OK!");
-    /* Display image from SD card */
-    sprintf(img_string, "Art_%d.bmp", (esp_random()%NUM_IMAGES)+1);
-    Paperdink_UI.display_bitmap_fs(Paperdink.epd, SD, img_string, 0, 0, Paperdink.has_color);
-  }
+	if (Paperdink.enable_sd() < 0) {
+		Paperdink.epd.setTextColor(GxEPD_BLACK);
+		Paperdink.epd.setRotation(0);
+		Paperdink.epd.setFont(&PAPERDINK_FONT_SML);
+		Paperdink.epd.setCursor(0, 120);
+		Paperdink.epd.println("   SD card failed to be initialized.");
+		Paperdink.epd.println("     1) Is a card inserted?");
+		Paperdink.epd.println("     2) Is it FAT32 formatted?");
+		Paperdink.epd.println("     3) Is it less than or equal to 32GB in size?");
+		Serial.println("SD card failed to be initialized.");
+	} else {
+		Serial.println("SD OK!");
+		/* Display image from SD card */
+		sprintf(img_string, "Art_%d.bmp", (esp_random() % NUM_IMAGES) + 1);
+		Paperdink_UI.display_bitmap_fs(Paperdink.epd, SD, img_string, 0, 0, Paperdink.has_color);
+	}
 
-  /* Send data to display for the update */
-  Paperdink.epd.display();
-	
-  DEBUG.println("Turning off everything");
-  
-  /* Update after sleep_time microsecond or when button 1 is pressed. */
-  Paperdink.deep_sleep_timer_wakeup(UPDATE_INTERVAL*M_TO_uS_FACTOR); // Consumes lower current
+	/* Send data to display for the update */
+	Paperdink.epd.display();
+
+	DEBUG.println("Turning off everything");
+
+	/* Update after sleep_time microsecond or when button 1 is pressed. */
+	Paperdink.deep_sleep_timer_wakeup(UPDATE_INTERVAL * M_TO_uS_FACTOR); // Consumes lower current
 	//Paperdink.deep_sleep_timer_button_wakeup(sleep_time*S_TO_uS_FACTOR, BUTTON_1_PIN); // Consumes higher current
 }
 
-void loop() {}
+void loop()
+{
+}

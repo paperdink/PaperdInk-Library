@@ -1,4 +1,3 @@
-
 #ifndef CONFIG_H
 #define CONFIG_H
 
@@ -9,8 +8,8 @@
 #define PAPERDINK_DEVICE Paperdink_Classic
 //#define PAPERDINK_DEVICE Paperdink_Merlot
 
-#define SSID     "*****" // Wifi Network SSID (name of wifi network)
-#define PASSWORD "*****" // Wifi Network password
+#define SSID     "*****"        // Wifi Network SSID (name of wifi network)
+#define PASSWORD "*****"        // Wifi Network password
 
 /* Weather information */
 #define CITY    "*****" // City for weather
@@ -53,7 +52,7 @@
 #define START_DAY_OFFSET 0
 
 /* Number of images in data folder.
- * Background will cycle through these images 
+ * Background will cycle through these images
  */
 #define NUM_IMAGES 5
 
