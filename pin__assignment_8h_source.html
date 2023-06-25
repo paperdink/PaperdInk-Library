@@ -94,61 +94,60 @@ $(document).ready(function(){initNavTree('pin__assignment_8h_source.html',''); i
   <div class="headertitle"><div class="title">pin_assignment.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="pin__assignment_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef _PAPERDINK_PIN_ASSIGNMENT_H_</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define _PAPERDINK_PIN_ASSIGNMENT_H_</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// PIN ASSIGNMENT</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// I2C pins</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a6890442e1cc24a0d61597a13576b8727">    8</a></span><span class="preprocessor">#define SDA 16</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#ab5ffc4751921608954bb7a5687566b2d">    9</a></span><span class="preprocessor">#define SCL 17</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// SPI pins</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// SD card pins</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a88f7782e210e61586baf33b93240d905">   14</a></span><span class="preprocessor">#define SS    21</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a7e2d8ef8f0724f23ce84b1e7d0c171d9">   15</a></span><span class="preprocessor">#define SD_CS SS</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a15569d756317107701fa79787ab864c4">   16</a></span><span class="preprocessor">#define SD_EN 5</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// E-paper pins</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a25e8ef72b86b3dca2dbdb39b248f948d">   19</a></span><span class="preprocessor">#define EPD_CS   22</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#ab043cbf17e064086d28042d8f7707dbb">   20</a></span><span class="preprocessor">#define EPD_DC   15</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a98a47d15f16ce30ec6e48c08ec45b685">   21</a></span><span class="preprocessor">#define EPD_BUSY 34</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a227e94fca745014a0386f84cd4321513">   22</a></span><span class="preprocessor">#define EPD_EN   12</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#aa8c957366ef9084af92c44996b5857e0">   23</a></span><span class="preprocessor">#define EPD_RST  13</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">// PCF8574 pins</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a4e96da313fa726b5b120e6d2461248cd">   26</a></span><span class="preprocessor">#define PCF_INT   35</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#add794225c4f93bdb13c26a03866853b7">   27</a></span><span class="preprocessor">#define SD_CD     P4 </span><span class="comment">// input</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#ac50e2b1f9ae3de4d3ba00d5861e18b1f">   28</a></span><span class="preprocessor">#define EXT_GPIO1 P5</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#aa62a91121a8416e1fc44ca9fcff6d36a">   29</a></span><span class="preprocessor">#define EXT_GPIO2 P6</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#aa02bac860a3c7ee1a00b10fdf1990407">   30</a></span><span class="preprocessor">#define EXT_GPIO3 P7</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#ab4caa618bccec4ed861326ea194d7895">   31</a></span><span class="preprocessor">#define PCF_I2C_ADDR 0x38</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">// LiPo</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a7d4c35896b4cef11138dc33d6a258811">   34</a></span><span class="preprocessor">#define CHARGE_PIN 36</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#ad9659da3944ab60dddc44fcd16293ee5">   35</a></span><span class="preprocessor">#define BATT_EN    25</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a474fd5ac3b123247b0482397fa599cdf">   36</a></span><span class="preprocessor">#define BATT_VOLT  39</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">// Buzzer</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a929d197e1e139d225ace86e78e91c3a4">   39</a></span><span class="preprocessor">#define BUZR 26</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">// Buttons</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">// Top to bottom</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a0411f64ff1b702c2b2e6e721f032f750">   43</a></span><span class="preprocessor">#define BUTTON_1_PIN 14</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a9b41bdc625fc987d318710249adbca19">   44</a></span><span class="preprocessor">#define BUTTON_1_RTC_GPIO 16</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#ac965fc518b25b1ec0de10e3ac841b170">   46</a></span><span class="preprocessor">#define BUTTON_2_PIN 27</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#ac5d692d4b5d2ff3e023841ceaeda0f91">   47</a></span><span class="preprocessor">#define BUTTON_2_RTC_GPIO 17</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a0371ce39a54669bd1ef373bac05fdd4b">   49</a></span><span class="preprocessor">#define BUTTON_3_PIN 4</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#af529de7a35ec2b8418e9022ba84983b6">   50</a></span><span class="preprocessor">#define BUTTON_3_RTC_GPIO 10</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a6f97237f1f6f3380a8010ba147a088ad">   52</a></span><span class="preprocessor">#define BUTTON_4_PIN 2</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a74f6b2c4f5885a8321ab1ccd7bcfcf06">   53</a></span><span class="preprocessor">#define BUTTON_4_RTC_GPIO 12</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#endif </span><span class="comment">/* _PAPERDINK_PIN_ASSIGNMENT_H_ */</span><span class="preprocessor"></span></div>
+<a href="pin__assignment_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef _PAPERDINK_PIN_ASSIGNMENT_H_</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define _PAPERDINK_PIN_ASSIGNMENT_H_</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// PIN ASSIGNMENT</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// I2C pins</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a6890442e1cc24a0d61597a13576b8727">    7</a></span><span class="preprocessor">#define SDA 16</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#ab5ffc4751921608954bb7a5687566b2d">    8</a></span><span class="preprocessor">#define SCL 17</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// SPI pins</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// SD card pins</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a88f7782e210e61586baf33b93240d905">   13</a></span><span class="preprocessor">#define SS    21</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a7e2d8ef8f0724f23ce84b1e7d0c171d9">   14</a></span><span class="preprocessor">#define SD_CS SS</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a15569d756317107701fa79787ab864c4">   15</a></span><span class="preprocessor">#define SD_EN 5</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// E-paper pins</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a25e8ef72b86b3dca2dbdb39b248f948d">   18</a></span><span class="preprocessor">#define EPD_CS   22</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#ab043cbf17e064086d28042d8f7707dbb">   19</a></span><span class="preprocessor">#define EPD_DC   15</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a98a47d15f16ce30ec6e48c08ec45b685">   20</a></span><span class="preprocessor">#define EPD_BUSY 34</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a227e94fca745014a0386f84cd4321513">   21</a></span><span class="preprocessor">#define EPD_EN   12</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#aa8c957366ef9084af92c44996b5857e0">   22</a></span><span class="preprocessor">#define EPD_RST  13</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// PCF8574 pins</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a4e96da313fa726b5b120e6d2461248cd">   25</a></span><span class="preprocessor">#define PCF_INT   35</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#add794225c4f93bdb13c26a03866853b7">   26</a></span><span class="preprocessor">#define SD_CD     P4 </span><span class="comment">// input</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#ac50e2b1f9ae3de4d3ba00d5861e18b1f">   27</a></span><span class="preprocessor">#define EXT_GPIO1 P5</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#aa62a91121a8416e1fc44ca9fcff6d36a">   28</a></span><span class="preprocessor">#define EXT_GPIO2 P6</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#aa02bac860a3c7ee1a00b10fdf1990407">   29</a></span><span class="preprocessor">#define EXT_GPIO3 P7</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#ab4caa618bccec4ed861326ea194d7895">   30</a></span><span class="preprocessor">#define PCF_I2C_ADDR 0x38</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">// LiPo</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a7d4c35896b4cef11138dc33d6a258811">   33</a></span><span class="preprocessor">#define CHARGE_PIN 36</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#ad9659da3944ab60dddc44fcd16293ee5">   34</a></span><span class="preprocessor">#define BATT_EN    25</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a474fd5ac3b123247b0482397fa599cdf">   35</a></span><span class="preprocessor">#define BATT_VOLT  39</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">// Buzzer</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a929d197e1e139d225ace86e78e91c3a4">   38</a></span><span class="preprocessor">#define BUZR 26</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">// Buttons</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">// Top to bottom</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a0411f64ff1b702c2b2e6e721f032f750">   42</a></span><span class="preprocessor">#define BUTTON_1_PIN 14</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a9b41bdc625fc987d318710249adbca19">   43</a></span><span class="preprocessor">#define BUTTON_1_RTC_GPIO 16</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#ac965fc518b25b1ec0de10e3ac841b170">   45</a></span><span class="preprocessor">#define BUTTON_2_PIN 27</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#ac5d692d4b5d2ff3e023841ceaeda0f91">   46</a></span><span class="preprocessor">#define BUTTON_2_RTC_GPIO 17</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a0371ce39a54669bd1ef373bac05fdd4b">   48</a></span><span class="preprocessor">#define BUTTON_3_PIN 4</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#af529de7a35ec2b8418e9022ba84983b6">   49</a></span><span class="preprocessor">#define BUTTON_3_RTC_GPIO 10</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a6f97237f1f6f3380a8010ba147a088ad">   51</a></span><span class="preprocessor">#define BUTTON_4_PIN 2</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="pin__assignment_8h.html#a74f6b2c4f5885a8321ab1ccd7bcfcf06">   52</a></span><span class="preprocessor">#define BUTTON_4_RTC_GPIO 12</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#endif </span><span class="comment">/* _PAPERDINK_PIN_ASSIGNMENT_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

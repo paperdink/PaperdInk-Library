@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('Wave_8ino-example.html',''); initResiz
 <p>Displays day and date along with weather and todo list.</p>
 <div class="fragment"><div class="line">/* The MIT License (MIT)</div>
 <div class="line"> * Copyright (c) 2022 Paperd.Ink</div>
-<div class="line"> </div>
+<div class="line"> *</div>
 <div class="line"> * Permission is hereby granted, free of charge, to any person obtaining a copy</div>
 <div class="line"> * of this software and associated documentation files (the &quot;Software&quot;), to deal</div>
 <div class="line"> * in the Software without restriction, including without limitation the rights</div>
@@ -141,11 +141,10 @@ $(document).ready(function(){initNavTree('Wave_8ino-example.html',''); initResiz
 <div class="line"> </div>
 <div class="line">    /* Intialize on chip SPI file system */</div>
 <div class="line">    DEBUG.print(&quot;Initializing SPIFFS...&quot;);</div>
-<div class="line">    if(!SPIFFS.begin(true)){</div>
+<div class="line">    if (!SPIFFS.begin(true))</div>
 <div class="line">        DEBUG.println(&quot;Failed!&quot;);</div>
-<div class="line">    }else{</div>
+<div class="line">    else</div>
 <div class="line">        DEBUG.println(&quot;Success!&quot;);</div>
-<div class="line">    }</div>
 <div class="line">    delay(100);</div>
 <div class="line"> </div>
 <div class="line">    /* Enable power to the display */</div>
@@ -154,13 +153,13 @@ $(document).ready(function(){initNavTree('Wave_8ino-example.html',''); initResiz
 <div class="line">    Paperdink.epd.fillScreen(GxEPD_WHITE);</div>
 <div class="line"> </div>
 <div class="line">    /* Connect to wifi network */</div>
-<div class="line">    if(Paperdink.connect_wifi(SSID, PASSWORD) &lt; 0){</div>
+<div class="line">    if (Paperdink.connect_wifi(SSID, PASSWORD) &lt; 0) {</div>
 <div class="line">        DEBUG.println(&quot;Unable to connect to WiFi&quot;);</div>
 <div class="line">        Paperdink.epd.drawBitmap(370, 4, wifi_off_sml, wifi_off_sml_width, wifi_off_sml_height, GxEPD_BLACK);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    /* Show background image */</div>
-<div class="line">    sprintf(img_string, &quot;%d.bmp&quot;, (image_counter++%NUM_IMAGES)+1);</div>
+<div class="line">    sprintf(img_string, &quot;%d.bmp&quot;, (image_counter++ % NUM_IMAGES) + 1);</div>
 <div class="line">    Paperdink_UI.display_bitmap_fs(Paperdink.epd, SPIFFS, img_string, 0, 0, Paperdink.has_color);</div>
 <div class="line"> </div>
 <div class="line">    /* Create white box to display tasks */</div>
@@ -169,31 +168,28 @@ $(document).ready(function(){initNavTree('Wave_8ino-example.html',''); initResiz
 <div class="line"> </div>
 <div class="line">    /* Fetch and display Todo list */</div>
 <div class="line">#ifdef TODOIST</div>
-<div class="line">    Paperdink_TodoListTodoist.font_bold = &amp;Gobold_Thin9pt7b;</div>
-<div class="line">    Paperdink_TodoListTodoist.font = &amp;Mont_ExtraLight8pt7b;</div>
-<div class="line">    Paperdink_TodoListTodoist.primary_color = GxEPD_BLACK;</div>
+<div class="line">        Paperdink_TodoListTodoist.font_bold = &amp;Gobold_Thin9pt7b;</div>
+<div class="line">        Paperdink_TodoListTodoist.font = &amp;Mont_ExtraLight8pt7b;</div>
+<div class="line">        Paperdink_TodoListTodoist.primary_color = GxEPD_BLACK;</div>
 <div class="line"> </div>
-<div class="line">    if(Paperdink_TodoListTodoist.fetch_data(TODOIST_TOKEN) &lt; 0 ){</div>
-<div class="line">        DEBUG.println(&quot;Unable to fetch to-do list from Todoist&quot;);</div>
-<div class="line">    }</div>
-<div class="line">    Paperdink_TodoListTodoist.display_list_style1(Paperdink.epd, 20, 30, 12, 1, 135);</div>
+<div class="line">        if (Paperdink_TodoListTodoist.fetch_data(TODOIST_TOKEN) &lt; 0)</div>
+<div class="line">            DEBUG.println(&quot;Unable to fetch to-do list from Todoist&quot;);</div>
+<div class="line">        Paperdink_TodoListTodoist.display_list_style1(Paperdink.epd, 20, 30, 12, 1, 135);</div>
 <div class="line"> </div>
 <div class="line">#elif TAIGA</div>
-<div class="line">    Paperdink_TodoListTaiga.font_bold = &amp;Gobold_Thin9pt7b;</div>
-<div class="line">    Paperdink_TodoListTaiga.font = &amp;Mont_ExtraLight8pt7b;</div>
-<div class="line">    Paperdink_TodoListTaiga.primary_color = GxEPD_BLACK;</div>
+<div class="line">        Paperdink_TodoListTaiga.font_bold = &amp;Gobold_Thin9pt7b;</div>
+<div class="line">        Paperdink_TodoListTaiga.font = &amp;Mont_ExtraLight8pt7b;</div>
+<div class="line">        Paperdink_TodoListTaiga.primary_color = GxEPD_BLACK;</div>
 <div class="line"> </div>
-<div class="line">    if(Paperdink_TodoListTaiga.fetch_data(TAIGA_PROJECT_NAME, TAIGA_PROJECT_USERNAME, TAIGA_PROJECT_PASSWORD) &lt; 0 ){</div>
-<div class="line">        DEBUG.println(&quot;Unable to fetch to-do list from Taiga&quot;);</div>
-<div class="line">    }</div>
-<div class="line">    Paperdink_TodoListTaiga.display_list_style1(Paperdink.epd, 20, 30, 12, 1, 135);</div>
+<div class="line">        if (Paperdink_TodoListTaiga.fetch_data(TAIGA_PROJECT_NAME, TAIGA_PROJECT_USERNAME, TAIGA_PROJECT_PASSWORD) &lt; 0)</div>
+<div class="line">            DEBUG.println(&quot;Unable to fetch to-do list from Taiga&quot;);</div>
+<div class="line">        Paperdink_TodoListTaiga.display_list_style1(Paperdink.epd, 20, 30, 12, 1, 135);</div>
 <div class="line"> </div>
 <div class="line">#endif</div>
 <div class="line"> </div>
 <div class="line">    /* Fetch date data */</div>
-<div class="line">    if(Paperdink_Date.fetch_data(TIME_ZONE) &lt; 0){</div>
+<div class="line">    if (Paperdink_Date.fetch_data(TIME_ZONE) &lt; 0)</div>
 <div class="line">        DEBUG.println(&quot;Unable to fetch Date Time data&quot;);</div>
-<div class="line">    }</div>
 <div class="line">    /* Create white box to display time and weather */</div>
 <div class="line">    Paperdink.epd.fillRect(180, 50, 200, 200, GxEPD_WHITE);</div>
 <div class="line">    Paperdink.epd.drawRect(180, 50, 200, 200, GxEPD_BLACK);</div>
@@ -203,16 +199,15 @@ $(document).ready(function(){initNavTree('Wave_8ino-example.html',''); initResiz
 <div class="line">    Paperdink_Date.display_day_date_style1_center(Paperdink.epd, 180, 65, 200);</div>
 <div class="line"> </div>
 <div class="line">    /* Fetch weather data*/</div>
-<div class="line">    if(Paperdink_Weather.fetch_data(CITY, COUNTRY, OWM_ID) &lt; 0){</div>
+<div class="line">    if (Paperdink_Weather.fetch_data(CITY, COUNTRY, OWM_ID) &lt; 0)</div>
 <div class="line">        DEBUG.println(&quot;Unable to fetch weather data&quot;);</div>
-<div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    /* Display weather text */</div>
 <div class="line">    Paperdink_Weather.font = &amp;Gobold_Thin9pt7b;</div>
 <div class="line">    Paperdink_Weather.primary_color = GxEPD_BLACK;</div>
 <div class="line">    Paperdink_Weather.display_weather_text_center(Paperdink.epd, 180, 200, 200);</div>
 <div class="line"> </div>
-<div class="line">    /* Send data to display for the update */ </div>
+<div class="line">    /* Send data to display for the update */</div>
 <div class="line">    Paperdink.epd.display();</div>
 <div class="line"> </div>
 <div class="line">    DEBUG.println(&quot;Turning off everything&quot;);</div>
@@ -221,16 +216,15 @@ $(document).ready(function(){initNavTree('Wave_8ino-example.html',''); initResiz
 <div class="line">     * Align updates to 12am so that date change aligns</div>
 <div class="line">     * with actual day change.</div>
 <div class="line">     */</div>
-<div class="line">    uint64_t sleep_time = (86400/(UPDATES_PER_DAY))-(((Paperdink_Date.mil_hour*3600)+(Paperdink_Date.min*60)+(Paperdink_Date.sec))%(86400/UPDATES_PER_DAY));</div>
+<div class="line">    uint64_t sleep_time = (86400 / (UPDATES_PER_DAY)) - (((Paperdink_Date.mil_hour * 3600) + (Paperdink_Date.min * 60) + (Paperdink_Date.sec)) % (86400 / UPDATES_PER_DAY));</div>
 <div class="line"> </div>
 <div class="line">    /* Update after sleep_time microsecond or when button 1 is pressed. */</div>
 <div class="line">    // Paperdink.deep_sleep_timer_wakeup(sleep_time*S_TO_uS_FACTOR); // Consumes lower current</div>
-<div class="line">    Paperdink.deep_sleep_timer_button_wakeup(sleep_time*S_TO_uS_FACTOR, BUTTON_1_PIN); // Consumes higher current</div>
+<div class="line">    Paperdink.deep_sleep_timer_button_wakeup(sleep_time * S_TO_uS_FACTOR, BUTTON_1_PIN); // Consumes higher current</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line">void loop()</div>
 <div class="line">{</div>
-<div class="line"> </div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->

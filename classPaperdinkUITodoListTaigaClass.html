@@ -144,7 +144,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="todo__list_8h_source.html#l00022">22</a> of file <a class="el" href="todo__list_8h_source.html">todo_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="todo__list_8h_source.html#l00021">21</a> of file <a class="el" href="todo__list_8h_source.html">todo_list.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a9407b7b602c520ae35c428843e936139" name="a9407b7b602c520ae35c428843e936139"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9407b7b602c520ae35c428843e936139">&#9670;&#160;</a></span>fetch_data()</h2>
@@ -178,108 +178,108 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="todo__list_8cpp_source.html#l00078">78</a> of file <a class="el" href="todo__list_8cpp_source.html">todo_list.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   79</span>{</div>
-<div class="line"><span class="lineno">   80</span>    <span class="keywordtype">int</span> httpCode, ret = 0;</div>
-<div class="line"><span class="lineno">   81</span>    String payload;</div>
-<div class="line"><span class="lineno">   82</span>    </div>
-<div class="line"><span class="lineno">   83</span>    WiFiClientSecure *client = <span class="keyword">new</span> WiFiClientSecure;</div>
-<div class="line"><span class="lineno">   84</span>    client-&gt;setCACert(taiga_cert);</div>
-<div class="line"><span class="lineno">   85</span> </div>
-<div class="line"><span class="lineno">   86</span>    {</div>
-<div class="line"><span class="lineno">   87</span>        HTTPClient https;</div>
-<div class="line"><span class="lineno">   88</span>        <span class="comment">/* Authenticate with Taiga server */</span></div>
-<div class="line"><span class="lineno">   89</span>        https.begin(*client, <a class="code hl_variable" href="todo__list_8cpp.html#ab2e96e50738f23e186ccf43c01baddc5">taiga_auth_url</a>.c_str());</div>
-<div class="line"><span class="lineno">   90</span>        https.addHeader(<span class="stringliteral">&quot;Content-Type&quot;</span>, <span class="stringliteral">&quot;application/json&quot;</span>, 0, 0);</div>
-<div class="line"><span class="lineno">   91</span> </div>
-<div class="line"><span class="lineno">   92</span>        <a class="code hl_variable" href="todo__list_8cpp.html#a320ae5e41e94502495aa7bea712cb20e">taiga_post_data</a>.replace(<span class="stringliteral">&quot;{0}&quot;</span>, project_username);</div>
-<div class="line"><span class="lineno">   93</span>        <a class="code hl_variable" href="todo__list_8cpp.html#a320ae5e41e94502495aa7bea712cb20e">taiga_post_data</a>.replace(<span class="stringliteral">&quot;{1}&quot;</span>, project_password);</div>
-<div class="line"><span class="lineno">   94</span>        httpCode = https.POST(<a class="code hl_variable" href="todo__list_8cpp.html#a320ae5e41e94502495aa7bea712cb20e">taiga_post_data</a>);</div>
-<div class="line"><span class="lineno">   95</span> </div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">if</span>(httpCode == HTTP_CODE_OK){</div>
-<div class="line"><span class="lineno">   97</span>            <a class="code hl_define" href="todo__list_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.printf(<span class="stringliteral">&quot;[HTTP] AUTH SUCCESS\r\n&quot;</span>);</div>
-<div class="line"><span class="lineno">   98</span>            <span class="comment">//String payload = https.getString();</span></div>
-<div class="line"><span class="lineno">   99</span>            <span class="comment">//Serial.println(payload);</span></div>
-<div class="line"><span class="lineno">  100</span>            <a class="code hl_class" href="classArudinoStreamParser.html">ArudinoStreamParser</a> parser;</div>
-<div class="line"><span class="lineno">  101</span>            parser.setListener(&amp;<a class="code hl_variable" href="todo__list_8cpp.html#ae44d09779c57b6fdde53bc16e3e7190a">taiga_todo_listener</a>);</div>
-<div class="line"><span class="lineno">  102</span>            https.writeToStream(&amp;parser);</div>
-<div class="line"><span class="lineno">  103</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  104</span>            <a class="code hl_define" href="todo__list_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.printf(<span class="stringliteral">&quot;[HTTP] AUTH... failed, error: %s\r\n&quot;</span>, https.errorToString(httpCode).c_str());</div>
-<div class="line"><span class="lineno">  105</span>            ret = -1;</div>
-<div class="line"><span class="lineno">  106</span>        }</div>
-<div class="line"><span class="lineno">  107</span> </div>
-<div class="line"><span class="lineno">  108</span>        https.end();</div>
-<div class="line"><span class="lineno">  109</span>    }</div>
-<div class="line"><span class="lineno">  110</span> </div>
-<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">if</span>(ret != 0){</div>
-<div class="line"><span class="lineno">  112</span>        <span class="keyword">delete</span> client;</div>
-<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">return</span> ret;</div>
-<div class="line"><span class="lineno">  114</span>    }</div>
-<div class="line"><span class="lineno">  115</span> </div>
-<div class="line"><span class="lineno">  116</span>    <span class="comment">/* Get the slug */</span></div>
-<div class="line"><span class="lineno">  117</span>    <a class="code hl_variable" href="todo__list_8cpp.html#af89519e731bbcfd207bf2087fec6f2f7">taiga_slug_url</a>.replace(<span class="stringliteral">&quot;{0}&quot;</span>, project_username);</div>
-<div class="line"><span class="lineno">  118</span>    <a class="code hl_variable" href="todo__list_8cpp.html#af89519e731bbcfd207bf2087fec6f2f7">taiga_slug_url</a>.replace(<span class="stringliteral">&quot;{1}&quot;</span>, project_name);</div>
-<div class="line"><span class="lineno">  119</span> </div>
-<div class="line"><span class="lineno">  120</span>    {</div>
-<div class="line"><span class="lineno">  121</span>        HTTPClient https;</div>
-<div class="line"><span class="lineno">  122</span>        https.begin(*client, <a class="code hl_variable" href="todo__list_8cpp.html#af89519e731bbcfd207bf2087fec6f2f7">taiga_slug_url</a>.c_str());</div>
-<div class="line"><span class="lineno">  123</span>        https.addHeader(<span class="stringliteral">&quot;Authorization&quot;</span>, <a class="code hl_variable" href="classPaperdinkUITodoListClass.html#aa1eb56525504af9c2c6290e975ac8d59">token</a>, 0, 0);</div>
-<div class="line"><span class="lineno">  124</span>        httpCode = https.GET();</div>
-<div class="line"><span class="lineno">  125</span> </div>
-<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">if</span>(httpCode == HTTP_CODE_OK){</div>
-<div class="line"><span class="lineno">  127</span>            <a class="code hl_define" href="todo__list_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.printf(<span class="stringliteral">&quot;[HTTP] SLUG SUCCESS\r\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  128</span>            <span class="comment">//payload = https.getString();</span></div>
-<div class="line"><span class="lineno">  129</span>            <span class="comment">//DEBUG.println(payload);</span></div>
-<div class="line"><span class="lineno">  130</span>            <a class="code hl_class" href="classArudinoStreamParser.html">ArudinoStreamParser</a> parser;</div>
-<div class="line"><span class="lineno">  131</span>            parser.setListener(&amp;<a class="code hl_variable" href="todo__list_8cpp.html#ae44d09779c57b6fdde53bc16e3e7190a">taiga_todo_listener</a>);</div>
-<div class="line"><span class="lineno">  132</span>            https.writeToStream(&amp;parser);</div>
-<div class="line"><span class="lineno">  133</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  134</span>            <a class="code hl_define" href="todo__list_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.printf(<span class="stringliteral">&quot;[HTTP] SLUG... failed, error: %s\r\n&quot;</span>, https.errorToString(httpCode).c_str());</div>
-<div class="line"><span class="lineno">  135</span>            ret = -1;</div>
-<div class="line"><span class="lineno">  136</span>        }</div>
-<div class="line"><span class="lineno">  137</span>        https.end();</div>
-<div class="line"><span class="lineno">  138</span>    }</div>
-<div class="line"><span class="lineno">  139</span>    </div>
-<div class="line"><span class="lineno">  140</span>    <span class="keywordflow">if</span>(ret != 0){</div>
-<div class="line"><span class="lineno">  141</span>        <span class="keyword">delete</span> client;</div>
-<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">return</span> ret;</div>
-<div class="line"><span class="lineno">  143</span>    }</div>
-<div class="line"><span class="lineno">  144</span> </div>
-<div class="line"><span class="lineno">  145</span>    <span class="comment">/* Get the tasks list */</span></div>
-<div class="line"><span class="lineno">  146</span>    <a class="code hl_variable" href="todo__list_8cpp.html#a38184879252d18ede01fe1394f669353">taiga_tasks_url</a> += <a class="code hl_variable" href="classPaperdinkUITodoListTaigaClass.html#aa1fda4dcfb8f698207914d820dc6feef">project_id</a>;</div>
-<div class="line"><span class="lineno">  147</span>    </div>
-<div class="line"><span class="lineno">  148</span>    {</div>
-<div class="line"><span class="lineno">  149</span>        HTTPClient https;</div>
-<div class="line"><span class="lineno">  150</span>        https.begin(*client, <a class="code hl_variable" href="todo__list_8cpp.html#a38184879252d18ede01fe1394f669353">taiga_tasks_url</a>.c_str());</div>
-<div class="line"><span class="lineno">  151</span>        https.addHeader(<span class="stringliteral">&quot;Authorization&quot;</span>, <a class="code hl_variable" href="classPaperdinkUITodoListClass.html#aa1eb56525504af9c2c6290e975ac8d59">token</a>, 0, 0);</div>
-<div class="line"><span class="lineno">  152</span>        httpCode = https.GET();</div>
-<div class="line"><span class="lineno">  153</span> </div>
-<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">if</span>(httpCode == HTTP_CODE_OK){</div>
-<div class="line"><span class="lineno">  155</span>            <a class="code hl_define" href="todo__list_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.printf(<span class="stringliteral">&quot;[HTTP] TASKS SUCCESS\r\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  156</span>            <span class="comment">//payload = https.getString();</span></div>
-<div class="line"><span class="lineno">  157</span>            <span class="comment">//DEBUG.println(payload);</span></div>
-<div class="line"><span class="lineno">  158</span>            <a class="code hl_class" href="classArudinoStreamParser.html">ArudinoStreamParser</a> parser;</div>
-<div class="line"><span class="lineno">  159</span>            parser.setListener(&amp;<a class="code hl_variable" href="todo__list_8cpp.html#ae44d09779c57b6fdde53bc16e3e7190a">taiga_todo_listener</a>);</div>
-<div class="line"><span class="lineno">  160</span>            https.writeToStream(&amp;parser);</div>
-<div class="line"><span class="lineno">  161</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  162</span>            <a class="code hl_define" href="todo__list_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.printf(<span class="stringliteral">&quot;[HTTP] TASKS... failed, error: %s\r\n&quot;</span>, https.errorToString(httpCode).c_str());</div>
-<div class="line"><span class="lineno">  163</span>        }</div>
-<div class="line"><span class="lineno">  164</span> </div>
-<div class="line"><span class="lineno">  165</span>        https.end();</div>
-<div class="line"><span class="lineno">  166</span>    }</div>
-<div class="line"><span class="lineno">  167</span> </div>
-<div class="line"><span class="lineno">  168</span>    <span class="keyword">delete</span> client;</div>
-<div class="line"><span class="lineno">  169</span>    <span class="keywordflow">return</span> ret;</div>
-<div class="line"><span class="lineno">  170</span>}</div>
-<div class="ttc" id="aclassArudinoStreamParser_html"><div class="ttname"><a href="classArudinoStreamParser.html">ArudinoStreamParser</a></div><div class="ttdef"><b>Definition</b> <a href="paperdink__common_8h_source.html#l00023">paperdink_common.h:23</a></div></div>
-<div class="ttc" id="aclassPaperdinkUITodoListClass_html_aa1eb56525504af9c2c6290e975ac8d59"><div class="ttname"><a href="classPaperdinkUITodoListClass.html#aa1eb56525504af9c2c6290e975ac8d59">PaperdinkUITodoListClass::token</a></div><div class="ttdeci">String token</div><div class="ttdef"><b>Definition</b> <a href="todo__list_8h_source.html#l00017">todo_list.h:17</a></div></div>
-<div class="ttc" id="aclassPaperdinkUITodoListTaigaClass_html_aa1fda4dcfb8f698207914d820dc6feef"><div class="ttname"><a href="classPaperdinkUITodoListTaigaClass.html#aa1fda4dcfb8f698207914d820dc6feef">PaperdinkUITodoListTaigaClass::project_id</a></div><div class="ttdeci">String project_id</div><div class="ttdef"><b>Definition</b> <a href="todo__list_8h_source.html#l00025">todo_list.h:25</a></div></div>
-<div class="ttc" id="atodo__list_8cpp_html_a320ae5e41e94502495aa7bea712cb20e"><div class="ttname"><a href="todo__list_8cpp.html#a320ae5e41e94502495aa7bea712cb20e">taiga_post_data</a></div><div class="ttdeci">String taiga_post_data</div><div class="ttdef"><b>Definition</b> <a href="todo__list_8cpp_source.html#l00013">todo_list.cpp:13</a></div></div>
-<div class="ttc" id="atodo__list_8cpp_html_a38184879252d18ede01fe1394f669353"><div class="ttname"><a href="todo__list_8cpp.html#a38184879252d18ede01fe1394f669353">taiga_tasks_url</a></div><div class="ttdeci">String taiga_tasks_url</div><div class="ttdef"><b>Definition</b> <a href="todo__list_8cpp_source.html#l00012">todo_list.cpp:12</a></div></div>
-<div class="ttc" id="atodo__list_8cpp_html_ab2e96e50738f23e186ccf43c01baddc5"><div class="ttname"><a href="todo__list_8cpp.html#ab2e96e50738f23e186ccf43c01baddc5">taiga_auth_url</a></div><div class="ttdeci">String taiga_auth_url</div><div class="ttdef"><b>Definition</b> <a href="todo__list_8cpp_source.html#l00010">todo_list.cpp:10</a></div></div>
-<div class="ttc" id="atodo__list_8cpp_html_ae44d09779c57b6fdde53bc16e3e7190a"><div class="ttname"><a href="todo__list_8cpp.html#ae44d09779c57b6fdde53bc16e3e7190a">taiga_todo_listener</a></div><div class="ttdeci">TodoTaigaJsonListener taiga_todo_listener</div><div class="ttdef"><b>Definition</b> <a href="todo__list_8cpp_source.html#l00014">todo_list.cpp:14</a></div></div>
-<div class="ttc" id="atodo__list_8cpp_html_af89519e731bbcfd207bf2087fec6f2f7"><div class="ttname"><a href="todo__list_8cpp.html#af89519e731bbcfd207bf2087fec6f2f7">taiga_slug_url</a></div><div class="ttdeci">String taiga_slug_url</div><div class="ttdef"><b>Definition</b> <a href="todo__list_8cpp_source.html#l00011">todo_list.cpp:11</a></div></div>
-<div class="ttc" id="atodo__list_8h_html_ad72dbcf6d0153db1b8d8a58001feed83"><div class="ttname"><a href="todo__list_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a></div><div class="ttdeci">#define DEBUG</div><div class="ttdef"><b>Definition</b> <a href="todo__list_8h_source.html#l00007">todo_list.h:7</a></div></div>
+<p class="definition">Definition at line <a class="el" href="todo__list_8cpp_source.html#l00077">77</a> of file <a class="el" href="todo__list_8cpp_source.html">todo_list.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>{</div>
+<div class="line"><span class="lineno">   79</span>    <span class="keywordtype">int</span> httpCode, ret = 0;</div>
+<div class="line"><span class="lineno">   80</span>    String payload;</div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span>    WiFiClientSecure *client = <span class="keyword">new</span> WiFiClientSecure;</div>
+<div class="line"><span class="lineno">   83</span>    client-&gt;setCACert(taiga_cert);</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>    {</div>
+<div class="line"><span class="lineno">   86</span>        HTTPClient https;</div>
+<div class="line"><span class="lineno">   87</span>        <span class="comment">/* Authenticate with Taiga server */</span></div>
+<div class="line"><span class="lineno">   88</span>        https.begin(*client, <a class="code hl_variable" href="todo__list_8cpp.html#ab2e96e50738f23e186ccf43c01baddc5">taiga_auth_url</a>.c_str());</div>
+<div class="line"><span class="lineno">   89</span>        https.addHeader(<span class="stringliteral">&quot;Content-Type&quot;</span>, <span class="stringliteral">&quot;application/json&quot;</span>, 0, 0);</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>        <a class="code hl_variable" href="todo__list_8cpp.html#a320ae5e41e94502495aa7bea712cb20e">taiga_post_data</a>.replace(<span class="stringliteral">&quot;{0}&quot;</span>, project_username);</div>
+<div class="line"><span class="lineno">   92</span>        <a class="code hl_variable" href="todo__list_8cpp.html#a320ae5e41e94502495aa7bea712cb20e">taiga_post_data</a>.replace(<span class="stringliteral">&quot;{1}&quot;</span>, project_password);</div>
+<div class="line"><span class="lineno">   93</span>        httpCode = https.POST(<a class="code hl_variable" href="todo__list_8cpp.html#a320ae5e41e94502495aa7bea712cb20e">taiga_post_data</a>);</div>
+<div class="line"><span class="lineno">   94</span> </div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">if</span> (httpCode == HTTP_CODE_OK) {</div>
+<div class="line"><span class="lineno">   96</span>            <a class="code hl_define" href="todo__list_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.printf(<span class="stringliteral">&quot;[HTTP] AUTH SUCCESS\r\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   97</span>            <span class="comment">//String payload = https.getString();</span></div>
+<div class="line"><span class="lineno">   98</span>            <span class="comment">//Serial.println(payload);</span></div>
+<div class="line"><span class="lineno">   99</span>            <a class="code hl_class" href="classArudinoStreamParser.html">ArudinoStreamParser</a> parser;</div>
+<div class="line"><span class="lineno">  100</span>            parser.setListener(&amp;<a class="code hl_variable" href="todo__list_8cpp.html#ae44d09779c57b6fdde53bc16e3e7190a">taiga_todo_listener</a>);</div>
+<div class="line"><span class="lineno">  101</span>            https.writeToStream(&amp;parser);</div>
+<div class="line"><span class="lineno">  102</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  103</span>            <a class="code hl_define" href="todo__list_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.printf(<span class="stringliteral">&quot;[HTTP] AUTH... failed, error: %s\r\n&quot;</span>, https.errorToString(httpCode).c_str());</div>
+<div class="line"><span class="lineno">  104</span>            ret = -1;</div>
+<div class="line"><span class="lineno">  105</span>        }</div>
+<div class="line"><span class="lineno">  106</span> </div>
+<div class="line"><span class="lineno">  107</span>        https.end();</div>
+<div class="line"><span class="lineno">  108</span>    }</div>
+<div class="line"><span class="lineno">  109</span> </div>
+<div class="line"><span class="lineno">  110</span>    <span class="keywordflow">if</span> (ret != 0) {</div>
+<div class="line"><span class="lineno">  111</span>        <span class="keyword">delete</span> client;</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">return</span> ret;</div>
+<div class="line"><span class="lineno">  113</span>    }</div>
+<div class="line"><span class="lineno">  114</span> </div>
+<div class="line"><span class="lineno">  115</span>    <span class="comment">/* Get the slug */</span></div>
+<div class="line"><span class="lineno">  116</span>    <a class="code hl_variable" href="todo__list_8cpp.html#af89519e731bbcfd207bf2087fec6f2f7">taiga_slug_url</a>.replace(<span class="stringliteral">&quot;{0}&quot;</span>, project_username);</div>
+<div class="line"><span class="lineno">  117</span>    <a class="code hl_variable" href="todo__list_8cpp.html#af89519e731bbcfd207bf2087fec6f2f7">taiga_slug_url</a>.replace(<span class="stringliteral">&quot;{1}&quot;</span>, project_name);</div>
+<div class="line"><span class="lineno">  118</span> </div>
+<div class="line"><span class="lineno">  119</span>    {</div>
+<div class="line"><span class="lineno">  120</span>        HTTPClient https;</div>
+<div class="line"><span class="lineno">  121</span>        https.begin(*client, <a class="code hl_variable" href="todo__list_8cpp.html#af89519e731bbcfd207bf2087fec6f2f7">taiga_slug_url</a>.c_str());</div>
+<div class="line"><span class="lineno">  122</span>        https.addHeader(<span class="stringliteral">&quot;Authorization&quot;</span>, <a class="code hl_variable" href="classPaperdinkUITodoListClass.html#aa1eb56525504af9c2c6290e975ac8d59">token</a>, 0, 0);</div>
+<div class="line"><span class="lineno">  123</span>        httpCode = https.GET();</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">if</span> (httpCode == HTTP_CODE_OK) {</div>
+<div class="line"><span class="lineno">  126</span>            <a class="code hl_define" href="todo__list_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.printf(<span class="stringliteral">&quot;[HTTP] SLUG SUCCESS\r\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  127</span>            <span class="comment">//payload = https.getString();</span></div>
+<div class="line"><span class="lineno">  128</span>            <span class="comment">//DEBUG.println(payload);</span></div>
+<div class="line"><span class="lineno">  129</span>            <a class="code hl_class" href="classArudinoStreamParser.html">ArudinoStreamParser</a> parser;</div>
+<div class="line"><span class="lineno">  130</span>            parser.setListener(&amp;<a class="code hl_variable" href="todo__list_8cpp.html#ae44d09779c57b6fdde53bc16e3e7190a">taiga_todo_listener</a>);</div>
+<div class="line"><span class="lineno">  131</span>            https.writeToStream(&amp;parser);</div>
+<div class="line"><span class="lineno">  132</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  133</span>            <a class="code hl_define" href="todo__list_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.printf(<span class="stringliteral">&quot;[HTTP] SLUG... failed, error: %s\r\n&quot;</span>, https.errorToString(httpCode).c_str());</div>
+<div class="line"><span class="lineno">  134</span>            ret = -1;</div>
+<div class="line"><span class="lineno">  135</span>        }</div>
+<div class="line"><span class="lineno">  136</span>        https.end();</div>
+<div class="line"><span class="lineno">  137</span>    }</div>
+<div class="line"><span class="lineno">  138</span> </div>
+<div class="line"><span class="lineno">  139</span>    <span class="keywordflow">if</span> (ret != 0) {</div>
+<div class="line"><span class="lineno">  140</span>        <span class="keyword">delete</span> client;</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">return</span> ret;</div>
+<div class="line"><span class="lineno">  142</span>    }</div>
+<div class="line"><span class="lineno">  143</span> </div>
+<div class="line"><span class="lineno">  144</span>    <span class="comment">/* Get the tasks list */</span></div>
+<div class="line"><span class="lineno">  145</span>    <a class="code hl_variable" href="todo__list_8cpp.html#a38184879252d18ede01fe1394f669353">taiga_tasks_url</a> += <a class="code hl_variable" href="classPaperdinkUITodoListTaigaClass.html#aa1fda4dcfb8f698207914d820dc6feef">project_id</a>;</div>
+<div class="line"><span class="lineno">  146</span> </div>
+<div class="line"><span class="lineno">  147</span>    {</div>
+<div class="line"><span class="lineno">  148</span>        HTTPClient https;</div>
+<div class="line"><span class="lineno">  149</span>        https.begin(*client, <a class="code hl_variable" href="todo__list_8cpp.html#a38184879252d18ede01fe1394f669353">taiga_tasks_url</a>.c_str());</div>
+<div class="line"><span class="lineno">  150</span>        https.addHeader(<span class="stringliteral">&quot;Authorization&quot;</span>, <a class="code hl_variable" href="classPaperdinkUITodoListClass.html#aa1eb56525504af9c2c6290e975ac8d59">token</a>, 0, 0);</div>
+<div class="line"><span class="lineno">  151</span>        httpCode = https.GET();</div>
+<div class="line"><span class="lineno">  152</span> </div>
+<div class="line"><span class="lineno">  153</span>        <span class="keywordflow">if</span> (httpCode == HTTP_CODE_OK) {</div>
+<div class="line"><span class="lineno">  154</span>            <a class="code hl_define" href="todo__list_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.printf(<span class="stringliteral">&quot;[HTTP] TASKS SUCCESS\r\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  155</span>            <span class="comment">//payload = https.getString();</span></div>
+<div class="line"><span class="lineno">  156</span>            <span class="comment">//DEBUG.println(payload);</span></div>
+<div class="line"><span class="lineno">  157</span>            <a class="code hl_class" href="classArudinoStreamParser.html">ArudinoStreamParser</a> parser;</div>
+<div class="line"><span class="lineno">  158</span>            parser.setListener(&amp;<a class="code hl_variable" href="todo__list_8cpp.html#ae44d09779c57b6fdde53bc16e3e7190a">taiga_todo_listener</a>);</div>
+<div class="line"><span class="lineno">  159</span>            https.writeToStream(&amp;parser);</div>
+<div class="line"><span class="lineno">  160</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  161</span>            <a class="code hl_define" href="todo__list_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.printf(<span class="stringliteral">&quot;[HTTP] TASKS... failed, error: %s\r\n&quot;</span>, https.errorToString(httpCode).c_str());</div>
+<div class="line"><span class="lineno">  162</span>        }</div>
+<div class="line"><span class="lineno">  163</span> </div>
+<div class="line"><span class="lineno">  164</span>        https.end();</div>
+<div class="line"><span class="lineno">  165</span>    }</div>
+<div class="line"><span class="lineno">  166</span> </div>
+<div class="line"><span class="lineno">  167</span>    <span class="keyword">delete</span> client;</div>
+<div class="line"><span class="lineno">  168</span>    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><span class="lineno">  169</span>}</div>
+<div class="ttc" id="aclassArudinoStreamParser_html"><div class="ttname"><a href="classArudinoStreamParser.html">ArudinoStreamParser</a></div><div class="ttdef"><b>Definition</b> <a href="paperdink__common_8h_source.html#l00022">paperdink_common.h:22</a></div></div>
+<div class="ttc" id="aclassPaperdinkUITodoListClass_html_aa1eb56525504af9c2c6290e975ac8d59"><div class="ttname"><a href="classPaperdinkUITodoListClass.html#aa1eb56525504af9c2c6290e975ac8d59">PaperdinkUITodoListClass::token</a></div><div class="ttdeci">String token</div><div class="ttdef"><b>Definition</b> <a href="todo__list_8h_source.html#l00016">todo_list.h:16</a></div></div>
+<div class="ttc" id="aclassPaperdinkUITodoListTaigaClass_html_aa1fda4dcfb8f698207914d820dc6feef"><div class="ttname"><a href="classPaperdinkUITodoListTaigaClass.html#aa1fda4dcfb8f698207914d820dc6feef">PaperdinkUITodoListTaigaClass::project_id</a></div><div class="ttdeci">String project_id</div><div class="ttdef"><b>Definition</b> <a href="todo__list_8h_source.html#l00024">todo_list.h:24</a></div></div>
+<div class="ttc" id="atodo__list_8cpp_html_a320ae5e41e94502495aa7bea712cb20e"><div class="ttname"><a href="todo__list_8cpp.html#a320ae5e41e94502495aa7bea712cb20e">taiga_post_data</a></div><div class="ttdeci">String taiga_post_data</div><div class="ttdef"><b>Definition</b> <a href="todo__list_8cpp_source.html#l00012">todo_list.cpp:12</a></div></div>
+<div class="ttc" id="atodo__list_8cpp_html_a38184879252d18ede01fe1394f669353"><div class="ttname"><a href="todo__list_8cpp.html#a38184879252d18ede01fe1394f669353">taiga_tasks_url</a></div><div class="ttdeci">String taiga_tasks_url</div><div class="ttdef"><b>Definition</b> <a href="todo__list_8cpp_source.html#l00011">todo_list.cpp:11</a></div></div>
+<div class="ttc" id="atodo__list_8cpp_html_ab2e96e50738f23e186ccf43c01baddc5"><div class="ttname"><a href="todo__list_8cpp.html#ab2e96e50738f23e186ccf43c01baddc5">taiga_auth_url</a></div><div class="ttdeci">String taiga_auth_url</div><div class="ttdef"><b>Definition</b> <a href="todo__list_8cpp_source.html#l00009">todo_list.cpp:9</a></div></div>
+<div class="ttc" id="atodo__list_8cpp_html_ae44d09779c57b6fdde53bc16e3e7190a"><div class="ttname"><a href="todo__list_8cpp.html#ae44d09779c57b6fdde53bc16e3e7190a">taiga_todo_listener</a></div><div class="ttdeci">TodoTaigaJsonListener taiga_todo_listener</div><div class="ttdef"><b>Definition</b> <a href="todo__list_8cpp_source.html#l00013">todo_list.cpp:13</a></div></div>
+<div class="ttc" id="atodo__list_8cpp_html_af89519e731bbcfd207bf2087fec6f2f7"><div class="ttname"><a href="todo__list_8cpp.html#af89519e731bbcfd207bf2087fec6f2f7">taiga_slug_url</a></div><div class="ttdeci">String taiga_slug_url</div><div class="ttdef"><b>Definition</b> <a href="todo__list_8cpp_source.html#l00010">todo_list.cpp:10</a></div></div>
+<div class="ttc" id="atodo__list_8h_html_ad72dbcf6d0153db1b8d8a58001feed83"><div class="ttname"><a href="todo__list_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a></div><div class="ttdeci">#define DEBUG</div><div class="ttdef"><b>Definition</b> <a href="todo__list_8h_source.html#l00006">todo_list.h:6</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -296,7 +296,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="todo__list_8h_source.html#l00025">25</a> of file <a class="el" href="todo__list_8h_source.html">todo_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="todo__list_8h_source.html#l00024">24</a> of file <a class="el" href="todo__list_8h_source.html">todo_list.h</a>.</p>
 
 </div>
 </div>

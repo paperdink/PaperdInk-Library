@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('Quotes_8ino-example.html',''); initRes
 <p>Displays quotes from quotable API.</p>
 <div class="fragment"><div class="line">/* The MIT License (MIT)</div>
 <div class="line"> * Copyright (c) 2022 Paperd.Ink</div>
-<div class="line"> </div>
+<div class="line"> *</div>
 <div class="line"> * Permission is hereby granted, free of charge, to any person obtaining a copy</div>
 <div class="line"> * of this software and associated documentation files (the &quot;Software&quot;), to deal</div>
 <div class="line"> * in the Software without restriction, including without limitation the rights</div>
@@ -142,15 +142,14 @@ $(document).ready(function(){initNavTree('Quotes_8ino-example.html',''); initRes
 <div class="line">    Paperdink.epd.fillScreen(BACKGROUND_COLOR);</div>
 <div class="line"> </div>
 <div class="line">    /* Connect to wifi network */</div>
-<div class="line">    if(Paperdink.connect_wifi(SSID, PASSWORD) &lt; 0){</div>
+<div class="line">    if (Paperdink.connect_wifi(SSID, PASSWORD) &lt; 0) {</div>
 <div class="line">        DEBUG.println(&quot;Unable to connect to WiFi&quot;);</div>
 <div class="line">        Paperdink.epd.drawBitmap(370, 4, wifi_off_sml, wifi_off_sml_width, wifi_off_sml_height, GxEPD_BLACK);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    /* Fetch date data */</div>
-<div class="line">    if(Paperdink_Date.fetch_data(TIME_ZONE) &lt; 0){</div>
+<div class="line">    if (Paperdink_Date.fetch_data(TIME_ZONE) &lt; 0)</div>
 <div class="line">        DEBUG.println(&quot;Unable to fetch Date Time data&quot;);</div>
-<div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    /* Fetch and display quote */</div>
 <div class="line">    fetch_quote();</div>
@@ -165,16 +164,15 @@ $(document).ready(function(){initNavTree('Quotes_8ino-example.html',''); initRes
 <div class="line">     * Align updates to 12am so that date change aligns</div>
 <div class="line">     * with actual day change.</div>
 <div class="line">     */</div>
-<div class="line">    uint64_t sleep_time = (86400/(UPDATES_PER_DAY))-(((Paperdink_Date.mil_hour*3600)+(Paperdink_Date.min*60)+(Paperdink_Date.sec))%(86400/UPDATES_PER_DAY));</div>
+<div class="line">    uint64_t sleep_time = (86400 / (UPDATES_PER_DAY)) - (((Paperdink_Date.mil_hour * 3600) + (Paperdink_Date.min * 60) + (Paperdink_Date.sec)) % (86400 / UPDATES_PER_DAY));</div>
 <div class="line"> </div>
 <div class="line">    /* Update after sleep_time microsecond or when button 1 is pressed. */</div>
 <div class="line">    // Paperdink.deep_sleep_timer_wakeup(sleep_time*S_TO_uS_FACTOR); // Consumes lower current</div>
-<div class="line">    Paperdink.deep_sleep_timer_button_wakeup(sleep_time*S_TO_uS_FACTOR, BUTTON_1_PIN); // Consumes higher current</div>
+<div class="line">    Paperdink.deep_sleep_timer_button_wakeup(sleep_time * S_TO_uS_FACTOR, BUTTON_1_PIN); // Consumes higher current</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line">void loop()</div>
 <div class="line">{</div>
-<div class="line"> </div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line">#include &quot;quotes_parser.h&quot;</div>
@@ -188,37 +186,37 @@ $(document).ready(function(){initNavTree('Quotes_8ino-example.html',''); initRes
 <div class="line">const char *url = &quot;https://api.quotable.io/random?maxLength=&quot; MAX_QUOTE_LENGTH_STR &quot;&amp;tags=&quot; QUOTE_TAGS;</div>
 <div class="line">quoteListener quote_listener;</div>
 <div class="line"> </div>
-<div class="line">static const char* cert = &quot;-----BEGIN CERTIFICATE-----\n&quot; \</div>
-<div class="line">&quot;MIIFazCCA1OgAwIBAgIRAIIQz7DSQONZRGPgu2OCiwAwDQYJKoZIhvcNAQELBQAw\n&quot; \</div>
-<div class="line">&quot;TzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2Vh\n&quot; \</div>
-<div class="line">&quot;cmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwHhcNMTUwNjA0MTEwNDM4\n&quot; \</div>
-<div class="line">&quot;WhcNMzUwNjA0MTEwNDM4WjBPMQswCQYDVQQGEwJVUzEpMCcGA1UEChMgSW50ZXJu\n&quot; \</div>
-<div class="line">&quot;ZXQgU2VjdXJpdHkgUmVzZWFyY2ggR3JvdXAxFTATBgNVBAMTDElTUkcgUm9vdCBY\n&quot; \</div>
-<div class="line">&quot;MTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBAK3oJHP0FDfzm54rVygc\n&quot; \</div>
-<div class="line">&quot;h77ct984kIxuPOZXoHj3dcKi/vVqbvYATyjb3miGbESTtrFj/RQSa78f0uoxmyF+\n&quot; \</div>
-<div class="line">&quot;0TM8ukj13Xnfs7j/EvEhmkvBioZxaUpmZmyPfjxwv60pIgbz5MDmgK7iS4+3mX6U\n&quot; \</div>
-<div class="line">&quot;A5/TR5d8mUgjU+g4rk8Kb4Mu0UlXjIB0ttov0DiNewNwIRt18jA8+o+u3dpjq+sW\n&quot; \</div>
-<div class="line">&quot;T8KOEUt+zwvo/7V3LvSye0rgTBIlDHCNAymg4VMk7BPZ7hm/ELNKjD+Jo2FR3qyH\n&quot; \</div>
-<div class="line">&quot;B5T0Y3HsLuJvW5iB4YlcNHlsdu87kGJ55tukmi8mxdAQ4Q7e2RCOFvu396j3x+UC\n&quot; \</div>
-<div class="line">&quot;B5iPNgiV5+I3lg02dZ77DnKxHZu8A/lJBdiB3QW0KtZB6awBdpUKD9jf1b0SHzUv\n&quot; \</div>
-<div class="line">&quot;KBds0pjBqAlkd25HN7rOrFleaJ1/ctaJxQZBKT5ZPt0m9STJEadao0xAH0ahmbWn\n&quot; \</div>
-<div class="line">&quot;OlFuhjuefXKnEgV4We0+UXgVCwOPjdAvBbI+e0ocS3MFEvzG6uBQE3xDk3SzynTn\n&quot; \</div>
-<div class="line">&quot;jh8BCNAw1FtxNrQHusEwMFxIt4I7mKZ9YIqioymCzLq9gwQbooMDQaHWBfEbwrbw\n&quot; \</div>
-<div class="line">&quot;qHyGO0aoSCqI3Haadr8faqU9GY/rOPNk3sgrDQoo//fb4hVC1CLQJ13hef4Y53CI\n&quot; \</div>
-<div class="line">&quot;rU7m2Ys6xt0nUW7/vGT1M0NPAgMBAAGjQjBAMA4GA1UdDwEB/wQEAwIBBjAPBgNV\n&quot; \</div>
-<div class="line">&quot;HRMBAf8EBTADAQH/MB0GA1UdDgQWBBR5tFnme7bl5AFzgAiIyBpY9umbbjANBgkq\n&quot; \</div>
-<div class="line">&quot;hkiG9w0BAQsFAAOCAgEAVR9YqbyyqFDQDLHYGmkgJykIrGF1XIpu+ILlaS/V9lZL\n&quot; \</div>
-<div class="line">&quot;ubhzEFnTIZd+50xx+7LSYK05qAvqFyFWhfFQDlnrzuBZ6brJFe+GnY+EgPbk6ZGQ\n&quot; \</div>
-<div class="line">&quot;3BebYhtF8GaV0nxvwuo77x/Py9auJ/GpsMiu/X1+mvoiBOv/2X/qkSsisRcOj/KK\n&quot; \</div>
-<div class="line">&quot;NFtY2PwByVS5uCbMiogziUwthDyC3+6WVwW6LLv3xLfHTjuCvjHIInNzktHCgKQ5\n&quot; \</div>
-<div class="line">&quot;ORAzI4JMPJ+GslWYHb4phowim57iaztXOoJwTdwJx4nLCgdNbOhdjsnvzqvHu7Ur\n&quot; \</div>
-<div class="line">&quot;TkXWStAmzOVyyghqpZXjFaH3pO3JLF+l+/+sKAIuvtd7u+Nxe5AW0wdeRlN8NwdC\n&quot; \</div>
-<div class="line">&quot;jNPElpzVmbUq4JUagEiuTDkHzsxHpFKVK7q4+63SM1N95R1NbdWhscdCb+ZAJzVc\n&quot; \</div>
-<div class="line">&quot;oyi3B43njTOQ5yOf+1CceWxG1bQVs5ZufpsMljq4Ui0/1lvh+wjChP4kqKOJ2qxq\n&quot; \</div>
-<div class="line">&quot;4RgqsahDYVvTH9w7jXbyLeiNdd8XM2w9U/t7y0Ff/9yi0GE44Za4rF2LN9d11TPA\n&quot; \</div>
-<div class="line">&quot;mRGunUHBcnWEvgJBQl9nJEiU0Zsnvgc/ubhPgXRR4Xq37Z0j4r7g1SgEEzwxA57d\n&quot; \</div>
-<div class="line">&quot;emyPxgcYxn/eR44/KJ4EBs+lVDR3veyJm+kXQ99b21/+jh5Xos1AnX5iItreGCc=\n&quot; \</div>
-<div class="line">&quot;-----END CERTIFICATE-----\n&quot;;</div>
+<div class="line">static const char *cert = &quot;-----BEGIN CERTIFICATE-----\n&quot;                      \</div>
+<div class="line">              &quot;MIIFazCCA1OgAwIBAgIRAIIQz7DSQONZRGPgu2OCiwAwDQYJKoZIhvcNAQELBQAw\n&quot; \</div>
+<div class="line">              &quot;TzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2Vh\n&quot; \</div>
+<div class="line">              &quot;cmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwHhcNMTUwNjA0MTEwNDM4\n&quot; \</div>
+<div class="line">              &quot;WhcNMzUwNjA0MTEwNDM4WjBPMQswCQYDVQQGEwJVUzEpMCcGA1UEChMgSW50ZXJu\n&quot; \</div>
+<div class="line">              &quot;ZXQgU2VjdXJpdHkgUmVzZWFyY2ggR3JvdXAxFTATBgNVBAMTDElTUkcgUm9vdCBY\n&quot; \</div>
+<div class="line">              &quot;MTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBAK3oJHP0FDfzm54rVygc\n&quot; \</div>
+<div class="line">              &quot;h77ct984kIxuPOZXoHj3dcKi/vVqbvYATyjb3miGbESTtrFj/RQSa78f0uoxmyF+\n&quot; \</div>
+<div class="line">              &quot;0TM8ukj13Xnfs7j/EvEhmkvBioZxaUpmZmyPfjxwv60pIgbz5MDmgK7iS4+3mX6U\n&quot; \</div>
+<div class="line">              &quot;A5/TR5d8mUgjU+g4rk8Kb4Mu0UlXjIB0ttov0DiNewNwIRt18jA8+o+u3dpjq+sW\n&quot; \</div>
+<div class="line">              &quot;T8KOEUt+zwvo/7V3LvSye0rgTBIlDHCNAymg4VMk7BPZ7hm/ELNKjD+Jo2FR3qyH\n&quot; \</div>
+<div class="line">              &quot;B5T0Y3HsLuJvW5iB4YlcNHlsdu87kGJ55tukmi8mxdAQ4Q7e2RCOFvu396j3x+UC\n&quot; \</div>
+<div class="line">              &quot;B5iPNgiV5+I3lg02dZ77DnKxHZu8A/lJBdiB3QW0KtZB6awBdpUKD9jf1b0SHzUv\n&quot; \</div>
+<div class="line">              &quot;KBds0pjBqAlkd25HN7rOrFleaJ1/ctaJxQZBKT5ZPt0m9STJEadao0xAH0ahmbWn\n&quot; \</div>
+<div class="line">              &quot;OlFuhjuefXKnEgV4We0+UXgVCwOPjdAvBbI+e0ocS3MFEvzG6uBQE3xDk3SzynTn\n&quot; \</div>
+<div class="line">              &quot;jh8BCNAw1FtxNrQHusEwMFxIt4I7mKZ9YIqioymCzLq9gwQbooMDQaHWBfEbwrbw\n&quot; \</div>
+<div class="line">              &quot;qHyGO0aoSCqI3Haadr8faqU9GY/rOPNk3sgrDQoo//fb4hVC1CLQJ13hef4Y53CI\n&quot; \</div>
+<div class="line">              &quot;rU7m2Ys6xt0nUW7/vGT1M0NPAgMBAAGjQjBAMA4GA1UdDwEB/wQEAwIBBjAPBgNV\n&quot; \</div>
+<div class="line">              &quot;HRMBAf8EBTADAQH/MB0GA1UdDgQWBBR5tFnme7bl5AFzgAiIyBpY9umbbjANBgkq\n&quot; \</div>
+<div class="line">              &quot;hkiG9w0BAQsFAAOCAgEAVR9YqbyyqFDQDLHYGmkgJykIrGF1XIpu+ILlaS/V9lZL\n&quot; \</div>
+<div class="line">              &quot;ubhzEFnTIZd+50xx+7LSYK05qAvqFyFWhfFQDlnrzuBZ6brJFe+GnY+EgPbk6ZGQ\n&quot; \</div>
+<div class="line">              &quot;3BebYhtF8GaV0nxvwuo77x/Py9auJ/GpsMiu/X1+mvoiBOv/2X/qkSsisRcOj/KK\n&quot; \</div>
+<div class="line">              &quot;NFtY2PwByVS5uCbMiogziUwthDyC3+6WVwW6LLv3xLfHTjuCvjHIInNzktHCgKQ5\n&quot; \</div>
+<div class="line">              &quot;ORAzI4JMPJ+GslWYHb4phowim57iaztXOoJwTdwJx4nLCgdNbOhdjsnvzqvHu7Ur\n&quot; \</div>
+<div class="line">              &quot;TkXWStAmzOVyyghqpZXjFaH3pO3JLF+l+/+sKAIuvtd7u+Nxe5AW0wdeRlN8NwdC\n&quot; \</div>
+<div class="line">              &quot;jNPElpzVmbUq4JUagEiuTDkHzsxHpFKVK7q4+63SM1N95R1NbdWhscdCb+ZAJzVc\n&quot; \</div>
+<div class="line">              &quot;oyi3B43njTOQ5yOf+1CceWxG1bQVs5ZufpsMljq4Ui0/1lvh+wjChP4kqKOJ2qxq\n&quot; \</div>
+<div class="line">              &quot;4RgqsahDYVvTH9w7jXbyLeiNdd8XM2w9U/t7y0Ff/9yi0GE44Za4rF2LN9d11TPA\n&quot; \</div>
+<div class="line">              &quot;mRGunUHBcnWEvgJBQl9nJEiU0Zsnvgc/ubhPgXRR4Xq37Z0j4r7g1SgEEzwxA57d\n&quot; \</div>
+<div class="line">              &quot;emyPxgcYxn/eR44/KJ4EBs+lVDR3veyJm+kXQ99b21/+jh5Xos1AnX5iItreGCc=\n&quot; \</div>
+<div class="line">              &quot;-----END CERTIFICATE-----\n&quot;;</div>
 <div class="line"> </div>
 <div class="line">int8_t fetch_quote()</div>
 <div class="line">{</div>
@@ -235,7 +233,7 @@ $(document).ready(function(){initNavTree('Quotes_8ino-example.html',''); initRes
 <div class="line"> </div>
 <div class="line">        httpCode = https.GET();</div>
 <div class="line"> </div>
-<div class="line">        if(httpCode == HTTP_CODE_OK){</div>
+<div class="line">        if (httpCode == HTTP_CODE_OK) {</div>
 <div class="line">            // HTTP header has been send and Server response header has been handled</div>
 <div class="line">            DEBUG.printf(&quot;[HTTP] GET SUCCESS\r\n&quot;);</div>
 <div class="line">            //String payload = https.getString();</div>
@@ -262,7 +260,7 @@ $(document).ready(function(){initNavTree('Quotes_8ino-example.html',''); initRes
 <div class="line">                ret = -1;</div>
 <div class="line">            } else {</div>
 <div class="line">                // convert it to a JsonObject</div>
-<div class="line">                JsonObject root = json.as&lt;JsonObject&gt;();</div>
+<div class="line">                JsonObject root = json.as &lt; JsonObject &gt; ();</div>
 <div class="line">                strncpy(quote_string, root[&quot;content&quot;], MAX_QUOTE_LENGTH);</div>
 <div class="line">                Serial.printf(&quot;Quote: %s\r\n&quot;, quote_string);</div>
 <div class="line"> </div>
@@ -296,23 +294,21 @@ $(document).ready(function(){initNavTree('Quotes_8ino-example.html',''); initRes
 <div class="line">    int32_t space_index = 0;</div>
 <div class="line">    char *temp = first_line;</div>
 <div class="line"> </div>
-<div class="line">    while(*string != &#39;\0&#39; &amp;&amp; w &lt;= display.width()-margin){</div>
+<div class="line">    while (*string != &#39;\0&#39; &amp;&amp; w &lt;= display.width() - margin) {</div>
 <div class="line">        length_count++;</div>
 <div class="line">        *temp = *string;</div>
 <div class="line"> </div>
-<div class="line">        if(*string == &#39; &#39;){</div>
+<div class="line">        if (*string == &#39; &#39;)</div>
 <div class="line">            space_index = length_count;</div>
-<div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        *(temp+1) = &#39;\0&#39;;</div>
+<div class="line">        *(temp + 1) = &#39;\0&#39;;</div>
 <div class="line">        display.getTextBounds(first_line, 0, 0, &amp;x, &amp;y, &amp;w, &amp;h);</div>
 <div class="line">        temp++;</div>
 <div class="line">        string++;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    if(w &lt;= display.width()-margin){</div>
+<div class="line">    if (w &lt;= display.width() - margin)</div>
 <div class="line">        space_index = length_count;</div>
-<div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    first_line[space_index] = &#39;\0&#39;;</div>
 <div class="line"> </div>
@@ -335,30 +331,28 @@ $(document).ready(function(){initNavTree('Quotes_8ino-example.html',''); initRes
 <div class="line"> </div>
 <div class="line">    // To get height of the font</div>
 <div class="line">    display.getTextBounds(F(&quot;A&quot;), 0, 0, &amp;x, &amp;y, &amp;w, &amp;h);</div>
-<div class="line">    num_lines = (str_len/LINE_HEIGHT_FACTOR)+1;</div>
-<div class="line">    display.setCursor(FIRST_LINE_MARGIN, (display.height()-(num_lines*h))/2);</div>
+<div class="line">    num_lines = (str_len / LINE_HEIGHT_FACTOR) + 1;</div>
+<div class="line">    display.setCursor(FIRST_LINE_MARGIN, (display.height() - (num_lines * h)) / 2);</div>
 <div class="line"> </div>
-<div class="line">    completed = get_chars_words(display, quote_string, line, (FIRST_LINE_MARGIN+QUOTE_MARGIN_RIGHT));</div>
+<div class="line">    completed = get_chars_words(display, quote_string, line, (FIRST_LINE_MARGIN + QUOTE_MARGIN_RIGHT));</div>
 <div class="line">    display.println(line);</div>
 <div class="line"> </div>
-<div class="line">    while(completed &lt; str_len){</div>
-<div class="line">        completed += get_chars_words(display, &amp;quote_string[completed], line, (QUOTE_MARGIN_LEFT+QUOTE_MARGIN_RIGHT));</div>
+<div class="line">    while (completed &lt; str_len) {</div>
+<div class="line">        completed += get_chars_words(display, &amp;quote_string[completed], line, (QUOTE_MARGIN_LEFT + QUOTE_MARGIN_RIGHT));</div>
 <div class="line">        DEBUG.printf(&quot;Completed: %d/%d\r\n&quot;, completed, str_len);</div>
 <div class="line"> </div>
 <div class="line">        display.getTextBounds(line, 0, 0, &amp;x, &amp;y, &amp;w, &amp;h);</div>
-<div class="line">        display.setCursor(QUOTE_MARGIN_LEFT+display.getCursorX(), display.getCursorY());</div>
+<div class="line">        display.setCursor(QUOTE_MARGIN_LEFT + display.getCursorX(), display.getCursorY());</div>
 <div class="line">        display.println(line);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    display.setFont(AUTHOR_FONT);</div>
 <div class="line">    display.setTextColor(AUTHOR_COLOR);</div>
 <div class="line">    display.getTextBounds(author_string, 0, 0, &amp;x, &amp;y, &amp;w, &amp;h);</div>
-<div class="line">    display.setCursor((display.width()-w)/2, display.getCursorY()+10);</div>
+<div class="line">    display.setCursor((display.width() - w) / 2, display.getCursorY() + 10);</div>
 <div class="line">    display.print(&quot;-&quot;);</div>
 <div class="line">    display.println(author_string);</div>
 <div class="line">}</div>
-<div class="line"> </div>
-<div class="line"> </div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

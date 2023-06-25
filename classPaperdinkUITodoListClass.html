@@ -139,7 +139,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="todo__list_8h_source.html#l00012">12</a> of file <a class="el" href="todo__list_8h_source.html">todo_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="todo__list_8h_source.html#l00011">11</a> of file <a class="el" href="todo__list_8h_source.html">todo_list.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="abf70b99272faa70dadb1c55daf4c788f" name="abf70b99272faa70dadb1c55daf4c788f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abf70b99272faa70dadb1c55daf4c788f">&#9670;&#160;</a></span>display_list_style1()</h2>
@@ -191,52 +191,52 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="todo__list_8cpp_source.html#l00208">208</a> of file <a class="el" href="todo__list_8cpp_source.html">todo_list.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  209</span>{</div>
-<div class="line"><span class="lineno">  210</span>    int16_t xt, yt;</div>
-<div class="line"><span class="lineno">  211</span>    uint16_t wt, ht, char_ht, prev_height = y, prev_width = x;</div>
-<div class="line"><span class="lineno">  212</span>    uint16_t i = 0, j = 0, start_height = 0;</div>
-<div class="line"><span class="lineno">  213</span> </div>
-<div class="line"><span class="lineno">  214</span>    display.setFont(<a class="code hl_variable" href="classPaperdinkUIBaseClass.html#a48ed5b437a554c49e2acbbf3625e5ebe">font_bold</a>);</div>
-<div class="line"><span class="lineno">  215</span>    display.setTextColor(<a class="code hl_variable" href="classPaperdinkUIBaseClass.html#adb4e45b10a8ba627629cf9e34626aa7d">primary_color</a>);</div>
-<div class="line"><span class="lineno">  216</span>    display.setTextSize(1);</div>
-<div class="line"><span class="lineno">  217</span> </div>
-<div class="line"><span class="lineno">  218</span>    display.getTextBounds(F(<span class="stringliteral">&quot;To-Do List&quot;</span>), 0, 0, &amp;xt, &amp;yt, &amp;wt, &amp;ht);</div>
-<div class="line"><span class="lineno">  219</span>    display.setCursor(prev_width+5, prev_height+ht);</div>
-<div class="line"><span class="lineno">  220</span>    prev_height += ht;</div>
-<div class="line"><span class="lineno">  221</span>    prev_width += 5;</div>
-<div class="line"><span class="lineno">  222</span>    display.println(F(<span class="stringliteral">&quot;To-Do List&quot;</span>));</div>
-<div class="line"><span class="lineno">  223</span> </div>
-<div class="line"><span class="lineno">  224</span>    display.setFont(<a class="code hl_variable" href="classPaperdinkUIBaseClass.html#a2403c7536e7ad035b91e3f171c0de35e">font</a>);</div>
-<div class="line"><span class="lineno">  225</span>    display.setTextColor(<a class="code hl_variable" href="classPaperdinkUIBaseClass.html#adb4e45b10a8ba627629cf9e34626aa7d">primary_color</a>);</div>
-<div class="line"><span class="lineno">  226</span>    display.getTextBounds(<span class="stringliteral">&quot;W&quot;</span>, 0, 0, &amp;xt, &amp;yt, &amp;wt, &amp;char_ht);</div>
-<div class="line"><span class="lineno">  227</span> </div>
-<div class="line"><span class="lineno">  228</span>    <span class="comment">// Display tasks</span></div>
-<div class="line"><span class="lineno">  229</span>    start_height = prev_height + ht + 5;</div>
-<div class="line"><span class="lineno">  230</span>    <span class="keywordflow">for</span>(j = 0; j &lt; columns; j++){</div>
-<div class="line"><span class="lineno">  231</span>        prev_height = start_height;</div>
-<div class="line"><span class="lineno">  232</span>        <span class="keywordflow">for</span>(i = 0; i+(j*rows) &lt; <a class="code hl_variable" href="classPaperdinkUITodoListClass.html#ad01bf3afa0109d2609020a539afbaf9b">task_count</a> &amp;&amp; i &lt; rows; i++){</div>
-<div class="line"><span class="lineno">  233</span>            String task = <a class="code hl_variable" href="classPaperdinkUITodoListClass.html#ac2343e208525596653c605fbe6c303f0">tasks</a>[i+(j*rows)];</div>
-<div class="line"><span class="lineno">  234</span>            uint16_t cnt = task.length();</div>
-<div class="line"><span class="lineno">  235</span>            <span class="keywordflow">do</span>{</div>
-<div class="line"><span class="lineno">  236</span>                task = task.substring(0, cnt);</div>
-<div class="line"><span class="lineno">  237</span>                display.getTextBounds(task.c_str(), 0, 0, &amp;xt, &amp;yt, &amp;wt, &amp;ht);</div>
-<div class="line"><span class="lineno">  238</span>            }<span class="keywordflow">while</span>(wt &gt; max_line_width &amp;&amp; cnt-- &gt; 0);</div>
-<div class="line"><span class="lineno">  239</span> </div>
-<div class="line"><span class="lineno">  240</span>            <a class="code hl_define" href="todo__list_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.printf(<span class="stringliteral">&quot;Task: %s\r\n&quot;</span>, task.c_str());</div>
-<div class="line"><span class="lineno">  241</span>            display.setCursor(prev_width, prev_height);</div>
-<div class="line"><span class="lineno">  242</span>            display.printf(<span class="stringliteral">&quot;%s&quot;</span>, task.c_str());</div>
-<div class="line"><span class="lineno">  243</span>            prev_height += char_ht + 7;</div>
-<div class="line"><span class="lineno">  244</span>        }</div>
-<div class="line"><span class="lineno">  245</span>        prev_width += max_line_width + 10;</div>
-<div class="line"><span class="lineno">  246</span>    }</div>
-<div class="line"><span class="lineno">  247</span>}</div>
-<div class="ttc" id="aclassPaperdinkUIBaseClass_html_a2403c7536e7ad035b91e3f171c0de35e"><div class="ttname"><a href="classPaperdinkUIBaseClass.html#a2403c7536e7ad035b91e3f171c0de35e">PaperdinkUIBaseClass::font</a></div><div class="ttdeci">const GFXfont * font</div><div class="ttdef"><b>Definition</b> <a href="ui__base_8h_source.html#l00010">ui_base.h:10</a></div></div>
-<div class="ttc" id="aclassPaperdinkUIBaseClass_html_a48ed5b437a554c49e2acbbf3625e5ebe"><div class="ttname"><a href="classPaperdinkUIBaseClass.html#a48ed5b437a554c49e2acbbf3625e5ebe">PaperdinkUIBaseClass::font_bold</a></div><div class="ttdeci">const GFXfont * font_bold</div><div class="ttdef"><b>Definition</b> <a href="ui__base_8h_source.html#l00011">ui_base.h:11</a></div></div>
-<div class="ttc" id="aclassPaperdinkUIBaseClass_html_adb4e45b10a8ba627629cf9e34626aa7d"><div class="ttname"><a href="classPaperdinkUIBaseClass.html#adb4e45b10a8ba627629cf9e34626aa7d">PaperdinkUIBaseClass::primary_color</a></div><div class="ttdeci">int primary_color</div><div class="ttdef"><b>Definition</b> <a href="ui__base_8h_source.html#l00012">ui_base.h:12</a></div></div>
-<div class="ttc" id="aclassPaperdinkUITodoListClass_html_ac2343e208525596653c605fbe6c303f0"><div class="ttname"><a href="classPaperdinkUITodoListClass.html#ac2343e208525596653c605fbe6c303f0">PaperdinkUITodoListClass::tasks</a></div><div class="ttdeci">char tasks[TODO_LIST_MAX_TASKS][TODO_LIST_MAX_TODO_STR_LENGTH+1]</div><div class="ttdef"><b>Definition</b> <a href="todo__list_8h_source.html#l00015">todo_list.h:15</a></div></div>
-<div class="ttc" id="aclassPaperdinkUITodoListClass_html_ad01bf3afa0109d2609020a539afbaf9b"><div class="ttname"><a href="classPaperdinkUITodoListClass.html#ad01bf3afa0109d2609020a539afbaf9b">PaperdinkUITodoListClass::task_count</a></div><div class="ttdeci">uint8_t task_count</div><div class="ttdef"><b>Definition</b> <a href="todo__list_8h_source.html#l00016">todo_list.h:16</a></div></div>
-<div class="ttc" id="atodo__list_8h_html_ad72dbcf6d0153db1b8d8a58001feed83"><div class="ttname"><a href="todo__list_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a></div><div class="ttdeci">#define DEBUG</div><div class="ttdef"><b>Definition</b> <a href="todo__list_8h_source.html#l00007">todo_list.h:7</a></div></div>
+<p class="definition">Definition at line <a class="el" href="todo__list_8cpp_source.html#l00207">207</a> of file <a class="el" href="todo__list_8cpp_source.html">todo_list.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  208</span>{</div>
+<div class="line"><span class="lineno">  209</span>    int16_t xt, yt;</div>
+<div class="line"><span class="lineno">  210</span>    uint16_t wt, ht, char_ht, prev_height = y, prev_width = x;</div>
+<div class="line"><span class="lineno">  211</span>    uint16_t i = 0, j = 0, start_height = 0;</div>
+<div class="line"><span class="lineno">  212</span> </div>
+<div class="line"><span class="lineno">  213</span>    display.setFont(<a class="code hl_variable" href="classPaperdinkUIBaseClass.html#a48ed5b437a554c49e2acbbf3625e5ebe">font_bold</a>);</div>
+<div class="line"><span class="lineno">  214</span>    display.setTextColor(<a class="code hl_variable" href="classPaperdinkUIBaseClass.html#adb4e45b10a8ba627629cf9e34626aa7d">primary_color</a>);</div>
+<div class="line"><span class="lineno">  215</span>    display.setTextSize(1);</div>
+<div class="line"><span class="lineno">  216</span> </div>
+<div class="line"><span class="lineno">  217</span>    display.getTextBounds(F(<span class="stringliteral">&quot;To-Do List&quot;</span>), 0, 0, &amp;xt, &amp;yt, &amp;wt, &amp;ht);</div>
+<div class="line"><span class="lineno">  218</span>    display.setCursor(prev_width + 5, prev_height + ht);</div>
+<div class="line"><span class="lineno">  219</span>    prev_height += ht;</div>
+<div class="line"><span class="lineno">  220</span>    prev_width += 5;</div>
+<div class="line"><span class="lineno">  221</span>    display.println(F(<span class="stringliteral">&quot;To-Do List&quot;</span>));</div>
+<div class="line"><span class="lineno">  222</span> </div>
+<div class="line"><span class="lineno">  223</span>    display.setFont(<a class="code hl_variable" href="classPaperdinkUIBaseClass.html#a2403c7536e7ad035b91e3f171c0de35e">font</a>);</div>
+<div class="line"><span class="lineno">  224</span>    display.setTextColor(<a class="code hl_variable" href="classPaperdinkUIBaseClass.html#adb4e45b10a8ba627629cf9e34626aa7d">primary_color</a>);</div>
+<div class="line"><span class="lineno">  225</span>    display.getTextBounds(<span class="stringliteral">&quot;W&quot;</span>, 0, 0, &amp;xt, &amp;yt, &amp;wt, &amp;char_ht);</div>
+<div class="line"><span class="lineno">  226</span> </div>
+<div class="line"><span class="lineno">  227</span>    <span class="comment">// Display tasks</span></div>
+<div class="line"><span class="lineno">  228</span>    start_height = prev_height + ht + 5;</div>
+<div class="line"><span class="lineno">  229</span>    <span class="keywordflow">for</span> (j = 0; j &lt; columns; j++) {</div>
+<div class="line"><span class="lineno">  230</span>        prev_height = start_height;</div>
+<div class="line"><span class="lineno">  231</span>        <span class="keywordflow">for</span> (i = 0; i + (j * rows) &lt; <a class="code hl_variable" href="classPaperdinkUITodoListClass.html#ad01bf3afa0109d2609020a539afbaf9b">task_count</a> &amp;&amp; i &lt; rows; i++) {</div>
+<div class="line"><span class="lineno">  232</span>            String task = <a class="code hl_variable" href="classPaperdinkUITodoListClass.html#ac2343e208525596653c605fbe6c303f0">tasks</a>[i + (j * rows)];</div>
+<div class="line"><span class="lineno">  233</span>            uint16_t cnt = task.length();</div>
+<div class="line"><span class="lineno">  234</span>            <span class="keywordflow">do</span>{</div>
+<div class="line"><span class="lineno">  235</span>                task = task.substring(0, cnt);</div>
+<div class="line"><span class="lineno">  236</span>                display.getTextBounds(task.c_str(), 0, 0, &amp;xt, &amp;yt, &amp;wt, &amp;ht);</div>
+<div class="line"><span class="lineno">  237</span>            }<span class="keywordflow">while</span> (wt &gt; max_line_width &amp;&amp; cnt-- &gt; 0);</div>
+<div class="line"><span class="lineno">  238</span> </div>
+<div class="line"><span class="lineno">  239</span>            <a class="code hl_define" href="todo__list_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a>.printf(<span class="stringliteral">&quot;Task: %s\r\n&quot;</span>, task.c_str());</div>
+<div class="line"><span class="lineno">  240</span>            display.setCursor(prev_width, prev_height);</div>
+<div class="line"><span class="lineno">  241</span>            display.printf(<span class="stringliteral">&quot;%s&quot;</span>, task.c_str());</div>
+<div class="line"><span class="lineno">  242</span>            prev_height += char_ht + 7;</div>
+<div class="line"><span class="lineno">  243</span>        }</div>
+<div class="line"><span class="lineno">  244</span>        prev_width += max_line_width + 10;</div>
+<div class="line"><span class="lineno">  245</span>    }</div>
+<div class="line"><span class="lineno">  246</span>}</div>
+<div class="ttc" id="aclassPaperdinkUIBaseClass_html_a2403c7536e7ad035b91e3f171c0de35e"><div class="ttname"><a href="classPaperdinkUIBaseClass.html#a2403c7536e7ad035b91e3f171c0de35e">PaperdinkUIBaseClass::font</a></div><div class="ttdeci">const GFXfont * font</div><div class="ttdef"><b>Definition</b> <a href="ui__base_8h_source.html#l00009">ui_base.h:9</a></div></div>
+<div class="ttc" id="aclassPaperdinkUIBaseClass_html_a48ed5b437a554c49e2acbbf3625e5ebe"><div class="ttname"><a href="classPaperdinkUIBaseClass.html#a48ed5b437a554c49e2acbbf3625e5ebe">PaperdinkUIBaseClass::font_bold</a></div><div class="ttdeci">const GFXfont * font_bold</div><div class="ttdef"><b>Definition</b> <a href="ui__base_8h_source.html#l00010">ui_base.h:10</a></div></div>
+<div class="ttc" id="aclassPaperdinkUIBaseClass_html_adb4e45b10a8ba627629cf9e34626aa7d"><div class="ttname"><a href="classPaperdinkUIBaseClass.html#adb4e45b10a8ba627629cf9e34626aa7d">PaperdinkUIBaseClass::primary_color</a></div><div class="ttdeci">int primary_color</div><div class="ttdef"><b>Definition</b> <a href="ui__base_8h_source.html#l00011">ui_base.h:11</a></div></div>
+<div class="ttc" id="aclassPaperdinkUITodoListClass_html_ac2343e208525596653c605fbe6c303f0"><div class="ttname"><a href="classPaperdinkUITodoListClass.html#ac2343e208525596653c605fbe6c303f0">PaperdinkUITodoListClass::tasks</a></div><div class="ttdeci">char tasks[TODO_LIST_MAX_TASKS][TODO_LIST_MAX_TODO_STR_LENGTH+1]</div><div class="ttdef"><b>Definition</b> <a href="todo__list_8h_source.html#l00014">todo_list.h:14</a></div></div>
+<div class="ttc" id="aclassPaperdinkUITodoListClass_html_ad01bf3afa0109d2609020a539afbaf9b"><div class="ttname"><a href="classPaperdinkUITodoListClass.html#ad01bf3afa0109d2609020a539afbaf9b">PaperdinkUITodoListClass::task_count</a></div><div class="ttdeci">uint8_t task_count</div><div class="ttdef"><b>Definition</b> <a href="todo__list_8h_source.html#l00015">todo_list.h:15</a></div></div>
+<div class="ttc" id="atodo__list_8h_html_ad72dbcf6d0153db1b8d8a58001feed83"><div class="ttname"><a href="todo__list_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a></div><div class="ttdeci">#define DEBUG</div><div class="ttdef"><b>Definition</b> <a href="todo__list_8h_source.html#l00006">todo_list.h:6</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -253,7 +253,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="todo__list_8h_source.html#l00016">16</a> of file <a class="el" href="todo__list_8h_source.html">todo_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="todo__list_8h_source.html#l00015">15</a> of file <a class="el" href="todo__list_8h_source.html">todo_list.h</a>.</p>
 
 </div>
 </div>
@@ -269,7 +269,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="todo__list_8h_source.html#l00015">15</a> of file <a class="el" href="todo__list_8h_source.html">todo_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="todo__list_8h_source.html#l00014">14</a> of file <a class="el" href="todo__list_8h_source.html">todo_list.h</a>.</p>
 
 </div>
 </div>
@@ -285,7 +285,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="todo__list_8h_source.html#l00017">17</a> of file <a class="el" href="todo__list_8h_source.html">todo_list.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="todo__list_8h_source.html#l00016">16</a> of file <a class="el" href="todo__list_8h_source.html">todo_list.h</a>.</p>
 
 </div>
 </div>

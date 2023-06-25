@@ -121,26 +121,29 @@ $(document).ready(function(){initNavTree('Hello_World_8ino-example.html',''); in
 <div class="line"> </div>
 <div class="line">PAPERDINK_DEVICE Paperdink;</div>
 <div class="line"> </div>
-<div class="line">void setup() {</div>
-<div class="line">  /* Initialize device */</div>
-<div class="line">  Paperdink.begin();</div>
-<div class="line">  /* Enable power to display */</div>
-<div class="line">  Paperdink.enable_display();</div>
-<div class="line">  /* Clear the background */</div>
-<div class="line">  Paperdink.epd.fillScreen(GxEPD_WHITE);</div>
+<div class="line">void setup()</div>
+<div class="line">{</div>
+<div class="line">    /* Initialize device */</div>
+<div class="line">    Paperdink.begin();</div>
+<div class="line">    /* Enable power to display */</div>
+<div class="line">    Paperdink.enable_display();</div>
+<div class="line">    /* Clear the background */</div>
+<div class="line">    Paperdink.epd.fillScreen(GxEPD_WHITE);</div>
 <div class="line"> </div>
-<div class="line">  Paperdink.epd.setTextColor(GxEPD_BLACK);</div>
+<div class="line">    Paperdink.epd.setTextColor(GxEPD_BLACK);</div>
 <div class="line"> </div>
-<div class="line">  /* Print text to  display */</div>
-<div class="line">  GxEPD2_GFX&amp; display = Paperdink.epd;</div>
-<div class="line">  display.setCursor(50, display.height() / 2);</div>
-<div class="line">  display.print(&quot;Hello World&quot;);</div>
+<div class="line">    /* Print text to  display */</div>
+<div class="line">    GxEPD2_GFX&amp; display = Paperdink.epd;</div>
+<div class="line">    display.setCursor(50, display.height() / 2);</div>
+<div class="line">    display.print(&quot;Hello World&quot;);</div>
 <div class="line"> </div>
-<div class="line">  /* Send data to display for the update */</div>
-<div class="line">  Paperdink.epd.display();</div>
+<div class="line">    /* Send data to display for the update */</div>
+<div class="line">    Paperdink.epd.display();</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line">void loop() {}</div>
+<div class="line">void loop()</div>
+<div class="line">{</div>
+<div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

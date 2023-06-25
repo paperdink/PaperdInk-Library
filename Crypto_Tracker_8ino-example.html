@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('Crypto_Tracker_8ino-example.html','');
 <p>Shows 6 crypto tickers with last updated time and date.</p>
 <div class="fragment"><div class="line">/* The MIT License (MIT)</div>
 <div class="line"> * Copyright (c) 2022 Paperd.Ink</div>
-<div class="line"> </div>
+<div class="line"> *</div>
 <div class="line"> * Permission is hereby granted, free of charge, to any person obtaining a copy</div>
 <div class="line"> * of this software and associated documentation files (the &quot;Software&quot;), to deal</div>
 <div class="line"> * in the Software without restriction, including without limitation the rights</div>
@@ -130,14 +130,14 @@ $(document).ready(function(){initNavTree('Crypto_Tracker_8ino-example.html','');
 <div class="line"> </div>
 <div class="line">    /* Initialize paperd.ink device */</div>
 <div class="line">    Paperdink.begin();</div>
-<div class="line">    </div>
+<div class="line"> </div>
 <div class="line">    /* Enable power to the display */</div>
 <div class="line">    Paperdink.enable_display();</div>
 <div class="line">    /* Clear the background */</div>
 <div class="line">    Paperdink.epd.fillScreen(GxEPD_WHITE);</div>
 <div class="line"> </div>
 <div class="line">    /* Connect to wifi network */</div>
-<div class="line">    if(Paperdink.connect_wifi(SSID, PASSWORD) &lt; 0){</div>
+<div class="line">    if (Paperdink.connect_wifi(SSID, PASSWORD) &lt; 0) {</div>
 <div class="line">        DEBUG.println(&quot;Unable to connect to WiFi&quot;);</div>
 <div class="line">        Paperdink.epd.drawBitmap(370, 4, wifi_off_sml, wifi_off_sml_width, wifi_off_sml_height, GxEPD_BLACK);</div>
 <div class="line">    }</div>
@@ -150,40 +150,33 @@ $(document).ready(function(){initNavTree('Crypto_Tracker_8ino-example.html','');
 <div class="line">    Paperdink_Crypto.secondary_color = Paperdink.has_color ? GxEPD_RED : GxEPD_BLACK;</div>
 <div class="line">    Paperdink_Crypto.tertiary_color = GxEPD_WHITE;</div>
 <div class="line"> </div>
-<div class="line">    if(Paperdink_Crypto.fetch_data(CRYPTO_TICKER_1) &lt; 0){</div>
+<div class="line">    if (Paperdink_Crypto.fetch_data(CRYPTO_TICKER_1) &lt; 0)</div>
 <div class="line">        DEBUG.println(&quot;Unable to fetch data for &quot; CRYPTO_TICKER_1);</div>
-<div class="line">    }</div>
 <div class="line">    Paperdink_Crypto.display_med_box(Paperdink.epd, 0, 15, CRYPTO_TICKER_1);</div>
-<div class="line">    </div>
-<div class="line">    if(Paperdink_Crypto.fetch_data(CRYPTO_TICKER_2) &lt; 0){</div>
+<div class="line"> </div>
+<div class="line">    if (Paperdink_Crypto.fetch_data(CRYPTO_TICKER_2) &lt; 0)</div>
 <div class="line">        DEBUG.println(&quot;Unable to fetch data for &quot; CRYPTO_TICKER_2);</div>
-<div class="line">    }</div>
 <div class="line">    Paperdink_Crypto.display_med_box(Paperdink.epd, 0, 85, CRYPTO_TICKER_2);</div>
-<div class="line">    </div>
-<div class="line">    if(Paperdink_Crypto.fetch_data(CRYPTO_TICKER_3) &lt; 0){</div>
+<div class="line"> </div>
+<div class="line">    if (Paperdink_Crypto.fetch_data(CRYPTO_TICKER_3) &lt; 0)</div>
 <div class="line">        DEBUG.println(&quot;Unable to fetch data for &quot; CRYPTO_TICKER_3);</div>
-<div class="line">    }</div>
 <div class="line">    Paperdink_Crypto.display_med_box(Paperdink.epd, 0, 155, CRYPTO_TICKER_3);</div>
 <div class="line"> </div>
-<div class="line">    if(Paperdink_Crypto.fetch_data(CRYPTO_TICKER_4) &lt; 0){</div>
+<div class="line">    if (Paperdink_Crypto.fetch_data(CRYPTO_TICKER_4) &lt; 0)</div>
 <div class="line">        DEBUG.println(&quot;Unable to fetch data for &quot; CRYPTO_TICKER_4);</div>
-<div class="line">    }</div>
 <div class="line">    Paperdink_Crypto.display_med_box(Paperdink.epd, 0, 225, CRYPTO_TICKER_4);</div>
-<div class="line">    </div>
-<div class="line">    if(Paperdink_Crypto.fetch_data(CRYPTO_TICKER_5) &lt; 0){</div>
+<div class="line"> </div>
+<div class="line">    if (Paperdink_Crypto.fetch_data(CRYPTO_TICKER_5) &lt; 0)</div>
 <div class="line">        DEBUG.println(&quot;Unable to fetch data for &quot; CRYPTO_TICKER_5);</div>
-<div class="line">    }</div>
 <div class="line">    Paperdink_Crypto.display_med_box(Paperdink.epd, 200, 155, CRYPTO_TICKER_5);</div>
-<div class="line">    </div>
-<div class="line">    if(Paperdink_Crypto.fetch_data(CRYPTO_TICKER_6) &lt; 0){</div>
+<div class="line"> </div>
+<div class="line">    if (Paperdink_Crypto.fetch_data(CRYPTO_TICKER_6) &lt; 0)</div>
 <div class="line">        DEBUG.println(&quot;Unable to fetch data for &quot; CRYPTO_TICKER_6);</div>
-<div class="line">    }</div>
 <div class="line">    Paperdink_Crypto.display_med_box(Paperdink.epd, 200, 225, CRYPTO_TICKER_6);</div>
 <div class="line"> </div>
 <div class="line">    /* Fetch date data */</div>
-<div class="line">    if(Paperdink_Date.fetch_data(TIME_ZONE) &lt; 0){</div>
+<div class="line">    if (Paperdink_Date.fetch_data(TIME_ZONE) &lt; 0)</div>
 <div class="line">        DEBUG.println(&quot;Unable to fetch Date Time data&quot;);</div>
-<div class="line">    }</div>
 <div class="line">    /* Display date */</div>
 <div class="line">    Paperdink_Date.font = &amp;PAPERDINK_FONT_LRG;</div>
 <div class="line">    Paperdink_Date.primary_color = Paperdink.color;</div>
@@ -194,7 +187,7 @@ $(document).ready(function(){initNavTree('Crypto_Tracker_8ino-example.html','');
 <div class="line">    Paperdink_Date.primary_color = GxEPD_BLACK;</div>
 <div class="line">    Paperdink_Date.display_last_updated_time_style1_center(Paperdink.epd, 200, 125, 200);</div>
 <div class="line"> </div>
-<div class="line">    /* Send data to display for the update */ </div>
+<div class="line">    /* Send data to display for the update */</div>
 <div class="line">    Paperdink.epd.display();</div>
 <div class="line"> </div>
 <div class="line">    DEBUG.println(&quot;Turning off everything&quot;);</div>
@@ -203,16 +196,15 @@ $(document).ready(function(){initNavTree('Crypto_Tracker_8ino-example.html','');
 <div class="line">     * Align updates to 12am so that date change aligns</div>
 <div class="line">     * with actual day change.</div>
 <div class="line">     */</div>
-<div class="line">    uint64_t sleep_time = (86400/(UPDATES_PER_DAY))-(((Paperdink_Date.mil_hour*3600)+(Paperdink_Date.min*60)+(Paperdink_Date.sec))%(86400/UPDATES_PER_DAY));</div>
+<div class="line">    uint64_t sleep_time = (86400 / (UPDATES_PER_DAY)) - (((Paperdink_Date.mil_hour * 3600) + (Paperdink_Date.min * 60) + (Paperdink_Date.sec)) % (86400 / UPDATES_PER_DAY));</div>
 <div class="line"> </div>
 <div class="line">    /* Update after sleep_time microsecond or when button 1 is pressed. */</div>
 <div class="line">    // Paperdink.deep_sleep_timer_wakeup(sleep_time*S_TO_uS_FACTOR); // Consumes lower current</div>
-<div class="line">    Paperdink.deep_sleep_timer_button_wakeup(sleep_time*S_TO_uS_FACTOR, BUTTON_1_PIN); // Consumes higher current</div>
+<div class="line">    Paperdink.deep_sleep_timer_button_wakeup(sleep_time * S_TO_uS_FACTOR, BUTTON_1_PIN); // Consumes higher current</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line">void loop()</div>
 <div class="line">{</div>
-<div class="line"> </div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
