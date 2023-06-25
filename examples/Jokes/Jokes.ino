@@ -17,8 +17,8 @@
 #define PAPERDINK_DEVICE Paperdink_Classic
 //#define PAPERDINK_DEVICE Paperdink_Merlot
 
-#define SSID     "MY_WIFI_NETWORK"      // Wifi Network SSID (name of wifi network)
-#define PASSWORD "MY_WIFI_PASSWORD"     // Wifi Network password
+#define SSID     "*****"      // Wifi Network SSID (name of wifi network)
+#define PASSWORD "*****"      // Wifi Network password
 
 /* Time zone from list https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv */
 #define TIME_ZONE "PST8PDT,M3.2.0,M11.1.0"
@@ -224,10 +224,16 @@ void display_joke(GxEPD2_GFX& display)
 	}
 
 	// Calculate battery level
-	pinMode(36, INPUT); //It is necessary to declare the input pin
-	battery_voltage = analogRead(36);
-	int rawValue = analogRead(36);
-	float voltageLevel = (rawValue / 4095.0) * 1.1 * 3.3; // Reference voltage on ESP32 is 1.1V
+	pinMode(BATT_VOLT, INPUT); // It is necessary to declare the input pin
+	pinMode(BATT_EN, OUTPUT);
+	digitalWrite(BATT_EN, LOW);
+	delay(10);
+	analogReadResolution(12);
+	double rawValue = analogReadMilliVolts(BATT_VOLT);
+	digitalWrite(BATT_EN, HIGH);
+	// calculate battery voltage according to divider resistors
+	// Vbat = (R1+R2)/R2 = (470000 + 1600000) / 1600000 = 1.29375
+	float voltageLevel = ((double(rawValue) * 1.29375) / 1000);
 	float batteryFraction = voltageLevel / MAX_BATTERY_VOLTAGE;
 	float batteryLevel = batteryFraction * 100;
 	int batt = int(batteryLevel);
