@@ -10,6 +10,8 @@
 #include <FS.h>
 #include <SD.h>
 #include <SPI.h>
+#include <WiFiClientSecure.h>
+#include <HTTPClient.h>
 
 #include "fonts.h"
 #include "icons.h"
