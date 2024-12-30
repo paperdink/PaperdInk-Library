@@ -20,7 +20,7 @@ var searchData=
   ['common_2ecpp_17',['common.cpp',['../common_8cpp.html',1,'']]],
   ['completed_18',['COMPLETED',['../weather__parser_8cpp.html#a02db9a290a38910921877cb5849e32bca3549811efddf16048f4b8f6a3b960b41',1,'weather_parser.cpp']]],
   ['config_5ftime_5fretry_5fcount_19',['CONFIG_TIME_RETRY_COUNT',['../date__time_8h.html#a3a3e2e5c42a500e7c7350e06c6305ffc',1,'date_time.h']]],
-  ['connect_5fwifi_20',['connect_wifi',['../classPaperdinkDeviceBaseClass.html#ad12df602577ae3f04c6cf1f6dd29df2e',1,'PaperdinkDeviceBaseClass::connect_wifi(const char *ssid, const char *password)'],['../classPaperdinkDeviceBaseClass.html#a8a143cfff2861d46747dc2c9db78b4a3',1,'PaperdinkDeviceBaseClass::connect_wifi(const char *ssid, const char *password, uint8_t attempts)']]],
+  ['connect_5fwifi_20',['connect_wifi',['../classPaperdinkDeviceBaseClass.html#a8a143cfff2861d46747dc2c9db78b4a3',1,'PaperdinkDeviceBaseClass::connect_wifi(const char *ssid, const char *password, uint8_t attempts)'],['../classPaperdinkDeviceBaseClass.html#ad12df602577ae3f04c6cf1f6dd29df2e',1,'PaperdinkDeviceBaseClass::connect_wifi(const char *ssid, const char *password)']]],
   ['country_21',['country',['../classPaperdinkUIWeatherClass.html#ad77665653da0a31b74994240510e8606',1,'PaperdinkUIWeatherClass']]],
   ['crypto_2ecpp_22',['crypto.cpp',['../crypto_8cpp.html',1,'']]],
   ['crypto_2eh_23',['crypto.h',['../crypto_8h.html',1,'']]],

@@ -22,5 +22,5 @@ var searchData=
   ['wifi_5fon_5fsml_5fheight_19',['wifi_on_sml_height',['../wifi__on__sml_8h.html#ad0c3bfac62c5f11f7609f62a5881e24e',1,'wifi_on_sml.h']]],
   ['wifi_5fon_5fsml_5fred_20',['wifi_on_sml_red',['../wifi__on__sml_8h.html#a2054d6fb320790185388f48210cc5c4b',1,'wifi_on_sml.h']]],
   ['wifi_5fon_5fsml_5fwidth_21',['wifi_on_sml_width',['../wifi__on__sml_8h.html#a0bde947659be809edf79b9801ac868be',1,'wifi_on_sml.h']]],
-  ['write_22',['write',['../classArudinoStreamParser.html#a4e172fbe2e755e1ec951f41e9c0252e4',1,'ArudinoStreamParser::write(uint8_t data) override'],['../classArudinoStreamParser.html#ac625d45efa816ac4255a329af6293663',1,'ArudinoStreamParser::write(const uint8_t *buffer, size_t size) override']]]
+  ['write_22',['write',['../classArudinoStreamParser.html#ac625d45efa816ac4255a329af6293663',1,'ArudinoStreamParser::write(const uint8_t *buffer, size_t size) override'],['../classArudinoStreamParser.html#a4e172fbe2e755e1ec951f41e9c0252e4',1,'ArudinoStreamParser::write(uint8_t data) override']]]
 ];
