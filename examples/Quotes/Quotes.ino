@@ -45,7 +45,7 @@ void setup()
 	Paperdink.epd.fillScreen(BACKGROUND_COLOR);
 
 	/* Connect to wifi network */
-	if (Paperdink.connect_wifi(SSID, PASSWORD) < 0) {
+	if (Paperdink.connect_wifi(SSID_NAME, PASSWORD) < 0) {
 		DEBUG.println("Unable to connect to WiFi");
 		Paperdink.epd.drawBitmap(370, 4, wifi_off_sml, wifi_off_sml_width, wifi_off_sml_height, GxEPD_BLACK);
 	}

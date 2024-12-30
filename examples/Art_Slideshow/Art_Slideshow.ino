@@ -62,7 +62,7 @@ void setup()
 
 	/* Update after sleep_time microsecond or when button 1 is pressed. */
 	Paperdink.deep_sleep_timer_wakeup(UPDATE_INTERVAL * M_TO_uS_FACTOR); // Consumes lower current
-	//Paperdink.deep_sleep_timer_button_wakeup(sleep_time*S_TO_uS_FACTOR, BUTTON_1_PIN); // Consumes higher current
+	//Paperdink.deep_sleep_timer_button_wakeup(UPDATE_INTERVAL*M_TO_uS_FACTOR, BUTTON_1_PIN); // Consumes higher current
 }
 
 void loop()
