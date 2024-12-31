@@ -18,7 +18,7 @@ void PaperdinkUIClass::display_grid(GxEPD2_GFX& display)
 }
 
 
-void PaperdinkUIClass::display_text_center(GxEPD2_GFX& display, int16_t x, int16_t y, const char *string, int16_t w, int16_t h, const GFXfont *font, uint8_t color, uint8_t size)
+void PaperdinkUIClass::display_text_center(GxEPD2_GFX& display, int16_t x, int16_t y, const char *string, int16_t w, int16_t h, const GFXfont *font, uint16_t color, uint8_t size)
 {
 	int16_t xt, yt;
 	uint16_t wt, ht, prev_height = y, prev_width = x;
