@@ -32,8 +32,9 @@
 #include "ui/todo_list/todo_list.h"
 
 // Paperdink Devices
-#include "devices/classic.h"
-#include "devices/merlot.h"
+//#include "devices/classic.h"
+#include "devices/classicv2.h"
+//#include "devices/merlot.h"
 
 // Conversion factor for seconds to microseconds
 #define S_TO_uS_FACTOR (1000000)

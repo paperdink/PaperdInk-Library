@@ -2,9 +2,10 @@
 #define _PDINK_BASE_H_
 
 #define ENABLE_GxEPD2_GFX 1
-#include <GxEPD2_BW.h>
-#include <GxEPD2_3C.h>
+#define ENABLE_GxEPD2_4G_GFX 1
 
+#include "../drivers/GxEPD2_BW.h"
+#include "../drivers/GxEPD2_3C.h"
 #include "pin_assignment.h"
 #include "../paperdink_common.h"
 

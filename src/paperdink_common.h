@@ -6,11 +6,11 @@
 #include <JsonListener.h>
 #include <Print.h>
 #include <Stream.h>
-#include <GxEPD2_GFX.h>
 #include <FS.h>
 #include <SD.h>
 #include <SPI.h>
 
+#include "drivers/GxEPD2_GFX.h"
 #include "fonts.h"
 #include "icons.h"
 
