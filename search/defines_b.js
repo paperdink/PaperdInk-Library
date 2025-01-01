@@ -1,21 +1,4 @@
 var searchData=
 [
-  ['s_5fto_5fus_5ffactor_0',['S_TO_uS_FACTOR',['../Paperdink_8h.html#ae556f9b535d008648ea895ad22202201',1,'Paperdink.h']]],
-  ['scl_1',['SCL',['../pin__assignment_8h.html#ab5ffc4751921608954bb7a5687566b2d',1,'pin_assignment.h']]],
-  ['sd_5fcd_2',['SD_CD',['../pin__assignment_8h.html#add794225c4f93bdb13c26a03866853b7',1,'pin_assignment.h']]],
-  ['sd_5fcs_3',['SD_CS',['../pin__assignment_8h.html#a7e2d8ef8f0724f23ce84b1e7d0c171d9',1,'pin_assignment.h']]],
-  ['sd_5fen_4',['SD_EN',['../pin__assignment_8h.html#a15569d756317107701fa79787ab864c4',1,'pin_assignment.h']]],
-  ['sda_5',['SDA',['../pin__assignment_8h.html#a6890442e1cc24a0d61597a13576b8727',1,'pin_assignment.h']]],
-  ['seekset_6',['seekSet',['../ui__base_8cpp.html#a15c49652d2f2aefcb41b013b97b48403',1,'ui_base.cpp']]],
-  ['snow_5fxlrg_5fheight_7',['snow_xlrg_height',['../snow__xlrg_8h.html#a4cc9d9bd37ca56192eeef759447a2506',1,'snow_xlrg.h']]],
-  ['snow_5fxlrg_5fwidth_8',['snow_xlrg_width',['../snow__xlrg_8h.html#a00a257847cb2583bc2bff0307357053a',1,'snow_xlrg.h']]],
-  ['snowflake_5fsml_5fheight_9',['snowflake_sml_height',['../snowflake__sml_8h.html#aae867c58e40476a1df96b0e3fc1bee86',1,'snowflake_sml.h']]],
-  ['snowflake_5fsml_5fwidth_10',['snowflake_sml_width',['../snowflake__sml_8h.html#afb404d679745f22d63dbd3eb4829bc90',1,'snowflake_sml.h']]],
-  ['ss_11',['SS',['../pin__assignment_8h.html#a88f7782e210e61586baf33b93240d905',1,'pin_assignment.h']]],
-  ['sun_5flrg_5fheight_12',['sun_lrg_height',['../sun__lrg_8h.html#a866c52472ab384555a657a76438d0e4c',1,'sun_lrg.h']]],
-  ['sun_5flrg_5fwidth_13',['sun_lrg_width',['../sun__lrg_8h.html#af3868b8f8f18484815ba995c77e45fec',1,'sun_lrg.h']]],
-  ['sun_5fmed_5fheight_14',['sun_med_height',['../sun__med_8h.html#a1a8ecfdf8fbc0b5bbfa3e3e49bc69ed9',1,'sun_med.h']]],
-  ['sun_5fmed_5fwidth_15',['sun_med_width',['../sun__med_8h.html#a4aa93b5cc3243c4215d7d4f621d6f57e',1,'sun_med.h']]],
-  ['sun_5fxlrg_5fheight_16',['sun_xlrg_height',['../sun__xlrg_8h.html#a7ddf19dd7be3b3fb4e84184d831877a7',1,'sun_xlrg.h']]],
-  ['sun_5fxlrg_5fwidth_17',['sun_xlrg_width',['../sun__xlrg_8h.html#ae30bcd7a5cf7dc8ab87df4991d369e1c',1,'sun_xlrg.h']]]
+  ['ntp_5fserver_0',['NTP_SERVER',['../date__time_8h.html#a751e3f85cd240e89d390d18996089cd0',1,'date_time.h']]]
 ];

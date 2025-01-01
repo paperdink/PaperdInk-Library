@@ -1,0 +1,27 @@
+var classGxEPD2__1248 =
+[
+    [ "GxEPD2_1248", "classGxEPD2__1248.html#ac6664f237c4e00bf1645fcb310c6a1d7", null ],
+    [ "GxEPD2_1248", "classGxEPD2__1248.html#a0280873c3e731f5e67998f84e98e14df", null ],
+    [ "clearScreen", "classGxEPD2__1248.html#adbc2bca265b96c4470122c1df7126006", null ],
+    [ "drawImage", "classGxEPD2__1248.html#a4fd0fdb55c566d6ce0e30a23812ae9c3", null ],
+    [ "drawImage", "classGxEPD2__1248.html#ae900f5d156e7abf1fd6d6d1e11786ac7", null ],
+    [ "drawImagePart", "classGxEPD2__1248.html#a83c9adfbf62a54bff01a967e5a6b90c7", null ],
+    [ "drawImagePart", "classGxEPD2__1248.html#aafdf866f643b80afcb01bc866afac534", null ],
+    [ "drawNative", "classGxEPD2__1248.html#aed41152510506fbf915b13d103d00418", null ],
+    [ "hibernate", "classGxEPD2__1248.html#ad686b03615dff3259dbf0a8df73b7748", null ],
+    [ "init", "classGxEPD2__1248.html#ab353a3e86dea43170401e559d1be81a9", null ],
+    [ "init", "classGxEPD2__1248.html#a04f9155f3fb77851448b3106994eb544", null ],
+    [ "powerOff", "classGxEPD2__1248.html#a3dd0e2958501d09516a0773e8bbe7e0a", null ],
+    [ "refresh", "classGxEPD2__1248.html#a28f1bb8dd59b193226f07d9c12c43884", null ],
+    [ "refresh", "classGxEPD2__1248.html#a0cb0988427c429abe96a1d866ba515e9", null ],
+    [ "writeImage", "classGxEPD2__1248.html#ac8a0d2823c5d06e6785a86821e9107f4", null ],
+    [ "writeImage", "classGxEPD2__1248.html#add570a4875c22b7e7d4c119e2e992e52", null ],
+    [ "writeImageAgain", "classGxEPD2__1248.html#abf0696d87ca604cf7e27405dc4a48f93", null ],
+    [ "writeImagePart", "classGxEPD2__1248.html#aafd55e906d73068b6de27131eccc3995", null ],
+    [ "writeImagePart", "classGxEPD2__1248.html#a11118a0ae43ca1e489c56dc200d15e5f", null ],
+    [ "writeImagePartAgain", "classGxEPD2__1248.html#aed7cecfe892b115d40323aea171b4eb0", null ],
+    [ "writeNative", "classGxEPD2__1248.html#a9cbc66c1382ae65e40f6a1272b5d8f77", null ],
+    [ "writeScreenBuffer", "classGxEPD2__1248.html#ae2878d31c44757f6c8d5ac2ae568b6f3", null ],
+    [ "writeScreenBufferAgain", "classGxEPD2__1248.html#acfcf0e6046e66d754cfa717e818cf31d", null ],
+    [ "GDEW1248T3_OTP", "classGxEPD2__1248.html#a4c234dd1c8affb34a522e6741320edc3", null ]
+];

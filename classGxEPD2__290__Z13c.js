@@ -1,0 +1,27 @@
+var classGxEPD2__290__Z13c =
+[
+    [ "GxEPD2_290_Z13c", "classGxEPD2__290__Z13c.html#a4b8e0f3651bfc6d3bd6b2f4c40ac89f2", null ],
+    [ "clearScreen", "classGxEPD2__290__Z13c.html#ab9f3232db67dca82c6beabfada98956f", null ],
+    [ "clearScreen", "classGxEPD2__290__Z13c.html#a8df61abdbf840eccd43a51fd5fb756ed", null ],
+    [ "drawImage", "classGxEPD2__290__Z13c.html#a9715dcbaecee08ea7fb813cc3ac17f71", null ],
+    [ "drawImage", "classGxEPD2__290__Z13c.html#acfa905fff9e0c74d653e6411495de59c", null ],
+    [ "drawImagePart", "classGxEPD2__290__Z13c.html#a075d5dbac0c15cedd9c62142de51e41d", null ],
+    [ "drawImagePart", "classGxEPD2__290__Z13c.html#a02baa573ebdefb97ab0693962f50afa6", null ],
+    [ "drawNative", "classGxEPD2__290__Z13c.html#a1cb2a48826866f3ab5d691072c8a7961", null ],
+    [ "hibernate", "classGxEPD2__290__Z13c.html#a6c1beda4d70d4f8c236187c62f7fa2c5", null ],
+    [ "powerOff", "classGxEPD2__290__Z13c.html#a11adfbc9482e93817f598e7c9429da33", null ],
+    [ "refresh", "classGxEPD2__290__Z13c.html#a8df34068d13ca4810b0a7c63a1efb637", null ],
+    [ "refresh", "classGxEPD2__290__Z13c.html#a0e5b3257d5a76a8597163cb95a106eb9", null ],
+    [ "refresh_bw", "classGxEPD2__290__Z13c.html#a67e5fd1cba4da29a3070e20689cc2b40", null ],
+    [ "writeImage", "classGxEPD2__290__Z13c.html#a6d804d510242526655dff77cb8b45532", null ],
+    [ "writeImage", "classGxEPD2__290__Z13c.html#a37ab196b391ad4c61fd266fe4e32ce8a", null ],
+    [ "writeImageNew", "classGxEPD2__290__Z13c.html#a48fffdae0534976bf2a8b703add204bd", null ],
+    [ "writeImagePart", "classGxEPD2__290__Z13c.html#aa503ae7c34408424d0d8448654d2e72c", null ],
+    [ "writeImagePart", "classGxEPD2__290__Z13c.html#a9e6756c920e814313e59509075ad7825", null ],
+    [ "writeImagePartNew", "classGxEPD2__290__Z13c.html#a199b63d5c5ff6aae8160df3f106decf4", null ],
+    [ "writeImagePartPrevious", "classGxEPD2__290__Z13c.html#a6d9982c7243459cdf35be7fa5a2476a3", null ],
+    [ "writeImagePrevious", "classGxEPD2__290__Z13c.html#a6c44de8896a23cf7c9df444b3f339b86", null ],
+    [ "writeNative", "classGxEPD2__290__Z13c.html#aa5ecfdb29c25521a2e1192a93139005f", null ],
+    [ "writeScreenBuffer", "classGxEPD2__290__Z13c.html#a8de39e01067826136a20338631cd0cf1", null ],
+    [ "writeScreenBuffer", "classGxEPD2__290__Z13c.html#ad97cdbe39250bf79c547bda3580c4526", null ]
+];

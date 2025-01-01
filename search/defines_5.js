@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['h_5fto_5fus_5ffactor_0',['H_TO_uS_FACTOR',['../Paperdink_8h.html#aac2496f31862b68e77c4589e3308d80c',1,'Paperdink.h']]]
+  ['fx19_0',['Fx19',['../GxEPD2__213__flex_8cpp.html#af48fd3e72b15e08b2005371e6ba398b0',1,'GxEPD2_213_flex.cpp']]]
 ];

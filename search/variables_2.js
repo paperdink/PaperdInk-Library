@@ -1,12 +1,10 @@
 var searchData=
 [
-  ['day_5fmax_5ftemp_0',['day_max_temp',['../classPaperdinkUIWeatherClass.html#ad15a2f157ff09d19d8f8cca654da428a',1,'PaperdinkUIWeatherClass']]],
-  ['day_5fmin_5ftemp_1',['day_min_temp',['../classPaperdinkUIWeatherClass.html#a0c94a2091634cbf6ea6972c8d5b3855d',1,'PaperdinkUIWeatherClass']]],
-  ['day_5foffset_2',['day_offset',['../classPaperdinkUIDateClass.html#a7f6e0c5fe7bcb62dbace073b3eae5733',1,'PaperdinkUIDateClass']]],
-  ['down_5farrow_5fmed_3',['down_arrow_med',['../down__arrow__med_8h.html#a307ffa1c2e884309329e4b577de8d29a',1,'down_arrow_med.h']]],
-  ['down_5farrow_5fred_4',['down_arrow_red',['../down__arrow__med_8h.html#a8844e6622e9424b96befe8ef5d49d929',1,'down_arrow_med.h']]],
-  ['down_5farrow_5fsml_5',['down_arrow_sml',['../down__arrow__sml_8h.html#aee416bcfdc67d12a1590d42d093ad19f',1,'down_arrow_sml.h']]],
-  ['down_5farrow_5fsml_5fred_6',['down_arrow_sml_red',['../down__arrow__sml_8h.html#aa812f2dc9a4081ab7c53e05687a8c913',1,'down_arrow_sml.h']]],
-  ['drizzle_5fxlrg_7',['drizzle_xlrg',['../drizzle__xlrg_8h.html#a8eab48db1abca26481a13607e3605ba8',1,'drizzle_xlrg.h']]],
-  ['drizzle_5fxlrg_5fred_8',['drizzle_xlrg_red',['../drizzle__xlrg_8h.html#a6b88113ac88c6da4d9869ff7828c5ead',1,'drizzle_xlrg.h']]]
+  ['change_0',['change',['../classPaperdinkUICryptoClass.html#a8a6c32d957a3c4673d628d33a28bc5f5',1,'PaperdinkUICryptoClass']]],
+  ['city_1',['city',['../classPaperdinkUIWeatherClass.html#a104721a13476760a371d1be1d6890b29',1,'PaperdinkUIWeatherClass']]],
+  ['cloud_5fxlrg_2',['cloud_xlrg',['../cloud__xlrg_8h.html#a1cbdd74fe3cb983b86885dbd0655b5e7',1,'cloud_xlrg.h']]],
+  ['cloud_5fxlrg_5fred_3',['cloud_xlrg_red',['../cloud__xlrg_8h.html#a76629f86cd422f4c35adc235ec07ff7f',1,'cloud_xlrg.h']]],
+  ['color_4',['color',['../classPaperdinkDeviceBaseClass.html#a1ce93eaa63134f67a5dcabe4b2eba617',1,'PaperdinkDeviceBaseClass::color'],['../classPaperdink__Classic.html#a60e3aab59ebff7470f092344f5cbafed',1,'Paperdink_Classic::color'],['../classPaperdink__Merlot.html#a2d19e0e13fa32ef9de10867d9d23a86b',1,'Paperdink_Merlot::color']]],
+  ['country_5',['country',['../classPaperdinkUIWeatherClass.html#ad77665653da0a31b74994240510e8606',1,'PaperdinkUIWeatherClass']]],
+  ['crypto_5flistener_6',['crypto_listener',['../crypto_8cpp.html#a7cf114580398ec010b4d1d2ed67c31fe',1,'crypto.cpp']]]
 ];

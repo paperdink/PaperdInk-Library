@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['weather_5fstate_0',['WEATHER_STATE',['../weather__parser_8cpp.html#a02db9a290a38910921877cb5849e32bc',1,'weather_parser.cpp']]]
+  ['taiga_5fstate_0',['TAIGA_STATE',['../taiga__parser_8cpp.html#a30c265d806ad403ddcf57e55bcb4ca1c',1,'taiga_parser.cpp']]],
+  ['todoist_5fstate_1',['TODOIST_STATE',['../todoist__parser_8cpp.html#a9193a21944b2852536fa3a164019a224',1,'todoist_parser.cpp']]]
 ];

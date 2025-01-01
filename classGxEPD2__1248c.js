@@ -1,0 +1,25 @@
+var classGxEPD2__1248c =
+[
+    [ "GxEPD2_1248c", "classGxEPD2__1248c.html#a55f27b782b343758c1a308887981c0c2", null ],
+    [ "GxEPD2_1248c", "classGxEPD2__1248c.html#a2dfaec7aa18b641a93984323c0d57b2f", null ],
+    [ "clearScreen", "classGxEPD2__1248c.html#aa20e5e475d41911abd8fbae0b29278b7", null ],
+    [ "drawImage", "classGxEPD2__1248c.html#a4d1da660514bf7cc38207da4a475ab8d", null ],
+    [ "drawImage", "classGxEPD2__1248c.html#a081e2e5c82be860d121099be055b4ab8", null ],
+    [ "drawImagePart", "classGxEPD2__1248c.html#ad625ce363bd4349e1bf5b4e06a52895d", null ],
+    [ "drawImagePart", "classGxEPD2__1248c.html#a4989602bed78dd90c65ec3e6f20cf0e3", null ],
+    [ "drawNative", "classGxEPD2__1248c.html#a3aa8a1403543a4413bdd1f79c8fe910f", null ],
+    [ "hibernate", "classGxEPD2__1248c.html#accb247879f58ffc11e5797d14027c872", null ],
+    [ "init", "classGxEPD2__1248c.html#a361f1ad2c643fbbc55b88d357572d4c4", null ],
+    [ "init", "classGxEPD2__1248c.html#abb9f74f3961c77278448af052ba51352", null ],
+    [ "powerOff", "classGxEPD2__1248c.html#a9bc407fb4859d683dfad7828c4fc3289", null ],
+    [ "refresh", "classGxEPD2__1248c.html#a05ed9e6693ab6a30b0bd7cad8fb37994", null ],
+    [ "refresh", "classGxEPD2__1248c.html#a4acd9d63feffbfabb69c354ca8af6352", null ],
+    [ "writeImage", "classGxEPD2__1248c.html#ab37efd3819c85ff73fb8d4aa74c73548", null ],
+    [ "writeImage", "classGxEPD2__1248c.html#a8feb83df9ce959c371374d66389fad80", null ],
+    [ "writeImagePart", "classGxEPD2__1248c.html#a7be3e4bc7ec10ec291060758c3196fda", null ],
+    [ "writeImagePart", "classGxEPD2__1248c.html#a0dffcbd94091ea39184f0a8e065686d4", null ],
+    [ "writeNative", "classGxEPD2__1248c.html#a6ecfb2c38aa1d663638d283d1f975476", null ],
+    [ "writeScreenBuffer", "classGxEPD2__1248c.html#aa0153850633e180b6bc834ab2214e5fe", null ],
+    [ "writeScreenBuffer", "classGxEPD2__1248c.html#afa81420ea4a43c3267177ce62039cff2", null ],
+    [ "GDEW1248T3_OTP", "classGxEPD2__1248c.html#a4c234dd1c8affb34a522e6741320edc3", null ]
+];

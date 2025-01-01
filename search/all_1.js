@@ -1,17 +1,13 @@
 var searchData=
 [
-  ['base_2ecpp_0',['base.cpp',['../base_8cpp.html',1,'']]],
-  ['base_2eh_1',['base.h',['../base_8h.html',1,'']]],
-  ['batt_5fen_2',['BATT_EN',['../pin__assignment_8h.html#ad9659da3944ab60dddc44fcd16293ee5',1,'pin_assignment.h']]],
-  ['batt_5fvolt_3',['BATT_VOLT',['../pin__assignment_8h.html#a474fd5ac3b123247b0482397fa599cdf',1,'pin_assignment.h']]],
-  ['begin_4',['begin',['../classPaperdinkDeviceBaseClass.html#ab5f1f3390591cc99c617b097b4ea86ff',1,'PaperdinkDeviceBaseClass']]],
-  ['button_5f1_5fpin_5',['BUTTON_1_PIN',['../pin__assignment_8h.html#a0411f64ff1b702c2b2e6e721f032f750',1,'pin_assignment.h']]],
-  ['button_5f1_5frtc_5fgpio_6',['BUTTON_1_RTC_GPIO',['../pin__assignment_8h.html#a9b41bdc625fc987d318710249adbca19',1,'pin_assignment.h']]],
-  ['button_5f2_5fpin_7',['BUTTON_2_PIN',['../pin__assignment_8h.html#ac965fc518b25b1ec0de10e3ac841b170',1,'pin_assignment.h']]],
-  ['button_5f2_5frtc_5fgpio_8',['BUTTON_2_RTC_GPIO',['../pin__assignment_8h.html#ac5d692d4b5d2ff3e023841ceaeda0f91',1,'pin_assignment.h']]],
-  ['button_5f3_5fpin_9',['BUTTON_3_PIN',['../pin__assignment_8h.html#a0371ce39a54669bd1ef373bac05fdd4b',1,'pin_assignment.h']]],
-  ['button_5f3_5frtc_5fgpio_10',['BUTTON_3_RTC_GPIO',['../pin__assignment_8h.html#af529de7a35ec2b8418e9022ba84983b6',1,'pin_assignment.h']]],
-  ['button_5f4_5fpin_11',['BUTTON_4_PIN',['../pin__assignment_8h.html#a6f97237f1f6f3380a8010ba147a088ad',1,'pin_assignment.h']]],
-  ['button_5f4_5frtc_5fgpio_12',['BUTTON_4_RTC_GPIO',['../pin__assignment_8h.html#a74f6b2c4f5885a8321ab1ccd7bcfcf06',1,'pin_assignment.h']]],
-  ['buzr_13',['BUZR',['../pin__assignment_8h.html#a929d197e1e139d225ace86e78e91c3a4',1,'pin_assignment.h']]]
+  ['acep565_0',['ACeP565',['../classGxEPD2.html#ad35652d475e58a8780208542c9954f57a05e6f872cf483417d3de140ba54612ee',1,'GxEPD2']]],
+  ['alert_5fxlrg_1',['alert_xlrg',['../alert__xlrg_8h.html#ae14a60c85315d98cb774dc9b078967c7',1,'alert_xlrg.h']]],
+  ['alert_5fxlrg_2eh_2',['alert_xlrg.h',['../alert__xlrg_8h.html',1,'']]],
+  ['alert_5fxlrg_5fheight_3',['alert_xlrg_height',['../alert__xlrg_8h.html#a1513d4ec8923e5b7bb5e4e659e413cc1',1,'alert_xlrg.h']]],
+  ['alert_5fxlrg_5fred_4',['alert_xlrg_red',['../alert__xlrg_8h.html#a10811eae27b76b352d7b00a65f4b1271',1,'alert_xlrg.h']]],
+  ['alert_5fxlrg_5fwidth_5',['alert_xlrg_width',['../alert__xlrg_8h.html#a747889a7dc283dcd411129269225355c',1,'alert_xlrg.h']]],
+  ['arduino_6',['Paperd.Ink Library for Arduino',['../index.html',1,'']]],
+  ['arduino_20library_20manager_7',['Library Dependencies (from Arduino Library Manager)',['../index.html#autotoc_md2',1,'']]],
+  ['arudinostreamparser_8',['ArudinoStreamParser',['../classArudinoStreamParser.html',1,'']]],
+  ['available_9',['available',['../classArudinoStreamParser.html#aeb88b494edaf3744f78d8ddf4c28b2b0',1,'ArudinoStreamParser']]]
 ];

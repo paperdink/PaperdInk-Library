@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['completed_0',['COMPLETED',['../weather__parser_8cpp.html#a02db9a290a38910921877cb5849e32bca3549811efddf16048f4b8f6a3b960b41',1,'weather_parser.cpp']]]
+  ['acep565_0',['ACeP565',['../classGxEPD2.html#ad35652d475e58a8780208542c9954f57a05e6f872cf483417d3de140ba54612ee',1,'GxEPD2']]]
 ];
