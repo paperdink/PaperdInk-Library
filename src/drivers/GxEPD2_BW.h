@@ -74,6 +74,10 @@
 #include "it8951/GxEPD2_it78_1872x1404.h"
 #include "it8951/GxEPD2_it103_1872x1404.h"
 
+#ifndef GxEPD_BPP
+	#define GxEPD_BPP 1
+#endif
+
 template<typename GxEPD2_Type, const uint16_t page_height>
 class GxEPD2_BW : public GxEPD2_GFX_BASE_CLASS
 {
@@ -140,11 +144,52 @@ class GxEPD2_BW : public GxEPD2_GFX_BASE_CLASS
       if (_reverse) y = _page_height - y - 1;
       // check if in current page
       if ((y < 0) || (y >= int16_t(_page_height))) return;
-      uint16_t i = x / 8 + y * (_pw_w / 8);
-      if (color)
-        _buffer[i] = (_buffer[i] | (1 << (7 - x % 8)));
-      else
-        _buffer[i] = (_buffer[i] & (0xFF ^ (1 << (7 - x % 8))));
+      uint16_t i = x / 4 + y * (_pw_w / 4);
+      _buffer[i] = (_buffer[i] & (0xFF ^ (3 << 2 * (3 - x % 4))));
+      if (color > 0)
+      {
+        uint8_t brb = 0x03;
+        if (color != GxEPD_WHITE)
+        {
+          uint32_t brightness = (uint32_t(color & 0xF800) + uint32_t((color & 0x07E0) << 5) + uint32_t((color & 0x001F) << 11));
+          brb = uint8_t((brightness - 1) / 0xC000ul); // GxEPD_LIGHTGREY is one too high
+        }
+        _buffer[i] = (_buffer[i] | (brb << 2 * (3 - x % 4)));
+      }
+    }
+
+    void drawGreyPixel(int16_t x, int16_t y, uint8_t grey)
+    {
+      if ((x < 0) || (x >= width()) || (y < 0) || (y >= height())) return;
+      if (_mirror) x = width() - x - 1;
+      // check rotation, move pixel around if necessary
+      switch (getRotation())
+      {
+        case 1:
+          _swap_(x, y);
+          x = WIDTH - x - 1;
+          break;
+        case 2:
+          x = WIDTH - x - 1;
+          y = HEIGHT - y - 1;
+          break;
+        case 3:
+          _swap_(x, y);
+          y = HEIGHT - y - 1;
+          break;
+      }
+      // transpose partial window to 0,0
+      x -= _pw_x;
+      y -= _pw_y;
+      // clip to (partial) window
+      if ((x < 0) || (x >= _pw_w) || (y < 0) || (y >= _pw_h)) return;
+      // adjust for current page
+      y -= _current_page * _page_height;
+      // check if in current page
+      if ((y < 0) || (y >= _page_height)) return;
+      uint16_t i = x / 4 + y * (_pw_w / 4);
+      _buffer[i] = (_buffer[i] & (0xFF ^ (3 << 2 * (3 - x % 4))));
+      _buffer[i] = (_buffer[i] | ((grey >> 6) << 2 * (3 - x % 4)));
     }
 
     void init(uint32_t serial_diag_bitrate = 0) // = 0 : disabled
@@ -183,7 +228,9 @@ class GxEPD2_BW : public GxEPD2_GFX_BASE_CLASS
 
     void fillScreen(uint16_t color) // 0x0 black, >0x0 white, to buffer
     {
-      uint8_t data = (color == GxEPD_BLACK) ? 0x00 : 0xFF;
+      uint32_t brightness = (uint32_t(color & 0xF800) + uint32_t((color & 0x07E0) << 5) + uint32_t((color & 0x001F) << 11));
+      uint8_t brb = uint8_t((brightness - 1) / 0xC000ul); // GxEPD_LIGHTGREY is one too high
+      uint8_t data = brb * 0b01010101;
       for (uint16_t x = 0; x < sizeof(_buffer); x++)
       {
         _buffer[x] = data;
@@ -464,6 +511,100 @@ class GxEPD2_BW : public GxEPD2_GFX_BASE_CLASS
       }
     }
 
+    void drawGreyPixmap(const uint8_t pixmap[], int16_t depth, int16_t x, int16_t y, int16_t w, int16_t h)
+    {
+      switch (depth)
+      {
+        case 1:
+          {
+            int16_t byteWidth = (w + 7) / 8; // Bitmap scanline pad = whole byte
+            uint8_t byte = 0;
+            for (int16_t j = 0; j < h; j++)
+            {
+              for (int16_t i = 0; i < w; i++ )
+              {
+                if (i & 7) byte <<= 1;
+                else
+                {
+#if defined(__AVR) || defined(ESP8266) || defined(ESP32)
+                  byte = pgm_read_byte(&pixmap[j * byteWidth + i / 8]);
+#else
+                  byte = pixmap[j * byteWidth + i / 8];
+#endif
+                }
+                uint16_t color = byte & 0x80 ? 0xFFFF : 0x0000;
+                drawPixel(x + i, y + j, color);
+              }
+            }
+          }
+          break;
+        case 2:
+          {
+            int16_t byteWidth = (w + 3) / 4; // Bitmap scanline pad = whole byte
+            uint8_t byte = 0;
+            for (int16_t j = 0; j < h; j++)
+            {
+              for (int16_t i = 0; i < w; i++ )
+              {
+                if (i & 3) byte <<= 2;
+                else
+                {
+#if defined(__AVR) || defined(ESP8266) || defined(ESP32)
+                  byte = pgm_read_byte(&pixmap[j * byteWidth + i / 4]);
+#else
+                  byte = pixmap[j * byteWidth + i / 4];
+#endif
+                }
+                drawGreyPixel(x + i, y + j, byte & 0xC0);
+              }
+            }
+          }
+          break;
+        case 4:
+          {
+            int16_t byteWidth = (w + 1) / 2; // Bitmap scanline pad = whole byte
+            uint8_t byte = 0;
+            for (int16_t j = 0; j < h; j++)
+            {
+              for (int16_t i = 0; i < w; i++ )
+              {
+                if (i & 1) byte <<= 4;
+                else
+                {
+#if defined(__AVR) || defined(ESP8266) || defined(ESP32)
+                  byte = pgm_read_byte(&pixmap[j * byteWidth + i / 2]);
+#else
+                  byte = pixmap[j * byteWidth + i / 2];
+#endif
+                }
+                uint8_t grey = byte & 0xF0;
+                if ((grey < 0xF0) && (grey >= 0xA0)) grey = 0x80; // light grey demo limit for 4bpp
+                else if ((grey < 0xF0) && (grey > 0x00)) grey = 0x40;  // dark grey
+                drawGreyPixel(x + i, y + j, grey);
+              }
+            }
+          }
+          break;
+        case 8:
+          {
+            uint8_t byte = 0;
+            for (int16_t j = 0; j < h; j++)
+            {
+              for (int16_t i = 0; i < w; i++ )
+              {
+#if defined(__AVR) || defined(ESP8266) || defined(ESP32)
+                byte = pgm_read_byte(&pixmap[j * w + i]);
+#else
+                byte = pixmap[j * w + i];
+#endif
+                drawGreyPixel(x + i, y + j, byte);
+              }
+            }
+          }
+          break;
+      }
+    }
+
     //  Support for Bitmaps (Sprites) to Controller Buffer and to Screen
     void clearScreen(uint8_t value = 0xFF) // init controller memory and screen (default white)
     {
@@ -595,7 +736,7 @@ class GxEPD2_BW : public GxEPD2_GFX_BASE_CLASS
       }
     }
   private:
-    uint8_t _buffer[(GxEPD2_Type::WIDTH / 8) * page_height];
+    uint8_t _buffer[(GxEPD2_Type::WIDTH / (8/GxEPD_BPP)) * page_height];
     bool _using_partial_mode, _second_phase, _mirror, _reverse;
     uint16_t _width_bytes, _pixel_bytes;
     int16_t _current_page;

@@ -15,6 +15,8 @@
 
 #include "../GxEPD2_EPD.h"
 
+#define GxEPD_BPP 2
+
 class GxEPD2_420 : public GxEPD2_EPD
 {
   public:
@@ -38,7 +40,10 @@ class GxEPD2_420 : public GxEPD2_EPD
     void writeScreenBuffer(uint8_t value = 0xFF); // init controller memory (default white)
     // write to controller memory, without screen refresh; x and w should be multiple of 8
     void writeImage(const uint8_t bitmap[], int16_t x, int16_t y, int16_t w, int16_t h, bool invert = false, bool mirror_y = false, bool pgm = false);
+    void writeImage_4G(const uint8_t bitmap[], uint8_t bpp, int16_t x, int16_t y, int16_t w, int16_t h, bool invert = false, bool mirror_y = false, bool pgm = false);
     void writeImagePart(const uint8_t bitmap[], int16_t x_part, int16_t y_part, int16_t w_bitmap, int16_t h_bitmap,
+                        int16_t x, int16_t y, int16_t w, int16_t h, bool invert = false, bool mirror_y = false, bool pgm = false);
+    void writeImagePart_4G(const uint8_t bitmap[], uint8_t bpp, int16_t x_part, int16_t y_part, int16_t w_bitmap, int16_t h_bitmap,
                         int16_t x, int16_t y, int16_t w, int16_t h, bool invert = false, bool mirror_y = false, bool pgm = false);
     void writeImage(const uint8_t* black, const uint8_t* color, int16_t x, int16_t y, int16_t w, int16_t h, bool invert = false, bool mirror_y = false, bool pgm = false);
     void writeImagePart(const uint8_t* black, const uint8_t* color, int16_t x_part, int16_t y_part, int16_t w_bitmap, int16_t h_bitmap,
@@ -47,7 +52,10 @@ class GxEPD2_420 : public GxEPD2_EPD
     void writeNative(const uint8_t* data1, const uint8_t* data2, int16_t x, int16_t y, int16_t w, int16_t h, bool invert = false, bool mirror_y = false, bool pgm = false);
     // write to controller memory, with screen refresh; x and w should be multiple of 8
     void drawImage(const uint8_t bitmap[], int16_t x, int16_t y, int16_t w, int16_t h, bool invert = false, bool mirror_y = false, bool pgm = false);
+    void drawImage_4G(const uint8_t bitmap[], uint8_t bpp, int16_t x, int16_t y, int16_t w, int16_t h, bool invert = false, bool mirror_y = false, bool pgm = false);
     void drawImagePart(const uint8_t bitmap[], int16_t x_part, int16_t y_part, int16_t w_bitmap, int16_t h_bitmap,
+                       int16_t x, int16_t y, int16_t w, int16_t h, bool invert = false, bool mirror_y = false, bool pgm = false);
+    void drawImagePart_4G(const uint8_t bitmap[], uint8_t bpp, int16_t x_part, int16_t y_part, int16_t w_bitmap, int16_t h_bitmap,
                        int16_t x, int16_t y, int16_t w, int16_t h, bool invert = false, bool mirror_y = false, bool pgm = false);
     void drawImage(const uint8_t* black, const uint8_t* color, int16_t x, int16_t y, int16_t w, int16_t h, bool invert = false, bool mirror_y = false, bool pgm = false);
     void drawImagePart(const uint8_t* black, const uint8_t* color, int16_t x_part, int16_t y_part, int16_t w_bitmap, int16_t h_bitmap,
@@ -63,16 +71,25 @@ class GxEPD2_420 : public GxEPD2_EPD
     void _PowerOn();
     void _PowerOff();
     void _InitDisplay();
+    void _Force_Init_Full();
     void _Init_Full();
+    void _Init_4G();
     void _Init_Part();
     void _Update_Full();
+    void _Update_4G();
     void _Update_Part();
   private:
+    enum {full_refresh, grey_refresh, fast_refresh, forced_full_refresh} _refresh_mode;
     static const unsigned char lut_20_vcom0_full[];
     static const unsigned char lut_21_ww_full[];
     static const unsigned char lut_22_bw_full[];
     static const unsigned char lut_23_wb_full[];
     static const unsigned char lut_24_bb_full[];
+    static const unsigned char lut_20_vcom0_4G[];
+    static const unsigned char lut_21_ww_4G[];
+    static const unsigned char lut_22_bw_4G[];
+    static const unsigned char lut_23_wb_4G[];
+    static const unsigned char lut_24_bb_4G[];
     static const unsigned char lut_20_vcom0_partial[];
     static const unsigned char lut_21_ww_partial[];
     static const unsigned char lut_22_bw_partial[];

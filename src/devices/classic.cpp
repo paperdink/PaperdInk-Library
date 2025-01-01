@@ -1,6 +1,6 @@
-#include "classicv2.h"
+#include "classic.h"
 
-int8_t Paperdink_Classic_v2::enable_display()
+int8_t Paperdink_Classic::enable_display()
 {
 	PaperdinkDeviceBaseClass::enable_display();
 	epd.init();
@@ -8,7 +8,7 @@ int8_t Paperdink_Classic_v2::enable_display()
 	return 0;
 }
 
-int8_t Paperdink_Classic_v2::disable_display()
+int8_t Paperdink_Classic::disable_display()
 {
 	digitalWrite(EPD_EN, HIGH);
 

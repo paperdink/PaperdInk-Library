@@ -14,7 +14,6 @@ int8_t PaperdinkDeviceBaseClass::begin()
 	pinMode(BUTTON_3_PIN, INPUT_PULLUP);
 	pinMode(BUTTON_4_PIN, INPUT_PULLUP);
 
-
 	return 0;
 }
 
